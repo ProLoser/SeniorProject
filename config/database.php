@@ -4,9 +4,9 @@ class DATABASE_CONFIG {
 	var $default = array(
 		'driver' => 'mysql',
 		'persistent' => false,
-		'host' => 'mysql.artengineered.net',
-		'login' => 'holycrap',
-		'password' => 'gamegod',
+		'host' => 'localhost',
+		'login' => 'root',
+		'password' => '',
 		'database' => 'isvonline',
 	);
 }
