@@ -38,7 +38,7 @@ CREATE TABLE `pages` (
   `short_title` INTEGER NOT NULL,
   `title` VARCHAR(100) NOT NULL,
   `slug` VARCHAR(100) NOT NULL,
-  `contents` TEXT NOT NULL,
+  `contents` MEDIUMTEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   `meta_description` INTEGER NOT NULL,
@@ -66,6 +66,7 @@ CREATE TABLE `employees` (
   `disabled` TINYINT(1) NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
+  `user_id` INTEGER DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) COMMENT='Level 0 (recruiters), Level 1, Level 2, Level 3, Level 4, Le';
 
@@ -78,9 +79,8 @@ DROP TABLE IF EXISTS `roles`;
 		
 CREATE TABLE `roles` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `employee_id` INTEGER NOT NULL,
   `name` VARCHAR(150) NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` MEDIUMTEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
@@ -95,29 +95,15 @@ DROP TABLE IF EXISTS `documents`;
 		
 CREATE TABLE `documents` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `type` VARCHAR(150) NOT NULL,
+  `type` VARCHAR(100) NOT NULL,
   `volunteer_id` INTEGER NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` MEDIUMTEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   `checked` TINYINT(1) NOT NULL,
   `attachment_file_name` VARCHAR(255) NOT NULL,
   `attachment_file_size` INTEGER NOT NULL,
   `attachment_meta_type` VARCHAR(10) NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
--- ---
--- Table 'contact_forms'
--- 
--- ---
-
-DROP TABLE IF EXISTS `contact_forms`;
-		
-CREATE TABLE `contact_forms` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `created` DATETIME NOT NULL,
-  `modified` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -132,24 +118,8 @@ CREATE TABLE `locations` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `currency_code` VARCHAR(4) NOT NULL,
   `name` VARCHAR(150) NOT NULL,
-  `short_code` VARCHAR(150) NOT NULL,
+  `short_code` VARCHAR(100) NOT NULL,
   `office_id` INTEGER NOT NULL,
-  `created` DATETIME NOT NULL,
-  `modified` DATETIME NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
--- ---
--- Table 'faqs'
--- 
--- ---
-
-DROP TABLE IF EXISTS `faqs`;
-		
-CREATE TABLE `faqs` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `question` TEXT NOT NULL,
-  `answer` TEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
@@ -165,7 +135,7 @@ DROP TABLE IF EXISTS `schools`;
 CREATE TABLE `schools` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
-  `location` TEXT NOT NULL,
+  `location` MEDIUMTEXT NOT NULL,
   `office_id` INTEGER NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
@@ -182,7 +152,7 @@ DROP TABLE IF EXISTS `recruiter_meetings`;
 CREATE TABLE `recruiter_meetings` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `time` DATETIME NOT NULL,
-  `location` TEXT NOT NULL,
+  `location` MEDIUMTEXT NOT NULL,
   `school_id` INTEGER NOT NULL,
   `employee_id` INTEGER NOT NULL,
   `created` DATETIME NOT NULL,
@@ -219,7 +189,7 @@ CREATE TABLE `volunteers` (
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   `last_login` DATETIME NOT NULL,
-  `referral` TEXT NOT NULL,
+  `referral` MEDIUMTEXT NOT NULL,
   `phone` VARCHAR(15) NOT NULL,
   `gender` VARCHAR(10) NOT NULL,
   `age` INTEGER NOT NULL,
@@ -240,21 +210,23 @@ CREATE TABLE `volunteers` (
   `secondary_emergency_email` VARCHAR(150) NOT NULL,
   `grade_level` VARCHAR(150) NOT NULL,
   `medical_conditions` VARCHAR(150) NOT NULL,
-  `medical_condition_comments` TEXT NOT NULL,
+  `medical_condition_comments` MEDIUMTEXT NOT NULL,
   `allergies` VARCHAR(150) NOT NULL,
-  `allergies_comments` TEXT NOT NULL,
-  `hospitalization` VARCHAR(150) NOT NULL,
-  `hospitalization_comments` TEXT NOT NULL,
+  `allergies_comments` MEDIUMTEXT NOT NULL,
+  `hospitalization` VARCHAR(100) NOT NULL,
+  `hospitalization_comments` MEDIUMTEXT NOT NULL,
   `prescription_medication` VARCHAR(150) NOT NULL,
-  `prescription_medication_comments` TEXT NOT NULL,
+  `prescription_medication_comments` MEDIUMTEXT NOT NULL,
   `diet` VARCHAR(150) NOT NULL,
-  `diet_comments` TEXT NOT NULL,
+  `diet_comments` MEDIUMTEXT NOT NULL,
   `shirt_size` VARCHAR(50) NOT NULL,
   `date_summer` DATE NOT NULL,
   `date_fall` DATE NOT NULL,
-  `hobbies` TEXT NOT NULL,
+  `hobbies` MEDIUMTEXT NOT NULL,
   `project_preference` VARCHAR(200) NOT NULL,
   `interests` VARCHAR(150) NOT NULL,
+  `location_id` INTEGER DEFAULT NULL,
+  `user_id` INTEGER DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -268,7 +240,7 @@ DROP TABLE IF EXISTS `programs`;
 CREATE TABLE `programs` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(200) NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` MEDIUMTEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
@@ -285,8 +257,8 @@ CREATE TABLE `destinations` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
-  `name` TEXT NOT NULL,
-  `description` TEXT NOT NULL,
+  `name` MEDIUMTEXT NOT NULL,
+  `description` MEDIUMTEXT NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -299,7 +271,7 @@ DROP TABLE IF EXISTS `prices`;
 		
 CREATE TABLE `prices` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `foreign_sid` INTEGER NOT NULL,
+  `foreign_ids` INTEGER NOT NULL,
   `foreign_model` VARCHAR(10) NOT NULL,
   `location_id` INTEGER NOT NULL,
   `price` DECIMAL(8,2) NOT NULL,
@@ -322,7 +294,7 @@ DROP TABLE IF EXISTS `offices`;
 CREATE TABLE `offices` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
-  `location` TEXT NOT NULL,
+  `location` MEDIUMTEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
@@ -361,8 +333,8 @@ CREATE TABLE `bookings` (
   `accepted` TINYINT(1) NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
-  `payment_sid` INTEGER NOT NULL,
-  `payed` TINYINT(1) DEFAULT NULL,
+  `payment_ids` INTEGER NOT NULL,
+  `paid` TINYINT(1) NOT NULL DEFAULT '0',
   `cancelled` TINYINT(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) COMMENT='The package booked for a volunteer';
@@ -376,7 +348,7 @@ DROP TABLE IF EXISTS `spanish_profiles`;
 		
 CREATE TABLE `spanish_profiles` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `proficiency_level` VARCHAR(150) NOT NULL,
+  `proficiency_level` VARCHAR(255) NOT NULL,
   `homestay` TINYINT(1) NOT NULL,
   `volunteer_id` INTEGER NOT NULL,
   `booking_id` INTEGER NOT NULL,
@@ -411,7 +383,7 @@ DROP TABLE IF EXISTS `promos`;
 CREATE TABLE `promos` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(150) NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` MEDIUMTEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   `expires` DATE NOT NULL,
@@ -428,7 +400,7 @@ DROP TABLE IF EXISTS `menus`;
 		
 CREATE TABLE `menus` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `parent_sid` INTEGER DEFAULT NULL,
+  `parent_ids` INTEGER DEFAULT NULL,
   `page_id` INTEGER NOT NULL,
   `lft` INTEGER NOT NULL,
   `rght` INTEGER NOT NULL,
@@ -449,7 +421,7 @@ DROP TABLE IF EXISTS `addons`;
 CREATE TABLE `addons` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(200) NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` MEDIUMTEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
@@ -465,7 +437,7 @@ DROP TABLE IF EXISTS `fees`;
 CREATE TABLE `fees` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(150) NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` MEDIUMTEXT NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
@@ -513,15 +485,34 @@ DROP TABLE IF EXISTS `donations`;
 CREATE TABLE `donations` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(150) NOT NULL,
-  `description` TEXT NOT NULL,
+  `description` MEDIUMTEXT NOT NULL,
   `amount` DECIMAL(8,2) NOT NULL,
-  `reason` TEXT NOT NULL,
+  `reason` MEDIUMTEXT NOT NULL,
   `volunteer_name` VARCHAR(150) NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
-  `payment_sid` INTEGER NOT NULL,
+  `payment_ids` INTEGER NOT NULL,
   `booking_id` INTEGER NOT NULL,
   `volunteer_id` INTEGER NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+-- ---
+-- Table 'users'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `users`;
+		
+CREATE TABLE `users` (
+  `id` INTEGER AUTO_INCREMENT DEFAULT NULL,
+  `username` VARCHAR(140) NOT NULL,
+  `password` VARCHAR(40) NOT NULL,
+  `email` VARCHAR(150) NOT NULL,
+  `role_id` INTEGER NOT NULL,
+  `location_id` INTEGER NOT NULL,
+  `created` DATETIME NOT NULL,
+  `modified` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -534,16 +525,18 @@ ALTER TABLE `line_items` ADD FOREIGN KEY (price_id) REFERENCES `prices` (`id`);
 ALTER TABLE `pages` ADD FOREIGN KEY (price_id) REFERENCES `prices` (`id`);
 ALTER TABLE `pages` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
 ALTER TABLE `employees` ADD FOREIGN KEY (office_id) REFERENCES `offices` (`id`);
-ALTER TABLE `roles` ADD FOREIGN KEY (employee_id) REFERENCES `employees` (`id`);
+ALTER TABLE `employees` ADD FOREIGN KEY (user_id) REFERENCES `users` (`id`);
 ALTER TABLE `documents` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (`id`);
 ALTER TABLE `locations` ADD FOREIGN KEY (office_id) REFERENCES `offices` (`id`);
 ALTER TABLE `schools` ADD FOREIGN KEY (office_id) REFERENCES `offices` (`id`);
 ALTER TABLE `recruiter_meetings` ADD FOREIGN KEY (school_id) REFERENCES `schools` (`id`);
 ALTER TABLE `recruiter_meetings` ADD FOREIGN KEY (employee_id) REFERENCES `employees` (`id`);
-ALTER TABLE `prices` ADD FOREIGN KEY (foreign_sid) REFERENCES `addon_combinations` (`id`);
-ALTER TABLE `prices` ADD FOREIGN KEY (foreign_sid) REFERENCES `base_combinations` (`id`);
-ALTER TABLE `prices` ADD FOREIGN KEY (foreign_sid) REFERENCES `fees` (`id`);
-ALTER TABLE `prices` ADD FOREIGN KEY (foreign_sid) REFERENCES `promos` (`id`);
+ALTER TABLE `volunteers` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
+ALTER TABLE `volunteers` ADD FOREIGN KEY (user_id) REFERENCES `users` (`id`);
+ALTER TABLE `prices` ADD FOREIGN KEY (foreign_ids) REFERENCES `addon_combinations` (`id`);
+ALTER TABLE `prices` ADD FOREIGN KEY (foreign_ids) REFERENCES `base_combinations` (`id`);
+ALTER TABLE `prices` ADD FOREIGN KEY (foreign_ids) REFERENCES `fees` (`id`);
+ALTER TABLE `prices` ADD FOREIGN KEY (foreign_ids) REFERENCES `promos` (`id`);
 ALTER TABLE `prices` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
 ALTER TABLE `signups` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (`id`);
 ALTER TABLE `signups` ADD FOREIGN KEY (school_id) REFERENCES `schools` (`id`);
@@ -553,7 +546,7 @@ ALTER TABLE `spanish_profiles` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunt
 ALTER TABLE `spanish_profiles` ADD FOREIGN KEY (booking_id) REFERENCES `bookings` (`id`);
 ALTER TABLE `ecuador_profiles` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (`id`);
 ALTER TABLE `ecuador_profiles` ADD FOREIGN KEY (booking_id) REFERENCES `bookings` (`id`);
-ALTER TABLE `menus` ADD FOREIGN KEY (parent_sid) REFERENCES `menus` (`id`);
+ALTER TABLE `menus` ADD FOREIGN KEY (parent_ids) REFERENCES `menus` (`id`);
 ALTER TABLE `menus` ADD FOREIGN KEY (page_id) REFERENCES `pages` (`id`);
 ALTER TABLE `addon_combinations` ADD FOREIGN KEY (base_combination_id) REFERENCES `base_combinations` (`id`);
 ALTER TABLE `addon_combinations` ADD FOREIGN KEY (addon_id) REFERENCES `addons` (`id`);
@@ -561,6 +554,8 @@ ALTER TABLE `base_combinations` ADD FOREIGN KEY (destination_id) REFERENCES `des
 ALTER TABLE `base_combinations` ADD FOREIGN KEY (program_id) REFERENCES `programs` (`id`);
 ALTER TABLE `donations` ADD FOREIGN KEY (booking_id) REFERENCES `bookings` (`id`);
 ALTER TABLE `donations` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (`id`);
+ALTER TABLE `users` ADD FOREIGN KEY (role_id) REFERENCES `roles` (`id`);
+ALTER TABLE `users` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
 
 -- ---
 -- Table Properties
@@ -571,9 +566,7 @@ ALTER TABLE `donations` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (
 -- ALTER TABLE `employees` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `roles` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `documents` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `contact_forms` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `locations` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
--- ALTER TABLE `faqs` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `schools` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `recruiter_meetings` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `volunteers` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -592,6 +585,7 @@ ALTER TABLE `donations` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (
 -- ALTER TABLE `addon_combinations` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `base_combinations` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 -- ALTER TABLE `donations` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- ALTER TABLE `users` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ---
 -- Test Data
@@ -601,35 +595,31 @@ ALTER TABLE `donations` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (
 -- ('','','','','');
 -- INSERT INTO `pages` (`id`,`price_id`,`short_title`,`title`,`slug`,`contents`,`created`,`modified`,`meta_description`,`meta_keywords`,`location_id`) VALUES
 -- ('','','','','','','','','','','');
--- INSERT INTO `employees` (`id`,`office_id`,`status`,`name`,`email`,`phone`,`address`,`department`,`disabled`,`created`,`modified`) VALUES
--- ('','','','','','','','','','','');
--- INSERT INTO `roles` (`id`,`employee_id`,`name`,`description`,`created`,`modified`) VALUES
--- ('','','','','','');
+-- INSERT INTO `employees` (`id`,`office_id`,`status`,`name`,`email`,`phone`,`address`,`department`,`disabled`,`created`,`modified`,`user_id`) VALUES
+-- ('','','','','','','','','','','','');
+-- INSERT INTO `roles` (`id`,`name`,`description`,`created`,`modified`) VALUES
+-- ('','','','','');
 -- INSERT INTO `documents` (`id`,`type`,`volunteer_id`,`description`,`created`,`modified`,`checked`,`attachment_file_name`,`attachment_file_size`,`attachment_meta_type`) VALUES
 -- ('','','','','','','','','','');
--- INSERT INTO `contact_forms` (`id`,`created`,`modified`) VALUES
--- ('','','');
 -- INSERT INTO `locations` (`id`,`currency_code`,`name`,`short_code`,`office_id`,`created`,`modified`) VALUES
 -- ('','','','','','','');
--- INSERT INTO `faqs` (`id`,`question`,`answer`,`created`,`modified`) VALUES
--- ('','','','','');
 -- INSERT INTO `schools` (`id`,`name`,`location`,`office_id`,`created`,`modified`) VALUES
 -- ('','','','','','');
 -- INSERT INTO `recruiter_meetings` (`id`,`time`,`location`,`school_id`,`employee_id`,`created`,`modified`) VALUES
 -- ('','','','','','','');
--- INSERT INTO `volunteers` (`id`,`last_name`,`first_name`,`middle_name`,`nickname`,`current_address`,`current_city`,`current_state`,`current_zip`,`current_country`,`permanent_address`,`permanent_city`,`permanent_state`,`permanent_zip`,`permanent_country`,`passport`,`passport_country`,`email`,`created`,`modified`,`last_login`,`referral`,`phone`,`gender`,`age`,`mobile_phone`,`university`,`university_major`,`country_of_birth`,`country_of_residence`,`citizenship`,`alternate_email`,`primary_emergency_contact`,`primary_emergency_relationship`,`primary_emergency_phone`,`primary_emergency_email`,`secondary_emergency_contact`,`secondary_emergency_relationship`,`secondary_emergency_phone`,`secondary_emergency_email`,`grade_level`,`medical_conditions`,`medical_condition_comments`,`allergies`,`allergies_comments`,`hospitalization`,`hospitalization_comments`,`prescription_medication`,`prescription_medication_comments`,`diet`,`diet_comments`,`shirt_size`,`date_summer`,`date_fall`,`hobbies`,`project_preference`,`interests`) VALUES
--- ('','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
+-- INSERT INTO `volunteers` (`id`,`last_name`,`first_name`,`middle_name`,`nickname`,`current_address`,`current_city`,`current_state`,`current_zip`,`current_country`,`permanent_address`,`permanent_city`,`permanent_state`,`permanent_zip`,`permanent_country`,`passport`,`passport_country`,`email`,`created`,`modified`,`last_login`,`referral`,`phone`,`gender`,`age`,`mobile_phone`,`university`,`university_major`,`country_of_birth`,`country_of_residence`,`citizenship`,`alternate_email`,`primary_emergency_contact`,`primary_emergency_relationship`,`primary_emergency_phone`,`primary_emergency_email`,`secondary_emergency_contact`,`secondary_emergency_relationship`,`secondary_emergency_phone`,`secondary_emergency_email`,`grade_level`,`medical_conditions`,`medical_condition_comments`,`allergies`,`allergies_comments`,`hospitalization`,`hospitalization_comments`,`prescription_medication`,`prescription_medication_comments`,`diet`,`diet_comments`,`shirt_size`,`date_summer`,`date_fall`,`hobbies`,`project_preference`,`interests`,`location_id`,`user_id`) VALUES
+-- ('','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
 -- INSERT INTO `programs` (`id`,`name`,`description`,`created`,`modified`) VALUES
 -- ('','','','','');
 -- INSERT INTO `destinations` (`id`,`created`,`modified`,`name`,`description`) VALUES
 -- ('','','','','');
--- INSERT INTO `prices` (`id`,`foreign_sid`,`foreign_model`,`location_id`,`price`,`created`,`modified`,`hidden`,`active`,`expires`,`activates`) VALUES
+-- INSERT INTO `prices` (`id`,`foreign_ids`,`foreign_model`,`location_id`,`price`,`created`,`modified`,`hidden`,`active`,`expires`,`activates`) VALUES
 -- ('','','','','','','','','','','');
 -- INSERT INTO `offices` (`id`,`name`,`location`,`created`,`modified`) VALUES
 -- ('','','','','');
 -- INSERT INTO `signups` (`id`,`volunteer_id`,`school_id`,`employee_id`,`name`,`email`,`phone`,`created`,`modified`) VALUES
 -- ('','','','','','','','','');
--- INSERT INTO `bookings` (`id`,`volunteer_id`,`accepted`,`created`,`modified`,`payment_sid`,`payed`,`cancelled`) VALUES
+-- INSERT INTO `bookings` (`id`,`volunteer_id`,`accepted`,`created`,`modified`,`payment_ids`,`paid`,`cancelled`) VALUES
 -- ('','','','','','','','');
 -- INSERT INTO `spanish_profiles` (`id`,`proficiency_level`,`homestay`,`volunteer_id`,`booking_id`,`created`,`modified`) VALUES
 -- ('','','','','','','');
@@ -637,7 +627,7 @@ ALTER TABLE `donations` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (
 -- ('','','','','');
 -- INSERT INTO `promos` (`id`,`name`,`description`,`created`,`modified`,`expires`,`activates`) VALUES
 -- ('','','','','','','');
--- INSERT INTO `menus` (`id`,`parent_sid`,`page_id`,`lft`,`rght`,`path`,`name`,`created`,`modified`) VALUES
+-- INSERT INTO `menus` (`id`,`parent_ids`,`page_id`,`lft`,`rght`,`path`,`name`,`created`,`modified`) VALUES
 -- ('','','','','','','','','');
 -- INSERT INTO `addons` (`id`,`name`,`description`,`created`,`modified`) VALUES
 -- ('','','','','');
@@ -647,6 +637,8 @@ ALTER TABLE `donations` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (
 -- ('','','','','');
 -- INSERT INTO `base_combinations` (`id`,`destination_id`,`program_id`,`created`,`modified`) VALUES
 -- ('','','','','');
--- INSERT INTO `donations` (`id`,`name`,`description`,`amount`,`reason`,`volunteer_name`,`created`,`modified`,`payment_sid`,`booking_id`,`volunteer_id`) VALUES
+-- INSERT INTO `donations` (`id`,`name`,`description`,`amount`,`reason`,`volunteer_name`,`created`,`modified`,`payment_ids`,`booking_id`,`volunteer_id`) VALUES
 -- ('','','','','','','','','','','');
+-- INSERT INTO `users` (`id`,`username`,`password`,`email`,`role_id`,`location_id`,`created`,`modified`) VALUES
+-- ('','','','','','','','');
 
