@@ -1,5 +1,5 @@
 <?php
-/* RecruiterMeeting Fixture generated on: 2010-04-15 10:04:25 : 1271329165 */
+/* RecruiterMeeting Fixture generated on: 2010-04-23 23:04:10 : 1272066130 */
 class RecruiterMeetingFixture extends CakeTestFixture {
 	var $name = 'RecruiterMeeting';
 
@@ -18,12 +18,12 @@ class RecruiterMeetingFixture extends CakeTestFixture {
 	var $records = array(
 		array(
 			'id' => 1,
-			'time' => '2010-04-15 10:59:25',
+			'time' => '2010-04-23 23:42:10',
 			'location' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'school_id' => 1,
 			'employee_id' => 1,
-			'created' => '2010-04-15 10:59:25',
-			'modified' => '2010-04-15 10:59:25'
+			'created' => '2010-04-23 23:42:10',
+			'modified' => '2010-04-23 23:42:10'
 		),
 	);
 }

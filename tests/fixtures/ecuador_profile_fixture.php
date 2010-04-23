@@ -1,5 +1,5 @@
 <?php
-/* EcuadorProfile Fixture generated on: 2010-04-15 10:04:09 : 1271329149 */
+/* EcuadorProfile Fixture generated on: 2010-04-23 23:04:44 : 1272066104 */
 class EcuadorProfileFixture extends CakeTestFixture {
 	var $name = 'EcuadorProfile';
 
@@ -18,8 +18,8 @@ class EcuadorProfileFixture extends CakeTestFixture {
 			'id' => 1,
 			'volunteer_id' => 1,
 			'booking_id' => 1,
-			'created' => '2010-04-15 10:59:09',
-			'modified' => '2010-04-15 10:59:09'
+			'created' => '2010-04-23 23:41:44',
+			'modified' => '2010-04-23 23:41:44'
 		),
 	);
 }

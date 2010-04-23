@@ -31,9 +31,9 @@
 			<?php echo $booking['Booking']['payment_sid']; ?>
 			&nbsp;
 		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Payed'); ?></dt>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Paid'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $booking['Booking']['payed']; ?>
+			<?php echo $booking['Booking']['paid']; ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Cancelled'); ?></dt>

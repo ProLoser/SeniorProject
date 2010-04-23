@@ -1,5 +1,5 @@
 <?php
-/* Volunteers Test cases generated on: 2010-04-15 10:04:45 : 1271329185*/
+/* Volunteers Test cases generated on: 2010-04-23 23:04:55 : 1272066175*/
 App::import('Controller', 'Volunteers');
 
 class TestVolunteersController extends VolunteersController {
@@ -11,7 +11,7 @@ class TestVolunteersController extends VolunteersController {
 }
 
 class VolunteersControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.volunteer', 'app.booking', 'app.donation', 'app.ecuador_profile', 'app.line_item', 'app.price', 'app.location', 'app.office', 'app.employee', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.role', 'app.page', 'app.menu', 'app.spanish_profile', 'app.document');
+	var $fixtures = array('app.volunteer', 'app.location', 'app.office', 'app.employee', 'app.user', 'app.role', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.page', 'app.price', 'app.line_item', 'app.booking', 'app.donation', 'app.ecuador_profile', 'app.spanish_profile', 'app.menu', 'app.document');
 
 	function startTest() {
 		$this->Volunteers =& new TestVolunteersController();

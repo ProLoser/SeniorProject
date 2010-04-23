@@ -1,5 +1,5 @@
 <?php
-/* AddonCombination Fixture generated on: 2010-04-15 10:04:59 : 1271329139 */
+/* AddonCombination Fixture generated on: 2010-04-23 23:04:28 : 1272066088 */
 class AddonCombinationFixture extends CakeTestFixture {
 	var $name = 'AddonCombination';
 
@@ -18,8 +18,8 @@ class AddonCombinationFixture extends CakeTestFixture {
 			'id' => 1,
 			'base_combination_id' => 1,
 			'addon_id' => 1,
-			'created' => '2010-04-15 10:58:59',
-			'modified' => '2010-04-15 10:58:59'
+			'created' => '2010-04-23 23:41:28',
+			'modified' => '2010-04-23 23:41:28'
 		),
 	);
 }

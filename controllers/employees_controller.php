@@ -27,7 +27,8 @@ class EmployeesController extends AppController {
 			}
 		}
 		$offices = $this->Employee->Office->find('list');
-		$this->set(compact('offices'));
+		$users = $this->Employee->User->find('list');
+		$this->set(compact('offices', 'users'));
 	}
 
 	function edit($id = null) {
@@ -47,7 +48,8 @@ class EmployeesController extends AppController {
 			$this->data = $this->Employee->read(null, $id);
 		}
 		$offices = $this->Employee->Office->find('list');
-		$this->set(compact('offices'));
+		$users = $this->Employee->User->find('list');
+		$this->set(compact('offices', 'users'));
 	}
 
 	function delete($id = null) {

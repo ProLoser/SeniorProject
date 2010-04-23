@@ -8,7 +8,7 @@
 			<th><?php echo $this->Paginator->sort('created');?></th>
 			<th><?php echo $this->Paginator->sort('modified');?></th>
 			<th><?php echo $this->Paginator->sort('payment_sid');?></th>
-			<th><?php echo $this->Paginator->sort('payed');?></th>
+			<th><?php echo $this->Paginator->sort('paid');?></th>
 			<th><?php echo $this->Paginator->sort('cancelled');?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
@@ -29,7 +29,7 @@
 		<td><?php echo $booking['Booking']['created']; ?>&nbsp;</td>
 		<td><?php echo $booking['Booking']['modified']; ?>&nbsp;</td>
 		<td><?php echo $booking['Booking']['payment_sid']; ?>&nbsp;</td>
-		<td><?php echo $booking['Booking']['payed']; ?>&nbsp;</td>
+		<td><?php echo $booking['Booking']['paid']; ?>&nbsp;</td>
 		<td><?php echo $booking['Booking']['cancelled']; ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $booking['Booking']['id'])); ?>

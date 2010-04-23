@@ -1,5 +1,5 @@
 <?php
-/* Volunteer Fixture generated on: 2010-04-15 10:04:32 : 1271329172 */
+/* Volunteer Fixture generated on: 2010-04-23 23:04:25 : 1272066145 */
 class VolunteerFixture extends CakeTestFixture {
 	var $name = 'Volunteer';
 
@@ -49,7 +49,7 @@ class VolunteerFixture extends CakeTestFixture {
 		'medical_condition_comments' => array('type' => 'text', 'null' => false, 'default' => NULL),
 		'allergies' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 150),
 		'allergies_comments' => array('type' => 'text', 'null' => false, 'default' => NULL),
-		'hospitalization' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 150),
+		'hospitalization' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 100),
 		'hospitalization_comments' => array('type' => 'text', 'null' => false, 'default' => NULL),
 		'prescription_medication' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 150),
 		'prescription_medication_comments' => array('type' => 'text', 'null' => false, 'default' => NULL),
@@ -61,7 +61,9 @@ class VolunteerFixture extends CakeTestFixture {
 		'hobbies' => array('type' => 'text', 'null' => false, 'default' => NULL),
 		'project_preference' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 200),
 		'interests' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 150),
-		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1)),
+		'location_id' => array('type' => 'integer', 'null' => true, 'default' => NULL, 'key' => 'index'),
+		'user_id' => array('type' => 'integer', 'null' => true, 'default' => NULL, 'key' => 'index'),
+		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'location_id' => array('column' => 'location_id', 'unique' => 0), 'user_id' => array('column' => 'user_id', 'unique' => 0)),
 		'tableParameters' => array('charset' => 'latin1', 'collate' => 'latin1_swedish_ci', 'engine' => 'MyISAM')
 	);
 
@@ -85,9 +87,9 @@ class VolunteerFixture extends CakeTestFixture {
 			'passport' => 'Lorem ipsum dolor sit amet',
 			'passport_country' => 'Lorem ipsum dolor sit amet',
 			'email' => 'Lorem ipsum dolor sit amet',
-			'created' => '2010-04-15 10:59:32',
-			'modified' => '2010-04-15 10:59:32',
-			'last_login' => '2010-04-15 10:59:32',
+			'created' => '2010-04-23 23:42:25',
+			'modified' => '2010-04-23 23:42:25',
+			'last_login' => '2010-04-23 23:42:25',
 			'referral' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'phone' => 'Lorem ipsum d',
 			'gender' => 'Lorem ip',
@@ -119,11 +121,13 @@ class VolunteerFixture extends CakeTestFixture {
 			'diet' => 'Lorem ipsum dolor sit amet',
 			'diet_comments' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'shirt_size' => 'Lorem ipsum dolor sit amet',
-			'date_summer' => '2010-04-15',
-			'date_fall' => '2010-04-15',
+			'date_summer' => '2010-04-23',
+			'date_fall' => '2010-04-23',
 			'hobbies' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'project_preference' => 'Lorem ipsum dolor sit amet',
-			'interests' => 'Lorem ipsum dolor sit amet'
+			'interests' => 'Lorem ipsum dolor sit amet',
+			'location_id' => 1,
+			'user_id' => 1
 		),
 	);
 }

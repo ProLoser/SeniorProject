@@ -59,6 +59,7 @@
 		<th><?php __('Disabled'); ?></th>
 		<th><?php __('Created'); ?></th>
 		<th><?php __('Modified'); ?></th>
+		<th><?php __('User Id'); ?></th>
 		<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -81,6 +82,7 @@
 			<td><?php echo $employee['disabled'];?></td>
 			<td><?php echo $employee['created'];?></td>
 			<td><?php echo $employee['modified'];?></td>
+			<td><?php echo $employee['user_id'];?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View', true), array('controller' => 'employees', 'action' => 'view', $employee['id'])); ?>
 				<?php echo $this->Html->link(__('Edit', true), array('controller' => 'employees', 'action' => 'edit', $employee['id'])); ?>

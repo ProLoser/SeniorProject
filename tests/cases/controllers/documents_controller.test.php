@@ -1,5 +1,5 @@
 <?php
-/* Documents Test cases generated on: 2010-04-15 10:04:42 : 1271329182*/
+/* Documents Test cases generated on: 2010-04-23 23:04:48 : 1272066168*/
 App::import('Controller', 'Documents');
 
 class TestDocumentsController extends DocumentsController {
@@ -11,7 +11,7 @@ class TestDocumentsController extends DocumentsController {
 }
 
 class DocumentsControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.document', 'app.volunteer', 'app.booking', 'app.donation', 'app.ecuador_profile', 'app.line_item', 'app.price', 'app.location', 'app.office', 'app.employee', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.role', 'app.page', 'app.menu', 'app.spanish_profile');
+	var $fixtures = array('app.document', 'app.volunteer', 'app.location', 'app.office', 'app.employee', 'app.user', 'app.role', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.page', 'app.price', 'app.line_item', 'app.booking', 'app.donation', 'app.ecuador_profile', 'app.spanish_profile', 'app.menu');
 
 	function startTest() {
 		$this->Documents =& new TestDocumentsController();

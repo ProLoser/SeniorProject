@@ -1,5 +1,5 @@
 <?php
-/* Menu Fixture generated on: 2010-04-15 10:04:17 : 1271329157 */
+/* Menu Fixture generated on: 2010-04-23 23:04:56 : 1272066116 */
 class MenuFixture extends CakeTestFixture {
 	var $name = 'Menu';
 
@@ -26,8 +26,8 @@ class MenuFixture extends CakeTestFixture {
 			'rght' => 1,
 			'path' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'created' => '2010-04-15 10:59:17',
-			'modified' => '2010-04-15 10:59:17'
+			'created' => '2010-04-23 23:41:56',
+			'modified' => '2010-04-23 23:41:56'
 		),
 	);
 }

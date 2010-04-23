@@ -1,5 +1,5 @@
 <?php
-/* LineItem Fixture generated on: 2010-04-15 10:04:14 : 1271329154 */
+/* LineItem Fixture generated on: 2010-04-23 23:04:51 : 1272066111 */
 class LineItemFixture extends CakeTestFixture {
 	var $name = 'LineItem';
 
@@ -18,8 +18,8 @@ class LineItemFixture extends CakeTestFixture {
 			'id' => 1,
 			'booking_id' => 1,
 			'price_id' => 1,
-			'created' => '2010-04-15 10:59:14',
-			'modified' => '2010-04-15 10:59:14'
+			'created' => '2010-04-23 23:41:51',
+			'modified' => '2010-04-23 23:41:51'
 		),
 	);
 }

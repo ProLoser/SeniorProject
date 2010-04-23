@@ -1,5 +1,5 @@
 <?php
-/* Signup Fixture generated on: 2010-04-15 10:04:29 : 1271329169 */
+/* Signup Fixture generated on: 2010-04-23 23:04:17 : 1272066137 */
 class SignupFixture extends CakeTestFixture {
 	var $name = 'Signup';
 
@@ -26,8 +26,8 @@ class SignupFixture extends CakeTestFixture {
 			'name' => 'Lorem ipsum dolor sit amet',
 			'email' => 'Lorem ipsum dolor sit amet',
 			'phone' => 'Lorem ipsum d',
-			'created' => '2010-04-15 10:59:29',
-			'modified' => '2010-04-15 10:59:29'
+			'created' => '2010-04-23 23:42:17',
+			'modified' => '2010-04-23 23:42:17'
 		),
 	);
 }

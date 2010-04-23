@@ -1,5 +1,5 @@
 <?php
-/* Employees Test cases generated on: 2010-04-15 10:04:42 : 1271329182*/
+/* Employees Test cases generated on: 2010-04-23 23:04:49 : 1272066169*/
 App::import('Controller', 'Employees');
 
 class TestEmployeesController extends EmployeesController {
@@ -11,7 +11,7 @@ class TestEmployeesController extends EmployeesController {
 }
 
 class EmployeesControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.employee', 'app.office', 'app.location', 'app.page', 'app.price', 'app.line_item', 'app.booking', 'app.volunteer', 'app.document', 'app.donation', 'app.ecuador_profile', 'app.signup', 'app.school', 'app.recruiter_meeting', 'app.spanish_profile', 'app.menu', 'app.role');
+	var $fixtures = array('app.employee', 'app.office', 'app.location', 'app.page', 'app.price', 'app.line_item', 'app.booking', 'app.volunteer', 'app.user', 'app.role', 'app.document', 'app.donation', 'app.ecuador_profile', 'app.signup', 'app.school', 'app.recruiter_meeting', 'app.spanish_profile', 'app.menu');
 
 	function startTest() {
 		$this->Employees =& new TestEmployeesController();

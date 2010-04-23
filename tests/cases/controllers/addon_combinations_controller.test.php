@@ -1,5 +1,5 @@
 <?php
-/* AddonCombinations Test cases generated on: 2010-04-15 10:04:41 : 1271329181*/
+/* AddonCombinations Test cases generated on: 2010-04-23 23:04:47 : 1272066167*/
 App::import('Controller', 'AddonCombinations');
 
 class TestAddonCombinationsController extends AddonCombinationsController {

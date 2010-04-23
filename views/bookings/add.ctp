@@ -6,7 +6,7 @@
 		echo $this->Form->input('volunteer_id');
 		echo $this->Form->input('accepted');
 		echo $this->Form->input('payment_sid');
-		echo $this->Form->input('payed');
+		echo $this->Form->input('paid');
 		echo $this->Form->input('cancelled');
 	?>
 	</fieldset>

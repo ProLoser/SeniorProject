@@ -1,5 +1,5 @@
 <?php
-/* Schools Test cases generated on: 2010-04-15 10:04:44 : 1271329184*/
+/* Schools Test cases generated on: 2010-04-23 23:04:53 : 1272066173*/
 App::import('Controller', 'Schools');
 
 class TestSchoolsController extends SchoolsController {
@@ -11,7 +11,7 @@ class TestSchoolsController extends SchoolsController {
 }
 
 class SchoolsControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.school', 'app.office', 'app.employee', 'app.recruiter_meeting', 'app.role', 'app.signup', 'app.volunteer', 'app.booking', 'app.donation', 'app.ecuador_profile', 'app.line_item', 'app.price', 'app.location', 'app.page', 'app.menu', 'app.spanish_profile', 'app.document');
+	var $fixtures = array('app.school', 'app.office', 'app.employee', 'app.user', 'app.role', 'app.location', 'app.page', 'app.price', 'app.line_item', 'app.booking', 'app.volunteer', 'app.document', 'app.donation', 'app.ecuador_profile', 'app.signup', 'app.spanish_profile', 'app.menu', 'app.recruiter_meeting');
 
 	function startTest() {
 		$this->Schools =& new TestSchoolsController();

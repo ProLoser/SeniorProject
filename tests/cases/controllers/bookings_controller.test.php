@@ -1,5 +1,5 @@
 <?php
-/* Bookings Test cases generated on: 2010-04-15 10:04:41 : 1271329181*/
+/* Bookings Test cases generated on: 2010-04-23 23:04:48 : 1272066168*/
 App::import('Controller', 'Bookings');
 
 class TestBookingsController extends BookingsController {
@@ -11,7 +11,7 @@ class TestBookingsController extends BookingsController {
 }
 
 class BookingsControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.booking', 'app.volunteer', 'app.document', 'app.donation', 'app.ecuador_profile', 'app.signup', 'app.school', 'app.office', 'app.employee', 'app.recruiter_meeting', 'app.role', 'app.location', 'app.page', 'app.price', 'app.line_item', 'app.menu', 'app.spanish_profile');
+	var $fixtures = array('app.booking', 'app.volunteer', 'app.location', 'app.office', 'app.employee', 'app.user', 'app.role', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.page', 'app.price', 'app.line_item', 'app.menu', 'app.document', 'app.donation', 'app.ecuador_profile', 'app.spanish_profile');
 
 	function startTest() {
 		$this->Bookings =& new TestBookingsController();
