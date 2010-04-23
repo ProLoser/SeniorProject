@@ -1,5 +1,5 @@
 <?php
-/* EcuadorProfiles Test cases generated on: 2010-04-15 10:04:42 : 1271329182*/
+/* EcuadorProfiles Test cases generated on: 2010-04-23 23:04:49 : 1272066169*/
 App::import('Controller', 'EcuadorProfiles');
 
 class TestEcuadorProfilesController extends EcuadorProfilesController {
@@ -11,7 +11,7 @@ class TestEcuadorProfilesController extends EcuadorProfilesController {
 }
 
 class EcuadorProfilesControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.ecuador_profile', 'app.volunteer', 'app.booking', 'app.donation', 'app.line_item', 'app.price', 'app.location', 'app.office', 'app.employee', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.role', 'app.page', 'app.menu', 'app.spanish_profile', 'app.document');
+	var $fixtures = array('app.ecuador_profile', 'app.volunteer', 'app.location', 'app.office', 'app.employee', 'app.user', 'app.role', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.page', 'app.price', 'app.line_item', 'app.booking', 'app.donation', 'app.spanish_profile', 'app.menu', 'app.document');
 
 	function startTest() {
 		$this->EcuadorProfiles =& new TestEcuadorProfilesController();

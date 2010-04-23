@@ -3,7 +3,6 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('employee_id');?></th>
 			<th><?php echo $this->Paginator->sort('name');?></th>
 			<th><?php echo $this->Paginator->sort('description');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
@@ -20,9 +19,6 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td><?php echo $role['Role']['id']; ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($role['Employee']['name'], array('controller' => 'employees', 'action' => 'view', $role['Employee']['id'])); ?>
-		</td>
 		<td><?php echo $role['Role']['name']; ?>&nbsp;</td>
 		<td><?php echo $role['Role']['description']; ?>&nbsp;</td>
 		<td><?php echo $role['Role']['created']; ?>&nbsp;</td>
@@ -53,7 +49,7 @@
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Role', true)), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Employees', true)), array('controller' => 'employees', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Employee', true)), array('controller' => 'employees', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Users', true)), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('User', true)), array('controller' => 'users', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

@@ -1,5 +1,5 @@
 <?php
-/* BaseCombination Test cases generated on: 2010-04-15 10:04:02 : 1271329142*/
+/* BaseCombination Test cases generated on: 2010-04-23 23:04:33 : 1272066093*/
 App::import('Model', 'BaseCombination');
 
 class BaseCombinationTestCase extends CakeTestCase {

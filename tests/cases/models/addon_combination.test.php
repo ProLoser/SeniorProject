@@ -1,9 +1,9 @@
 <?php
-/* AddonCombination Test cases generated on: 2010-04-15 10:04:59 : 1271329139*/
+/* AddonCombination Test cases generated on: 2010-04-23 23:04:28 : 1272066088*/
 App::import('Model', 'AddonCombination');
 
 class AddonCombinationTestCase extends CakeTestCase {
-	var $fixtures = array('app.addon_combination', 'app.base_combination', 'app.addon');
+	var $fixtures = array('app.addon_combination', 'app.base_combination', 'app.destination', 'app.program', 'app.addon');
 
 	function startTest() {
 		$this->AddonCombination =& ClassRegistry::init('AddonCombination');

@@ -286,6 +286,16 @@
 			<?php echo $volunteer['Volunteer']['interests']; ?>
 			&nbsp;
 		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Location'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $this->Html->link($volunteer['Location']['name'], array('controller' => 'locations', 'action' => 'view', $volunteer['Location']['id'])); ?>
+			&nbsp;
+		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('User'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $this->Html->link($volunteer['User']['id'], array('controller' => 'users', 'action' => 'view', $volunteer['User']['id'])); ?>
+			&nbsp;
+		</dd>
 	</dl>
 </div>
 <div class="actions">
@@ -295,6 +305,10 @@
 		<li><?php echo $this->Html->link(sprintf(__('Delete %s', true), __('Volunteer', true)), array('action' => 'delete', $volunteer['Volunteer']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $volunteer['Volunteer']['id'])); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Volunteers', true)), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Volunteer', true)), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Locations', true)), array('controller' => 'locations', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Location', true)), array('controller' => 'locations', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Users', true)), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('User', true)), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Bookings', true)), array('controller' => 'bookings', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Booking', true)), array('controller' => 'bookings', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Documents', true)), array('controller' => 'documents', 'action' => 'index')); ?> </li>
@@ -320,7 +334,7 @@
 		<th><?php __('Created'); ?></th>
 		<th><?php __('Modified'); ?></th>
 		<th><?php __('Payment Sid'); ?></th>
-		<th><?php __('Payed'); ?></th>
+		<th><?php __('Paid'); ?></th>
 		<th><?php __('Cancelled'); ?></th>
 		<th class="actions"><?php __('Actions');?></th>
 	</tr>
@@ -339,7 +353,7 @@
 			<td><?php echo $booking['created'];?></td>
 			<td><?php echo $booking['modified'];?></td>
 			<td><?php echo $booking['payment_sid'];?></td>
-			<td><?php echo $booking['payed'];?></td>
+			<td><?php echo $booking['paid'];?></td>
 			<td><?php echo $booking['cancelled'];?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View', true), array('controller' => 'bookings', 'action' => 'view', $booking['id'])); ?>

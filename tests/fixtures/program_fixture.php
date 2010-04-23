@@ -1,5 +1,5 @@
 <?php
-/* Program Fixture generated on: 2010-04-15 10:04:23 : 1271329163 */
+/* Program Fixture generated on: 2010-04-23 23:04:06 : 1272066126 */
 class ProgramFixture extends CakeTestFixture {
 	var $name = 'Program';
 
@@ -18,8 +18,8 @@ class ProgramFixture extends CakeTestFixture {
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
 			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'created' => '2010-04-15 10:59:23',
-			'modified' => '2010-04-15 10:59:23'
+			'created' => '2010-04-23 23:42:06',
+			'modified' => '2010-04-23 23:42:06'
 		),
 	);
 }

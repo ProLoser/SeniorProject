@@ -1,5 +1,5 @@
 <?php
-/* Prices Test cases generated on: 2010-04-15 10:04:44 : 1271329184*/
+/* Prices Test cases generated on: 2010-04-23 23:04:52 : 1272066172*/
 App::import('Controller', 'Prices');
 
 class TestPricesController extends PricesController {
@@ -11,7 +11,7 @@ class TestPricesController extends PricesController {
 }
 
 class PricesControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.price', 'app.location', 'app.office', 'app.employee', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.volunteer', 'app.booking', 'app.donation', 'app.ecuador_profile', 'app.line_item', 'app.spanish_profile', 'app.document', 'app.role', 'app.page', 'app.menu');
+	var $fixtures = array('app.price', 'app.location', 'app.office', 'app.employee', 'app.user', 'app.role', 'app.volunteer', 'app.booking', 'app.donation', 'app.ecuador_profile', 'app.line_item', 'app.spanish_profile', 'app.document', 'app.signup', 'app.school', 'app.recruiter_meeting', 'app.page', 'app.menu');
 
 	function startTest() {
 		$this->Prices =& new TestPricesController();

@@ -59,6 +59,8 @@
 			<th><?php echo $this->Paginator->sort('hobbies');?></th>
 			<th><?php echo $this->Paginator->sort('project_preference');?></th>
 			<th><?php echo $this->Paginator->sort('interests');?></th>
+			<th><?php echo $this->Paginator->sort('location_id');?></th>
+			<th><?php echo $this->Paginator->sort('user_id');?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -127,6 +129,12 @@
 		<td><?php echo $volunteer['Volunteer']['hobbies']; ?>&nbsp;</td>
 		<td><?php echo $volunteer['Volunteer']['project_preference']; ?>&nbsp;</td>
 		<td><?php echo $volunteer['Volunteer']['interests']; ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($volunteer['Location']['name'], array('controller' => 'locations', 'action' => 'view', $volunteer['Location']['id'])); ?>
+		</td>
+		<td>
+			<?php echo $this->Html->link($volunteer['User']['id'], array('controller' => 'users', 'action' => 'view', $volunteer['User']['id'])); ?>
+		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $volunteer['Volunteer']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $volunteer['Volunteer']['id'])); ?>
@@ -153,6 +161,10 @@
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Volunteer', true)), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Locations', true)), array('controller' => 'locations', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Location', true)), array('controller' => 'locations', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Users', true)), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('User', true)), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Bookings', true)), array('controller' => 'bookings', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Booking', true)), array('controller' => 'bookings', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Documents', true)), array('controller' => 'documents', 'action' => 'index')); ?> </li>
