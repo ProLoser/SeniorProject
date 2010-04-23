@@ -1,6 +1,6 @@
 <?php
 class DATABASE_CONFIG {
-
+//Test
 	var $default = array(
 		'driver' => 'mysql',
 		'persistent' => false,
