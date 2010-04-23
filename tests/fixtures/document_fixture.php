@@ -1,11 +1,11 @@
 <?php
-/* Document Fixture generated on: 2010-04-15 10:04:07 : 1271329147 */
+/* Document Fixture generated on: 2010-04-23 23:04:39 : 1272066099 */
 class DocumentFixture extends CakeTestFixture {
 	var $name = 'Document';
 
 	var $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'primary'),
-		'type' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 150),
+		'type' => array('type' => 'string', 'null' => false, 'default' => NULL, 'length' => 100),
 		'volunteer_id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'index'),
 		'description' => array('type' => 'text', 'null' => false, 'default' => NULL),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => NULL),
@@ -24,8 +24,8 @@ class DocumentFixture extends CakeTestFixture {
 			'type' => 'Lorem ipsum dolor sit amet',
 			'volunteer_id' => 1,
 			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'created' => '2010-04-15 10:59:07',
-			'modified' => '2010-04-15 10:59:07',
+			'created' => '2010-04-23 23:41:39',
+			'modified' => '2010-04-23 23:41:39',
 			'checked' => 1,
 			'attachment_file_name' => 'Lorem ipsum dolor sit amet',
 			'attachment_file_size' => 1,

@@ -271,7 +271,7 @@ DROP TABLE IF EXISTS `prices`;
 		
 CREATE TABLE `prices` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `foreign_ids` INTEGER NOT NULL,
+  `foreign_id` INTEGER NOT NULL,
   `foreign_model` VARCHAR(10) NOT NULL,
   `location_id` INTEGER NOT NULL,
   `price` DECIMAL(8,2) NOT NULL,
@@ -333,7 +333,7 @@ CREATE TABLE `bookings` (
   `accepted` TINYINT(1) NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
-  `payment_ids` INTEGER NOT NULL,
+  `payment_id` INTEGER NOT NULL,
   `paid` TINYINT(1) NOT NULL DEFAULT '0',
   `cancelled` TINYINT(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
@@ -400,7 +400,7 @@ DROP TABLE IF EXISTS `menus`;
 		
 CREATE TABLE `menus` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `parent_ids` INTEGER DEFAULT NULL,
+  `parent_id` INTEGER DEFAULT NULL,
   `page_id` INTEGER NOT NULL,
   `lft` INTEGER NOT NULL,
   `rght` INTEGER NOT NULL,
@@ -491,7 +491,7 @@ CREATE TABLE `donations` (
   `volunteer_name` VARCHAR(150) NOT NULL,
   `created` DATETIME NOT NULL,
   `modified` DATETIME NOT NULL,
-  `payment_ids` INTEGER NOT NULL,
+  `payment_id` INTEGER NOT NULL,
   `booking_id` INTEGER NOT NULL,
   `volunteer_id` INTEGER NOT NULL,
   PRIMARY KEY (`id`)
@@ -533,10 +533,10 @@ ALTER TABLE `recruiter_meetings` ADD FOREIGN KEY (school_id) REFERENCES `schools
 ALTER TABLE `recruiter_meetings` ADD FOREIGN KEY (employee_id) REFERENCES `employees` (`id`);
 ALTER TABLE `volunteers` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
 ALTER TABLE `volunteers` ADD FOREIGN KEY (user_id) REFERENCES `users` (`id`);
-ALTER TABLE `prices` ADD FOREIGN KEY (foreign_ids) REFERENCES `addon_combinations` (`id`);
-ALTER TABLE `prices` ADD FOREIGN KEY (foreign_ids) REFERENCES `base_combinations` (`id`);
-ALTER TABLE `prices` ADD FOREIGN KEY (foreign_ids) REFERENCES `fees` (`id`);
-ALTER TABLE `prices` ADD FOREIGN KEY (foreign_ids) REFERENCES `promos` (`id`);
+ALTER TABLE `prices` ADD FOREIGN KEY (foreign_id) REFERENCES `addon_combinations` (`id`);
+ALTER TABLE `prices` ADD FOREIGN KEY (foreign_id) REFERENCES `base_combinations` (`id`);
+ALTER TABLE `prices` ADD FOREIGN KEY (foreign_id) REFERENCES `fees` (`id`);
+ALTER TABLE `prices` ADD FOREIGN KEY (foreign_id) REFERENCES `promos` (`id`);
 ALTER TABLE `prices` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
 ALTER TABLE `signups` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (`id`);
 ALTER TABLE `signups` ADD FOREIGN KEY (school_id) REFERENCES `schools` (`id`);
@@ -546,7 +546,7 @@ ALTER TABLE `spanish_profiles` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunt
 ALTER TABLE `spanish_profiles` ADD FOREIGN KEY (booking_id) REFERENCES `bookings` (`id`);
 ALTER TABLE `ecuador_profiles` ADD FOREIGN KEY (volunteer_id) REFERENCES `volunteers` (`id`);
 ALTER TABLE `ecuador_profiles` ADD FOREIGN KEY (booking_id) REFERENCES `bookings` (`id`);
-ALTER TABLE `menus` ADD FOREIGN KEY (parent_ids) REFERENCES `menus` (`id`);
+ALTER TABLE `menus` ADD FOREIGN KEY (parent_id) REFERENCES `menus` (`id`);
 ALTER TABLE `menus` ADD FOREIGN KEY (page_id) REFERENCES `pages` (`id`);
 ALTER TABLE `addon_combinations` ADD FOREIGN KEY (base_combination_id) REFERENCES `base_combinations` (`id`);
 ALTER TABLE `addon_combinations` ADD FOREIGN KEY (addon_id) REFERENCES `addons` (`id`);
@@ -613,13 +613,13 @@ ALTER TABLE `users` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
 -- ('','','','','');
 -- INSERT INTO `destinations` (`id`,`created`,`modified`,`name`,`description`) VALUES
 -- ('','','','','');
--- INSERT INTO `prices` (`id`,`foreign_ids`,`foreign_model`,`location_id`,`price`,`created`,`modified`,`hidden`,`active`,`expires`,`activates`) VALUES
+-- INSERT INTO `prices` (`id`,`foreign_id`,`foreign_model`,`location_id`,`price`,`created`,`modified`,`hidden`,`active`,`expires`,`activates`) VALUES
 -- ('','','','','','','','','','','');
 -- INSERT INTO `offices` (`id`,`name`,`location`,`created`,`modified`) VALUES
 -- ('','','','','');
 -- INSERT INTO `signups` (`id`,`volunteer_id`,`school_id`,`employee_id`,`name`,`email`,`phone`,`created`,`modified`) VALUES
 -- ('','','','','','','','','');
--- INSERT INTO `bookings` (`id`,`volunteer_id`,`accepted`,`created`,`modified`,`payment_ids`,`paid`,`cancelled`) VALUES
+-- INSERT INTO `bookings` (`id`,`volunteer_id`,`accepted`,`created`,`modified`,`payment_id`,`paid`,`cancelled`) VALUES
 -- ('','','','','','','','');
 -- INSERT INTO `spanish_profiles` (`id`,`proficiency_level`,`homestay`,`volunteer_id`,`booking_id`,`created`,`modified`) VALUES
 -- ('','','','','','','');
@@ -627,7 +627,7 @@ ALTER TABLE `users` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
 -- ('','','','','');
 -- INSERT INTO `promos` (`id`,`name`,`description`,`created`,`modified`,`expires`,`activates`) VALUES
 -- ('','','','','','','');
--- INSERT INTO `menus` (`id`,`parent_ids`,`page_id`,`lft`,`rght`,`path`,`name`,`created`,`modified`) VALUES
+-- INSERT INTO `menus` (`id`,`parent_id`,`page_id`,`lft`,`rght`,`path`,`name`,`created`,`modified`) VALUES
 -- ('','','','','','','','','');
 -- INSERT INTO `addons` (`id`,`name`,`description`,`created`,`modified`) VALUES
 -- ('','','','','');
@@ -637,7 +637,7 @@ ALTER TABLE `users` ADD FOREIGN KEY (location_id) REFERENCES `locations` (`id`);
 -- ('','','','','');
 -- INSERT INTO `base_combinations` (`id`,`destination_id`,`program_id`,`created`,`modified`) VALUES
 -- ('','','','','');
--- INSERT INTO `donations` (`id`,`name`,`description`,`amount`,`reason`,`volunteer_name`,`created`,`modified`,`payment_ids`,`booking_id`,`volunteer_id`) VALUES
+-- INSERT INTO `donations` (`id`,`name`,`description`,`amount`,`reason`,`volunteer_name`,`created`,`modified`,`payment_id`,`booking_id`,`volunteer_id`) VALUES
 -- ('','','','','','','','','','','');
 -- INSERT INTO `users` (`id`,`username`,`password`,`email`,`role_id`,`location_id`,`created`,`modified`) VALUES
 -- ('','','','','','','','');

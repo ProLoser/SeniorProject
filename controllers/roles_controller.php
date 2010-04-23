@@ -26,8 +26,6 @@ class RolesController extends AppController {
 				$this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'role'));
 			}
 		}
-		$employees = $this->Role->Employee->find('list');
-		$this->set(compact('employees'));
 	}
 
 	function edit($id = null) {
@@ -46,8 +44,6 @@ class RolesController extends AppController {
 		if (empty($this->data)) {
 			$this->data = $this->Role->read(null, $id);
 		}
-		$employees = $this->Role->Employee->find('list');
-		$this->set(compact('employees'));
 	}
 
 	function delete($id = null) {

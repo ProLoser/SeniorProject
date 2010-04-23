@@ -1,5 +1,5 @@
 <?php
-/* Promo Fixture generated on: 2010-04-15 10:04:24 : 1271329164 */
+/* Promo Fixture generated on: 2010-04-23 23:04:08 : 1272066128 */
 class PromoFixture extends CakeTestFixture {
 	var $name = 'Promo';
 
@@ -20,10 +20,10 @@ class PromoFixture extends CakeTestFixture {
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
 			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'created' => '2010-04-15 10:59:24',
-			'modified' => '2010-04-15 10:59:24',
-			'expires' => '2010-04-15',
-			'activates' => '2010-04-15'
+			'created' => '2010-04-23 23:42:08',
+			'modified' => '2010-04-23 23:42:08',
+			'expires' => '2010-04-23',
+			'activates' => '2010-04-23'
 		),
 	);
 }

@@ -1,5 +1,5 @@
 <?php
-/* Employee Fixture generated on: 2010-04-15 10:04:11 : 1271329151 */
+/* Employee Fixture generated on: 2010-04-23 23:04:47 : 1272066107 */
 class EmployeeFixture extends CakeTestFixture {
 	var $name = 'Employee';
 
@@ -15,7 +15,8 @@ class EmployeeFixture extends CakeTestFixture {
 		'disabled' => array('type' => 'boolean', 'null' => false, 'default' => NULL),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => NULL),
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => NULL),
-		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'office_id' => array('column' => 'office_id', 'unique' => 0)),
+		'user_id' => array('type' => 'integer', 'null' => true, 'default' => NULL, 'key' => 'index'),
+		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'office_id' => array('column' => 'office_id', 'unique' => 0), 'user_id' => array('column' => 'user_id', 'unique' => 0)),
 		'tableParameters' => array('charset' => 'latin1', 'collate' => 'latin1_swedish_ci', 'engine' => 'MyISAM')
 	);
 
@@ -30,8 +31,9 @@ class EmployeeFixture extends CakeTestFixture {
 			'address' => 'Lorem ipsum dolor sit amet',
 			'department' => 'Lorem ipsum dolor sit amet',
 			'disabled' => 1,
-			'created' => '2010-04-15 10:59:11',
-			'modified' => '2010-04-15 10:59:11'
+			'created' => '2010-04-23 23:41:47',
+			'modified' => '2010-04-23 23:41:47',
+			'user_id' => 1
 		),
 	);
 }

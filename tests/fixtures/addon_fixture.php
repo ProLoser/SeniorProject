@@ -1,5 +1,5 @@
 <?php
-/* Addon Fixture generated on: 2010-04-15 10:04:00 : 1271329140 */
+/* Addon Fixture generated on: 2010-04-23 23:04:30 : 1272066090 */
 class AddonFixture extends CakeTestFixture {
 	var $name = 'Addon';
 
@@ -18,8 +18,8 @@ class AddonFixture extends CakeTestFixture {
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
 			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'created' => '2010-04-15 10:59:00',
-			'modified' => '2010-04-15 10:59:00'
+			'created' => '2010-04-23 23:41:30',
+			'modified' => '2010-04-23 23:41:30'
 		),
 	);
 }

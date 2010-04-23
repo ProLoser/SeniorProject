@@ -1,5 +1,5 @@
 <?php
-/* BaseCombination Fixture generated on: 2010-04-15 10:04:02 : 1271329142 */
+/* BaseCombination Fixture generated on: 2010-04-23 23:04:33 : 1272066093 */
 class BaseCombinationFixture extends CakeTestFixture {
 	var $name = 'BaseCombination';
 
@@ -18,8 +18,8 @@ class BaseCombinationFixture extends CakeTestFixture {
 			'id' => 1,
 			'destination_id' => 1,
 			'program_id' => 1,
-			'created' => '2010-04-15 10:59:02',
-			'modified' => '2010-04-15 10:59:02'
+			'created' => '2010-04-23 23:41:33',
+			'modified' => '2010-04-23 23:41:33'
 		),
 	);
 }

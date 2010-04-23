@@ -92,25 +92,19 @@ class Employee extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 
 	var $hasMany = array(
 		'RecruiterMeeting' => array(
 			'className' => 'RecruiterMeeting',
-			'foreignKey' => 'employee_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Role' => array(
-			'className' => 'Role',
 			'foreignKey' => 'employee_id',
 			'dependent' => false,
 			'conditions' => '',

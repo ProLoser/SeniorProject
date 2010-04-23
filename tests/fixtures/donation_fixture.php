@@ -1,5 +1,5 @@
 <?php
-/* Donation Fixture generated on: 2010-04-15 10:04:08 : 1271329148 */
+/* Donation Fixture generated on: 2010-04-23 23:04:42 : 1272066102 */
 class DonationFixture extends CakeTestFixture {
 	var $name = 'Donation';
 
@@ -27,8 +27,8 @@ class DonationFixture extends CakeTestFixture {
 			'amount' => 1,
 			'reason' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'volunteer_name' => 'Lorem ipsum dolor sit amet',
-			'created' => '2010-04-15 10:59:08',
-			'modified' => '2010-04-15 10:59:08',
+			'created' => '2010-04-23 23:41:42',
+			'modified' => '2010-04-23 23:41:42',
 			'payment_sid' => 1,
 			'booking_id' => 1,
 			'volunteer_id' => 1

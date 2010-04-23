@@ -26,6 +26,9 @@ class VolunteersController extends AppController {
 				$this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'volunteer'));
 			}
 		}
+		$locations = $this->Volunteer->Location->find('list');
+		$users = $this->Volunteer->User->find('list');
+		$this->set(compact('locations', 'users'));
 	}
 
 	function edit($id = null) {
@@ -44,6 +47,9 @@ class VolunteersController extends AppController {
 		if (empty($this->data)) {
 			$this->data = $this->Volunteer->read(null, $id);
 		}
+		$locations = $this->Volunteer->Location->find('list');
+		$users = $this->Volunteer->User->find('list');
+		$this->set(compact('locations', 'users'));
 	}
 
 	function delete($id = null) {

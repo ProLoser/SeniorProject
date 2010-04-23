@@ -1,5 +1,5 @@
 <?php
-/* Booking Fixture generated on: 2010-04-15 10:04:03 : 1271329143 */
+/* Booking Fixture generated on: 2010-04-23 23:04:35 : 1272066095 */
 class BookingFixture extends CakeTestFixture {
 	var $name = 'Booking';
 
@@ -10,7 +10,7 @@ class BookingFixture extends CakeTestFixture {
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => NULL),
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => NULL),
 		'payment_sid' => array('type' => 'integer', 'null' => false, 'default' => NULL),
-		'payed' => array('type' => 'boolean', 'null' => true, 'default' => NULL),
+		'paid' => array('type' => 'boolean', 'null' => false, 'default' => '0'),
 		'cancelled' => array('type' => 'boolean', 'null' => false, 'default' => '0'),
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'volunteer_id' => array('column' => 'volunteer_id', 'unique' => 0)),
 		'tableParameters' => array('charset' => 'latin1', 'collate' => 'latin1_swedish_ci', 'engine' => 'MyISAM')
@@ -21,10 +21,10 @@ class BookingFixture extends CakeTestFixture {
 			'id' => 1,
 			'volunteer_id' => 1,
 			'accepted' => 1,
-			'created' => '2010-04-15 10:59:03',
-			'modified' => '2010-04-15 10:59:03',
+			'created' => '2010-04-23 23:41:35',
+			'modified' => '2010-04-23 23:41:35',
 			'payment_sid' => 1,
-			'payed' => 1,
+			'paid' => 1,
 			'cancelled' => 1
 		),
 	);

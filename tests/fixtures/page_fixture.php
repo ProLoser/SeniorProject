@@ -1,5 +1,5 @@
 <?php
-/* Page Fixture generated on: 2010-04-15 10:04:19 : 1271329159 */
+/* Page Fixture generated on: 2010-04-23 23:04:01 : 1272066121 */
 class PageFixture extends CakeTestFixture {
 	var $name = 'Page';
 
@@ -27,8 +27,8 @@ class PageFixture extends CakeTestFixture {
 			'title' => 'Lorem ipsum dolor sit amet',
 			'slug' => 'Lorem ipsum dolor sit amet',
 			'contents' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'created' => '2010-04-15 10:59:19',
-			'modified' => '2010-04-15 10:59:19',
+			'created' => '2010-04-23 23:42:01',
+			'modified' => '2010-04-23 23:42:01',
 			'meta_description' => 1,
 			'meta_keywords' => 1,
 			'location_id' => 1

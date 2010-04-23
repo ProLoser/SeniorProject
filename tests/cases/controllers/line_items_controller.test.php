@@ -1,5 +1,5 @@
 <?php
-/* LineItems Test cases generated on: 2010-04-15 10:04:43 : 1271329183*/
+/* LineItems Test cases generated on: 2010-04-23 23:04:50 : 1272066170*/
 App::import('Controller', 'LineItems');
 
 class TestLineItemsController extends LineItemsController {
@@ -11,7 +11,7 @@ class TestLineItemsController extends LineItemsController {
 }
 
 class LineItemsControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.line_item', 'app.booking', 'app.volunteer', 'app.document', 'app.donation', 'app.ecuador_profile', 'app.signup', 'app.school', 'app.office', 'app.employee', 'app.recruiter_meeting', 'app.role', 'app.location', 'app.page', 'app.price', 'app.menu', 'app.spanish_profile');
+	var $fixtures = array('app.line_item', 'app.booking', 'app.volunteer', 'app.location', 'app.office', 'app.employee', 'app.user', 'app.role', 'app.recruiter_meeting', 'app.school', 'app.signup', 'app.page', 'app.price', 'app.menu', 'app.document', 'app.donation', 'app.ecuador_profile', 'app.spanish_profile');
 
 	function startTest() {
 		$this->LineItems =& new TestLineItemsController();

@@ -1,5 +1,5 @@
 <?php
-/* Price Fixture generated on: 2010-04-15 10:04:21 : 1271329161 */
+/* Price Fixture generated on: 2010-04-23 23:04:04 : 1272066124 */
 class PriceFixture extends CakeTestFixture {
 	var $name = 'Price';
 
@@ -26,12 +26,12 @@ class PriceFixture extends CakeTestFixture {
 			'foreign_model' => 'Lorem ip',
 			'location_id' => 1,
 			'price' => 1,
-			'created' => '2010-04-15 10:59:21',
-			'modified' => '2010-04-15 10:59:21',
+			'created' => '2010-04-23 23:42:04',
+			'modified' => '2010-04-23 23:42:04',
 			'hidden' => 1,
 			'active' => 1,
-			'expires' => '2010-04-15',
-			'activates' => '2010-04-15'
+			'expires' => '2010-04-23',
+			'activates' => '2010-04-23'
 		),
 	);
 }
