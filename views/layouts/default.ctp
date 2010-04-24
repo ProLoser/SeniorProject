@@ -37,6 +37,7 @@
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link(__('CakePHP: the rapid development php framework', true), 'http://cakephp.org'); ?></h1>
+			<?php echo $this->element('navigation'); ?>
 		</div>
 		<div id="content">
 
