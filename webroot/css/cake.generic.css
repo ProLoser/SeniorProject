@@ -94,6 +94,15 @@ ul, li {
 	background: #003d4c;
 	text-decoration: underline;
 }
+#header a {
+	margin: 0 10px;
+	color: #fff;
+	text-decoration: none;
+}
+#header a:hover {
+	color: #367889;
+}
+
 #content{
 	background: #fff;
 	clear: both;
