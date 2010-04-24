@@ -1,0 +1,19 @@
+.ddsmoothmenu{
+margin-top:12px;
+}
+
+.footerflickrwrap { width:280px;float:left; margin:0;padding:0; margin-left:40px; }
+
+#main_image{padding:0;background: url(../images/image-bgie.png) no-repeat top;}
+.caption{padding-left:5px;font-family:verdana; font-size:10px;line-height:28px;color:#3a3a3a;}
+.gallery li{margin-top:10px;}
+
+#contents .minishowcasewrap { width:610px;float:left; margin:0 0 20px 0;padding:0; }
+
+
+.sidebaropts ul { line-height:12px; }
+.sidebaropts ul ul { line-height:12px; }
+.sidebaropts { padding:0;margin:0;line-height:12px; }
+
+
+
