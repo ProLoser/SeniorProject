@@ -1,4 +1,11 @@
 <ul>
-  <a href="/">Item 1</a>
-  <a href="/">Item 2</a>
+  <?php
+  echo $html->link(
+    'View Pages',
+    array('controller'=>'pages', 'action'=>'')
+  );
+  echo $html->link(
+    'View Users',
+    array('controller'=>'users', 'action'=>'')
+  );?>
 </ul>
