@@ -30,6 +30,25 @@
  * @package       cake
  * @subpackage    cake.app
  */
-class AppModel extends Model {
+ 
+// MCurry's Custom Find Types http://github.com/mcurry/find
+App::import('Vendor', 'Find.find_app_model');
+ 
+class AppModel extends FindAppModel {
+	var $recursive = -1;
+	
+	var $actsAs = array('Containable');
+	
+	/**
+	 * Run this during beforeSave() to set the currently logged in user as the owner of the record
+	 */
+	function owner() {
+		if (!isset($this->data[$this->name]['id'])) {
+			$this->data[$this->name]['user_id'] = User::get('id');
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 ?>

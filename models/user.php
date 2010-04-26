@@ -100,6 +100,44 @@ class User extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+	
+	/**
+	 * Used for global authenticated user access
+	 */
+	function &getInstance($user=null) {
+		static $instance = array();
+		if ($user) {
+			$instance[0] =& $user;
+		}
+		if (!$instance) {
+			trigger_error(__("User not set.", true), E_USER_WARNING);
+			return false;
+		}
+		return $instance[0];
+	}
+	
+	function store($user) {
+		if(empty($user)){
+			return false;
+		}
+		User::getInstance($user);
+	}
+	
+	function get($path) {
+		$_user =& User::getInstance();
+		$path = str_replace('.', '/', $path);
+		if (strpos($path, 'User') !== 0) {
+			$path = sprintf('User/%s', $path);
+		}
+		if (strpos($path, '/') !== 0) {
+			$path = sprintf('/%s', $path);
+		}
+		$value = Set::extract($path, $_user);
+		if (!$value) {
+			return false;
+		}
+		return $value[0];
+	}
 
 }
 ?>
