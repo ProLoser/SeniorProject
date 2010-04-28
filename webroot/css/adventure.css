@@ -1,0 +1,207 @@
+/***************
+ ADVENTURE
+ ***************/
+ 
+/* Main Splash Page */
+
+#pagecontainer #mainpage #contents #adv_main_p_vol {float:left; margin:5px 5px 5px 0px; display:inline;}
+#pagecontainer #mainpage #contents #adv_main_p_adv {float:right; margin:0px 5px 5px 5px; display:inline;}
+#adv_main_img_vol {float:right; margin:5px;}
+#adv_main_img_adv {float:left; margin:5px;}
+
+
+/******************************** 
+    ACCORDION
+*********************************/
+
+#accordionContainer {
+    width:600px; 
+    height:300px; 
+    overflow:hidden; 
+    background-color:#000; 
+    position:relative;
+    border:0px solid #EEE; 
+    margin:15px 0px 40px 0px;
+}
+
+.asyncImgLoadAccordion { clear: none; }
+
+.accordionImgDiv 
+{
+    width: 400px;  
+    height: 300px; 
+    position: absolute;  
+    border-left:1px solid #222;  
+    margin-left: 0px; 
+    background-color: black; 
+    cursor:pointer;
+    overflow: hidden;
+}
+
+.accordionImgDiv .slideStrip
+{
+    position: absolute;
+    width: 90px;
+    height: 300px;
+    left:0px;
+    top:0px;
+    overflow: hidden;
+    background-image: url('../img/loading6.gif');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-color: transparent;
+}    
+
+.accordionImgDiv .slideDesc
+{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font: normal 12px/12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #eee;     
+}
+
+.accordionSlideImage 
+{
+    border-left: 0px solid #AAA; 
+    /*width:760px; */
+	width:400px;
+    height:300px;
+	display:block;
+    
+   background-image: url('../img/common/ajax/loading10.gif');
+   background-repeat: no-repeat;
+   background-position: 50% 50%; 
+}    
+
+.accordionDescBack 
+{
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:760px;
+    height:70px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    background-color:#000;
+    border-top:1px solid #111;
+}
+
+.accordionDesc 
+{
+    font-weight:normal;
+    font-family: verdana;
+    font-size:10px;
+    padding-top:0px;
+    padding-left:10px;
+    text-align:left;
+    color:#DDD;
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:760px;
+    height:70px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    background:none;
+    border:0px solid red;
+}
+
+/*.accordionDescBack 
+{
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:760px;
+    height:70px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    /*background-color:#000;
+    border-top:1px solid #111;
+}
+
+.accordionDesc 
+{
+    font-weight:normal;
+    font-family: verdana;
+    font-size:10px;
+    padding-top:0px;
+    padding-left:10px;
+    text-align:left;
+    color:#DDD;
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:760px;
+    height:70px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    /*background:none;
+    border:0px solid red;
+}*/
+
+.accordionDescHeader 
+{
+    margin-top:5px;
+    position:static;
+    color:#FFF;
+    font: bold 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding-bottom:3px;
+    margin-bottom:0px;
+}
+ 
+
+/****************************************** 
+   ACCORDION CONTROL PANEL
+*******************************************/
+
+#accordionControlPanel
+{
+    text-align:right;
+    width:250px;
+    height:16px;
+    margin-right:40px;
+    display:inline; 
+    float:right; 
+    margin:5px 0px 5px 0px;
+}
+
+#accorControlBtnDesc
+{
+    margin-right:0px;
+    padding-top:0px;
+    margin-top:0px;
+    font:10px/16px Verdana;
+    color:#666;
+    vertical-align:top;
+}
+
+.accorControlButton
+{
+    cursor: pointer;
+    vertical-align: top;
+}
+
+
+/* EXCURSION */
+.excursion {margin:0; padding:0;}
+.excur_title {margin:0px 0px 10px 0px;}
+
+.mportfolio_exc {}
+		.mportfolio_exc img { width:600px; height:300px;float:left;}
+		.mportfoliospace_exc { margin-left:20px;}
+		.mportfoliobg_exc { width:300px; height:138px; float:left; background: #111 url(../img/hover2.png) no-repeat top left;}
+		.mportfoliocatbg_exc { width:600px; height:300px; float:left; background: transparent url(../img/hover_exc.png) no-repeat top left;}
+		.mportfoliobgvideo_exc { width:300px; height:138px; float:left; background: #111 url(../img/hover-video.jpg) no-repeat top left;}
+
+/*=== End of CSS ===*/
+
