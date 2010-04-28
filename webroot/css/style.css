@@ -44,7 +44,7 @@ Main Global Layout Settings
 *{ padding: 0px; }
 body, html{ height: 100%; margin: 0;height: auto; min-height: 100%; }
 body{ font-family:'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans Condensed', Tahoma, Arial,sans-serif;
-font-size: 62.5%; background: #000 url(../images/bg.jpg) repeat ;}
+font-size: 62.5%; background: #000 url(../img/bg.jpg) repeat ;}
 a{ outline: none; text-decoration: none; }
 a:hover{ text-decoration: underline; }
 a img{ border: none; }
@@ -59,8 +59,8 @@ a img{ border: none; }
 
 /* -------- Page Structure -------- */
 
-#mainpagecontainer{ width: 1035px; margin: 0px auto; padding:0px; margin-top:10px;background: #fff url(../images/main-bg2.jpg) repeat-x top;}
-#pagecontainer{ width: 1035px; margin: 0px auto; padding:0px; margin-top:10px;background: #fff url(../images/other-bg.png) repeat-x top;}
+#mainpagecontainer{ width: 1035px; margin: 0px auto; padding:0px; margin-top:10px;background: #fff url(../img/main-bg2.jpg) repeat-x top;}
+#pagecontainer{ width: 1035px; margin: 0px auto; padding:0px; margin-top:10px;background: #fff url(../img/other-bg.png) repeat-x top;}
 #mainpage{ width: 940px; margin: 0px auto; padding-top:30px;  }
 #mainpageheader { padding-bottom:15px;}
 #gallerypageheader { padding-bottom:55px;}
@@ -82,7 +82,7 @@ a img{ border: none; }
 	#cubeshadow {
 
 		height:440px;
-		background: #fff url(../images/shadow.jpg) no-repeat bottom center;
+		background: #fff url(../img/shadow.jpg) no-repeat bottom center;
 
 		}
 	
@@ -128,9 +128,9 @@ a img{ border: none; }
 	.mportfolio {}
 		.mportfolio img { width:300px; height:138px;float:left;}
 		.mportfoliospace { margin-left:20px;}
-		.mportfoliobg { width:300px; height:138px; float:left; background: #111 url(../images/hover2.png) no-repeat top left;}
-		.mportfoliocatbg { width:300px; height:138px; float:left; background: transparent url(../images/hover2.png) no-repeat top left;}
-		.mportfoliobgvideo { width:300px; height:138px; float:left; background: #111 url(../images/hover-video.jpg) no-repeat top left;}
+		.mportfoliobg { width:300px; height:138px; float:left; background: #111 url(../img/hover2.png) no-repeat top left;}
+		.mportfoliocatbg { width:300px; height:138px; float:left; background: transparent url(../img/hover2.png) no-repeat top left;}
+		.mportfoliobgvideo { width:300px; height:138px; float:left; background: #111 url(../img/hover-video.jpg) no-repeat top left;}
 	
 /* -------- Category Portfolio -------- */
 		
@@ -213,7 +213,7 @@ a img{ border: none; }
 /* -------- Mainpage button -------- */
 
 .blankbutton { 
-	background: #fff url(../images/blank_button.gif) no-repeat top left; 
+	background: #fff url(../img/blank_button.gif) no-repeat top left; 
 	float:right; 
 	width:133px; 
 	height:31px;
@@ -262,7 +262,7 @@ a img{ border: none; }
 	padding: 10px 0 20px 0; 
 	}
 	.recent-portfolioitem { width:460px; float:left;}
-	.recentportfoliobg { width:460px; height:260px; float:left; background: #111 url(../images/recenthover-media.jpg) no-repeat top left;}
+	.recentportfoliobg { width:460px; height:260px; float:left; background: #111 url(../img/recenthover-media.jpg) no-repeat top left;}
 	.recent-contentblock {width:460px; float:right; padding-top:10px;}
 	.recent-description {color:#919191; font-size:12px; font-weight:normal; padding-right:20px;}
 	.recent-highlight {color:#111; font-size:19px; font-weight:normal; padding:0 20px 20px 0;}
@@ -331,7 +331,7 @@ a img{ border: none; }
 	/* -------- Read more -------- */
 	
 	#contents .readmorebutton { 
-	background: #fff url(../images/readmore_button.gif) no-repeat top left; 
+	background: #fff url(../img/readmore_button.gif) no-repeat top left; 
 	float:right;
 	width:133px; 
 	height:31px;
@@ -371,7 +371,7 @@ a img{ border: none; }
 		
 	#contents .servicelist ul { 
 		list-style-image: 
-		url('../images/tick.gif');
+		url('../img/tick.gif');
 		padding-bottom:20px;
 		}
 		#contents .servicelist ul li { 
@@ -380,7 +380,7 @@ a img{ border: none; }
 			
 	#contents .starlist ul { 
 		list-style-image: 
-		url('../images/star.gif');
+		url('../img/star.gif');
 		
 		padding-bottom:20px;
 		}
@@ -530,7 +530,7 @@ background: #1f240a;
 	
 	#footerwrap {
 		padding: 40px 0 10px 46px;
-		background: #1f240a url(../images/footer/bg-footer.jpg) no-repeat top;
+		background: #1f240a url(../img/footer/bg-footer.jpg) no-repeat top;
 		}
 	.footerminibox {
 		/*width:143px;*/
