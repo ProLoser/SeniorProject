@@ -141,7 +141,7 @@ $$ = $.fn.galleria = function($options) {
 			$(_loader).load(function () {
 				
 				// try to bring the alt
-				$(this).attr('alt',_img.attr('alt'));
+				// $(this).attr('alt',_img.attr('alt'));
 				
 				//-----------------------------------------------------------------
 				// the image is loaded, let's create the thumbnail
@@ -308,7 +308,7 @@ $$.onPageLoad = function(_src) {
 		_wrapper.empty().append(_img);
 
 		// Get the link from the alt attribute of the image
-		var link = _thumb.attr('alt')
+		// var link = _thumb.attr('alt')
 				
 		// fire the onImage function to customize the loaded image's features
 		$.galleria.onImage(_img,_wrapper.siblings('.caption'),_thumb);
@@ -316,10 +316,10 @@ $$.onPageLoad = function(_src) {
 		// add clickable image helper
 		if($.galleria.clickNext) {
 			//_img.css('cursor','pointer').click(function() { $.galleria.next(); })
-			_img.css('cursor', 'pointer').click(function() { window.location = link; })
+			_img.css('cursor', 'default').click(function() { window.location = link; })
 			
 			// insert the caption
-			_wrapper.siblings('.caption').html(unescape(_thumb.attr('longdesc'))).css('cursor', 'pointer').click(function() { window.location = link; });
+			_wrapper.siblings('.caption').html(unescape(_thumb.attr('longdesc'))).css('cursor', 'default').click(function() { window.location = link; });
 
 		} else {
 			_wrapper.siblings('.caption').html(unescape(_thumb.attr('longdesc')));

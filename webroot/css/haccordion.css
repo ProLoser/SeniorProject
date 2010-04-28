@@ -43,7 +43,7 @@ height: 430px;  /*For users with JS disabled: Height of each content*/
 	line-height:18px;
 	/*background:#111;*/
 	width: 400px;
-	background:#111 url(../images/accordion/caption_edge.gif) top left repeat-x;
+	background:#111 url(../img/accordion/caption_edge.gif) top left repeat-x;
 
 	}
 .hpanelcaption a {color:#fff; }

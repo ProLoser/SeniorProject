@@ -44,7 +44,7 @@ Main Global Layout Settings
 *{ padding: 0px; }
 body, html{ height: 100%; margin: 0;height: auto; min-height: 100%; }
 body{ font-family:'Lucida Grande','Lucida Sans Unicode','Lucida Sans','DejaVu Sans Condensed', Tahoma, Arial,sans-serif;
-font-size: 62.5%; background: #000 url(../images/bg.jpg) repeat ;}
+font-size: 62.5%; background: #000 url(../img/bg.jpg) repeat ;}
 a{ outline: none; text-decoration: none; }
 a:hover{ text-decoration: underline; }
 a img{ border: none; }
@@ -59,8 +59,8 @@ a img{ border: none; }
 
 /* -------- Page Structure -------- */
 
-#mainpagecontainer{ width: 1035px; margin: 0px auto; padding:0px; margin-top:10px;background: #fff url(../images/main-bg2.jpg) repeat-x top;}
-#pagecontainer{ width: 1035px; margin: 0px auto; padding:0px; margin-top:10px;background: #fff url(../images/other-bg.png) repeat-x top;}
+#mainpagecontainer{ width: 1035px; margin: 0px auto; padding:0px; margin-top:10px;background: #fff url(../img/main-bg2.jpg) repeat-x top;}
+#pagecontainer{ width: 1035px; margin: 0px auto; padding:0px; margin-top:10px;background: #fff url(../img/other-bg.png) repeat-x top;}
 #mainpage{ width: 940px; margin: 0px auto; padding-top:30px;  }
 #mainpageheader { padding-bottom:15px;}
 #gallerypageheader { padding-bottom:55px;}
@@ -82,7 +82,7 @@ a img{ border: none; }
 	#cubeshadow {
 
 		height:440px;
-		background: #fff url(../images/shadow.jpg) no-repeat bottom center;
+		background: #fff url(../img/shadow.jpg) no-repeat bottom center;
 
 		}
 	
@@ -90,7 +90,7 @@ a img{ border: none; }
 		width: 300px;
 		height: 430px;
 		float: right;
-		padding-top: 5px;
+		padding-top: 0px;
 	}
 	
 	#mainpagecontainer #mainpage .teaser {
@@ -128,9 +128,9 @@ a img{ border: none; }
 	.mportfolio {}
 		.mportfolio img { width:300px; height:138px;float:left;}
 		.mportfoliospace { margin-left:20px;}
-		.mportfoliobg { width:300px; height:138px; float:left; background: #111 url(../images/hover2.png) no-repeat top left;}
-		.mportfoliocatbg { width:300px; height:138px; float:left; background: transparent url(../images/hover2.png) no-repeat top left;}
-		.mportfoliobgvideo { width:300px; height:138px; float:left; background: #111 url(../images/hover-video.jpg) no-repeat top left;}
+		.mportfoliobg { width:300px; height:138px; float:left; background: #111 url(../img/hover2.png) no-repeat top left;}
+		.mportfoliocatbg { width:300px; height:138px; float:left; background: transparent url(../img/hover2.png) no-repeat top left;}
+		.mportfoliobgvideo { width:300px; height:138px; float:left; background: #111 url(../img/hover-video.jpg) no-repeat top left;}
 	
 /* -------- Category Portfolio -------- */
 		
@@ -213,7 +213,7 @@ a img{ border: none; }
 /* -------- Mainpage button -------- */
 
 .blankbutton { 
-	background: #fff url(../images/blank_button.gif) no-repeat top left; 
+	background: #fff url(../img/blank_button.gif) no-repeat top left; 
 	float:right; 
 	width:133px; 
 	height:31px;
@@ -262,7 +262,7 @@ a img{ border: none; }
 	padding: 10px 0 20px 0; 
 	}
 	.recent-portfolioitem { width:460px; float:left;}
-	.recentportfoliobg { width:460px; height:260px; float:left; background: #111 url(../images/recenthover-media.jpg) no-repeat top left;}
+	.recentportfoliobg { width:460px; height:260px; float:left; background: #111 url(../img/recenthover-media.jpg) no-repeat top left;}
 	.recent-contentblock {width:460px; float:right; padding-top:10px;}
 	.recent-description {color:#919191; font-size:12px; font-weight:normal; padding-right:20px;}
 	.recent-highlight {color:#111; font-size:19px; font-weight:normal; padding:0 20px 20px 0;}
@@ -331,7 +331,7 @@ a img{ border: none; }
 	/* -------- Read more -------- */
 	
 	#contents .readmorebutton { 
-	background: #fff url(../images/readmore_button.gif) no-repeat top left; 
+	background: #fff url(../img/readmore_button.gif) no-repeat top left; 
 	float:right;
 	width:133px; 
 	height:31px;
@@ -371,7 +371,7 @@ a img{ border: none; }
 		
 	#contents .servicelist ul { 
 		list-style-image: 
-		url('../images/tick.gif');
+		url('../img/tick.gif');
 		padding-bottom:20px;
 		}
 		#contents .servicelist ul li { 
@@ -380,7 +380,7 @@ a img{ border: none; }
 			
 	#contents .starlist ul { 
 		list-style-image: 
-		url('../images/star.gif');
+		url('../img/star.gif');
 		
 		padding-bottom:20px;
 		}
@@ -526,11 +526,14 @@ table.studiotable td {
 
 #footer{
 background: #1f240a;
+width: 1035px;
+padding:0;
+margin:0;
 }
 	
 	#footerwrap {
 		padding: 40px 0 10px 46px;
-		background: #1f240a url(../images/footer/bg-footer.jpg) no-repeat top;
+		background: #1f240a url(../img/footer/bg-footer.jpg) no-repeat top;
 		}
 	.footerminibox {
 		/*width:143px;*/
@@ -557,11 +560,12 @@ background: #1f240a;
 		.footerposts ul li a:hover { font-size:12px; line-height:18px; color:#fff; text-decoration:none;}
 		
 	.footermedia { font-size:12px; line-height:18px; color:#7d7d7d; margin-top:-8px;}
-		.footermedia ul { list-style:none; font-size:14px; line-height:18px; color:#7d7d7d; padding:0;margin:0; padding-top:5px;}
-		.footermedia ul li { width: 250px; font-size:14px; line-height:18px; color:#7d7d7d; border-bottom:1px dotted #2E2E2E; padding:6px 0 5px 0; margin: 10px 0px 40px 20px;}
-		.footermedia ul li img {float: left; padding:6px 0 5px 0;}
-		.footermedia ul li a { font-size:14px; line-height:18px; color:#7d7d7d; margin:0px 0px 0px 20px; padding:0px 0px 0px 0px;}
-		.footermedia ul li a:hover { font-size:14px; line-height:18px; color:#fff; text-decoration:none;}
+		.footermedia ul { list-style:none; font-size:14px; color:#7d7d7d; padding:0;margin:0; padding-top:5px;}
+		.footermedia ul li { width: 250px; font-size:14px; color:#7d7d7d; border-bottom:1px dotted #2E2E2E; padding:5px 0px 2px 0px; margin: 0; height:44px;}
+		/*.footermedia ul li img {float: left; padding:6px 0 5px 0;}*/
+		/*.footermedia ul li a { font-size:14px; color:#7d7d7d; margin:0px 0px 20px 10px; padding:0px 0px 10px 0px; height:44px; vertical-align:middle;}*/
+		.footermedia ul li .medialinks { font-size:14px; color:#7d7d7d; margin:0px 0px 20px 10px; vertical-align:middle; height: 44px;}
+		.footermedia ul li a:hover { font-size:14px; color:#fff; text-decoration:none;}
 
 	.footerspace { margin-left:20px; padding-left:20px; }
 	
@@ -571,7 +575,7 @@ background: #1f240a;
 
 	.footerflickrwrap { width:280px;float:left; margin:0;padding:0; margin-left:80px; }
 		.footerflickr ul { list-style:none; }
-		.footerflickr ul li { float:left; margin-right:38px; margin-bottom:38px; }
+		/*.footerflickr ul li { float:left; margin-right:38px; margin-bottom:28px; }*/
 		.footerflickrimage {width: 40px; height:40px; }
 		
 	/* -------- Copyright style -------- */
@@ -596,8 +600,3 @@ background: #1f240a;
 		#footerbarwrap ul li a{
 			color:#fff;
 			}
-
-
-
-
-/*=== End of CSS ===*/
