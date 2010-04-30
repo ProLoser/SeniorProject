@@ -542,3 +542,40 @@ div.code-coverage-results span.result-ok {
 div.code-coverage-results span.result-good {
 	color: #0a0;
 }
+
+/** Eric's Overrides **/
+#header ul {
+	padding: 3px 0;
+	margin-left: 0;
+	border-bottom: 1px solid #778;
+	font: bold 12px Verdana, sans-serif;
+}
+
+#header ul li {
+	list-style: none;
+	margin: 0;
+	display: inline;
+}
+
+#header ul li a {
+	padding: 3px 0.5em;
+	margin-left: 3px;
+	border: 1px solid #778;
+	border-bottom: none;
+	background: #DDE;
+	text-decoration: none;
+}
+
+#header ul li a:link { color: #448; }
+#header ul li a:visited { color: #667; }
+
+#header ul li a:hover {
+	color: #000;
+	background: #AAE;
+	border-color: #227;
+}
+
+#header ul li a#current { /* Currently not implemented */
+	background: white;
+	border-bottom: 1px solid white;
+}
