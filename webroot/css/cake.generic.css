@@ -110,11 +110,11 @@ ul, li {
 	padding: 10px 20px 40px 20px;
 	overflow: auto;
 }
-#footer {
+/*#footer {
 	clear: both;
 	padding: 6px 10px;
 	text-align: right;
-}
+}*/
 
 /** containers **/
 div.form,

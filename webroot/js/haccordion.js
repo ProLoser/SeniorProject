@@ -7,7 +7,7 @@
 
 var haccordion={
 	//customize loading message if accordion markup is fetched via Ajax:
-	ajaxloadingmsg: '<div style="margin: 1em; font-weight: bold"><img src="images/ajaxloadr.gif" style="vertical-align: middle" /></div>',
+	ajaxloadingmsg: '<div style="margin: 1em; font-weight: bold"><img src="img/ajaxloadr.gif" style="vertical-align: middle" /></div>',
 
 	accordioninfo: {}, //class that holds config information of each haccordion instance
 
