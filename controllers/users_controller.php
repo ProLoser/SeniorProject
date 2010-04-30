@@ -66,7 +66,6 @@ class UsersController extends AppController {
 	}
 	
 	function login() {
-		$this->Session->setFlash('The login system has not been implemented. It can be added by modifying the login() funtion in controllers/users_controller.php and the views/users/login.ctp file.');
 	}
 }
 ?>
