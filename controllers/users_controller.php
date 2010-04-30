@@ -64,5 +64,9 @@ class UsersController extends AppController {
 		$this->Session->setFlash(sprintf(__('%s was not deleted', true), 'User'));
 		$this->redirect(array('action' => 'index'));
 	}
+	
+	function login() {
+		$this->Session->setFlash('The login system has not been implemented. It can be added by modifying the login() funtion in controllers/users_controller.php and the views/users/login.ctp file.');
+	}
 }
 ?>
