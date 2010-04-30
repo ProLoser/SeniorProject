@@ -7,3 +7,6 @@
 [submodule "plugins/find"]
 	path = plugins/find
 	url = git://github.com/mcurry/find.git
+[submodule "plugins/welcome"]
+	path = plugins/welcome
+	url = git://github.com/ProLoser/CakePHP-Welcome.git
