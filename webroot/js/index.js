@@ -1,147 +1,5 @@
 /********************************************************************
     File:   
-        common.js
-    Brief:  
-        Implementation of common functionality for whole website
-    Dependencies:
-        jquery-1.3.2.min.js             (jQuery library)
-        jquery.easing.1.2.js            (jQuery library plugin)          
-        cufon-yui.js                    (font replacement tool) 
-    Author:
-        DigitalCavalry
-    Author URI:
-        http://graphicriver.net/user/DigitalCavalry
-*********************************************************************/
-
-/*************************************
-    BROWSER DETECTING CODE
-**************************************/
-   
-var g_browserDetect = {
-    init: function () {
-        this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
-        this.version = this.searchVersion(navigator.userAgent)
-            || this.searchVersion(navigator.appVersion)
-            || "an unknown version";
-        this.OS = this.searchString(this.dataOS) || "an unknown OS";
-    },
-    searchString: function (data) {
-        for (var i=0;i<data.length;i++)    {
-            var dataString = data[i].string;
-            var dataProp = data[i].prop;
-            this.versionSearchString = data[i].versionSearch || data[i].identity;
-            if (dataString) {
-                if (dataString.indexOf(data[i].subString) != -1)
-                    return data[i].identity;
-            }
-            else if (dataProp)
-                return data[i].identity;
-        }
-    },
-    searchVersion: function (dataString) {
-        var index = dataString.indexOf(this.versionSearchString);
-        if (index == -1) return;
-        return
-parseFloat(dataString.substring(index+this.versionSearchString.length+1));
-    },
-    dataBrowser: [
-        {
-            string: navigator.userAgent,
-            subString: "Chrome",
-            identity: "Chrome"
-        },
-        {     string: navigator.userAgent,
-            subString: "OmniWeb",
-            versionSearch: "OmniWeb/",
-            identity: "OmniWeb"
-        },
-        {
-            string: navigator.vendor,
-            subString: "Apple",
-            identity: "Safari",
-            versionSearch: "Version"
-        },
-        {
-            prop: window.opera,
-            identity: "Opera"
-        },
-        {
-            string: navigator.vendor,
-            subString: "iCab",
-            identity: "iCab"
-        },
-        {
-            string: navigator.vendor,
-            subString: "KDE",
-            identity: "Konqueror"
-        },
-        {
-            string: navigator.userAgent,
-            subString: "Firefox",
-            identity: "Firefox"
-        },
-        {
-            string: navigator.vendor,
-            subString: "Camino",
-            identity: "Camino"
-        },
-        {        // for newer Netscapes (6+)
-            string: navigator.userAgent,
-            subString: "Netscape",
-            identity: "Netscape"
-        },
-        {
-            string: navigator.userAgent,
-            subString: "MSIE",
-            identity: "Explorer",
-            versionSearch: "MSIE"
-        },
-        {
-            string: navigator.userAgent,
-            subString: "Gecko",
-            identity: "Mozilla",
-            versionSearch: "rv"
-        },
-        {         // for older Netscapes (4-)
-            string: navigator.userAgent,
-            subString: "Mozilla",
-            identity: "Netscape",
-            versionSearch: "Mozilla"
-        }
-    ],
-    dataOS : [
-        {
-            string: navigator.platform,
-            subString: "Win",
-            identity: "Windows"
-        },
-        {
-            string: navigator.platform,
-            subString: "Mac",
-            identity: "Mac"
-        },
-        {
-               string: navigator.userAgent,
-               subString: "iPhone",
-               identity: "iPhone/iPod"
-        },
-        {
-            string: navigator.platform,
-            subString: "Linux",
-            identity: "Linux"
-        }
-    ]
-
-};
-// init detection
-g_browserDetect.init();
-
-// alias to jQuery library, function noConflict release control of the $ variable 
-var $j = jQuery.noConflict();
-
-
-/********************************************************************
-    File:   
         index.js
     Brief:  
         Implementation of JavaScript functionality 
@@ -158,7 +16,69 @@ var $j = jQuery.noConflict();
 
 // alias to jQuery library, function noConflict release control of the $ variable 
 // to whichever library first implemented it
-//var $j = jQuery.noConflict();
+var $j = jQuery.noConflict();
+
+/**************************
+    NEWS BAR CODE
+**************************/
+
+// time interval between news text change
+var g_newsBarInterval = 8000;
+// number of news determined dynamically
+var g_newsCount = 0;
+// current number of displayed news, start index from one
+var g_actualNews = 1;
+// handle to displayed news
+var g_newsThis = null;
+
+// Auto play function for news bar, is calling itself in some period time
+function newsBarAutoPlay()
+{
+   // switch to next news
+   g_actualNews = g_actualNews + 1;
+   // check news range
+   if(g_actualNews > g_newsCount)
+   {
+      // back to first news
+      g_newsThis = $j(".newsBarNews:first");
+      g_actualNews = 1;
+   } else
+   {
+      // move to next news
+      g_newsThis = $j(g_newsThis).next(".newsBarNews");
+   }
+   
+   // fade down current news
+   $j("#newsBarLink").fadeOut(100);
+   $j("#newsBarText").fadeOut(100, 
+        function(){
+            $j("#newsBarText").html($j(g_newsThis).find(".text").html());
+            var link = $j(g_newsThis).find(".link").html();
+            $j("#newsBarLink").attr("href", link); 
+            });
+            
+   // fade up new news
+   $j("#newsBarText").fadeIn(1500);
+   $j("#newsBarLink").fadeIn(1500);
+   
+   // set auto call in some time period
+   setTimeout(newsBarAutoPlay, g_newsBarInterval);
+} // end of function newsBarAutoPlay
+
+// This function setup news bar, and is called only once then page is loaded
+function setupNewsBar()
+{
+    // determining number of news to display
+    g_newsCount = $j(".newsBarNews").length;
+    // get handle to the first news
+    g_newsThis = $j(".newsBarNews:first");
+    // copying news text and link to newsBarText and newsBarLink
+    $j("#newsBarText").html($j(g_newsThis).find(".text").html());
+    $j("#newsBarLink").attr("href", $j(g_newsThis).find(".link").html()); 
+    // set auto play for news
+    setTimeout(newsBarAutoPlay, g_newsBarInterval);
+} // end of function setupNewsBar
+
 
 /**************************
        ACCORDION CODE
@@ -773,7 +693,7 @@ function setupAdditionalCufonFontReplacement()
     Cufon.replace(".tabHeader", {fontWeight: 400});
     Cufon.replace(".tabsHeader", {fontWeight: 700});
      
-    //Cufon.replace(".accordionDescHeader", {fontWeight: 700});
+    Cufon.replace(".accordionDescHeader", {fontWeight: 700});
     Cufon.replace("#servicesProductsHeader", {fontWeight: 300});
     Cufon.replace("#latestNewsHeader", {fontWeight: 300});
 } // end of function setupAddCufonFontReplacement
@@ -946,6 +866,87 @@ function setupLoadingAsyncSlideStripImages()
                 ).attr('src', imagePath);                        
         } 
 } // end of function setupLoadingAsyncSlideStripImages 
+
+/***************************************
+    CODE FOR TABS
+****************************************/
+// handle to selected tab
+var g_selectedTab = null;
+var g_tabsBtnColor = "#65B31C";
+
+function setupTabs()
+{
+    // selecting all tab switch on
+    var tabs = $j(".tabsBtn");
+
+    // for every tab we doing the same things
+    for(var i = 0; i < tabs.length; i++)
+    {
+        // veriable for object with class tabsDefaultTab
+        var defaultTab = null;
+        // lets find default tab element
+        defaultTab = $j(tabs[i]).find(".tabsDefaultTab");
+        // if currently analysed tab contains the default tab element 
+        if(0 != defaultTab.length)
+        {
+            var tabSource = $j(tabs[i]).find(".tabsSource").text();
+            $j(tabSource).css("visibility", "visible").css("top", 0);
+            $j(tabs[i]).each(function(){g_selectedTab = this;});
+            $j(tabs[i]).css("background-color", g_tabsBtnColor);
+            break;
+        }
+    } // for
+
+
+    $j(".tabsBtn").click(
+        function()
+        {
+             if(g_selectedTab == this)
+             {
+                return;
+             } 
+             if(g_selectedTab != null)
+             {
+                $j(g_selectedTab).css("background-color", "#000");
+             }
+             var oldSource = $j(g_selectedTab).find(".tabsSource").text();
+             g_selectedTab = this;
+             $j(this).css("background-color", g_tabsBtnColor);
+             
+             $j(oldSource).animate({opacity: 0.0}, 200, 
+                function()
+                {
+                    $j(this).css("visibility", "hidden");
+                    var tabSource = $j(g_selectedTab).find(".tabsSource").text();
+                    $j(tabSource)
+                        .css("opacity", 0.0)
+                        .css("top", 0)
+                        .css("visibility", "visible")
+                        .animate({opacity: 1.0}, 400); 
+                }
+             );
+        }
+    );
+
+    $j(".tabsBtn").hover(
+        function()
+        {
+            if(this != g_selectedTab)
+            {
+                $j(this).css("background-color", g_tabsBtnColor);
+            }
+        },
+        function()
+        {
+            if(this != g_selectedTab)
+            {
+                $j(this).css("background-color", "#000000");
+            }
+        }
+    );
+} // end of function setupTabs  
+       
+
        
 /***************************************
     MAIN CODE - CALL THEN PAGE LOADED
