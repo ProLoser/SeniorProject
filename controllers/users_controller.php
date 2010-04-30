@@ -3,6 +3,12 @@ class UsersController extends AppController {
 
 	var $name = 'Users';
 
+	function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow(array('add'));
+		$this->Auth->deny(array(''));
+	}
+	
 	function index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
