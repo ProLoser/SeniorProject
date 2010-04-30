@@ -1,0 +1,119 @@
+/********************************************************************
+    File:   
+        articlesPageCSS.css
+    Brief:  
+        Hold styles used in file articlesPage.html
+    Author:
+        DigitalCavalry
+    Author URI:
+        http://graphicriver.net/user/DigitalCavalry
+*********************************************************************/
+
+#articlesPageContentContainer
+{
+    width: 960px;
+    margin-left: 40px;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+    
+#articlesPageContainer
+{
+    width:960px;
+    min-height: 500px;
+    background-color: #fff;
+    padding-bottom: 0px;
+}
+
+#articlesPageContainer  .fullWidthImage
+{
+    width: 460px;
+    height: 192px;
+    
+    background-image: url('../img/common/ajax/loading1.gif');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#articlesPageContainer .imageDesc
+{
+    margin-top: 5px;
+    padding: 0px;
+    font: normal 11px Verdana;
+    color:#000;
+}
+
+#articlesPageContainer .columnLeft
+{
+    width: 460px;
+    float: left;
+    background-color:transparent;
+}
+
+#articlesPageContainer p
+{
+   font: normal 12px Verdana;
+   line-height: 140%;
+   color: #000;
+}
+
+#articlesPageContainer .indent
+{
+   text-indent: 25px;
+}
+
+#articlesPageContainer .columnRight
+{
+    width: 460px;
+    float: right;
+    background-color:transparent;
+}
+
+#articlesPageContainer .pageBtnWrapper
+{
+    height: 20px;
+    background-color:transparent;
+    margin-bottom: 10px;
+}
+
+#articlesPageContainer .pageBtn
+{
+    display:block;
+    color: #fff;
+    font: normal 10px/20px Verdana;
+    height: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    float:right;
+    text-decoration: none;
+    background-color: #000;
+    margin-left: 2px;
+    text-transform: uppercase;
+}
+
+#articlesPageContainer .pageBtnActual
+{
+    display:block;
+    color: #FFF;
+    font: normal 10px/20px Verdana;
+    height: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 2px;
+    float:right;
+    text-decoration: none;
+    background-color: #65B31C;
+    text-transform: uppercase;
+}
+
+#articlesPageContainer .pageBtn:hover
+{
+     background-color: #65B31C;
+     color:#FFF;
+}
+ 
+
+
+
+    

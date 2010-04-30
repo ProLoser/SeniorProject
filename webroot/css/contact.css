@@ -1,0 +1,59 @@
+/********************************************************************
+    File:   
+        contactCSS.css
+    Brief:  
+        Hold styles used in file contact.html
+    Author:
+        DigitalCavalry
+    Author URI:
+        http://graphicriver.net/user/DigitalCavalry
+*********************************************************************/
+     
+
+#contactContentContainer
+{
+  width: 960px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+ 
+#contactContainer
+{
+    width: 600px;
+    float:left;
+    padding-bottom: 80px; 
+}
+
+        
+.contactInputHuman
+{
+    border: 1px solid #ccc;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    width: 40px;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    height: 18px;
+    color: #222;
+    font-size: 15px;
+    font-family: Arial;
+    padding-left: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+     
+#contactErrorPanel
+{
+    height: 10px;
+    padding: 8px;
+    padding-left: 10px;
+    border: 1px solid #993333;
+    background-color: #FFcccc;
+    margin-bottom: 15px;
+        
+    font: 10px/10px Verdana;
+    color: #000;
+    
+}

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cu3er>
+	<settings>
+		
+    	<prev_button>
+			<defaults round_corners="5,5,5,5"/>
+			<tweenOver tint="0xFFFFFF" scaleX="1.0" scaleY="1.0" />
+			<tweenOut tint="0x000000" />
+		</prev_button>
+		
+    	<prev_symbol>
+			<tweenOver tint="0x000000" />			
+		</prev_symbol>
+		
+    	<next_button>
+			<defaults round_corners="5,5,5,5"/>			
+			<tweenOver tint="0xFFFFFF"  scaleX="1.0" scaleY="1.0" />
+			<tweenOut tint="0x000000" />
+		</next_button>
+		
+    	<next_symbol>
+			<tweenOver tint="0x000000" />
+		</next_symbol>	
+        
+        <description>            
+            <defaults
+            heading_text_size="26"
+            heading_text_color="0x65B31C" 
+            paragraph_font="Arial"
+            paragraph_text_size="13"
+            paragraph_text_color="0xDDDDDD"
+            paragraph_text_margin="5, 25, 10, 25"       
+        /> 
+            <tweenIn alpha="0.8" />       
+        </description>
+			
+	<auto_play> 
+		<defaults symbol="circular" time="6" /> 
+		<tweenIn x="920" y="40" width="35" height="35" tint="0xFFFFFF" />				
+	</auto_play>				
+			
+	</settings> 
+
+
+
+	<slides>
+	
+        <slide>		
+			<description>
+				<heading>God of War III</heading>
+				<paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Halo consequat.
+				</paragraph>		
+			</description>
+            <url>img/slider/cu3er/1.jpg</url>            
+        </slide>
+		<!-- changing transition between first & second slide -->
+        <transition num="8" z_multiplier="4" slicing="vertical" direction="right" cube_color="0x000000" />
+        <slide>
+			<description>
+				<heading>Heavenly Sword</heading>
+				<paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Heavenly Sword ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et exercitation ullamco laboris nisi Halo consequat.
+				</paragraph>
+			</description>
+            <url>img/slider/cu3er/2.jpg</url>             
+        </slide>		
+		<!-- changing transition between second & third slide -->
+        <transition num="3" z_multiplier="4" direction="down" shader="flat" cube_color="0x000000" />
+		<slide>
+			<description>		
+				<heading>HALO: Combat Evolved</heading>
+				<paragraph>Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Combat Evolved veniam, quis nostrud eiusmod tempor incididunt ut labore et exercitation ullamco laboris nisi Halo consequat.
+				</paragraph>
+			</description>			
+            <url>img/slider/cu3er/3.jpg</url>
+        </slide>
+        <!-- changing transition between third & fourth slide --> 
+        <transition num="3" z_multiplier="4" slicing="vertical" direction="up" shader="flat" cube_color="0x000000" />
+		<slide>
+			<description>			
+				<heading>Rayman Raving Rabbits TV Party</heading>
+				<paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Halo consequat.
+				</paragraph>		
+			</description>					
+            <url>img/slider/cu3er/4.jpg</url>
+        </slide>
+        <!-- changing transition between fourth & fifth slide -->
+        <transition num="3" z_multiplier="4" slicing="horizontal" direction="left" shader="flat" cube_color="0x000000" />
+		<slide>
+			<description>			
+				<heading>HALO WARS</heading>
+				<paragraph>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Halo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut quis nostrud exercitation ullamco labore et dolore magna aliqua.
+				</paragraph>		
+			</description>					
+            <url>img/slider/cu3er/5.jpg</url>
+        </slide>
+        <!-- changing transition between fifth & sixth slide -->
+        <transition num="4" z_multiplier="4" slicing="vertical" direction="down" shader="flat" cube_color="0x000000" />
+		<slide>
+			<description>		
+				<heading>KIRBY: Canvas Curse</heading>
+				<paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Canvas Curse aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Halo consequat.
+				</paragraph>		
+			</description>				
+            <url>img/slider/cu3er/6.jpg</url>
+        </slide>		
+				
+	</slides>
+</cu3er>
+

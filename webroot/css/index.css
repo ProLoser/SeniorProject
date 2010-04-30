@@ -1,0 +1,458 @@
+/********************************************************************
+    File:   
+        indexCSS.css
+    Brief:  
+        Hold styles used in index.html
+    Author:
+        DigitalCavalry
+    Author URI:
+        http://graphicriver.net/user/DigitalCavalry
+*********************************************************************/
+
+#ImageDescrip { margin-left: 45px; margin-top: 5px; height: 50px; width: 600px; font: 11px Verdana; }
+
+
+/******************************** 
+    ACCORDION
+*********************************/
+
+#accordionContainer {
+    width:600px; 
+    height:350px; 
+    overflow:hidden; 
+    background-color:#000; 
+    position:relative;
+    border:0px solid #EEE; 
+    margin-left:40px; 
+    margin-top:15px;
+}
+
+.asyncImgLoadAccordion { clear: none; }
+
+.accordionImgDiv 
+{
+    width: 760px;  
+    height: 350px; 
+    position: absolute;  
+    border-left:1px solid #222;  
+    margin-left: 0px; 
+    background-color: black; 
+    cursor:pointer;
+    overflow: hidden;
+}
+
+.accordionImgDiv .slideStrip
+{
+    position: absolute;
+    width: 90px;
+    height: 350px;
+    left:0px;
+    top:0px;
+    overflow: hidden;
+    background-image: url('../img/common/ajax/loading6.gif');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-color: transparent;
+}    
+
+.accordionImgDiv .slideDesc
+{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font: normal 12px/12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #eee;     
+}
+
+.accordionSlideImage 
+{
+    border-left: 0px solid #AAA; 
+    width:760px; 
+    height:300px;
+	display:block;
+    
+   background-image: url('../img/common/ajax/loading10.gif');
+   background-repeat: no-repeat;
+   background-position: 50% 50%; 
+}    
+
+.accordionDescBack 
+{
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:760px;
+    height:40px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    background-color:#000;
+    border-top:1px solid #111;
+}
+
+.accordionDesc 
+{
+    font-weight:normal;
+    font-family: verdana;
+    font-size:10px;
+    padding-top:0px;
+    padding-left:10px;
+    text-align:left;
+    color:#DDD;
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:365px;
+    height:40px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    background:none;
+    border:0px solid red;
+}
+
+.accordionDescHeader 
+{
+    margin-top:5px;
+    position:static;
+    color:#FFF;
+    font: bold 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding-bottom:3px;
+    margin-bottom:0px;
+}
+ 
+/****************************************** 
+   NEWS BAR
+*******************************************/
+
+#newsBarContainer
+{
+    margin-left: 40px;
+    height: 16px;
+    width: 630px;
+    float:left;
+    margin-top:5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+#newsBar
+{
+    width: 620px;
+    left:0px;
+    top:0px;
+    display:inline;
+    background-color: white;
+    font: 10px/16px Verdana;
+    float:left;
+    margin-left: 0px;
+
+}
+
+#newsBarText 
+{
+   color: #666;
+} 
+#newsBarTitle 
+{
+   color: #000;
+   font-weight: bold;
+} 
+.newsBarNews 
+{
+  display: none; 
+}
+
+/****************************************** 
+   ACCORDION CONTROL PANEL
+*******************************************/
+
+#accordionControlPanel
+{
+    text-align:right;
+    width:250px;
+    height:16px;
+    margin-right:40px;
+    display:inline; 
+    float:right; 
+    margin-bottom:5px; 
+    margin-top:5px;
+}
+
+#accorControlBtnDesc
+{
+    margin-right:0px;
+    padding-top:0px;
+    margin-top:0px;
+    font:10px/16px Verdana;
+    color:#666;
+    vertical-align:top;
+}
+
+.accorControlButton
+{
+    cursor: pointer;
+    vertical-align: top;
+}
+
+/****************************************** 
+   CSS STYLES FOR TABS IN FILE index.html 
+*******************************************/
+
+#tabsContainer
+{
+   width: 960px;
+   height: 172px; /* 32px for buttons and 140px for tab content*/
+   margin-left: 40px;
+   margin-bottom: 10px;
+   background-color: #FFF;
+}
+
+#tabsWrapper
+{
+    margin: 0px;
+    width: 960px;
+    height:140px;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+}
+
+#tabsBtnBar
+{
+    height: 32px;
+    width: 960px;
+    background-color: #FFF;
+}
+
+.tabsBtn
+{
+   height: 32px;
+   float: right;
+   font: normal 12px/32px "Trebuchet MS", Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+   color: #FFF;
+   background-color: #000;
+   padding-right: 14px;
+   padding-left: 14px;
+   cursor: pointer;
+   border-top: 1px solid #65B31C;
+}
+
+.tabsDefaultTab
+{
+    display:none;   
+}
+
+.tabsSource
+{
+    display:none;   
+}
+
+.tabsGeneral 
+{
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 10px;
+    width:940px;
+    margin: 0px;
+    background-color:transparent;
+    visibility:visible;
+    left: 0px;
+    top:200px;    
+}
+
+.tabsFeatureImageContainer
+{
+    float:left; 
+    margin-right:10px;
+    width:168px;
+    height:112px;
+    background-color:#000;
+    border: 1px solid #333;
+    padding: 3px;
+    
+    background-image: url('../img/common/ajax/loading6.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;       
+}
+
+.tabsThumbsContainer
+{
+    margin-top:15px; 
+    border: 0px solid blue;
+    margin-right: 0px;
+}
+
+.tabsThumb
+{
+    display:block;
+    float:right;
+    width:26px;
+    height:26px;
+    background-color:white;
+    background-image: url('../img/common/ajax/loading2.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-left:5px;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    cursor:pointer;
+}
+
+.tabsThumb:hover
+{
+    border: 1px solid #222;
+}
+
+.tabsDesc
+{
+    font: 11px Verdana;
+    color: #FFF;
+    line-height: 120%; 
+}
+
+.tabsHeader
+{
+    margin-bottom: 5px; 
+    font: bold 25px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    height: 30px;
+    color:#65B31C;
+}
+
+/****************************************** 
+   SERVICES AND PRODUCTS, LAST NEWS LIST
+*******************************************/  
+
+#corporateInfoContainer
+{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 1000px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    border-top: 0px dotted #ccc;  
+    border-bottom: 0px solid #FFF;
+    background-image: url('../img/index/gradient.jpg');
+    background-position: 50% 100%;
+    background-repeat: repeat-x;
+}
+
+.columnServicesProducts
+{
+    display:block;
+    float:left;
+    color:#222;
+    width:580px;
+    padding-left:0px;
+    padding-right:40px;
+    margin-top: 10px;
+    background-color: transparent;
+    
+    background-image: url('../img/index/spliterForGradient.jpg');
+    /* background-image: url('../img/index/spliterForWhite.jpg'); */
+    background-repeat:no-repeat;
+    background-position: 100% 50%;      
+}
+
+.columnLatestNews
+{
+    display:block;
+    float:left;
+    width:320px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top: 10px;
+    font: 12px Verdana;
+    line-height: 150%;
+    background-color: transparent;
+}
+
+.lastNews
+{
+    height: 60px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 10px;
+    padding-top: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.lastNews:hover
+{
+    background-color: #e8e8e8;
+}
+
+.lastNewsDate
+{
+    color: #65B31C;
+    font: 9px Verdana;
+    line-height: 10px;
+}  
+
+.lastNewsTitle
+{
+    color: #333;
+    font: 12px Verdana;
+    margin-top: 2px;
+    display: block;
+}
+
+.lastNewsText
+{
+    color: #999;
+    font: 9px Verdana;
+    margin-top: 2px;
+    display: block;
+}   
+
+.columnText
+{
+    padding-top: 15px;
+    padding-left: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    font: 12px Verdana;
+    line-height: 140%;
+}
+
+.columnTextLastNews
+{
+    padding-top: 10px;
+    padding-left: 0px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    font: 12px Verdana;
+    line-height: 145%;
+}
+
+
+#servicesProductsHeader
+{
+    font: bold 30px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #000;
+    padding-left: 10px;
+}
+
+#latestNewsHeader
+{
+    font: bold 30px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #000;
+    padding-left: 10px;
+}
+
+ 
+
+    
+
+
+
+
+
+
