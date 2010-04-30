@@ -9,4 +9,4 @@
 	url = git://github.com/mcurry/find.git
 [submodule "plugins/welcome"]
 	path = plugins/welcome
-	url = git@github.com:ProLoser/CakePHP-Welcome.git
+	url = git://github.com/ProLoser/CakePHP-Welcome.git
