@@ -1,0 +1,200 @@
+/********************************************************************
+    File:   
+        servicesCSS.css
+    Brief:  
+        Hold styles used in file services.html
+    Author:
+        DigitalCavalry
+    Author URI:
+        http://graphicriver.net/user/DigitalCavalry
+*********************************************************************/
+     
+
+#servicesContentContainer
+{
+  width: 960px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+ 
+#servicesContainer
+{
+    width: 600px;
+    float:left;
+    padding-bottom: 20px; 
+}
+
+#servicesSmallInfo
+{
+    width: 960px;
+    min-height: 300px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#servicesSmallInfo .column
+{
+    width: 460px;
+    background-color:transparent;
+}
+
+#servicesSmallInfo .item
+{
+    width: 460px;
+    height: 110px;
+    background-color: #FFF;
+    margin-bottom: 10px;
+}
+
+#servicesSmallInfo .desc
+{
+    width: 330px;
+    height: 100px;
+    float: left;
+}
+
+#servicesSmallInfo .text
+{
+    font:11px Verdana;
+    color:#000;
+    margin-top: 5px;
+}
+
+#servicesSmallInfo .title
+{
+    font: 20px Verdana;
+    color: #65B31C;
+} 
+
+#servicesSmallInfo .image
+{
+    width: 100px;
+    height: 100px;
+    padding: 3px;
+    border:0px solid #eee;
+    float:left;
+    margin-right: 10px;
+    
+    background-image: url('../img/common/ajax/loading1.gif');
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+}
+
+#servicesBigInfo
+{
+    width: 960px;
+    min-height: 400px;
+    background-color: #fff;
+}
+
+#servicesBigInfo .item
+{
+    width: 960px;
+    min-height: 250px;
+    padding-top:15px;
+    border-top: 1px solid #eee;
+    margin-bottom: 15px;
+    background-color:transparent;
+}
+
+#servicesBigInfo .image
+{
+    width: 320px;
+    height: 240px;
+    background-color: #fff;
+    padding: 3px;
+    border: 1px solid #ddd;
+    float: right;
+    
+    background-image: url('../img/common/ajax/loading1.gif');
+    background-repeat:no-repeat;
+    background-position: 50% 50%;    
+}
+
+#servicesBigInfo .desc
+{
+    height: 248px;
+    width: 600px;
+    float: left;
+    font: 11px Verdana;
+    line-height: 130%;
+    color:#000;
+}
+
+#servicesBigInfo .title
+{
+    font: 28px Verdana;
+    color: #65B31C;
+}
+
+#servicesBigInfo .subtitle
+{
+    font: 14px Verdana;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+/****************************************** 
+   FEATURES LIST
+*******************************************/
+
+#featuresContainer
+{
+    width: 960px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    height: 170px;   
+    overflow: hidden;
+    background-color: #FFF;
+ }
+
+.featureWrapper
+{
+    width:  319px;
+    height: 150px;
+    border-right: 1px solid #eeeeee;
+    margin-top: 10px;
+    float: left;
+}
+
+.featureWrapperLast
+{
+    width:  319px;
+    height: 140px;
+    margin-top: 10px;
+    float: left;
+    border-right: 1px solid #FFF; 
+}
+
+.featureTitle
+{
+    font: normal 22px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #65B31C;
+    margin-left: 16px;
+}
+
+.featureText
+{
+    font: 11px Verdana;
+    color: #555;
+    line-height: 140%;
+    display: block;
+    margin-left: 16px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.featureImageContainer
+{
+    margin-left: 16px;
+}
+
+.featureImage
+{
+    padding:3px;
+    border: 1px solid #E0E0E0;
+}

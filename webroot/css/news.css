@@ -1,0 +1,163 @@
+/********************************************************************
+    File:   
+        newsCSS.css
+    Brief:  
+        Hold styles used in file news.html
+    Author:
+        DigitalCavalry
+    Author URI:
+        http://graphicriver.net/user/DigitalCavalry
+*********************************************************************/
+
+#newsContentContainer
+{
+    width: 960px;
+    margin-left: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+    
+#newsContainer
+{
+    width:600px;
+    float:left;
+    min-height: 500px;
+    background-color: #fff;
+    padding-bottom: 60px;
+}    
+
+.newsLastImage
+{
+   border: 0px dotted red;
+   position: relative;
+   width: 600px;
+   height: 250px;
+   margin-bottom: 5px;
+   background-image: url('../img/common/ajax/loading3.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-top: 0px solid #ccc;
+    background-color: #FFF;
+    display: block;   
+}
+
+.newsLastWrapper
+{
+    width: 600px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    background-color: #000;
+}
+
+.newsLastImageDesc
+{
+   text-align:right;
+   font: 9px Arial;
+   color: #aaa;
+   padding-right: 10px;
+   float:right;
+}
+
+.newsLastDate
+{
+   text-align:left;
+   font: 10px/12px Verdana;
+   color: #FFF;
+   width: 120px;
+   padding-left: 10px;
+   padding-top:10px;
+}
+
+.newsLastTitle
+{
+   font: normal 26px "Trebuchet MS", Arial, Helvetica, sans-serif;
+   padding: 0px;
+   padding-left: 10px;
+   color: #65B31C;
+}
+.newsLastSubTitle
+{
+   font: 12px Verdana;
+   padding: 0px;
+   padding-left: 10px;
+   color: #ccc;
+}
+
+.newsLastText
+{
+    font: 11px Verdana;
+    line-height: 120%;
+    color: #FFF;
+    margin-top: 15px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.newsItemWrapper
+{
+    border-bottom: 1px solid #ECECEC;
+    height: 110px;
+    margin-bottom: 0px;
+    cursor:pointer;
+}
+
+.newsItemWrapper:hover
+{
+    background-color: #eFeFeF;
+}
+
+.newsItemWrapper .imageWrapper
+{
+    float:left;
+    padding-left: 10px;
+    width: 106px;
+    height: 96px;
+    margin-top: 7px;
+}
+
+.newsItemWrapper .image
+{
+    height:90px;
+    width:90px;
+    padding:2px;
+    border:1px solid #eee;
+    background-color: #FFF;
+    
+    background-image: url('../img/common/ajax/loading1.gif');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.newsItemWrapper .itemDesc
+{
+    height:96px;
+    margin-top:7px;
+    width: 480px;
+    float:left;
+    background-color:transparent;
+    overflow: hidden;
+}
+
+.newsItemWrapper .itemDesc .date
+{
+   text-align:left;
+   font: 10px/12px Verdana;
+   color: #000;
+   width: 280px;
+   padding-top: 5px;
+}
+
+.newsItemWrapper .itemDesc .title
+{
+   font: normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+   padding: 0px;
+   color: #65B31C; 
+}
+
+.newsItemWrapper .itemDesc .text
+{
+    font: 11px Verdana;
+    color: #000;
+    margin-top: 0px;
+}
+

@@ -9,16 +9,13 @@
         http://graphicriver.net/user/DigitalCavalry
 *********************************************************************/
 
-#ImageDescrip { margin-left: 45px; margin-top: 5px; height: 50px; width: 600px; font: 11px Verdana; }
-
-
 /******************************** 
     ACCORDION
 *********************************/
 
 #accordionContainer {
-    width:600px; 
-    height:350px; 
+    width:960px; 
+    height:300px; 
     overflow:hidden; 
     background-color:#000; 
     position:relative;
@@ -32,7 +29,7 @@
 .accordionImgDiv 
 {
     width: 760px;  
-    height: 350px; 
+    height: 300px; 
     position: absolute;  
     border-left:1px solid #222;  
     margin-left: 0px; 
@@ -45,7 +42,7 @@
 {
     position: absolute;
     width: 90px;
-    height: 350px;
+    height: 300px;
     left:0px;
     top:0px;
     overflow: hidden;
@@ -85,7 +82,7 @@
     position:absolute;
     left:0px;
     width:760px;
-    height:40px;
+    height:70px;
     opacity:0.0;
     filter:alpha(opacity=0); /* IE */ 
     background-color:#000;
@@ -106,8 +103,8 @@
     margin-top:0px;
     position:absolute;
     left:0px;
-    width:365px;
-    height:40px;
+    width:760px;
+    height:70px;
     opacity:0.0;
     filter:alpha(opacity=0); /* IE */ 
     background:none;

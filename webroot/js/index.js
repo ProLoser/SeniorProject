@@ -14,6 +14,9 @@
         http://graphicriver.net/user/DigitalCavalry
 *********************************************************************/
 
+// array of image descriptions
+var ImageDescriptions = new Array();
+
 // alias to jQuery library, function noConflict release control of the $ variable 
 // to whichever library first implemented it
 var $j = jQuery.noConflict();
@@ -221,6 +224,9 @@ function setupAccordionImageSlider()
             g_slidedDivs[g_hoveredSlideIndex].out = 0;
             // draw aside all divs
             setMoveForAccordionDivs(g_hoveredSlideIndex);
+			
+			$j("div#ImageDescrip").text(ImageDescriptions[divID.substring(6,7)-1]);  
+			
         }, 
         function()
         {
@@ -284,6 +290,7 @@ function setMoveForAccordionDivs(index)
                     {marginLeft: newMargin+"px"}, 
                     {duration: animTime, easing: ACCORDION_EASING_METHOD});
             }
+			$j("div#ImageDescrip").text(ImageDescriptions[i + 1]); 
             // go to next iteraction of loop
             continue;
         }
@@ -381,6 +388,7 @@ function accordionPlay()
        
         for(var i = 0; i < g_slidedDivs.length; i++)
         {
+			$j("div#ImageDescrip").text(ImageDescriptions[0]); 
             // if div is currently moved we stop the animation
             // and set new animation for left margin
             $j(g_slidedDivs[i].name).stop()
@@ -388,6 +396,7 @@ function accordionPlay()
             // we set the destination member to the same value
             g_slidedDivs[i].dest = i*ribOutWidth;
             $j(g_slidedDivs[i].name).find(".slideDesc").stop().animate({opacity: 1.0}, 2000); 
+			
         }
         timeOut = g_sliderTimerInterval * 2;
         g_sliderNewLoop = false;
@@ -405,7 +414,7 @@ function accordionPlay()
     if(g_actualSlideImage >= g_slidedDivs.length)
     {
         g_actualSlideImage = 0;
-        g_sliderNewLoop = true;   
+        g_sliderNewLoop = true; 
     }
     
     // fire up slider
@@ -498,7 +507,7 @@ var g_lastSlideMoveDirection = FORWARD;
 function setupAccordionControlPanel()
 {
     // fadeout description text
-    $j("#accorControlBtnDesc").fadeTo(0, 0.0);
+    $j("#accorControlBtnDesc").fadeTo(0, 0.0); 
 
     // bind function to accordion control panel play button called then button is clicked 
     $j("#accorPlayBtn").click(
@@ -661,10 +670,11 @@ function setupAccordionControlPanel()
                  if(g_actualSlideImage >= g_slidedDivs.length)
                  {
                     g_actualSlideImage = 0;
-                    g_sliderNewLoop = true;
+                    g_sliderNewLoop = true; 
                  }                  
             }
             g_lastSlideMoveDirection = FORWARD;
+				$j("div#ImageDescrip").text(ImageDescriptions[0]);  
             mouseOutAccorOnAll(null);
             mouseOnAccor(g_slidedDivs[g_actualSlideImage].name);
     
@@ -763,7 +773,9 @@ function setupLoadingAsynchronousImagesForAccordion()
             // save handle to loader - caintainer which we gona insert loaded image    
             var loader = $j(id);
             // get image path from loader title attribute
-            var imagePath = loader.attr('title');
+			var imageInformation = loader.attr('title').split('|');
+            var imagePath = imageInformation[0];
+			ImageDescriptions[_index] = imageInformation[1];
             // create new image object
             var img = new Image();
             // set opacity for image to maximum
@@ -787,7 +799,7 @@ function setupLoadingAsynchronousImagesForAccordion()
                         if(_index == g_hoveredSlideIndex)
                         {
                             $j(this).animate({opacity: 1.0}, 500);
-                        }                        
+                        }                     
                             
                     }
                 // set new value for attribute src - this means: load image from imagePath    
@@ -836,7 +848,9 @@ function setupLoadingAsyncSlideStripImages()
             // save handle to loader - caintainer which we gona insert loaded image    
             var loader = $j(id);
             // get image path from loader title attribute
-            var imagePath = loader.attr('title');
+			var imageInformation = loader.attr('title').split('|');
+            var imagePath = imageInformation[0];
+			var imageDesc = imageInformation[1];
             // create new image object
             var img = new Image();
             // set opacity for image to maximum
