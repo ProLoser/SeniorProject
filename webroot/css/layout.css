@@ -1,0 +1,241 @@
+@charset "utf-8";
+/*************
+ COMMON PAGE ELEMENTS
+*************/
+
+* { margin: 0; padding: 0; }
+.clearfix { overflow: auto; }
+.clear { clear:both; }
+.clearright { clear:right; }
+.clearleft { clear:left; }
+.left { float: left; }
+.right { float: right; }
+img.left {margin-right: 10px }
+img.right {margin-left: 10px }
+body {
+	background: #465931 url(../img/bg.jpg) repeat;
+	font-family: Verdana, Trebuchet MS, Arial, sans-serif;
+	font-size: 11px;
+}
+#container { 
+	width: 1035px;
+	margin: 0 auto;
+	padding: 0;
+	background: #fff url(../img/other-bg.png) top repeat-x;
+}
+
+/*** HEADER ***/
+#header {
+	overflow: auto;
+}
+#header h2 {
+	/* title goes in here */
+	text-indent: -5000px;
+	background: transparent url(../img/logo2.png) top left no-repeat ;
+	margin: 22px 0px 0px 5px;
+	width: 366px;
+	height: 63px;
+	float: left;
+}
+#header form {
+	/* search form */
+	float: right;
+	margin: 25px 40px 0 0;
+	color: #EBEBEB;
+	overflow: auto;
+	font-size: 0.9em;
+}
+
+
+/*** BODY ***/
+#body {
+	height: 100%;
+	overflow: auto;
+	padding: 0 0 30px 0;
+}
+
+
+/*** SIDEBAR ***/
+#sidebar {
+	float: right;
+	width: 310px;
+	margin: 40px 10px 0px 0px;
+}
+#sidebar h3 {
+	/* heading for each navigation list*/
+	font-size: 16px;
+	font-weight: normal;
+	color: #4D4D4D;
+	margin: 25px 0px 10px 30px;
+}
+#sidebar img {
+	padding:5px;
+	margin:12px 5px 10px 35px;
+	background:#d1d1d1;
+	border:1px solid #B9B9B9; 
+	width:230px;
+}
+#sidebar img:hover {
+	background:#d1d1d1;
+	border:1px solid #484848; 
+	width:230px;
+}
+#sidebar ul {
+	/* navigation on the side */
+	margin: 0px 40px 20px 30px;
+	line-height: 30px;
+	list-style-type: none;
+}
+#sidebar ul li {
+	border-bottom: 1px #909090 dotted;
+	display: block;
+}
+#sidebar ul li a {
+	text-indent: 10px;
+	color: #757575;
+	text-decoration: none;
+	display: block;
+}
+#sidebar ul li a:hover {
+	color: #353535;
+	text-decoration: none;
+	display: block;
+	background: #F3F3F3;
+}
+
+
+/*** MAIN CONTENT ***/
+#content {
+	margin: 60px 340px 20px 40px;
+}
+#content h1 {
+	/* title of the individual page */	
+	font-size: 22px;
+	color: #9F9F9F;
+	font-weight: normal;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	border-bottom: 1px dotted #ccc;
+}
+#content h3 {
+	font-size: 18px;
+	margin: 10px 0 10px 0;
+	color: #313131;
+}
+#content h4 {
+	font-size: 16px;
+	color: #6C6C6C;
+	margin: 10px 0 10px 0;
+}
+#content .about {
+	font-size: 14px;
+	color: #3A3A3A;
+	margin: 0 0 15px 0;
+}
+
+/*** FOOTER **/
+#footer {
+	background: #1f240a url(../img/footer/bg-footer.jpg) top left no-repeat;
+}
+#footer h6 {
+	font-size: 18px;  
+	margin:0 0 14px 0; 
+	color: #EFEFEF;	
+	font-weight: normal;
+}
+#footer p {
+	font-size: 10px; 
+	line-height: 18px;
+	color:#7d7d7d;
+	margin: 5px 0 0 0;
+}
+.footerminibox {
+	width:290px;
+	float:left;
+	margin: 30px 10px 30px 40px;
+}
+.footerposts { 
+	list-style:none; 
+	font-size:10px; 
+	color:#7d7d7d; 
+	padding:0;
+	margin:0; 
+}
+.footerposts li { 
+	font-size:10px; 
+	line-height:30px; 
+	color:#7d7d7d; 
+	border-bottom:1px dotted #2E2E2E; 
+	display: block;
+}
+.footerposts li a { 
+	font-size:10px; 
+	color:#7d7d7d;
+	text-decoration: none;
+	display: block;
+}
+.footerposts li a:hover { 
+	color:#fff; 
+	text-decoration:none;
+	display: block;
+}
+.footermedia { 
+	width: 270px;
+	font-size:12px;
+	line-height:18px; 
+	list-style:none; 
+	color:#7d7d7d; 
+	padding:0;
+	margin:0; 
+}
+.footermedia li { 
+	color:#7d7d7d; 
+	border-bottom:1px dotted #2E2E2E; 
+	margin: 0;
+	padding: 0;
+	line-height: 44px;
+	display: block;
+}
+.footermedia li a { 
+	font-size: 14px;
+	color:#7d7d7d; 
+	margin: 0;
+	padding: 0;
+	vertical-align:middle; 
+	text-decoration: none;
+	display: block;
+}
+.footermedia li a:hover { 
+	font-size:14px; 
+	color:#fff;
+	text-decoration:none;
+	display: block;
+}
+.footermedia a img {
+	width: 40px; 
+	margin: 0;
+	padding; 0;
+	vertical-align: middle;
+	margin: 0 10px 0 0px;
+}
+#footerbarwrap {
+	padding: 15px 0 15px 35px;
+	margin: 0;
+	background:#070F04;
+	font-size:12px;
+	color:#565656; 
+}
+#footerbarwrap ul {
+	font-family:verdana;
+	font-size:10px;
+	line-height:15px;
+	color:#565656;
+	list-style:none;margin:0;padding:0;
+}
+#footerbarwrap ul li {
+	color:#565656;
+}
+#footerbarwrap ul li a{
+	color:#fff;
+	text-decoration: none;
+}

@@ -6,8 +6,8 @@
 
 #adv_vol {float:left;}
 #adv_adv {float:right;}
-#adv_vol #adv_main_p_vol {float:left; margin:5px 5px 5px 0px;}
-#adv_adv #adv_main_p_adv {float:right; margin:0px 5px 5px 5px;}
+#adv_vol p {font-size: 12px; line-height:20px; color:#646464;}
+#adv_adv p {font-size: 12px; line-height:20px;}
 #adv_vol #adv_main_img_vol {float:right; margin:1px 0px 7px 9px; vertical-align: text-top;}
 #adv_adv #adv_main_img_adv {float:left; margin:1px 9px 7px 0px; vertical-align: text-top;}
 /*#pagecontainer #mainpage #contents #adv_adv #adv_main_img_adv {float:left; margin:5px; vertical-align: text-top;}*/

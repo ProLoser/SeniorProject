@@ -1,6 +1,6 @@
 .ddsmoothmenu{
 background: none; /*background of menu bar (default state)*/
-margin-top:32px;
+margin:17px 32px 0px 0px;
 float:right;
 font-size:14px;
 }
@@ -41,13 +41,12 @@ display: inline-block;
 }
 
 .ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{
-
-color:#A7A7A7;
+color: #E8E8E8;
 }
 
 .ddsmoothmenu ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
 background: #171717; 
-color:#747474;
+color: #E8E8E8;
 }
 
 .ddsmoothmenu ul li a:hover{
