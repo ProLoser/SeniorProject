@@ -1,62 +1,62 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Australia Adventure</title>
+<title>ISVOnline - <?php echo $title_for_layout; ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<?php
+	echo $this->Html->meta('icon');
 
+	echo $this->Html->css(array(
+		'style',
+		'prettyPhoto',
+		'ddsmoothmenu',
+		'page-galleria',
+		'artengineered',
+		'adventure',
+		'prettyPhoto/prettyPhoto',
+		'common',
+		'index'
+	));
+	
+	echo $this->Html->Script(array(
+		'jquery-1.3.2.min',
+		'jquery.easing.1.2',
+		'fadeinout',
+		'jquery.prettyPhoto',
+		'lib/jquery.prettyPhoto',
+		'cufon-yui',
+		'fontconfig',
+		'jquery.galleria',
+		'ddsmoothmenu-sub',
+		'galleria-init1',
+		'jquery.galleria',
+		'common.js',
+		'TitilliumText14L_300_600.font',
+		'fonts/Sansation_700.font',
+		'fonts/Sansation_400.font',
+		'fonts/Sansation_300.font',
+		'common-innovation',
+		'index_advmain'
+	));
+
+	echo $scripts_for_layout;
+?>
 <link rel="Shortcut Icon" type="image/ico" href="../favicon.ico" />
 
-<link href="../css/style.css" rel="stylesheet" type="text/css" />
-<link href="../css/prettyPhoto.css" rel="stylesheet" type="text/css" />
-<link href="../css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
-<link href="../css/page-galleria.css" rel="stylesheet" type="text/css" />
-<link href="../css/artengineered.css" rel="stylesheet" type="text/css" />
-<link href="../css/adventure.css" rel="stylesheet" type="text/css" />
-
 <!--[if lte IE 6]>
-	<link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" />
+	<?php echo $this->Html->css('ie6'); ?>
 <![endif]-->
 
 <!--[if IE 7]>
-	<link rel="stylesheet" type="text/css" href="css/ie7.css" media="screen" />
+	<?php echo $this->Html->css('ie7'); ?>
 <![endif]-->
 
-
-<!-- JQUERY Library -->
-<script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="../js/jquery.easing.1.2.js"></script>
-<script type="text/javascript" src="../js/fadeinout.js"></script>
-<script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="../js/cufon-yui.js"></script>
-<script type="text/javascript" src="../js/TitilliumText14L_300_600.font.js"></script>
-<script type="text/javascript" src="../js/fontconfig.js"></script>
-<script type="text/javascript" src="../js/jquery.galleria.js"></script>
-<script type="text/javascript" src="../js/ddsmoothmenu-sub.js"></script>
-<script type="text/javascript" src="../js/galleria-init1.js">
-/***********************************************
+<!--/***********************************************
 * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
 * This notice MUST stay intact for legal use
 * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
-***********************************************/
-</script>
-<script type="text/javascript" src="../js/common.js"></script>
-
-	   <link type="text/css" rel="stylesheet" href="../css/prettyPhoto/prettyPhoto.css" />  
-       <link type="text/css" rel="stylesheet" href="../css/common.css" />
-       <link type="text/css" rel="stylesheet" href="../css/index.css" />
-       <!-- JavaScript Files -->
-       <script type="text/javascript" src="../lib/jquery-1.3.2.min.js"></script>
-       <script type="text/javascript" src="../lib/jquery.easing.1.2.js"></script>
-       <script type="text/javascript" src="../lib/jquery.prettyPhoto.js"></script>
-       <script type="text/javascript" src="../lib/cufon-yui.js"></script>
-       <script type="text/javascript" src="../fonts/Sansation_700.font.js"></script>  
-       <script type="text/javascript" src="../fonts/Sansation_400.font.js"></script>     
-       <script type="text/javascript" src="../fonts/Sansation_300.font.js"></script>         
-       <script type="text/javascript" src="../js/common-innovation.js"></script>   
-       <script type="text/javascript" src="../js/index_advmain.js"></script>
- 
+***********************************************/ -->
 </head>
-
 <body>
 
 <div id="pagecontainer"> <!-- Outside Container -->
@@ -307,6 +307,7 @@
 	</ul>
 	</div>
 </div> <!-- Close Container -->
+<?php echo $this->element('sql_dump'); ?>
 <script type="text/javascript"> Cufon.now(); </script>
 </body>
 </html>
