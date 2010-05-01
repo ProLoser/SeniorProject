@@ -15,13 +15,13 @@
 	#pagecontainer #mainpage #contents #gallerycontents #main_image .caption{font-size:12px;line-height:12px;color:#3a3a3a; margin:20px 0px 20px 0px;}
 	.caption a { color:#3a3a3a; text-decoration:none; }
 	.demo{margin-top:16px;}
-	.gallery {width:596px;}
+	.gallery {width:605px;}
 	.gallery li{width:76px;height:55px;border:2px double #111;margin: 0 2px;background:#000;margin-top:10px;}
 	.gallery li div{}
 	
 	/*#main_image{height:430px;width:590px;padding:5px 0 0 0;}*/
-	#main_image{width:590px;padding:0 0 0 0; cursor:default; }
-	#main_image img{width:590px;padding:0 0 10px 0; cursor:default;}
+	#main_image{width:600px;padding:0 0 0 0; cursor:default; }
+	#main_image img{width:600px;padding:0 0 10px 0; cursor:default;}
 	
 	.nav{padding:15px 0px 15px 0px;clear:both;font:80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
 	

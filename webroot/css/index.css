@@ -447,12 +447,113 @@
     padding-left: 10px;
 }
 
- 
+/******************************** 
+    ACCORDION
+*********************************/
 
+#accordionContainer_advmain {
+    width:600px; 
+    height:300px; 
+    overflow:hidden; 
+    background-color:#000; 
+    position:relative;
+    border:0px solid #EEE; 
+    margin:18px 0px 28px 0px; 
+}
+
+.asyncImgLoadAccordion_advmain { clear: none; }
+
+.accordionImgDiv_advmain 
+{
+    width: 760px;  
+    height: 300px; 
+    position: absolute;  
+    border-left:1px solid #222;  
+    margin-left: 0px; 
+    background-color: black; 
+    cursor:pointer;
+    overflow: hidden;
+}
+
+.accordionImgDiv_advmain .slideStrip_advmain
+{
+    position: absolute;
+    width: 90px;
+    height: 300px;
+    left:0px;
+    top:0px;
+    overflow: hidden;
+    background-image: url('../img/common/ajax/loading6.gif');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-color: transparent;
+}    
+
+.accordionImgDiv_advmain .slideDesc_advmain
+{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font: normal 12px/12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #F3F3F3;     
+}
+
+.accordionSlideImage_advmain 
+{
+    border-left: 0px solid #AAA; 
+    width:760px; 
+    height:300px;
+	display:block;
     
+   background-image: url('../img/common/ajax/loading10.gif');
+   background-repeat: no-repeat;
+   background-position: 50% 50%; 
+}    
 
+.accordionDescBack_advmain 
+{
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:760px;
+    height:40px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    background-color:#000;
+    border-top:1px solid #111;
+}
 
+.accordionDesc_advmain 
+{
+    font-weight:normal;
+    font-family: verdana;
+    font-size:10px;
+    padding-top:0px;
+    padding-left:10px;
+    text-align:left;
+    color: #fff;
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:365px;
+    height:40px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    background:none;
+    border:0px solid red;
+}
 
-
-
-
+#contents .accordionDescHeader_advmain 
+{
+    margin-top:5px;
+    position:static;
+    color: #E8E8E8;
+    font: bold 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding-bottom:3px;
+    margin-bottom:0px;
+}
