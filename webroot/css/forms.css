@@ -11,6 +11,7 @@ form fieldset {
 } 
 form fieldset legend {
 	font-size:11px; 
+	padding: 0 5px 0 5px;
 }
 form label {
 	display: block; 
@@ -24,7 +25,7 @@ form label {
 form input, textarea {
 	width: auto;     
 	margin: 5px 0 5px 8px;
-	border: 1px #E4E4E4 dotted;
+	border: 1px #A6C460 dotted;
 	padding: 3px;
 	background: #ECF5D6;
 }
