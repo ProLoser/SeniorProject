@@ -11,7 +11,8 @@
 	'prettyPhoto',
 	'prettyPhoto/prettyPhoto',
 	'common',
-	'index'
+	'index',
+	'forms'
 )); ?>
 <!--ifwhatever>
 	<?php echo $this->Html->css('ie6'); ?>
@@ -59,7 +60,7 @@
     	<div id="sidebar">
         	<h3>Some Media</h3>
             	<a rel="prettyPhoto[gallery]" >
-                <?php echo $this->Html->image('Adventure/Aus_map.jpg', array('alt' => 'Adventure Map of Australia')); ?>
+                <?php echo $this->Html->image('adventure/Aus_map.jpg', array('alt' => 'Adventure Map of Australia')); ?>
 				</a>
         	<h3>Sub Navigation</h3>
             <ul>

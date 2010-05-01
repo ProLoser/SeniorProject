@@ -1,0 +1,36 @@
+/* Forms */
+form {
+	margin: 0 auto;
+	width: 500px;
+	font-size: 12px;
+}
+form fieldset {
+  border: 1px #BCBCBC dotted;
+  padding: 10px;   
+  margin: 0;
+  background: #ECF5D6;
+} 
+form fieldset legend {
+	font-size:11px; 
+}
+form label {
+	display: block; 
+	float: left; 
+	width: 100px; 
+	padding: 3px; 
+	margin: 5px 0 5px 0; 
+	text-align: right; 
+	color: #666;
+}
+form input, textarea {
+	width: auto;     
+	margin: 5px 0 5px 8px;
+	border: 1px #E4E4E4 dotted;
+	padding: 3px;
+}
+form textarea {
+	overflow: auto;	
+}
+form .submit {
+	margin: 10px 0 0 120px;	
+}
