@@ -8,7 +8,6 @@ form fieldset {
   border: 1px #BCBCBC dotted;
   padding: 10px;   
   margin: 0;
-  background: #ECF5D6;
 } 
 form fieldset legend {
 	font-size:11px; 
@@ -27,6 +26,7 @@ form input, textarea {
 	margin: 5px 0 5px 8px;
 	border: 1px #E4E4E4 dotted;
 	padding: 3px;
+	background: #ECF5D6;
 }
 form textarea {
 	overflow: auto;	
