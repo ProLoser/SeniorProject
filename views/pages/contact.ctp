@@ -1,7 +1,12 @@
 <div class="emailers form">
+	<h1>Contact Us</h1>
+	<h3>Via Phone</h3>
+	<p>US Office: +1 (000) 000-0000</p>
+	<p>Australian Office: +...</p>
+	<h3>Via Email</h3>
 <?php echo $this->Form->create('Emailer', array('url' => array('controller' => 'pages')));?>
 	<fieldset>
- 		<legend><?php printf(__('Add %s', true), __('Emailer', true)); ?></legend>
+ 		<legend><?php __('Contact Info'); ?></legend>
 	<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');
@@ -11,7 +16,4 @@
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
-</div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
 </div>
