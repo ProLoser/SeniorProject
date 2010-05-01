@@ -46,6 +46,45 @@ body {
 	font-size: 0.9em;
 }
 
+#header ul {
+	float: right;
+	list-style-type: none;
+	font-size: 13px;
+	margin: 20px 30px 0 0;
+}
+
+#header ul ul {
+	border-bottom: 10px solid #F0F0F0;
+}
+
+#header ul li {
+	display: block;
+	float: left;
+}
+
+#header ul li a {
+	text-decoration: none;
+	color: #E5E5E5;
+	display: block;
+	padding: 5px 15px 5px 15px;
+}
+
+#header ul li a:hover {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	background: #374B29;
+}
+
+#header ul li li {
+	display: none;	
+}
+
+#header ul li:hover li {
+	background: #374B29;
+	display: block;	
+	float: none;
+}
 
 /*** BODY ***/
 #body {
@@ -136,6 +175,7 @@ body {
 /*** FOOTER **/
 #footer {
 	background: #1f240a url(../img/footer/bg-footer.jpg) top left no-repeat;
+	overflow: auto;
 }
 #footer h6 {
 	font-size: 18px;  
@@ -214,7 +254,7 @@ body {
 .footermedia a img {
 	width: 40px; 
 	margin: 0;
-	padding; 0;
+	padding: 0;
 	vertical-align: middle;
 	margin: 0 10px 0 0px;
 }
