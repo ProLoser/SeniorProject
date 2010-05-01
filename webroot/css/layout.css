@@ -50,7 +50,8 @@ body {
 #header #globalnav a {
 	color: #D1DFA8;
 	text-decoration: none;
-	margin: 3px 0 0 0;
+	margin: 8px 10px 6px 10px;
+	padding: 0;
 }
 #header #globalnav a:hover {
 	color: #fff;
@@ -75,9 +76,8 @@ body {
 	float: right;
 	list-style-type: none;
 	font-size: 13px;
-	margin: 20px 30px 0 0;
+	margin: 10px 30px 0 0;
 }
-
 #header ul ul {
 	border-bottom: 10px solid #F0F0F0;
 }
