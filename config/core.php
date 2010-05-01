@@ -300,4 +300,9 @@
  *
  */
 	Cache::config('default', array('engine' => 'File'));
+/**
+ * SeniorProject configuration values.
+ */
+	Configure::write('CONTACT_EMAIL', 'phorced@hotmail.com');
+	
 ?>

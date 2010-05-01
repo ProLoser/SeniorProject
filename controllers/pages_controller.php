@@ -30,6 +30,7 @@
  */
 class PagesController extends AppController {
 	var $name = 'Pages';
+	var $components = array('Email');
 
 /**
  * Displays a view
@@ -119,6 +120,28 @@ class PagesController extends AppController {
 		}
 		$this->Session->setFlash(sprintf(__('%s was not deleted', true), 'Page'));
 		$this->redirect(array('action' => 'index'));
+	}
+	
+	function contact() {
+		if (!empty($this->data)) {
+			$this->loadModel('Emailer');
+			$this->Emailer->create($this->data);
+			if ($this->Emailer->validates()) {
+				$this->Email->to = Configure::read('CONTACT_EMAIL');
+				$this->Email->replyTo = $this->data['Emailer']['email'];
+				$this->Email->from = $this->data['Emailer']['name'].' <'.$this->data['Emailer']['email'].'>';
+				$this->Email->subject = 'Emailer Form: '.$this->data['Emailer']['subject'];
+				//$this->Email->delivery = 'debug';
+				if ($this->Email->send($this->data['Emailer']['message'])) {
+					$this->Session->setFlash('Thank you for contacting us');
+					//$this->redirect('/');
+				} else {
+					$this->Session->setFlash(__('There was an error sending your email. Please try again in a few minutes.', true));
+				}
+			} else {
+				$this->Session->setFlash(__('Please correct the following errors', true));
+			}
+		}
 	}
 }
 ?>
