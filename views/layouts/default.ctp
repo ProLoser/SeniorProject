@@ -112,12 +112,10 @@
         </div>
         <div class="clear"></div>
 	
-        <div id="footerbarwrap">
-        <ul>
+        <ul id="footerbarwrap">
             <li>Copyright © Your Contact Name. All rights reserved.     +12 34 56 78 90</li>
             <li>Other important footer information is easy to add <a href="#">Including links</a></li>
         </ul>
-        </div>
     </div>
 </div>
 	<?php echo $this->element('sql_dump'); ?>
