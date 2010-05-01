@@ -1,8 +1,8 @@
-<ul>
+<ul id="nav">
     <li><?php echo $html->link(__('Home', true),'/',array('title' => 'Home')); ?></li>
-    <li><?php echo $html->link(__('Programs', true),array('controller'=>'programs','action'=>'display','index'),array('title' => 'Programs'));?>
+    <li><?php echo $html->link(__('Programs', true),array('controller'=>'programs','action'=>'index'),array('title' => 'Programs'));?>
         <ul>
-            <li><?php echo $html->link(__('Australia', true),array('controller'=>'programs','action'=>'display','Australia'),array('title' => 'Australia'));?>Australia</a></li>
+            <li><?php echo $html->link(__('Australia', true),array('controller'=>'programs','action'=>'view','Australia'),array('title' => 'Australia'));?></li>
             <li><a href="page-gallery.html">Costa Rica</a></li>
             <li><a href="fullwidth.html">Dominican Republic</a></li>
             <li><a href="page.html">Eastern Europe</a></li>
@@ -47,5 +47,5 @@
             <li><a href="../sb-dark-red">About ISV</a></li>
         </ul>
     </li>
-    <li><a href="contact.php">Apply Now</a></li>
+    <li><?php echo $this->Html->link(__('Apply Now', true), array('controller' => 'users', 'action' => 'add')); ?></li>
 </ul>

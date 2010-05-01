@@ -5,9 +5,6 @@
 
 * { margin: 0; padding: 0; }
 .clearfix { overflow: auto; }
-.clear { clear:both; }
-.clearright { clear:right; }
-.clearleft { clear:left; }
 .left { float: left; }
 .right { float: right; }
 img.left {margin-right: 10px }
@@ -26,7 +23,9 @@ body {
 
 /*** HEADER ***/
 #header {
-	overflow: auto;
+	height: 100px;
+	/* an idea I had to display the current localization */
+	background: url(../img/flag.png) no-repeat 600px 10px;
 }
 #header h2 {
 	/* title goes in here */
@@ -37,31 +36,41 @@ body {
 	height: 63px;
 	float: left;
 }
+#header ul {
+	float: right;
+}
+#header ul li {
+	list-style: none;
+	position: relative;
+	float: left;
+}
+#header ul li a {
+	text-decoration: none;
+	display: block;
+	/* as a test to make text stand out above the flag */
+	text-shadow: #000 0 2px 2px;
+	font-weight: bold;
+}
 #header #globalnav {
-	float: right;	
 	font-size: 12px;
 	margin: 20px 43px 0 0;
 	padding: 0;
 	color: #C3C3C3;
 }
-#header #globalnav li {
-	vertical-align: middle;	
-}
 #header #globalnav a {
 	color: #D1DFA8;
-	text-decoration: none;
-	margin: 3px 0 0 0;
+	margin: 10px;
+	padding: 0;
 }
 #header #globalnav a:hover {
 	color: #fff;
-	text-decoration: none;
-	background: none;
 	border-bottom: 1px #fff dotted;
+	/* compensates for the extra pixel height added by the border */
+	margin-bottom: 9px;
 }
 #header #globalnav form {
 	/* search form */
 	color: #EBEBEB;
-	overflow: auto;
 	font-size: 11px;
 	margin: 0;
 	padding: 0;
@@ -71,43 +80,34 @@ body {
 #header #globalnav form input {
 	padding: 1px 0 1px 0;	
 }
-#header ul {
-	float: right;
-	list-style-type: none;
+#header ul#nav {
 	font-size: 13px;
 	margin: 20px 30px 0 0;
 }
-
-#header ul ul {
-	border-bottom: 10px solid #F0F0F0;
-}
-
-#header ul li {
-	display: block;
-	float: left;
-}
-
-#header ul li a {
-	text-decoration: none;
+#header ul#nav li a {
 	color: #E5E5E5;
-	display: block;
-	padding: 5px 15px 5px 15px;
+	padding: 5px 15px;
 }
-
-#header ul li a:hover {
-	display: block;
-	text-decoration: none;
+#header ul#nav li a:hover {
 	color: #fff;
 	background: #374B29;
 }
-
-#header ul li li {
-	display: none;	
-}
-
-#header ul li:hover li {
+#header ul#nav li:hover {
 	background: #374B29;
-	display: block;	
+}
+#header ul#nav li ul {
+	border-bottom: 10px solid #F0F0F0;
+	display: none;
+	background: #374B29;
+	width: 170px;
+	position: absolute;
+	top: 100%;
+	margin: 0;
+}
+#header ul#nav li:hover ul {
+	display: block;
+}
+#header ul#nav li ul li {
 	float: none;
 }
 
