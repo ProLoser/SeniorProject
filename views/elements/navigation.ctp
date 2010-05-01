@@ -1,9 +1,8 @@
 <ul>
-    <li><?php $html->link(__('Home', true),'/',array('title' => 'Home')); ?></li>
-    <li><?php $html->link(__('Programs', true),array('controller'=>'programs','action'=>'display','index'),array('title' => 'Programs'));
-?>
+    <li><?php echo $html->link(__('Home', true),'/',array('title' => 'Home')); ?></li>
+    <li><?php echo $html->link(__('Programs', true),array('controller'=>'programs','action'=>'display','index'),array('title' => 'Programs'));?>
         <ul>
-            <li><a href="page.html">Australia</a></li>
+            <li><?php echo $html->link(__('Australia', true),array('controller'=>'programs','action'=>'display','Australia'),array('title' => 'Australia'));?>Australia</a></li>
             <li><a href="page-gallery.html">Costa Rica</a></li>
             <li><a href="fullwidth.html">Dominican Republic</a></li>
             <li><a href="page.html">Eastern Europe</a></li>

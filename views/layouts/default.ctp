@@ -10,7 +10,6 @@
 	'page-galleria',
 	'prettyPhoto',
 	'prettyPhoto/prettyPhoto',
-	'common',
 	'index',
 	'forms'
 )); ?>
@@ -51,8 +50,11 @@
 <div id="container">
     <div id="header">
     	<h2>ISV Online</h2>
-    	<form>Global Site | My Account &nbsp;<input type="textbox"></input> <input type="button" value="Search"></input></form>
-        <div class="clearright"></div>
+    	<ul id="globalnav">
+        	<li><a href="#">Global Site</a></li> 
+            <li><a href="#">My Account</a></li>
+            <li><form><input type="textbox"></input> <input type="button" value="Search"></input></form></li>
+        </ul>
         <?php echo $this->element('navigation'); ?>
     </div>
     
