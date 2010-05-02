@@ -90,8 +90,9 @@ body {
 	padding: 5px 15px;
 }
 #header ul#nav li a:hover {
-	color: #fff;
+	color: #000;
 	background: #374B29;
+	text-shadow: #719954 0 1px 1px;
 }
 #header ul#nav li:hover {
 	background: #374B29;
