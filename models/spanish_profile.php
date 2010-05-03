@@ -5,7 +5,7 @@ class SpanishProfile extends AppModel {
 		'proficiency_level' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a proficiency level.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -34,7 +34,7 @@ class SpanishProfile extends AppModel {
 		),
 		'booking_id' => array(
 			'numeric' => array(
-				'rule' => array('numeric'),
+				//'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

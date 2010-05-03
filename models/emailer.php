@@ -18,7 +18,7 @@ class Emailer extends AppModel {
 				'rule' => array('email'),
 				'message' => 'Please enter a valid email address',
 				//'allowEmpty' => false,
-				'required' => true,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -36,9 +36,9 @@ class Emailer extends AppModel {
 		'subject' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a subject',
 				//'allowEmpty' => false,
-				'required' => true,
+				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -46,9 +46,9 @@ class Emailer extends AppModel {
 		'message' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a message',
 				//'allowEmpty' => false,
-				'required' => true,
+				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
