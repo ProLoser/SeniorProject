@@ -1,5 +1,5 @@
 <?php
-/* Promos Test cases generated on: 2010-04-23 23:04:52 : 1272066172*/
+/* Promos Test cases generated on: 2010-05-03 00:05:31 : 1272846211*/
 App::import('Controller', 'Promos');
 
 class TestPromosController extends PromosController {
@@ -40,6 +40,26 @@ class PromosControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

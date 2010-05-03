@@ -30,6 +30,7 @@
  */
 class PagesController extends AppController {
 	var $name = 'Pages';
+	var $components = array('Email');
 
 /**
  * Displays a view
@@ -71,8 +72,21 @@ class PagesController extends AppController {
 		}
 		$this->set('page', $this->Page->read(null, $id));
 	}
+	
+	function admin_index() {
+		$this->Page->recursive = 0;
+		$this->set('pages', $this->paginate());
+	}
 
-	function add() {
+	function admin_view($id = null) {
+		if (!$id) {
+			$this->Session->setFlash(sprintf(__('Invalid %s', true), 'page'));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->set('page', $this->Page->read(null, $id));
+	}
+
+	function admin_add() {
 		if (!empty($this->data)) {
 			$this->Page->create();
 			if ($this->Page->save($this->data)) {
@@ -87,7 +101,7 @@ class PagesController extends AppController {
 		$this->set(compact('prices', 'locations'));
 	}
 
-	function edit($id = null) {
+	function admin_edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(sprintf(__('Invalid %s', true), 'page'));
 			$this->redirect(array('action' => 'index'));
@@ -108,7 +122,7 @@ class PagesController extends AppController {
 		$this->set(compact('prices', 'locations'));
 	}
 
-	function delete($id = null) {
+	function admin_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(sprintf(__('Invalid id for %s', true), 'page'));
 			$this->redirect(array('action'=>'index'));
@@ -119,6 +133,28 @@ class PagesController extends AppController {
 		}
 		$this->Session->setFlash(sprintf(__('%s was not deleted', true), 'Page'));
 		$this->redirect(array('action' => 'index'));
+	}
+	
+	function contact() {
+		if (!empty($this->data)) {
+			$this->loadModel('Emailer');
+			$this->Emailer->create($this->data);
+			if ($this->Emailer->validates()) {
+				$this->Email->to = Configure::read('CONTACT_EMAIL');
+				$this->Email->replyTo = $this->data['Emailer']['email'];
+				$this->Email->from = $this->data['Emailer']['name'].' <'.$this->data['Emailer']['email'].'>';
+				$this->Email->subject = 'Emailer Form: '.$this->data['Emailer']['subject'];
+				//$this->Email->delivery = 'debug';
+				if ($this->Email->send($this->data['Emailer']['message'])) {
+					$this->Session->setFlash('Thank you for contacting us');
+					//$this->redirect('/');
+				} else {
+					$this->Session->setFlash(__('There was an error sending your email. Please try again in a few minutes.', true));
+				}
+			} else {
+				$this->Session->setFlash(__('Please correct the following errors', true));
+			}
+		}
 	}
 }
 ?>

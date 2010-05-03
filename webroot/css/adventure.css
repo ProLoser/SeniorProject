@@ -4,13 +4,23 @@
  
 /* Main Splash Page */
 
+#content .about {
+	font-size: 14px;
+	color: #3A3A3A;
+	margin: 0 0 15px 0;
+	line-height: 20px;
+}
 #adv_vol {float:left;}
 #adv_adv {float:right;}
-#adv_vol #adv_main_p_vol {float:left; margin:5px 5px 5px 0px;}
-#adv_adv #adv_main_p_adv {float:right; margin:0px 5px 5px 5px;}
+#adv_vol p {font-size: 12px; line-height:20px; color:#646464;}
+#adv_adv p {font-size: 12px; line-height:20px; color:#646464;}
 #adv_vol #adv_main_img_vol {float:right; margin:1px 0px 7px 9px; vertical-align: text-top;}
 #adv_adv #adv_main_img_adv {float:left; margin:1px 9px 7px 0px; vertical-align: text-top;}
-/*#pagecontainer #mainpage #contents #adv_adv #adv_main_img_adv {float:left; margin:5px; vertical-align: text-top;}*/
+
+.minishowcasewrap { width:600px; float:left; margin:5px 0 0px 0; padding:0; }
+.minishowcase { list-style:none; margin:0;padding:0; }
+.minishowcase li { float:left; padding:5px;margin:0 5px 10px 5px;background:#d1d1d1;border:1px solid #B9B9B9;}
+.minishowcase li:hover { background:#d1d1d1;border:1px solid #484848;}
 
 
 /******************************** 

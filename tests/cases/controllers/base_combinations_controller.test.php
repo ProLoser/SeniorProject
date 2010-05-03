@@ -1,5 +1,5 @@
 <?php
-/* BaseCombinations Test cases generated on: 2010-04-23 23:04:47 : 1272066167*/
+/* BaseCombinations Test cases generated on: 2010-05-03 00:05:40 : 1272846100*/
 App::import('Controller', 'BaseCombinations');
 
 class TestBaseCombinationsController extends BaseCombinationsController {
@@ -40,6 +40,26 @@ class BaseCombinationsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

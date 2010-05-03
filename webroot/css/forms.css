@@ -1,0 +1,47 @@
+/* Forms */
+form {
+	margin: 0 auto;
+	width: 500px;
+	font-size: 12px;
+}
+fieldset {
+  border: 1px #BCBCBC dotted;
+  padding: 10px;   
+  margin: 0;
+} 
+fieldset legend {
+	font-size:11px; 
+	padding: 0 5px 0 5px;
+}
+form div.input {
+	overflow: auto;
+}
+label {
+	display: block; 
+	float: left; 
+	width: 100px; 
+	padding: 2px; 
+	margin: 6px 0 6px 0; 
+	text-align: right; 
+	color: #666;
+}
+input, textarea, select {
+	width: auto;     
+	margin: 5px 8px 5px 8px;
+	border: 1px #A6C460 dotted;
+	padding: 2px;
+	background: #ECF5D6;
+}
+textarea {
+	overflow: auto;	
+}
+form select {
+	width: auto;	
+	margin: 5px 0 5px 8px;
+	border: 1px #A6C460 dotted;
+	padding: 2px;
+	background: #ECF5D6;
+}
+form .submit {
+	margin: 10px 0 0 120px;	
+}

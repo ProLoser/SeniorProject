@@ -1,5 +1,5 @@
 <?php
-/* Documents Test cases generated on: 2010-04-23 23:04:48 : 1272066168*/
+/* Documents Test cases generated on: 2010-05-03 00:05:16 : 1272846136*/
 App::import('Controller', 'Documents');
 
 class TestDocumentsController extends DocumentsController {
@@ -40,6 +40,26 @@ class DocumentsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

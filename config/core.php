@@ -94,7 +94,7 @@
  *	`admin_index()` and `/admin/controller/index`
  *	`manager_index()` and `/manager/controller/index`
  */
-	//Configure::write('Routing.prefixes', array('admin'));
+	Configure::write('Routing.prefixes', array('admin'));
 
 /**
  * Turn off all caching application-wide.
@@ -300,4 +300,9 @@
  *
  */
 	Cache::config('default', array('engine' => 'File'));
+/**
+ * SeniorProject configuration values.
+ */
+	Configure::write('CONTACT_EMAIL', 'phorced@hotmail.com');
+	
 ?>

@@ -9,7 +9,7 @@
 		echo $this->Form->input('amount');
 		echo $this->Form->input('reason');
 		echo $this->Form->input('volunteer_name');
-		echo $this->Form->input('payment_sid');
+		echo $this->Form->input('payment_id');
 		echo $this->Form->input('booking_id');
 		echo $this->Form->input('volunteer_id');
 	?>

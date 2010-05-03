@@ -1,5 +1,5 @@
 <?php
-/* AddonCombinations Test cases generated on: 2010-04-23 23:04:47 : 1272066167*/
+/* AddonCombinations Test cases generated on: 2010-05-03 00:05:21 : 1272846081*/
 App::import('Controller', 'AddonCombinations');
 
 class TestAddonCombinationsController extends AddonCombinationsController {
@@ -40,6 +40,26 @@ class AddonCombinationsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

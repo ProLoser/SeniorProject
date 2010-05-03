@@ -6,9 +6,10 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('volunteer_id');
 		echo $this->Form->input('accepted');
-		echo $this->Form->input('payment_sid');
+		echo $this->Form->input('payment_id');
 		echo $this->Form->input('paid');
 		echo $this->Form->input('cancelled');
+		echo $this->Form->input('line_item_count');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>

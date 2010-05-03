@@ -1,5 +1,5 @@
 <?php
-/* Bookings Test cases generated on: 2010-04-23 23:04:48 : 1272066168*/
+/* Bookings Test cases generated on: 2010-05-03 00:05:48 : 1272846108*/
 App::import('Controller', 'Bookings');
 
 class TestBookingsController extends BookingsController {
@@ -40,6 +40,26 @@ class BookingsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

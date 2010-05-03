@@ -1,5 +1,5 @@
 <?php
-/* Prices Test cases generated on: 2010-04-23 23:04:52 : 1272066172*/
+/* Prices Test cases generated on: 2010-05-03 00:05:13 : 1272846193*/
 App::import('Controller', 'Prices');
 
 class TestPricesController extends PricesController {
@@ -40,6 +40,26 @@ class PricesControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

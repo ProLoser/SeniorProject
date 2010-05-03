@@ -1,5 +1,5 @@
 <?php
-/* SpanishProfiles Test cases generated on: 2010-04-23 23:04:54 : 1272066174*/
+/* SpanishProfiles Test cases generated on: 2010-05-03 00:05:11 : 1272846251*/
 App::import('Controller', 'SpanishProfiles');
 
 class TestSpanishProfilesController extends SpanishProfilesController {
@@ -40,6 +40,26 @@ class SpanishProfilesControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

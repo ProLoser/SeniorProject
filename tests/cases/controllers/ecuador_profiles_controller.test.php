@@ -1,5 +1,5 @@
 <?php
-/* EcuadorProfiles Test cases generated on: 2010-04-23 23:04:49 : 1272066169*/
+/* EcuadorProfiles Test cases generated on: 2010-05-03 00:05:30 : 1272846150*/
 App::import('Controller', 'EcuadorProfiles');
 
 class TestEcuadorProfilesController extends EcuadorProfilesController {
@@ -40,6 +40,26 @@ class EcuadorProfilesControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

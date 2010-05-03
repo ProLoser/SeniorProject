@@ -5,9 +5,9 @@ class Volunteer extends AppModel {
 		'last_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter your last name.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -15,9 +15,9 @@ class Volunteer extends AppModel {
 		'first_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter your first name.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -25,8 +25,8 @@ class Volunteer extends AppModel {
 		'middle_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				//'message' => 'Please enter your middle name.',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -36,7 +36,7 @@ class Volunteer extends AppModel {
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -45,9 +45,9 @@ class Volunteer extends AppModel {
 		'current_address' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter an address',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -55,9 +55,9 @@ class Volunteer extends AppModel {
 		'current_city' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a city.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -65,19 +65,19 @@ class Volunteer extends AppModel {
 		'current_state' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a state.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'current_zip' => array(
 			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'rule' => array('postal',null, 'us'),
+				'message' => 'Please enter a valid postal code.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -85,9 +85,9 @@ class Volunteer extends AppModel {
 		'current_country' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a valid country.',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -95,9 +95,9 @@ class Volunteer extends AppModel {
 		'permanent_address' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter your permanent address',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -105,9 +105,9 @@ class Volunteer extends AppModel {
 		'permanent_city' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a city',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -115,19 +115,19 @@ class Volunteer extends AppModel {
 		'permanent_state' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a state',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'permanent_zip' => array(
 			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'rule' => array('postal',null,'us'),
+				'message' => 'Please enter your zip code',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -135,9 +135,9 @@ class Volunteer extends AppModel {
 		'permanent_country' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a country',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -145,7 +145,7 @@ class Volunteer extends AppModel {
 		'passport' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a valid passport',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -155,7 +155,7 @@ class Volunteer extends AppModel {
 		'passport_country' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a valid country for your passport.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -165,9 +165,9 @@ class Volunteer extends AppModel {
 		'email' => array(
 			'email' => array(
 				'rule' => array('email'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a valid email',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -175,7 +175,7 @@ class Volunteer extends AppModel {
 		'phone' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a valid phone number',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -185,7 +185,7 @@ class Volunteer extends AppModel {
 		'gender' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please select a gender',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -195,9 +195,9 @@ class Volunteer extends AppModel {
 		'age' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a valid age',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -205,9 +205,9 @@ class Volunteer extends AppModel {
 		'mobile_phone' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a mobile phone number',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -215,9 +215,9 @@ class Volunteer extends AppModel {
 		'university' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a university',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -225,9 +225,9 @@ class Volunteer extends AppModel {
 		'university_major' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a Major',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -235,9 +235,9 @@ class Volunteer extends AppModel {
 		'country_of_birth' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter your country of birth',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -245,7 +245,7 @@ class Volunteer extends AppModel {
 		'country_of_residence' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter your country of residence.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -255,7 +255,7 @@ class Volunteer extends AppModel {
 		'citizenship' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter valid citizenship information',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -264,8 +264,8 @@ class Volunteer extends AppModel {
 		),
 		'alternate_email' => array(
 			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'rule' => array('email'),
+				'message' => 'Please enter an alternate email',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -275,9 +275,9 @@ class Volunteer extends AppModel {
 		'primary_emergency_contact' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter emergency contact information',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -285,7 +285,7 @@ class Volunteer extends AppModel {
 		'primary_emergency_relationship' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter emergency primary relationship information',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -295,19 +295,19 @@ class Volunteer extends AppModel {
 		'primary_emergency_phone' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter your emergency phone number',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'primary_emergency_email' => array(
 			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'rule' => array('email'),
+				'message' => 'Please enter primary emergency email',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -315,9 +315,9 @@ class Volunteer extends AppModel {
 		'secondary_emergency_contact' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter secondary emergency contact',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -325,9 +325,9 @@ class Volunteer extends AppModel {
 		'secondary_emergency_relationship' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter secondary emergency relationship',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -335,7 +335,7 @@ class Volunteer extends AppModel {
 		'secondary_emergency_phone' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter secondary emergency phone number',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -344,10 +344,10 @@ class Volunteer extends AppModel {
 		),
 		'secondary_emergency_email' => array(
 			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'rule' => array('email'),
+				'message' => 'Please enter a secondary emergency email',
 				//'allowEmpty' => false,
-				//'required' => false,
+				//'required' => true,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -355,7 +355,7 @@ class Volunteer extends AppModel {
 		'grade_level' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter your grade level',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -365,8 +365,8 @@ class Volunteer extends AppModel {
 		'medical_conditions' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				//'message' => 'Please enter any medical conditions.',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -375,8 +375,8 @@ class Volunteer extends AppModel {
 		'allergies' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				//'message' => 'Please enter any allergies',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -385,8 +385,8 @@ class Volunteer extends AppModel {
 		'hospitalization' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				//'message' => 'Please enter any hospitalization information',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -395,8 +395,8 @@ class Volunteer extends AppModel {
 		'prescription_medication' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				//'message' => 'Enter any prescription medications',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -405,7 +405,7 @@ class Volunteer extends AppModel {
 		'diet' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter information based on your diet.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -415,7 +415,7 @@ class Volunteer extends AppModel {
 		'shirt_size' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a shirt size',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -425,7 +425,7 @@ class Volunteer extends AppModel {
 		'date_summer' => array(
 			'date' => array(
 				'rule' => array('date'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a summer date',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -435,7 +435,7 @@ class Volunteer extends AppModel {
 		'date_fall' => array(
 			'date' => array(
 				'rule' => array('date'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a fall date',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -445,7 +445,7 @@ class Volunteer extends AppModel {
 		'project_preference' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter a project preference',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -455,7 +455,7 @@ class Volunteer extends AppModel {
 		'interests' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Please enter your interests.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule

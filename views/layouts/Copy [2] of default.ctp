@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>ISVOnline - <?php echo $title_for_layout; ?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<?php
+	echo $this->Html->meta('icon');
+
+	echo $this->Html->css(array(
+		'style',
+		'prettyPhoto',
+		'ddsmoothmenu',
+		'page-galleria',
+		'artengineered',
+		'adventure',
+		'prettyPhoto/prettyPhoto',
+		'common',
+		'index'
+	));
+	
+	echo $this->Html->Script(array(
+		'jquery-1.3.2.min',
+		'jquery.easing.1.2',
+		'fadeinout',
+		'jquery.prettyPhoto',
+		'lib/jquery.prettyPhoto',
+		'cufon-yui',
+		'fontconfig',
+		'jquery.galleria',
+		'ddsmoothmenu-sub',
+		'galleria-init1',
+		'jquery.galleria',
+		'common.js',
+		'TitilliumText14L_300_600.font',
+		'fonts/Sansation_700.font',
+		'fonts/Sansation_400.font',
+		'fonts/Sansation_300.font',
+		'common-innovation',
+		'index_advmain'
+	));
+
+	echo $scripts_for_layout;
+?>
+<link rel="Shortcut Icon" type="image/ico" href="../favicon.ico" />
+
+<!--[if lte IE 6]>
+	<?php echo $this->Html->css('ie6'); ?>
+<![endif]-->
+
+<!--[if IE 7]>
+	<?php echo $this->Html->css('ie7'); ?>
+<![endif]-->
+
+<!--/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/ -->
+</head>
+<body>
+
+<div id="pagecontainer"> <!-- Outside Container -->
+	<div id="mainpage"> 
+    
+    <div id="topmenu"><form>Global Site | My Account &nbsp;<input type="textbox"></input> <input type="button" value="Search"></input></form></div>
+	
+		<div id="header"> 
+			
+			<div id="smoothmenu1" class="ddsmoothmenu"><!-- The Menu -->
+				<ul>
+					<li><a href="index.html">Home</a>
+					</li>
+					<li><a href="page.html">Programs</a>
+						<ul>
+							<li><a href="page.html">Australia</a></li>
+							<li><a href="page-gallery.html">Costa Rica</a></li>
+							<li><a href="fullwidth.html">Dominican Republic</a></li>
+							<li><a href="page.html">Eastern Europe</a></li>
+							<li><a href="page.html">Ecuador</a></li>
+							<li><a href="page.html">New Zealand</a></li>
+							<li><a href="page.html">South Africa</a></li>
+							<li><a href="page.html">Thailand</a></li>
+						</ul>
+					</li>
+					<li><a href="adv-main.html">Adventure</a>
+						<ul>
+							<li><a href="adv-Aus.html">Australia</a></li>
+							<li><a href="adv-CosR.html">Costa Rica</a></li>
+							<li><a href="adv-DomR.html">Dominican Republic</a></li>
+							<li><a href="adv-EaEu.html">Eastern Europe</a></li>
+							<li><a href="adv-Ecua.html">Ecuador</a></li>
+							<li><a href="adv-NewZ.html">New Zealand</a></li>
+							<li><a href="adv-SouAfr.html">South Africa</a></li>
+							<li><a href="adv-Thai.html">Thailand</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Volunteer</a>
+						<ul>
+							<li><a href="../volunteer/vol-Aus.html">Australia</a></li>
+							<li><a href="../volunteer/vol-CosR.html">Costa Rica</a></li>
+							<li><a href="../volunteer/vol-DomR.html">Dominican Republic</a></li>
+							<li><a href="../volunteer/vol-EaEu.html">Eastern Europe</a></li>
+							<li><a href="../volunteer/vol-Ecua.html">Ecuador</a></li>
+							<li><a href="../volunteer/vol-NewZ.html">New Zealand</a></li>
+							<li><a href="../volunteer/vol-SouAfr.html">South Africa</a></li>
+							<li><a href="../volunteer/vol-Thai.html">Thailand</a></li>
+						</ul>
+					</li>
+					<li><a href="page.html">ISV Family</a>
+						<ul>
+							<li><a href="../sb-classic/index.html">Applicant</a></li>
+							<li><a href="../sb-dark/index.html">Contracted Student</a></li>
+							<li><a href="../sb-light-blue/index.html">Alumni</a></li>
+							<li><a href="../sb-light-red">Campus Clubs</a></li>
+							<li><a href="../sb-light-green">Fundraising</a></li>
+							<li><a href="../sb-dark-blue">ISV Foundation</a></li>
+							<li><a href="../sb-dark-red">About ISV</a></li>
+						</ul>
+					
+					</li>
+					<li><a href="contact.php">Apply Now</a></li>
+				</ul>
+				<br style="clear: left" />
+			</div>
+			
+			<div id="logo"><a href="index.html"><img src="../img/logo2.png" alt="logo" /></a></div>
+		</div> <!-- Close Header -->
+
+		<div id="categorytitle">
+		Australia - Adventure Tour
+		</div>
+
+		<div id="sidebar">
+			<div class="sidebartitle">
+			Map of Australia
+			</div>
+			<div class="sidebartextbox">
+            <!--<a class="picture asyncImgLoad" href="../img/Adventure/Aus_map.jpg" rel="prettyPhoto[gallery][unusual]" title="../img/Adventure/Aus_map.jpg"></a>-->
+			<a rel="prettyPhoto[gallery]" href="../img/Adventure/Aus_map.jpg">
+				<img class="mapimage" src="../img/Adventure/Aus_map.jpg" alt="Australia Map" />
+			</a>
+			</div>
+			<div class="sidebartitle">
+			Sub Navigation
+			</div>
+			<div class="sidebaropts">
+				<ul>
+					<li><a href="#">Australia</a></li>
+					<li><a href="#">Costa Rica</a></li>
+					<li><a href="#">Dominican Republic</a></li>
+					<li><a href="#">Eastern Europe</a></li>
+					<li><a href="#">Ecuador</a></li>
+					<li><a href="#">New Zealand</a></li>
+					<li><a href="#">South Africa</a></li>
+					<li><a href="#">Thailand</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="title">
+		About
+		</div>
+		<div id="titleHighlight">
+		You will travel throughout along Australia’s beautiful East Coast between Sydney and Cairns, exploring the World Heritage Areas of the Blue Mountains, Fraser Island which is the world’s largest sand island, the Great Barrier Reef and Wet Tropics areas, in addition to primary rainforests, wild rivers, pristine beaches and the cultural attractions of Sydney and Cairns. 
+		</div>
+
+	  <div id="contents" class="twocolumn">
+        
+  <div id="gallerycontents" class="twocolumn">
+			<!-- Page Gallery -->
+			<div class="slideshowgallery">
+			<div id="main_image"></div>
+			<ul class="gallery_unstyled">
+            
+    <li class="active"><img src="../img/adventure/Australia/day1.jpg" title="Day 1 - Arrive in Sydney" alt="Day 1 - Arrive in Sydney" longdesc="<strong>Day 1 – Arrive in Sydney</strong>: Return to Sydney from your Conservation Volunteer Project. Unwind with a free night out in Sydney (host of the 2000 Olympic Games)." /></li>
+    <li><img src="../img/adventure/Australia/day2.jpg" title="Day 2 - Sydney (Free Day / Harbor Cruise)" alt="Day 2 - Sydney (Free Day / Harbor Cruise)" longdesc="<strong>Day 2 – Sydney (Free Day / Harbor Cruise)</strong>: Free Day to explore the best of Sydney including Darling Harbor, the historical Rocks area, the Royal Botanical Gardens, Sydney Opera House, beautiful beaches and much more. You may want to visit the Sydney Tower or Sydney Aquarium and in the evening take a sunset cocktail cruise in one of the most famous harbors in the world (ISV Optional Activity Package)." /></li>
+    <li><img src="../img/adventure/Australia/day3.jpg" title="Day 3 – *Blue Mountains (Wildlife Park / Rappelling)" alt="Day 3 – *Blue Mountains (Wildlife Park / Rappelling)" longdesc="<strong>Day 3 – *Blue Mountains (Wildlife Park / Rappelling)</strong>: Today we drive 40 miles west of Sydney to the breathtaking Blue Mountains. On the way we stop at Featherdale Wildlife Park (ISV Included Activity) to see Australia’s unique wildlife such as kangaroos and koalas. In the Blue Mountains we will get to see the famous “Three Sisters” rock formations, and in the afternoon test your courage by rappelling (ISV Optional Activity Package). The scenic sandstone cliffs and gorges of the Blue Mountains are an excellent rappelling location for beginners and experts alike! After dinner, we will take an overnight trip to Byron Bay." /></li>
+    <li><img src="../img/adventure/Australia/day4.jpg" title="Day 4 – Byron Bay (Surf Lessons)" alt="Day 4 – Byron Bay (Surf Lessons)" longdesc="<strong>Day 4 – Byron Bay (Surf Lessons)</strong>: Today we experience the friendly and eclectic culture of beautiful Byron Bay. Learn to surf at the beautiful Byron Bay Beach (ISV Optional Activity Package), and you might be lucky enough to see dolphins or migrating whales. Explore the town or hike to Cape Byron (Australia's eastern most point)." /></li>
+    <li><img src="../img/adventure/Australia/day5.jpg" title="Day 5 – Byron Bay (Free Day)" alt="Day 5 – Byron Bay (Free Day)" longdesc="<strong>Day 5 – Byron Bay (Free Day)</strong>: Today is a free day to enjoy the beautiful town of Byron Bay and practice your new surfing skills! You may want to relax at the beach, explore the town, trek to the lighthouse at Cape Byron (Australia's eastern most point) for views of the Pacific Ocean or take part in a number of additional activities available." /></li>
+    <li><img src="../img/adventure/Australia/day6.jpg" title="Day 6 – Byron Bay to *Fraser Island (Lake Wabby)" alt="Day 6 – Byron Bay to *Fraser Island (Lake Wabby)" longdesc="<strong>Day 6 – Byron Bay to *Fraser Island (Lake Wabby)</strong>: Get ready to discover the amazing Fraser Island - the largest sand island in the world. Discover the diversity and natural beauty as you explore spectacular surf beaches and stunning cliffs of colored sands." /></li>
+    <li><img src="../img/adventure/Australia/day7.jpg" title="Day 7 – *Fraser Island (Indian Head Tour)" alt="Day 7 – *Fraser Island (Indian Head Tour)" longdesc="<strong>Day 7 – *Fraser Island (Indian Head Tour)</strong>: Today we will discover the best of Fraser Island on the Indian Head Full-Day Tour (ISV Included Activity). We will cruise along the amazing 75-mile beach to swim in Eli Creek, see the famous Maheno shipwreck and climb to the top of Indian Head for magnificent views of the surrounding sand below, beaches and the Pacific Ocean." /></li>
+    <li><img src="../img/adventure/Australia/day8.jpg" title="Day 8 – *Fraser Island to Airlie Beach (Lake Wabby & Birrabeen)" alt="Day 8 – *Fraser Island to Airlie Beach (Lake Wabby & Birrabeen)" longdesc="<strong>Day 8 – *Fraser Island to Airlie Beach (Lake Wabby & Birrabeen)</strong>: Today we continue to experience the amazing scenery and wildlife (e.g. dingoes) of Fraser Island. This morning you will have the option to trek over sand dunes and swim in the beautiful emerald-green Lake Wabby (ISV Optional Activity Package), the deepest of Fraser Islands lakes. Tonight, we leave for the backpacker town of Airlie Beach, gateway to the Whitsunday Islands." /></li>
+    <li><img src="../img/adventure/Australia/day9.jpg" title="Day 9 – Airlie Beach (Ocean Rafting)" alt="Day 9 – Airlie Beach (Ocean Rafting)" longdesc="<strong>Day 9 – Airlie Beach (Ocean Rafting)</strong>: Airlie Beach is the perfect place to soak up the sun and the warm tropical weather! Today you’ll have the option to go Ocean Rafting (ISV Optional Activity Package), to Whitehaven Beach. Experience what is known as the whitest sand in the world at Whitehaven Beach. On this Ocean Rafting adventure participants will also go snorkeling and take a guided walk on Whitsunday Island. This evening, enjoy the nightlife of this lively town filled with international travelers." /></li>
+    <li><img src="../img/adventure/Australia/day10.jpg" title="Day 10 – Airlie Beach to Cairns" alt="Day 10 – Airlie Beach to Cairns" longdesc="<strong>Day 10 – Airlie Beach to Cairns</strong>: We continue north to the city of Cairns, gateway to the Great Barrier Reef, and the adrenaline capital of Australia." /></li>
+    <li><img src="../img/adventure/Australia/day11.jpg" title="Day 11 – Cairns (Reef Teach & Tjapukai Aboriginal Cultural Park)" alt="Day 11 – Cairns (Reef Teach & Tjapukai Aboriginal Cultural Park)" longdesc="<strong>Day 11 – Cairns (Reef Teach & Tjapukai Aboriginal Cultural Park)</strong>: In the morning we will visit Tjapukai Aboriginal Cultural Park (ISV Included Activity) where we will learn about the history, art, dance and way of life of Australia's indigenous people. This afternoon we will visit 'Reef Teach' (ISV Included Activity), a fun information session on the Great Barrier Reef which will prepare you for your snorkeling trip tomorrow." /></li>
+    <li><img src="../img/adventure/Australia/day12.jpg" title="Day 12 – Cairns (*Great Barrier Reef)" alt="Day 12 – Cairns (*Great Barrier Reef)" longdesc="<strong>Day 12 – Cairns (*Great Barrier Reef)</strong>: We spend the day on the Great Barrier Reef for a full day of snorkeling at two different reefs (ISV Included Activity). There’s also the opportunity to scuba dive at an additional cost (even if you have never been scuba diving before!) Here you will explore the diversity of marine life from the largest reef of living coral in the world. Some participants will take the option to spend the day and night onboard another vessel called “Kangaroo Explorer”** and take advantage of an extra day of diving and snorkeling. (Limited availability)" /></li>
+    <li><img src="../img/adventure/Australia/day13.jpg" title="Day 13 – Cairns (Free Day)" alt="Day 13 – Cairns (Free Day)" longdesc="<strong>Day 13 – Cairns (Free Day)</strong>: A free day to explore the many attractions in Cairns & surrounding areas. Options available include spending an extra day on the Great Barrier Reef, skydiving, bungee jumping or exploring other areas in or around Cairns including Cape Tribulation where two World Heritage areas meet: the *Daintree Rainforest and the * Great Barrier Reef.. Those participants who opted to spend the night on the “Kangaroo Explorer” (see above) will return this afternoon." /></li>
+	<li><img src="../img/adventure/Australia/day14.jpg" title="Day 14 – Tully River" alt="Day 14 – Tully River" longdesc="<strong>Day 14 – Tully River</strong>: Depart for the Tully River to white water raft grade III and IV rapids (ISV Included Activity) through pristine tropical rainforest in yet another World Heritage area, the *Wet Tropics!" /></li>
+			</ul>
+			</div>
+		</div>	
+		<div class="clear"></div>
+        
+        <h2>Optional Activity Package (OAP)</h2>
+      	 	  <!-- ACCORDION IMAGE ROTATOR -->
+          <div id="accordionContainer_advmain">
+            
+              <!-- slide 1 -->
+              <div id="slide1" class="accordionImgDiv_advmain">
+                  <a href="index.html" id="slideimg1" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="../img/adventure/Australia/Adv_Aus-SliderMain01.jpg"></a>
+                  <div class="accordionDescBack_advmain"></div>
+                  <div class="accordionDesc_advmain">
+                      <h3 class="accordionDescHeader_advmain">Sydney Harbour</h3>
+                  </div>                    
+                  <div class="slideStrip_advmain" title="../img/adventure/Australia/Adv_Aus-SliderStrip01.jpg"></div>
+                  <p class="slideDesc_advmain">Sydney<br />Harbour</p>  
+              </div>
+                                                          
+              <!-- slide 2 -->
+              <div id="slide2" class="accordionImgDiv_advmain"> 
+                  <a href="index.html" id="slideimg2" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="../img/adventure/Australia/Adv_Aus-SliderMain02.jpg"></a>
+                  <div class="accordionDescBack_advmain"></div>
+                  <div class="accordionDesc_advmain">
+                      <h3 class="accordionDescHeader_advmain">Blue Mountains</h3>
+                  </div>                    
+                  <div class="slideStrip_advmain" title="../img/adventure/Australia/Adv_Aus-SliderStrip02.jpg"></div>
+                  <p class="slideDesc_advmain">Blue<br />Mountains</p> 
+              </div>
+                                
+              <!-- slide 3 -->
+              <div id="slide3" class="accordionImgDiv_advmain">
+                  <a href="index.html" id="slideimg3" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="../img/adventure/Australia/Adv_Aus-SliderMain03.jpg"></a>
+                  <div class="accordionDescBack_advmain"></div>
+                  <div class="accordionDesc_advmain">
+                      <h3 class="accordionDescHeader_advmain">Bryon Bay</h3>
+                  </div>                    
+                  <div class="slideStrip_advmain" title="../img/adventure/Australia/Adv_Aus-SliderStrip03.jpg"></div>
+                  <p class="slideDesc_advmain">Bryon <br />Bay</p>  
+              </div>
+                                          
+              <!-- slide 4 -->
+              <div id="slide4" class="accordionImgDiv_advmain">
+                  <a href="index.html" id="slideimg4" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="../img/adventure/Australia/Adv_Aus-SliderMain04.jpg"></a>
+                  <div class="accordionDescBack_advmain"></div>
+                  <div class="accordionDesc_advmain">
+                      <h3 class="accordionDescHeader_advmain">Frasier Island</h3>
+                  </div>                   
+                 <div class="slideStrip_advmain"  title="../img/adventure/Australia/Adv_Aus-SliderStrip04.jpg"></div>
+                 <p class="slideDesc_advmain">Frasier<br />Island</p>  
+              </div>           
+                
+              <!-- slide 5 -->
+              <div id="slide5" class="accordionImgDiv_advmain">
+                  <a href="index.html" id="slideimg5" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="../img/adventure/Australia/Adv_Aus-SliderMain05.jpg"></a> 
+                  <div class="accordionDescBack_advmain"></div>
+                  <div class="accordionDesc_advmain">
+                      <h3 class="accordionDescHeader_advmain">Whitsunday Islands</h3>
+                  </div>    
+                  <div class="slideStrip_advmain" title="../img/adventure/Australia/Adv_Aus-SliderStrip05.jpg"></div>
+                  <p class="slideDesc_advmain">Whitsunday<br />Islands</p>  
+              </div>
+          </div> <!-- accordionContainer -->
+
+		<h2 class="excur_title">Fiji Excursion</h2>
+        	<div class="mportfolio_exc mportfoliocatbg_exc">
+        		<a href="#"><img src="../img/adventure/Australia/Fiji_Excursion.jpg" class="fade" /></a>
+        	</div>
+		</div>
+		
+		<div class="clear"></div>
+	</div> <!-- Close Mainpage -->
+
+	<!-- Footer start -->
+	<div id="footer">
+		<div id="footerwrap">
+			<div class="footerminibox">
+				<div class="footertitle">Contact Us</div>
+				<div class="footerposts">
+				<ul>
+					<li><a href="#">Get a Free Brochure</a></li>
+					<li><a href="#">Subscribe to Our Newsletter</a></li>
+					<li><a href="#">Customer Service</a></li>
+					<li><a href="#">Frequently Asked Questions</a></li>
+					<li><a href="#">ISV Blog</a></li>
+
+				</ul>
+				</div>
+			</div>
+			<div class="footerbox footerspace">
+				<div class="footertitle">About ISV</div>
+				<div class="footertext">
+				<p>For the past 27 years ISV has conducted international travel programs for tens of thousands of students on six continents.  During this time, students from around the world have participated in ISV's educational, volunteer, cultural and adventure programs, and experienced the ultimate in outdoor adventure travel.</p>
+                <p>ISV has 12 offices in six continents worldwide.  ISV program outbound offices are located in Australia, Canada, New Zealand, the UK and the USA.</p>
+				</div>
+			</div>
+			<div class="footerflickrwrap flickrfooterspace">
+				<div class="footertitle">Media Center</div>
+				<!-- Flickr Photos -->
+                <div class="footermedia">
+				<ul>
+					<li><img class="footerflickrimage" src="../img/footer/flickr/thumb1.jpg" alt="Flickr" /><a href="#" class="medialinks" >Photo Gallery</a></li>
+					<li><img class="footerflickrimage" src="../img/footer/flickr/thumb2.jpg" alt="Flickr" /><a href="#" class="medialinks" >Video Gallery</a></li>
+					<li><img class="footerflickrimage" src="../img/footer/flickr/thumb3.jpg" alt="Flickr" /><a href="#" class="medialinks" >In the News</a></li>
+                    <li><img class="footerflickrimage" src="../img/footer/flickr/fb.png" alt="Flickr" /><a href="#" class="medialinks" >Facebook Fan Page</a></li>
+
+				</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footerbarwrap">
+	<ul>
+		<li>Copyright © Your Contact Name. All rights reserved.     +12 34 56 78 90</li>
+		<li>Other important footer information is easy to add <a href="#">Including links</a></li>
+	</ul>
+	</div>
+</div> <!-- Close Container -->
+<?php echo $this->element('sql_dump'); ?>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
