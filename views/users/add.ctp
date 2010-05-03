@@ -5,6 +5,7 @@
 	<?php
 		echo $this->Form->input('username');
 		echo $this->Form->input('password');
+		echo $this->Form->input('confirm_password');
 		echo $this->Form->input('email');
 		echo $this->Form->input('role_id');
 		echo $this->Form->input('location_id');

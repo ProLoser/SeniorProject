@@ -1,5 +1,5 @@
 <?php
-/* Volunteers Test cases generated on: 2010-04-23 23:04:55 : 1272066175*/
+/* Volunteers Test cases generated on: 2010-05-03 00:05:20 : 1272846260*/
 App::import('Controller', 'Volunteers');
 
 class TestVolunteersController extends VolunteersController {
@@ -40,6 +40,26 @@ class VolunteersControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

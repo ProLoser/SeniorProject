@@ -1,5 +1,5 @@
 <?php
-/* LineItems Test cases generated on: 2010-04-23 23:04:50 : 1272066170*/
+/* LineItems Test cases generated on: 2010-05-03 00:05:48 : 1272846168*/
 App::import('Controller', 'LineItems');
 
 class TestLineItemsController extends LineItemsController {
@@ -40,6 +40,26 @@ class LineItemsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

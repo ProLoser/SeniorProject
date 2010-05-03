@@ -1,5 +1,5 @@
 <?php
-/* Employees Test cases generated on: 2010-04-23 23:04:49 : 1272066169*/
+/* Employees Test cases generated on: 2010-05-03 00:05:36 : 1272846156*/
 App::import('Controller', 'Employees');
 
 class TestEmployeesController extends EmployeesController {
@@ -40,6 +40,26 @@ class EmployeesControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

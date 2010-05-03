@@ -1,5 +1,5 @@
 <?php
-/* RecruiterMeetings Test cases generated on: 2010-04-23 23:04:53 : 1272066173*/
+/* RecruiterMeetings Test cases generated on: 2010-05-03 00:05:48 : 1272846228*/
 App::import('Controller', 'RecruiterMeetings');
 
 class TestRecruiterMeetingsController extends RecruiterMeetingsController {
@@ -40,6 +40,26 @@ class RecruiterMeetingsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

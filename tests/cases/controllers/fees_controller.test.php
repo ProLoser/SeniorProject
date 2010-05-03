@@ -1,5 +1,5 @@
 <?php
-/* Fees Test cases generated on: 2010-04-23 23:04:49 : 1272066169*/
+/* Fees Test cases generated on: 2010-05-03 00:05:42 : 1272846162*/
 App::import('Controller', 'Fees');
 
 class TestFeesController extends FeesController {
@@ -40,6 +40,26 @@ class FeesControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

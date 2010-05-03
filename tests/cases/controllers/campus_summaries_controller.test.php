@@ -1,5 +1,5 @@
 <?php
-/* CampusSummaries Test cases generated on: 2010-04-28 00:04:35 : 1272413675*/
+/* CampusSummaries Test cases generated on: 2010-05-03 00:05:58 : 1272846118*/
 App::import('Controller', 'CampusSummaries');
 
 class TestCampusSummariesController extends CampusSummariesController {
@@ -40,6 +40,26 @@ class CampusSummariesControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

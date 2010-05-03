@@ -1,5 +1,5 @@
 <?php
-/* Signups Test cases generated on: 2010-04-23 23:04:54 : 1272066174*/
+/* Signups Test cases generated on: 2010-05-03 00:05:05 : 1272846245*/
 App::import('Controller', 'Signups');
 
 class TestSignupsController extends SignupsController {
@@ -40,6 +40,26 @@ class SignupsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

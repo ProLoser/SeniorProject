@@ -60,7 +60,7 @@
     </div>
     
     <div id="body">
-    	<div id="sidebar">
+    	<!--<div id="sidebar">
         	<h3>Some Media</h3>
             	<a rel="prettyPhoto[gallery]" >
                 <?php echo $this->Html->image('adventure/Aus_map.jpg', array('alt' => 'Adventure Map of Australia')); ?>
@@ -78,11 +78,11 @@
 			</ul>
         </div>
         
-        <div id="content">
+        <div id="content">-->
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $content_for_layout; ?>
-        </div>
+        <!--</div>-->
     </div>
     
     <div id="footer">

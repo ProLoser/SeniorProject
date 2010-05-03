@@ -1,5 +1,5 @@
 <?php
-/* Offices Test cases generated on: 2010-04-23 23:04:51 : 1272066171*/
+/* Offices Test cases generated on: 2010-05-03 00:05:08 : 1272846188*/
 App::import('Controller', 'Offices');
 
 class TestOfficesController extends OfficesController {
@@ -40,6 +40,26 @@ class OfficesControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

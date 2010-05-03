@@ -1,5 +1,5 @@
 <?php
-/* Donations Test cases generated on: 2010-04-23 23:04:49 : 1272066169*/
+/* Donations Test cases generated on: 2010-05-03 00:05:22 : 1272846142*/
 App::import('Controller', 'Donations');
 
 class TestDonationsController extends DonationsController {
@@ -40,6 +40,26 @@ class DonationsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
+
+	}
+
+	function testAdminIndex() {
+
+	}
+
+	function testAdminView() {
+
+	}
+
+	function testAdminAdd() {
+
+	}
+
+	function testAdminEdit() {
+
+	}
+
+	function testAdminDelete() {
 
 	}
 

@@ -3,7 +3,7 @@
 	<fieldset>
  		<legend><?php printf(__('Add %s', true), __('Price', true)); ?></legend>
 	<?php
-		echo $this->Form->input('foreign_sid');
+		echo $this->Form->input('foreign_id');
 		echo $this->Form->input('foreign_model');
 		echo $this->Form->input('location_id');
 		echo $this->Form->input('price');
@@ -11,6 +11,9 @@
 		echo $this->Form->input('active');
 		echo $this->Form->input('expires');
 		echo $this->Form->input('activates');
+		echo $this->Form->input('original_slots_available');
+		echo $this->Form->input('current_slots_available');
+		echo $this->Form->input('line_item_count');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
