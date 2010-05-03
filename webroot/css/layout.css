@@ -96,6 +96,7 @@ a:hover {
 	padding: 5px 15px;
 }
 #header ul#nav li a:hover {
+	text-shadow: #719954 0 1px 1px;
 	color: #fff;
 	background: #292F17;
 }
