@@ -90,6 +90,7 @@ a:hover {
 #header ul#nav {
 	font-size: 13px;
 	margin: 20px 30px 0 0;
+	z-index: 100;
 }
 #header ul#nav li a {
 	color: #E5E5E5;
@@ -209,10 +210,14 @@ a:hover {
 	margin: 10px 0 10px 0;
 }
 
+/*** FULL WIDTH CONTENTS ***/
+#fullwidth-content {
+	margin: 60px 40px 20px 40px;
+} 
+
 /*** FOOTER **/
 #footer {
 	background: #1f240a url(../img/footer/bg-footer.jpg) top center no-repeat;
-	overflow: auto;
 }
 #footer h6 {
 	font-size: 18px;  

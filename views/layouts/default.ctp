@@ -5,14 +5,14 @@
 <title>ISV Online - <?php echo $title_for_layout; ?></title>
 <?php echo $this->Html->css(array(
 	'layout',
-	'ddsmoothmenu',
 	'adventure',
 	'page-galleria',
 	'prettyPhoto',
 	'prettyPhoto/prettyPhoto',
 	'index',
 	'forms',
-	'tables'
+	'tables',
+	'home'
 )); ?>
 <!--ifwhatever>
 	<?php echo $this->Html->css('ie6'); ?>
@@ -20,12 +20,6 @@
 
 <!--ifwhatever>
 	<?php echo $this->Html->css('ie7'); ?>
--->
-
-<!--
-* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
-* This notice MUST stay intact for legal use
-* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
 -->
 
 <?php echo $this->Html->script(array(
@@ -36,12 +30,12 @@
 	'lib/jquery.prettyPhoto',
 	'jquery.galleria',
 	'common.js',
-	'ddsmoothmenu',
 	'galleria-init1',
 	'jquery.galleria',
 	'common-innovation',
 	'index_advmain',
-	
+	'haccordion',
+	'flash-map'
 )); ?>
 
 
