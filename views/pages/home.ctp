@@ -1,4 +1,3 @@
-<script src="../../Scripts/swfobject_modified.js" type="text/javascript"></script>
 <div id="fullwidth-content">
 	<div id="flash-map">
 	  	<script language="JavaScript" type="text/javascript">
