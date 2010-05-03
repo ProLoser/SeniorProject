@@ -15,6 +15,13 @@ body {
 	font-family: Verdana, Trebuchet MS, Arial, sans-serif;
 	font-size: 11px;
 }
+a {
+	color: #585858;
+	text-decoration: none;
+}
+a:hover {
+	color: #7E7E7E;	
+}
 #container { 
 	width: 1035px;
 	margin: 0 auto;
@@ -50,7 +57,6 @@ body {
 	display: block;
 	/* as a test to make text stand out above the flag */
 	text-shadow: #000 0 1px 1px;
-	font-weight: bold;
 }
 #header #globalnav {
 	font-size: 12px;
@@ -88,7 +94,6 @@ body {
 #header ul#nav li a {
 	color: #E5E5E5;
 	padding: 5px 15px;
-	font-weight: normal;
 }
 #header ul#nav li a:hover {
 	color: #fff;
@@ -197,11 +202,10 @@ body {
 	color: #6C6C6C;
 	margin: 10px 0 10px 0;
 }
-#content .about {
+#content h5 {
 	font-size: 14px;
-	color: #3A3A3A;
-	margin: 0 0 15px 0;
-	line-height: 20px;
+	color: #6C6C6C;
+	margin: 10px 0 10px 0;
 }
 
 /*** FOOTER **/

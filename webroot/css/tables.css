@@ -1,0 +1,27 @@
+/* Tables */
+
+table {
+	margin: 5px 0;
+	padding: 0;
+	border-collapse: collapse;
+	border: 1px #B6C893 solid;
+}
+table a {
+	color: #252525;
+	text-decoration: none;
+}
+table a:hover {
+	color: #4E4E4E;	
+}
+td {
+	border-bottom: 1px #D0DDB9 dotted;
+	border-right: 1px #B6C893 dotted;
+	padding: 4px 6px;
+}
+th {
+	font-weight: bold;	
+	background: #E2EBCD;
+	border: 1px #B6C893 dotted;
+	border-bottom: 2px #B6C893 solid;
+	padding: 4px 6px;
+}

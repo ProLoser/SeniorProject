@@ -11,7 +11,8 @@
 	'prettyPhoto',
 	'prettyPhoto/prettyPhoto',
 	'index',
-	'forms'
+	'forms',
+	'tables'
 )); ?>
 <!--ifwhatever>
 	<?php echo $this->Html->css('ie6'); ?>
