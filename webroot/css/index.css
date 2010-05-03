@@ -9,7 +9,8 @@
         http://graphicriver.net/user/DigitalCavalry
 *********************************************************************/
 
-#ImageDescrip { margin-left: 45px; margin-top: 5px; height: 50px; width: 600px; font: 11px Verdana; }
+#ImageTitle { width: 600px; font: 13px Verdana; margin: 0; padding: 0; color: #000; font-weight: bold;}
+#ImageDescrip { height: 40px; width: 600px; font: 11px Verdana; color: #000; }
 
 
 /******************************** 
@@ -23,8 +24,8 @@
     background-color:#000; 
     position:relative;
     border:0px solid #EEE; 
-    margin-left:40px; 
     margin-top:15px;
+	margin-bottom: 10px;
 }
 
 .asyncImgLoadAccordion { clear: none; }
@@ -44,7 +45,7 @@
 .accordionImgDiv .slideStrip
 {
     position: absolute;
-    width: 90px;
+    width: 120px;
     height: 350px;
     left:0px;
     top:0px;
@@ -175,11 +176,10 @@
     text-align:right;
     width:250px;
     height:16px;
-    margin-right:40px;
     display:inline; 
     float:right; 
-    margin-bottom:5px; 
-    margin-top:5px;
+    margin: 20px 0 5px 0;
+	padding: 0;
 }
 
 #accorControlBtnDesc
