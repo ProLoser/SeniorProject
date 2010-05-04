@@ -1,3 +1,5 @@
+<h1>This shows you the data currently available in the page</h1>
+<?php debug($this->params); ?>
 <h1>This is my practice page</h1>
 <table>
     <tr>

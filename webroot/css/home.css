@@ -19,7 +19,7 @@
 
 #mportfoliowrap {
 	padding:10px 0 10px 0;
-	margin: 15px 0 15px 0;
+	margin: 15px 0 15px 7px;
 }
 .homeportfoliotitle { 
 	font-size:18px; 
@@ -49,7 +49,7 @@
 }
 #mblogwrap {
 	padding: -10px 0 0 0;
-	margin: 25px 0 0 0;
+	margin: 25px 0 0 7px;
 }
 .mblogbox {
 	width:300px;

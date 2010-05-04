@@ -5,6 +5,7 @@ table {
 	padding: 0;
 	border-collapse: collapse;
 	border: 1px #B6C893 solid;
+	background: #fff;
 }
 table a {
 	color: #252525;

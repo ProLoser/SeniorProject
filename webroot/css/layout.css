@@ -11,7 +11,7 @@
 img.left {margin-right: 10px }
 img.right {margin-left: 10px }
 body {
-	background: #465931 url(../img/bg.jpg) repeat;
+	background: #30380f url(../img/body-bg.jpg) top center no-repeat;
 	font-family: Verdana, Trebuchet MS, Arial, sans-serif;
 	font-size: 11px;
 }
@@ -24,7 +24,7 @@ a:hover {
 }
 #container { 
 	width: 1035px;
-	margin: 0 auto;
+	margin: 20px auto;
 	padding: 0;
 	background: #fff url(../img/other-bg.png) top repeat-x;
 }

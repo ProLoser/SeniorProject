@@ -4,7 +4,6 @@
  		<legend><?php printf(__('Admin Add %s', true), __('Office', true)); ?></legend>
 	<?php
 		echo $this->Form->input('name');
-		echo $this->Form->input('location');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
