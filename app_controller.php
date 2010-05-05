@@ -57,6 +57,8 @@ class AppController extends Controller {
 		// Configure Layout
 		if ($this->_prefix()) {
 			$this->layout = 'admin';
+		} elseif ($this->_prefix('recruit')) {
+			$this->layout = 'recruit';
 		}
 	}
 
@@ -108,7 +110,7 @@ class AppController extends Controller {
 		$this->Auth->logoutRedirect = '/';
 		$this->Auth->loginRedirect = array('plugin' => null, 'admin' => true, 'controller' => 'users', 'action' => 'index');
 
-		if ($this->_prefix()) {
+		if ($this->_prefix() || $this->_prefix('recruit')) {
 			$this->Auth->deny();
 		} else {
 			$this->Auth->allow();

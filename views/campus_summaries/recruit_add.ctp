@@ -1,7 +1,7 @@
 <div class="campusSummaries form">
 <?php echo $this->Form->create('CampusSummary');?>
 	<fieldset>
- 		<legend><?php printf(__('Add %s', true), __('Campus Summary', true)); ?></legend>
+ 		<legend><?php printf(__('Recruit Add %s', true), __('Campus Summary', true)); ?></legend>
 	<?php
 		echo $this->Form->input('employee_id');
 		echo $this->Form->input('school_id');

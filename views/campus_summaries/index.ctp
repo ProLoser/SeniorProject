@@ -3,8 +3,8 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('id_employees');?></th>
-			<th><?php echo $this->Paginator->sort('id_schools');?></th>
+			<th><?php echo $this->Paginator->sort('employee_id');?></th>
+			<th><?php echo $this->Paginator->sort('school_id');?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -17,8 +17,12 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td><?php echo $campusSummary['CampusSummary']['id']; ?>&nbsp;</td>
-		<td><?php echo $campusSummary['CampusSummary']['id_employees']; ?>&nbsp;</td>
-		<td><?php echo $campusSummary['CampusSummary']['id_schools']; ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($campusSummary['Employee']['name'], array('controller' => 'employees', 'action' => 'view', $campusSummary['Employee']['id'])); ?>
+		</td>
+		<td>
+			<?php echo $this->Html->link($campusSummary['School']['name'], array('controller' => 'schools', 'action' => 'view', $campusSummary['School']['id'])); ?>
+		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $campusSummary['CampusSummary']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $campusSummary['CampusSummary']['id'])); ?>
@@ -45,5 +49,9 @@
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Campus Summary', true)), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Employees', true)), array('controller' => 'employees', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Employee', true)), array('controller' => 'employees', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Schools', true)), array('controller' => 'schools', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('School', true)), array('controller' => 'schools', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

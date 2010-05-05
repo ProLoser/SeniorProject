@@ -114,5 +114,61 @@ class PromosController extends AppController {
 		$this->Session->setFlash(sprintf(__('%s was not deleted', true), 'Promo'));
 		$this->redirect(array('action' => 'index'));
 	}
+
+	function recruit_index() {
+		$this->Promo->recursive = 0;
+		$this->set('promos', $this->paginate());
+	}
+
+	function recruit_view($id = null) {
+		if (!$id) {
+			$this->Session->setFlash(sprintf(__('Invalid %s', true), 'promo'));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->set('promo', $this->Promo->read(null, $id));
+	}
+
+	function recruit_add() {
+		if (!empty($this->data)) {
+			$this->Promo->create();
+			if ($this->Promo->save($this->data)) {
+				$this->Session->setFlash(sprintf(__('The %s has been saved', true), 'promo'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'promo'));
+			}
+		}
+	}
+
+	function recruit_edit($id = null) {
+		if (!$id && empty($this->data)) {
+			$this->Session->setFlash(sprintf(__('Invalid %s', true), 'promo'));
+			$this->redirect(array('action' => 'index'));
+		}
+		if (!empty($this->data)) {
+			if ($this->Promo->save($this->data)) {
+				$this->Session->setFlash(sprintf(__('The %s has been saved', true), 'promo'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'promo'));
+			}
+		}
+		if (empty($this->data)) {
+			$this->data = $this->Promo->read(null, $id);
+		}
+	}
+
+	function recruit_delete($id = null) {
+		if (!$id) {
+			$this->Session->setFlash(sprintf(__('Invalid id for %s', true), 'promo'));
+			$this->redirect(array('action'=>'index'));
+		}
+		if ($this->Promo->delete($id)) {
+			$this->Session->setFlash(sprintf(__('%s deleted', true), 'Promo'));
+			$this->redirect(array('action'=>'index'));
+		}
+		$this->Session->setFlash(sprintf(__('%s was not deleted', true), 'Promo'));
+		$this->redirect(array('action' => 'index'));
+	}
 }
 ?>

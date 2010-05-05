@@ -22,7 +22,8 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
-	Router::connect('/admin/', array('admin' => true, 'controller' => 'volunteers', 'action' => 'index'));
+	Router::connect('/admin', array('admin' => true, 'controller' => 'volunteers', 'action' => 'index'));
+	Router::connect('/recruit', array('recruit' => true, 'controller' => 'schools', 'action' => 'index'));
 /**
  * Creates Group prefixes
  */	

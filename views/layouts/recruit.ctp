@@ -22,13 +22,13 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php __('ISV Online - Administration'); ?>
+		<?php __('ISV Online - Recruiters'); ?>
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('cake.recruit');
 
 		echo $scripts_for_layout;
 	?>
@@ -36,8 +36,8 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link(__('ISV Online - Administration', true), '/admin'); ?></h1>
-			<?php echo $this->element('admin_navigation'); ?>
+			<h1><?php echo $this->Html->link(__('ISV Online - Recruiters', true), '/recruit'); ?></h1>
+			<?php echo $this->element('recruit_navigation'); ?>
 		</div>
 		<div id="content">
 
