@@ -14,13 +14,8 @@
 	'tables',
 	'home'
 )); ?>
-<!--ifwhatever>
-	<?php echo $this->Html->css('ie6'); ?>
--->
-
-<!--ifwhatever>
-	<?php echo $this->Html->css('ie7'); ?>
--->
+<!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
+<!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->
 
 <?php echo $this->Html->script(array(
 	'jquery-1.3.2.min',
