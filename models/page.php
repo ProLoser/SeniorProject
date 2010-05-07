@@ -13,8 +13,8 @@ class Page extends AppModel {
 			),
 		),
 		'short_title' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -43,8 +43,8 @@ class Page extends AppModel {
 			),
 		),
 		'meta_description' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -53,8 +53,8 @@ class Page extends AppModel {
 			),
 		),
 		'meta_keywords' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

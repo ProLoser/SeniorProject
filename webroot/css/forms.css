@@ -48,6 +48,5 @@ form .submit {
 .error-message {
 	color: #ff0000;
 	font-size: 90%;
-	float: right;
-	margin: 5px 0 0 0;
+	margin: -4px 0 10px 115px;
 }
