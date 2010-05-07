@@ -127,10 +127,18 @@ a:hover {
 /*** BODY ***/
 #body {
 	height: 100%;
-	overflow: auto;
 	padding: 0 0 30px 0;
+	overflow : hidden; /* For modern browsers and IE7 */
+  	display  : inline-block; /* For IE6 */
 }
-
+#body { display : block; } /* For IE6 */
+#body:after { /* For modern browsers */
+  content    : ".";
+  display    : block;
+  height     : 0;
+  clear      : both;
+  visibility : hidden;
+}
 
 /*** SIDEBAR ***/
 #sidebar {
