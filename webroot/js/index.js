@@ -15,6 +15,7 @@
 *********************************************************************/
 
 // array of image descriptions
+var ImageTitles = new Array();
 var ImageDescriptions = new Array();
 
 // alias to jQuery library, function noConflict release control of the $ variable 
@@ -225,6 +226,7 @@ function setupAccordionImageSlider()
             // draw aside all divs
             setMoveForAccordionDivs(g_hoveredSlideIndex);
 			
+			$j("div#ImageTitle").text(ImageTitles[divID.substring(6,7)-1]); 
 			$j("div#ImageDescrip").text(ImageDescriptions[divID.substring(6,7)-1]);  
 			
         }, 
@@ -290,6 +292,7 @@ function setMoveForAccordionDivs(index)
                     {marginLeft: newMargin+"px"}, 
                     {duration: animTime, easing: ACCORDION_EASING_METHOD});
             }
+			$j("div#ImageTitle").text(ImageTitles[i + 1]); 
 			$j("div#ImageDescrip").text(ImageDescriptions[i + 1]); 
             // go to next iteraction of loop
             continue;
@@ -388,6 +391,7 @@ function accordionPlay()
        
         for(var i = 0; i < g_slidedDivs.length; i++)
         {
+			$j("div#ImageTitle").text(ImageTitles[0]); 
 			$j("div#ImageDescrip").text(ImageDescriptions[0]); 
             // if div is currently moved we stop the animation
             // and set new animation for left margin
@@ -674,6 +678,7 @@ function setupAccordionControlPanel()
                  }                  
             }
             g_lastSlideMoveDirection = FORWARD;
+				$j("div#ImageTitle").text(ImageTitles[0]); 
 				$j("div#ImageDescrip").text(ImageDescriptions[0]);  
             mouseOutAccorOnAll(null);
             mouseOnAccor(g_slidedDivs[g_actualSlideImage].name);
@@ -775,7 +780,8 @@ function setupLoadingAsynchronousImagesForAccordion()
             // get image path from loader title attribute
 			var imageInformation = loader.attr('title').split('|');
             var imagePath = imageInformation[0];
-			ImageDescriptions[_index] = imageInformation[1];
+			ImageTitles[_index] = imageInformation[1];
+			ImageDescriptions[_index] = imageInformation[2];
             // create new image object
             var img = new Image();
             // set opacity for image to maximum
