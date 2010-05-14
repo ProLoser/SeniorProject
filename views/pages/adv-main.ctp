@@ -8,16 +8,14 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id metus in mauris rutrum vehicula. Ut eleifend blandit magna eu hendrerit. Praesent sollicitudin ligula sit amet risus rhoncus condimentum. Donec laoreet sem a mi lobortis gravida. Fusce viverra consectetur neque, sit amet convallis dolor accumsan at. Vivamus sodales, elit et tempus ultrices, quam tortor lacinia purus, a luctus mi felis vel elit.</p>
 </div>
             
-<div class="clear"></div>     
    
 <div id="adv_adv">
-    <h4 style="margin:0px 10px 9px 0px; float:right;">Adventure</h4> 
+    <h4 style="margin:15px 10px 9px 0px; float:right;">Adventure</h4> 
     <div class="clear"></div>
     <p><?php echo $this->Html->image('adventure/adventure.jpg', array('alt' => 'Adventure','id' => 'adv_main_img_adv')); ?>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id metus in mauris rutrum vehicula. Ut eleifend blandit magna eu hendrerit. Praesent sollicitudin ligula sit amet risus rhoncus condimentum. Donec laoreet sem a mi lobortis gravida. Fusce viverra consectetur neque, sit amet convallis dolor accumsan at. Vivamus sodales, elit et tempus ultrices, quam tortor lacinia purus, a luctus mi felis vel elit.</p>
 </div>
    
-<div class="clear"></div>
     
 <!-- Mini Showcase with lightbox feature -->
 <h3>Countries</h3>
