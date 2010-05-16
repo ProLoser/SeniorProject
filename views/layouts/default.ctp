@@ -14,24 +14,22 @@
 	'tables',
 	'home'
 )); ?>
-<!--ifwhatever>
-	<?php echo $this->Html->css('ie6'); ?>
--->
-
-<!--ifwhatever>
-	<?php echo $this->Html->css('ie7'); ?>
--->
+<!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
+<!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->
 
 <?php echo $this->Html->script(array(
 	'jquery-1.3.2.min',
 	'jquery.easing.1.2',
 	'fadeinout',
 	'jquery.prettyPhoto',
+	'lib/jquery-1.3.2.min',
+	'lib/jquery.easing.1.2',
 	'lib/jquery.prettyPhoto',
-	'jquery.galleria',
-	'common.js',
 	'galleria-init1',
 	'jquery.galleria',
+	'cufon-yui',
+	'fontconfig',
+	'common.js',
 	'common-innovation',
 	'index_advmain',
 	'haccordion',
