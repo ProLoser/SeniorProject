@@ -1,4 +1,4 @@
-<div id="fullwidth-content">
+<?php $this->layout = 'full-width'; ?>
 	<div id="flash-map">
 	  	<script language="JavaScript" type="text/javascript">
 	AC_FL_RunContent(
@@ -92,7 +92,6 @@
         </div>
         <div class="clear"></div>
 	</div>
-</div>	
 <script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");

@@ -46,11 +46,7 @@
     </div>
     
     <div id="body">
-    	<div id="sidebar">
-        	<?php echo $this->element('layout/sidebar');?>
-        </div>
-        
-        <div id="content">
+		<div id="fullwidth-content">
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $content_for_layout; ?>

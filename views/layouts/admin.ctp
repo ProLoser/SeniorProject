@@ -37,7 +37,7 @@
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link(__('ISV Online - Administration', true), '/admin'); ?></h1>
-			<?php echo $this->element('admin_navigation'); ?>
+			<?php echo $this->element('layout/admin_navigation'); ?>
 		</div>
 		<div id="content">
 
