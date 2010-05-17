@@ -44,6 +44,8 @@ class AppController extends Controller {
 		'Form',
 		'Text',
 		'Time',
+		'Javascript',
+		'HTML'
 	);
 
 	function beforeFilter() {

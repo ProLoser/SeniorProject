@@ -322,7 +322,7 @@ a img{ border: none; }
 	
 	#contents ul, #contents ol{
 	list-style-position:outside;
-	margin-left:20px;
+	margin-left:0px;
 	}
 
 	

@@ -39,56 +39,56 @@
             
               <!-- slide 1 -->
               <div id="slide1" class="accordionImgDiv_advmain">
-                  <a href="index.html" id="slideimg1" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/Adv_Aus-SliderMain01.jpg|Sydney Harbour|"></a>
+                  <a href="index.html" id="slideimg1" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/sydney.jpg"></a>
                   <div class="accordionDescBack_advmain"></div>
                   <div class="accordionDesc_advmain">
                       <h3 class="accordionDescHeader_advmain">Sydney Harbour</h3>
                   </div>                    
-                  <div class="slideStrip_advmain" title="../img/adventure/Australia/Adv_Aus-SliderStrip01.jpg"></div>
+                  <div class="slideStrip_advmain" title="/SeniorProject/img/adventure/Australia/sydneystrip.jpg"></div>
                   <p class="slideDesc_advmain">Sydney<br />Harbour</p>  
               </div>
                                                           
               <!-- slide 2 -->
               <div id="slide2" class="accordionImgDiv_advmain"> 
-                  <a href="index.html" id="slideimg2" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/Adv_Aus-SliderMain02.jpg|Blue Mountains|"></a>
+                  <a href="index.html" id="slideimg2" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/bluemountains.jpg"></a>
                   <div class="accordionDescBack_advmain"></div>
                   <div class="accordionDesc_advmain">
                       <h3 class="accordionDescHeader_advmain">Blue Mountains</h3>
                   </div>                    
-                  <div class="slideStrip_advmain" title="../img/adventure/Australia/Adv_Aus-SliderStrip02.jpg"></div>
+                  <div class="slideStrip_advmain" title="/SeniorProject/img/adventure/Australia/bluemountainsstrip.jpg"></div>
                   <p class="slideDesc_advmain">Blue<br />Mountains</p> 
               </div>
                                 
               <!-- slide 3 -->
               <div id="slide3" class="accordionImgDiv_advmain">
-                  <a href="index.html" id="slideimg3" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/Adv_Aus-SliderMain03.jpg|Bryon Bay|"></a>
+                  <a href="index.html" id="slideimg3" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/bryonbay.jpg"></a>
                   <div class="accordionDescBack_advmain"></div>
                   <div class="accordionDesc_advmain">
                       <h3 class="accordionDescHeader_advmain">Bryon Bay</h3>
                   </div>                    
-                  <div class="slideStrip_advmain" title="../img/adventure/Australia/Adv_Aus-SliderStrip03.jpg"></div>
+                  <div class="slideStrip_advmain" title="/SeniorProject/img/adventure/Australia/bryonbaystrip.jpg"></div>
                   <p class="slideDesc_advmain">Bryon <br />Bay</p>  
               </div>
                                           
               <!-- slide 4 -->
               <div id="slide4" class="accordionImgDiv_advmain">
-                  <a href="index.html" id="slideimg4" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/Adv_Aus-SliderMain04.jpg|Frasier Island|"></a>
+                  <a href="index.html" id="slideimg4" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/frasierisland.jpg"></a>
                   <div class="accordionDescBack_advmain"></div>
                   <div class="accordionDesc_advmain">
                       <h3 class="accordionDescHeader_advmain">Frasier Island</h3>
                   </div>                   
-                 <div class="slideStrip_advmain"  title="../img/adventure/Australia/Adv_Aus-SliderStrip04.jpg"></div>
+                 <div class="slideStrip_advmain"  title="/SeniorProject/img/adventure/Australia/frasierislandstrip.jpg"></div>
                  <p class="slideDesc_advmain">Frasier<br />Island</p>  
               </div>           
                 
               <!-- slide 5 -->
               <div id="slide5" class="accordionImgDiv_advmain">
-                  <a href="index.html" id="slideimg5" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/Adv_Aus-SliderMain05.jpg|Whitsunday Islands|"></a> 
+                  <a href="index.html" id="slideimg5" class="accordionSlideImage_advmain asyncImgLoadAccordion_advmain" title="/SeniorProject/img/adventure/Australia/whitsundayislands.jpg"></a> 
                   <div class="accordionDescBack_advmain"></div>
                   <div class="accordionDesc_advmain">
                       <h3 class="accordionDescHeader_advmain">Whitsunday Islands</h3>
                   </div>    
-                  <div class="slideStrip_advmain" title="../img/adventure/Australia/Adv_Aus-SliderStrip05.jpg"></div>
+                  <div class="slideStrip_advmain" title="/SeniorProject/img/adventure/Australia/whisundayislandsstrip.jpg"></div>
                   <p class="slideDesc_advmain">Whitsunday<br />Islands</p>  
               </div>
           </div> <!-- accordionContainer -->

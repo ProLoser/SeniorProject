@@ -12,23 +12,11 @@
         DigitalCavalry
     Author URI:
         http://graphicriver.net/user/DigitalCavalry
-		
-	Note:
-		Edited original for Adventure Main Page
 *********************************************************************/
-
-// array of image descriptions
-var ImageDescriptions = new Array();
 
 // alias to jQuery library, function noConflict release control of the $ variable 
 // to whichever library first implemented it
 var $j = jQuery.noConflict();
-
-//Eric's fix
-if ((typeof($) == "undefined")) {
-	var $;
-	$ = $j;
-}
 
 /**************************
     NEWS BAR CODE
@@ -99,7 +87,7 @@ function setupNewsBar()
 // default width of accordion for this template is set to 960 pixels,
 // this value is hardcoded and must be equal to accordion width coded in
 // accordionContainer CSS style (file: indexCSS.css)
-var ACCORDION_WIDTH = 600;
+var ACCORDION_WIDTH = 960;
 // this variable determine the width of div then it is draw aside
 var ACCORDION_DRAW_ASIDE_WIDTH = 50;
 // slide function, the default is "liner" which is implemented in jQuery,
@@ -115,13 +103,13 @@ var g_hoveredSlideIndex = null;
 function setupAccordionImageSlider()
 {
     // turn off displaying border-left for first div holding image in accordion
-    $j("#accordionContainer_advmain").find(".accordionImgDiv_advmain:first").css("border-left", "0px");
+    $j("#accordionContainer").find(".accordionImgDiv:first").css("border-left", "0px");
     
     // get list of all slided divs in slider
-    var slidedDivsList = $j("#accordionContainer_advmain .accordionImgDiv_advmain");
+    var slidedDivsList = $j("#accordionContainer .accordionImgDiv");
     // collect information on every div in to an global array
     g_slidedDivs = new Array;
-    var firstDiv = $j("#accordionContainer_advmain .accordionImgDiv_advmain:first");
+    var firstDiv = $j("#accordionContainer .accordionImgDiv:first");
     for(var i = 0; i < slidedDivsList.length; i++)
     {
         var obj = new Object(); 
@@ -130,7 +118,7 @@ function setupAccordionImageSlider()
         obj.out = 0;
         g_slidedDivs.push(obj); 
 
-        firstDiv = $j(firstDiv).next(".accordionImgDiv_advmain");
+        firstDiv = $j(firstDiv).next(".accordionImgDiv");
     }
                  
     // calculating rib width based on accordion containter width divided by slides number in accordion
@@ -152,7 +140,7 @@ function setupAccordionImageSlider()
     // when the mouse is moved on, there is no action taken,
     // when mouse is moved from we distribyte all slided divs in accordion
     // equally on accordion space
-    $j("#accordionContainer_advmain").hover(
+    $j("#accordionContainer").hover(
         function()
         {   
             // stop the auto play accordion image slider
@@ -166,7 +154,7 @@ function setupAccordionImageSlider()
                 return;
             }            
             // hide slide strip desc
-            $j("#accordionContainer_advmain .accordionImgDiv_advmain").find(".slideDesc_advmain").stop().animate({opacity: 0.0}, 150);
+            $j("#accordionContainer .accordionImgDiv").find(".slideDesc").stop().animate({opacity: 0.0}, 150);
         },
         function()
         {   
@@ -186,7 +174,7 @@ function setupAccordionImageSlider()
                 // we set the destination member to the same value
                 g_slidedDivs[i].dest = i*ribOutWidth;
                 // show strip desc
-                $j(g_slidedDivs[i].name).find(".slideDesc_advmain").stop().animate({opacity: 1.0}, 1200);
+                $j(g_slidedDivs[i].name).find(".slideDesc").stop().animate({opacity: 1.0}, 1200);
             }
             // fire up auto play for slider
             if(true == g_sliderAutoPlay)
@@ -200,7 +188,7 @@ function setupAccordionImageSlider()
 
     // setting hover action for every div of class accordionImgDiv in accordion,
     // when user move mause on div, we must to draw aside all dive except the hovered
-    $j(".accordionImgDiv_advmain").hover(
+    $j(".accordionImgDiv").hover(
         function()
         {   
             // stop the auto play accordion image slider
@@ -219,23 +207,20 @@ function setupAccordionImageSlider()
             // fade out all divs with excluding hovered div
             mouseOutAccorOnAll(divID);
 
-            g_hoveredSlideIndex = $j("#accordionContainer_advmain .accordionImgDiv_advmain").index(this);    
+            g_hoveredSlideIndex = $j("#accordionContainer .accordionImgDiv").index(this);    
             
             var context = $j(this)[0];
             // stop and set new animation of main image opacity
-            $j(".accordionSlideImage_advmain", context).find("img").stop().animate({opacity: 1.0}, 400); 
+            $j(".accordionSlideImage", context).find("img").stop().animate({opacity: 1.0}, 400); 
             // stop and set new animation of image description background div
-            $j(".accordionDescBack_advmain", context).stop().animate({bottom: 0, opacity: 0.8}, 1000);
+            $j(".accordionDescBack", context).stop().animate({bottom: 0, opacity: 0.8}, 1000);
             // stop and set new animation of image description div
-            $j(".accordionDesc_advmain", context).stop().animate({bottom: 0, opacity: 1.0}, 1000);
-            $j(".slideStrip_advmain", context).stop().animate({opacity: 0.0}, 200, ACCORDION_EASING_METHOD); 
+            $j(".accordionDesc", context).stop().animate({bottom: 0, opacity: 1.0}, 1000);
+            $j(".slideStrip", context).stop().animate({opacity: 0.0}, 200, ACCORDION_EASING_METHOD); 
             
             g_slidedDivs[g_hoveredSlideIndex].out = 0;
             // draw aside all divs
             setMoveForAccordionDivs(g_hoveredSlideIndex);
-			
-			$j("div#ImageDescrip").text(ImageDescriptions[divID.substring(6,7)-1]);  
-			
         }, 
         function()
         {
@@ -279,7 +264,7 @@ function setMoveForAccordionDivs(index)
     {
         var context = $j(g_slidedDivs[i].name)[0];
         var object = $j(g_slidedDivs[i].name);
-        $j(".slideDesc_advmain", context).stop().animate({opacity: 0.0}, 150);
+        $j(".slideDesc", context).stop().animate({opacity: 0.0}, 150);
         // if div lie on left we move it on left
         if(i < index)
         {
@@ -299,7 +284,6 @@ function setMoveForAccordionDivs(index)
                     {marginLeft: newMargin+"px"}, 
                     {duration: animTime, easing: ACCORDION_EASING_METHOD});
             }
-			$j("div#ImageDescrip").text(ImageDescriptions[i + 1]); 
             // go to next iteraction of loop
             continue;
         }
@@ -397,15 +381,13 @@ function accordionPlay()
        
         for(var i = 0; i < g_slidedDivs.length; i++)
         {
-			$j("div#ImageDescrip").text(ImageDescriptions[0]); 
             // if div is currently moved we stop the animation
             // and set new animation for left margin
             $j(g_slidedDivs[i].name).stop()
                 .animate({marginLeft: (i*ribOutWidth)+"px"}, {duration: 900, easing: ACCORDION_EASING_METHOD});
             // we set the destination member to the same value
             g_slidedDivs[i].dest = i*ribOutWidth;
-            $j(g_slidedDivs[i].name).find(".slideDesc_advmain").stop().animate({opacity: 1.0}, 2000); 
-			
+            $j(g_slidedDivs[i].name).find(".slideDesc").stop().animate({opacity: 1.0}, 2000); 
         }
         timeOut = g_sliderTimerInterval * 2;
         g_sliderNewLoop = false;
@@ -423,7 +405,7 @@ function accordionPlay()
     if(g_actualSlideImage >= g_slidedDivs.length)
     {
         g_actualSlideImage = 0;
-        g_sliderNewLoop = true; 
+        g_sliderNewLoop = true;   
     }
     
     // fire up slider
@@ -460,12 +442,12 @@ function mouseOnAccor(_this)
     g_slidedDivs[index].out = 0;
 
     // stop and set new animation of main image opacity
-    $j(_this).find(".accordionSlideImage_advmain").find("img").stop().animate({opacity: 1.0}, 400); 
+    $j(_this).find(".accordionSlideImage").find("img").stop().animate({opacity: 1.0}, 400); 
     // stop and set new animation of image description background div
-    $j(_this).find(".accordionDescBack_advmain").stop().animate({bottom: 0, opacity: 0.8}, 1000);
+    $j(_this).find(".accordionDescBack").stop().animate({bottom: 0, opacity: 0.8}, 1000);
     // stop and set new animation of image description div
-    $j(_this).find(".accordionDesc_advmain").stop().animate({bottom: 0, opacity: 1.0}, 1000);
-    $j(_this).find(".slideStrip_advmain").stop().animate({opacity: 0.0}, 300);
+    $j(_this).find(".accordionDesc").stop().animate({bottom: 0, opacity: 1.0}, 1000);
+    $j(_this).find(".slideStrip").stop().animate({opacity: 0.0}, 300);
   
     // draw aside all divs
     setMoveForAccordionDivs(index);
@@ -473,15 +455,15 @@ function mouseOnAccor(_this)
 
 function mouseOutAccor(_this)
 {
-    var context = $j('#accordionContainer_advmain')[0];
+    var context = $j('#accordionContainer')[0];
     // stop and set new animation of main image opacity
-    $j(_this, context).find(".accordionSlideImage_advmain").find("img").stop().animate({opacity: 0.0}, 800
-    ,function(){$j(_this, context).find(".slideStrip_advmain").stop().animate({opacity: 1.0}, 600);}
+    $j(_this, context).find(".accordionSlideImage").find("img").stop().animate({opacity: 0.0}, 800
+    ,function(){$j(_this, context).find(".slideStrip").stop().animate({opacity: 1.0}, 600);}
     );
     // stop and set new animation of image description background div   
-    $j(_this, context).find(".accordionDescBack_advmain").stop().animate({bottom: -70, opacity: 0}, 300);
+    $j(_this, context).find(".accordionDescBack").stop().animate({bottom: -70, opacity: 0}, 300);
     // stop and set new animation of image description div   
-    $j(_this, context).find(".accordionDesc_advmain").stop().animate({bottom: -70, opacity: 0}, 300);
+    $j(_this, context).find(".accordionDesc").stop().animate({bottom: -70, opacity: 0}, 300);
     
 } // end of function mouseOutAccor
 
@@ -516,7 +498,7 @@ var g_lastSlideMoveDirection = FORWARD;
 function setupAccordionControlPanel()
 {
     // fadeout description text
-    $j("#accorControlBtnDesc").fadeTo(0, 0.0); 
+    $j("#accorControlBtnDesc").fadeTo(0, 0.0);
 
     // bind function to accordion control panel play button called then button is clicked 
     $j("#accorPlayBtn").click(
@@ -540,7 +522,7 @@ function setupAccordionControlPanel()
                         .animate({marginLeft: (i*ribOutWidth)+"px"}, {duration: 900, easing: ACCORDION_EASING_METHOD});
                     // we set the destination member to the same value
                     g_slidedDivs[i].dest = i*ribOutWidth;
-                    $j(g_slidedDivs[i].name).find(".slideDesc_advmain").stop().animate({opacity: 1.0}, 2000); 
+                    $j(g_slidedDivs[i].name).find(".slideDesc").stop().animate({opacity: 1.0}, 2000); 
                 }                
             } else
             {
@@ -679,11 +661,10 @@ function setupAccordionControlPanel()
                  if(g_actualSlideImage >= g_slidedDivs.length)
                  {
                     g_actualSlideImage = 0;
-                    g_sliderNewLoop = true; 
+                    g_sliderNewLoop = true;
                  }                  
             }
             g_lastSlideMoveDirection = FORWARD;
-				$j("div#ImageDescrip").text(ImageDescriptions[0]);  
             mouseOutAccorOnAll(null);
             mouseOnAccor(g_slidedDivs[g_actualSlideImage].name);
     
@@ -754,19 +735,19 @@ function setupLoadingAsynchronousImagesForAccordion()
     if(g_imgList == null)
     {
         // get list of all slided divs in slider
-        var imgDivsList = $j("#accordionContainer_advmain .asyncImgLoadAccordion_advmain");
+        var imgDivsList = $j("#accordionContainer .asyncImgLoadAccordion");
         // collect information on every div in to an global array
          g_imgList = new Array;
-         var firstDiv = $j("#accordionContainer_advmain .accordionImgDiv_advmain:first");
-         var imgDiv = $j(firstDiv).find(".asyncImgLoadAccordion_advmain");
+         var firstDiv = $j("#accordionContainer .accordionImgDiv:first");
+         var imgDiv = $j(firstDiv).find(".asyncImgLoadAccordion");
          for(var i = 0; i < imgDivsList.length; i++)
          {
             var obj = new Object(); 
             obj.id = "#" + $j(imgDiv).attr('id'); 
             g_imgList.push(obj); 
 
-            firstDiv = $j(firstDiv).next(".accordionImgDiv_advmain");    
-            imgDiv = $j(firstDiv).find(".asyncImgLoadAccordion_advmain");
+            firstDiv = $j(firstDiv).next(".accordionImgDiv");    
+            imgDiv = $j(firstDiv).find(".asyncImgLoadAccordion");
          }
     }
         
@@ -782,9 +763,7 @@ function setupLoadingAsynchronousImagesForAccordion()
             // save handle to loader - caintainer which we gona insert loaded image    
             var loader = $j(id);
             // get image path from loader title attribute
-			var imageInformation = loader.attr('title').split('|');
-            var imagePath = imageInformation[0];
-			ImageDescriptions[_index] = imageInformation[1];
+            var imagePath = loader.attr('title');
             // create new image object
             var img = new Image();
             // set opacity for image to maximum
@@ -808,7 +787,7 @@ function setupLoadingAsynchronousImagesForAccordion()
                         if(_index == g_hoveredSlideIndex)
                         {
                             $j(this).animate({opacity: 1.0}, 500);
-                        }                     
+                        }                        
                             
                     }
                 // set new value for attribute src - this means: load image from imagePath    
@@ -820,24 +799,24 @@ function setupLoadingAsynchronousImagesForAccordion()
 
 var g_loadedStripCount = 0;
 var g_stripList = null;
-function setupLoadingAsyncslideStrip_advmainImages()
+function setupLoadingAsyncSlideStripImages()
 {
     if(g_stripList == null)
     {
         // get list of all slided divs in slider
-        var imgDivsList = $j("#accordionContainer_advmain .slideStrip_advmain");
+        var imgDivsList = $j("#accordionContainer .slideStrip");
         // collect information on every div in to an global array
          g_stripList = new Array;
-         var firstDiv = $j("#accordionContainer_advmain .accordionImgDiv_advmain:first");
-         var imgDiv = $j(firstDiv).find(".slideStrip_advmain");
+         var firstDiv = $j("#accordionContainer .accordionImgDiv:first");
+         var imgDiv = $j(firstDiv).find(".slideStrip");
          for(var i = 0; i < imgDivsList.length; i++)
          {
             var obj = new Object(); 
             obj.id = imgDiv; 
             g_stripList.push(obj); 
 
-            firstDiv = $j(firstDiv).next(".accordionImgDiv_advmain");    
-            imgDiv = $j(firstDiv).find(".slideStrip_advmain");
+            firstDiv = $j(firstDiv).next(".accordionImgDiv");    
+            imgDiv = $j(firstDiv).find(".slideStrip");
          }
     }
         
@@ -857,9 +836,7 @@ function setupLoadingAsyncslideStrip_advmainImages()
             // save handle to loader - caintainer which we gona insert loaded image    
             var loader = $j(id);
             // get image path from loader title attribute
-			var imageInformation = loader.attr('title').split('|');
-            var imagePath = imageInformation[0];
-			var imageDesc = imageInformation[1];
+            var imagePath = loader.attr('title');
             // create new image object
             var img = new Image();
             // set opacity for image to maximum
@@ -882,13 +859,13 @@ function setupLoadingAsyncslideStrip_advmainImages()
                             .animate({opacity: 1.0}, 400, function()
                             {
                                 loader.css("background-image", "none"); 
-                                setTimeout(setupLoadingAsyncslideStrip_advmainImages, 20); 
+                                setTimeout(setupLoadingAsyncSlideStripImages, 20); 
                             });                            
                     }
                 // set new value for attribute src - this means: load image from imagePath    
                 ).attr('src', imagePath);                        
         } 
-} // end of function setupLoadingAsyncslideStrip_advmainImages 
+} // end of function setupLoadingAsyncSlideStripImages 
 
 /***************************************
     CODE FOR TABS
@@ -997,11 +974,11 @@ $j(document).ready(
         setupAdditionalCufonFontReplacement();
         setupNewsBar();
         setupTabs();
-        if($j("#accordionContainer_advmain").length > 0)
+        if($j("#accordionContainer").length > 0)
         {
             // call this functions only if accordion is included
             setupLoadingAsynchronousImagesForAccordion();
-            setupLoadingAsyncslideStrip_advmainImages();            
+            setupLoadingAsyncSlideStripImages();            
             setupAccordionImageSlider();
             setupAccordionControlPanel();        
             setupAccordionAutoPlay();

@@ -5,37 +5,30 @@
 <title>ISV Online - <?php echo $title_for_layout; ?></title>
 <?php echo $this->Html->css(array(
 	'layout',
-	'adventure',
-	'page-galleria',
-	'prettyPhoto',
-	'prettyPhoto/prettyPhoto',
 	'index',
 	'forms',
 	'tables',
-	'home'
+	'home',
+	'adventure',
+	'prettyPhoto',
+	'prettyPhoto/prettyPhoto',
+	'tabs'
 )); ?>
 <!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
 <!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->
 
-<?php echo $this->Html->script(array(
-	'jquery-1.3.2.min',
-	'jquery.easing.1.2',
-	'fadeinout',
-	'jquery.prettyPhoto',
-	'lib/jquery-1.3.2.min',
+<?php echo $javascript->link(array(
+	'lib/jquery-1.3.2.min', 
 	'lib/jquery.easing.1.2',
 	'lib/jquery.prettyPhoto',
-	'galleria-init1',
+	'jquery.prettyPhoto',
 	'jquery.galleria',
+	'galleria-init1',
+	'flash-map',
+	'index_mod',
 	'cufon-yui',
-	'fontconfig',
-	'common.js',
-	'common-innovation',
-	'index_advmain',
-	'haccordion',
-	'flash-map'
+	'common-innovation'
 )); ?>
-
 
 <?php echo $scripts_for_layout; ?>
 </head>

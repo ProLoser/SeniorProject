@@ -92,9 +92,9 @@
         </div>
         <div class="clear"></div>
 	</div>
-</div>	
 <script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");
 //-->
 </script>
+</div>

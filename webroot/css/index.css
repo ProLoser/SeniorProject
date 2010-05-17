@@ -18,7 +18,7 @@
 *********************************/
 
 #accordionContainer {
-    width:600px; 
+    width:580px; 
     height:350px; 
     overflow:hidden; 
     background-color:#000; 
@@ -32,7 +32,7 @@
 
 .accordionImgDiv 
 {
-    width: 760px;  
+    width: 600px;  
     height: 350px; 
     position: absolute;  
     border-left:1px solid #222;  
