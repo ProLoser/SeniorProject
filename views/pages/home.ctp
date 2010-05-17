@@ -1,4 +1,4 @@
-<div id="fullwidth-content">
+<?php $this->layout = 'full-width'; ?>
 	<div id="flash-map">
 	  	<script language="JavaScript" type="text/javascript">
 	AC_FL_RunContent(

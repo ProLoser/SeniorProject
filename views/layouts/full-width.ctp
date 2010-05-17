@@ -5,30 +5,37 @@
 <title>ISV Online - <?php echo $title_for_layout; ?></title>
 <?php echo $this->Html->css(array(
 	'layout',
+	'adventure',
+	'page-galleria',
+	'prettyPhoto',
+	'prettyPhoto/prettyPhoto',
 	'index',
 	'forms',
 	'tables',
-	'home',
-	'adventure',
-	'prettyPhoto',
-	'prettyPhoto/prettyPhoto',
-	'tabs'
+	'home'
 )); ?>
 <!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
 <!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->
 
-<?php echo $javascript->link(array(
-	'lib/jquery-1.3.2.min', 
+<?php echo $this->Html->script(array(
+	'jquery-1.3.2.min',
+	'jquery.easing.1.2',
+	'fadeinout',
+	'jquery.prettyPhoto',
+	'lib/jquery-1.3.2.min',
 	'lib/jquery.easing.1.2',
 	'lib/jquery.prettyPhoto',
-	'jquery.prettyPhoto',
-	'jquery.galleria',
 	'galleria-init1',
-	'flash-map',
-	'index_mod',
+	'jquery.galleria',
 	'cufon-yui',
-	'common-innovation'
+	'fontconfig',
+	'common.js',
+	'common-innovation',
+	'index_advmain',
+	'haccordion',
+	'flash-map'
 )); ?>
+
 
 <?php echo $scripts_for_layout; ?>
 </head>
@@ -39,11 +46,7 @@
     </div>
     
     <div id="body">
-    	<div id="sidebar">
-        	<?php echo $this->element('layout/sidebar');?>
-        </div>
-        
-        <div id="content">
+		<div id="fullwidth-content">
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $content_for_layout; ?>

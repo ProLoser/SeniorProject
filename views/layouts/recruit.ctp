@@ -37,7 +37,7 @@
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link(__('ISV Online - Recruiters', true), '/recruit'); ?></h1>
-			<?php echo $this->element('recruit_navigation'); ?>
+			<?php echo $this->element('layout/recruit_navigation'); ?>
 		</div>
 		<div id="content">
 
