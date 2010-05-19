@@ -38,9 +38,6 @@ a
 
 body 
 {
-    background-image: url("../img/backgrounds/bg04.jpg");
-    background-repeat:no-repeat;
-    background-position: 50% 0%;
 
     background-color: #000;
     text-align:left;
@@ -1208,11 +1205,11 @@ body
 #sidebarMiniSliderContainer
 {
     /* 4:3 format*/
-    width:318px;  /* -2px for border */
+    width:290px;  /* -2px for border */
     height:238px;    
     border:0px solid #ccc;
     background-color: #000;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     position: relative;
     border: 0px solid #ddd;
     overflow:hidden;
@@ -1225,7 +1222,7 @@ body
 
 #sidebarMiniSliderContainer .slide
 {
-    width:320px; 
+    width:290px; 
     height:240px;
     position: absolute;
     left: 0px;
@@ -1264,7 +1261,7 @@ body
 
 #sidebarMiniSliderContainer .desc
 {
-    width: 310px;
+    width: 285px;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
