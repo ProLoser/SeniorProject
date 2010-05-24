@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('base_combination_id');?></th>
+			<th><?php echo $this->Paginator->sort('trip_id');?></th>
 			<th><?php echo $this->Paginator->sort('addon_id');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
 			<th><?php echo $this->Paginator->sort('modified');?></th>
@@ -20,7 +20,7 @@
 	<tr<?php echo $class;?>>
 		<td><?php echo $addonCombination['AddonCombination']['id']; ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($addonCombination['BaseCombination']['id'], array('controller' => 'base_combinations', 'action' => 'view', $addonCombination['BaseCombination']['id'])); ?>
+			<?php echo $this->Html->link($addonCombination['Trip']['name'], array('controller' => 'trips', 'action' => 'view', $addonCombination['Trip']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($addonCombination['Addon']['name'], array('controller' => 'addons', 'action' => 'view', $addonCombination['Addon']['id'])); ?>
@@ -53,8 +53,8 @@
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Addon Combination', true)), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Base Combinations', true)), array('controller' => 'base_combinations', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Base Combination', true)), array('controller' => 'base_combinations', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Trips', true)), array('controller' => 'trips', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Trip', true)), array('controller' => 'trips', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Addons', true)), array('controller' => 'addons', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Addon', true)), array('controller' => 'addons', 'action' => 'add')); ?> </li>
 	</ul>

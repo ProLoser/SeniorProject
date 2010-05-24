@@ -1,5 +1,5 @@
 <?php
-/* Destination Fixture generated on: 2010-04-23 23:04:37 : 1272066097 */
+/* Destination Fixture generated on: 2010-05-24 16:05:18 : 1274744238 */
 class DestinationFixture extends CakeTestFixture {
 	var $name = 'Destination';
 
@@ -16,8 +16,8 @@ class DestinationFixture extends CakeTestFixture {
 	var $records = array(
 		array(
 			'id' => 1,
-			'created' => '2010-04-23 23:41:37',
-			'modified' => '2010-04-23 23:41:37',
+			'created' => '2010-05-24 16:37:18',
+			'modified' => '2010-05-24 16:37:18',
 			'name' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.'
 		),

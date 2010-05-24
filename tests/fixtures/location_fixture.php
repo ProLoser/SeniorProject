@@ -1,5 +1,5 @@
 <?php
-/* Location Fixture generated on: 2010-04-23 23:04:54 : 1272066114 */
+/* Location Fixture generated on: 2010-05-24 16:05:19 : 1274744239 */
 class LocationFixture extends CakeTestFixture {
 	var $name = 'Location';
 
@@ -22,8 +22,8 @@ class LocationFixture extends CakeTestFixture {
 			'name' => 'Lorem ipsum dolor sit amet',
 			'short_code' => 'Lorem ipsum dolor sit amet',
 			'office_id' => 1,
-			'created' => '2010-04-23 23:41:54',
-			'modified' => '2010-04-23 23:41:54'
+			'created' => '2010-05-24 16:37:19',
+			'modified' => '2010-05-24 16:37:19'
 		),
 	);
 }

@@ -2,16 +2,6 @@
 class Page extends AppModel {
 	var $name = 'Page';
 	var $validate = array(
-		'price_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'short_title' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
@@ -76,13 +66,6 @@ class Page extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 	var $belongsTo = array(
-		'Price' => array(
-			'className' => 'Price',
-			'foreignKey' => 'price_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
 		'Location' => array(
 			'className' => 'Location',
 			'foreignKey' => 'location_id',
@@ -92,19 +75,21 @@ class Page extends AppModel {
 		)
 	);
 
-	var $hasMany = array(
-		'Menu' => array(
-			'className' => 'Menu',
+	var $hasAndBelongsToMany = array(
+		'Trip' => array(
+			'className' => 'Trip',
+			'joinTable' => 'trip_pages',
 			'foreignKey' => 'page_id',
-			'dependent' => false,
+			'associationForeignKey' => 'trip_id',
+			'unique' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
 			'limit' => '',
 			'offset' => '',
-			'exclusive' => '',
 			'finderQuery' => '',
-			'counterQuery' => ''
+			'deleteQuery' => '',
+			'insertQuery' => ''
 		)
 	);
 

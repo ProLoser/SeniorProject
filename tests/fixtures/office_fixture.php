@@ -1,5 +1,5 @@
 <?php
-/* Office Fixture generated on: 2010-04-23 23:04:59 : 1272066119 */
+/* Office Fixture generated on: 2010-05-24 16:05:19 : 1274744239 */
 class OfficeFixture extends CakeTestFixture {
 	var $name = 'Office';
 
@@ -18,8 +18,8 @@ class OfficeFixture extends CakeTestFixture {
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
 			'location' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'created' => '2010-04-23 23:41:59',
-			'modified' => '2010-04-23 23:41:59'
+			'created' => '2010-05-24 16:37:19',
+			'modified' => '2010-05-24 16:37:19'
 		),
 	);
 }

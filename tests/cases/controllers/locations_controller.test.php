@@ -1,5 +1,5 @@
 <?php
-/* Locations Test cases generated on: 2010-05-03 00:05:53 : 1272846173*/
+/* Locations Test cases generated on: 2010-05-24 16:05:57 : 1274744337*/
 App::import('Controller', 'Locations');
 
 class TestLocationsController extends LocationsController {
@@ -11,7 +11,7 @@ class TestLocationsController extends LocationsController {
 }
 
 class LocationsControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.location', 'app.office', 'app.employee', 'app.user', 'app.role', 'app.volunteer', 'app.booking', 'app.donation', 'app.ecuador_profile', 'app.line_item', 'app.price', 'app.page', 'app.menu', 'app.spanish_profile', 'app.document', 'app.signup', 'app.school', 'app.recruiter_meeting');
+	var $fixtures = array('app.location', 'app.office', 'app.page', 'app.trip', 'app.destination', 'app.trip_page', 'app.volunteer_type', 'app.program_type', 'app.addon_combination', 'app.addon');
 
 	function startTest() {
 		$this->Locations =& new TestLocationsController();
@@ -40,26 +40,6 @@ class LocationsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
-
-	}
-
-	function testAdminIndex() {
-
-	}
-
-	function testAdminView() {
-
-	}
-
-	function testAdminAdd() {
-
-	}
-
-	function testAdminEdit() {
-
-	}
-
-	function testAdminDelete() {
 
 	}
 

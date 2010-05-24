@@ -1,5 +1,5 @@
 <?php
-/* Addons Test cases generated on: 2010-05-03 00:05:30 : 1272846030*/
+/* Addons Test cases generated on: 2010-05-24 16:05:57 : 1274744337*/
 App::import('Controller', 'Addons');
 
 class TestAddonsController extends AddonsController {
@@ -11,7 +11,7 @@ class TestAddonsController extends AddonsController {
 }
 
 class AddonsControllerTestCase extends CakeTestCase {
-	var $fixtures = array('app.addon', 'app.addon_combination', 'app.base_combination', 'app.destination', 'app.program');
+	var $fixtures = array('app.addon', 'app.addon_combination', 'app.trip', 'app.destination', 'app.trip_page', 'app.volunteer_type', 'app.program_type', 'app.page', 'app.location', 'app.office');
 
 	function startTest() {
 		$this->Addons =& new TestAddonsController();
@@ -40,26 +40,6 @@ class AddonsControllerTestCase extends CakeTestCase {
 	}
 
 	function testDelete() {
-
-	}
-
-	function testAdminIndex() {
-
-	}
-
-	function testAdminView() {
-
-	}
-
-	function testAdminAdd() {
-
-	}
-
-	function testAdminEdit() {
-
-	}
-
-	function testAdminDelete() {
 
 	}
 

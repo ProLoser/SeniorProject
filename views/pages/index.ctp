@@ -3,15 +3,9 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('price_id');?></th>
-			<th><?php echo $this->Paginator->sort('short_title');?></th>
 			<th><?php echo $this->Paginator->sort('title');?></th>
-			<th><?php echo $this->Paginator->sort('slug');?></th>
-			<th><?php echo $this->Paginator->sort('contents');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
 			<th><?php echo $this->Paginator->sort('modified');?></th>
-			<th><?php echo $this->Paginator->sort('meta_description');?></th>
-			<th><?php echo $this->Paginator->sort('meta_keywords');?></th>
 			<th><?php echo $this->Paginator->sort('location_id');?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
@@ -25,17 +19,9 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td><?php echo $page['Page']['id']; ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($page['Price']['id'], array('controller' => 'prices', 'action' => 'view', $page['Price']['id'])); ?>
-		</td>
-		<td><?php echo $page['Page']['short_title']; ?>&nbsp;</td>
 		<td><?php echo $page['Page']['title']; ?>&nbsp;</td>
-		<td><?php echo $page['Page']['slug']; ?>&nbsp;</td>
-		<td><?php echo $page['Page']['contents']; ?>&nbsp;</td>
 		<td><?php echo $page['Page']['created']; ?>&nbsp;</td>
 		<td><?php echo $page['Page']['modified']; ?>&nbsp;</td>
-		<td><?php echo $page['Page']['meta_description']; ?>&nbsp;</td>
-		<td><?php echo $page['Page']['meta_keywords']; ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($page['Location']['name'], array('controller' => 'locations', 'action' => 'view', $page['Location']['id'])); ?>
 		</td>
@@ -60,4 +46,14 @@
  |
 		<?php echo $this->Paginator->next(__('next', true).' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
+</div>
+<div class="actions">
+	<h3><?php __('Actions'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Page', true)), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Locations', true)), array('controller' => 'locations', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Location', true)), array('controller' => 'locations', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Trips', true)), array('controller' => 'trips', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Trip', true)), array('controller' => 'trips', 'action' => 'add')); ?> </li>
+	</ul>
 </div>
