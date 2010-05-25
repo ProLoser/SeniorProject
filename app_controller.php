@@ -45,6 +45,7 @@ class AppController extends Controller {
 		'Javascript',
 		'HTML',
 		'Session',
+		'Isv',
 	);
 }
 ?>
