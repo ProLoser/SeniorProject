@@ -43,7 +43,7 @@ class AppController extends Controller {
 		'Text',
 		'Time',
 		'Javascript',
-		'HTML'
+		'HTML',
 		'Session',
 	);
 }
