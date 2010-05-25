@@ -9,10 +9,12 @@
 	'forms',
 	'tables',
 	'home',
-	'adventure',
+	'trip_info',
 	'prettyPhoto',
 	'prettyPhoto/prettyPhoto',
-	'tabs'
+	'slideshow',
+	'gallery',
+	'accordion_info'
 )); ?>
 <!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
 <!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->
@@ -23,11 +25,10 @@
 	'lib/jquery.prettyPhoto',
 	'jquery.prettyPhoto',
 	'jquery.galleria',
-	'galleria-init1',
 	'flash-map',
-	'index_mod',
-	'cufon-yui',
-	'common-innovation'
+	'slideshow',
+	'accordion_info',
+	'ISVOnline'
 )); ?>
 
 <?php echo $scripts_for_layout; ?>

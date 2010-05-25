@@ -202,9 +202,14 @@ a:hover {
 	margin-bottom: 20px;
 	border-bottom: 1px dotted #ccc;
 }
+#content h2 {
+	font-size: 20px;
+	color: #313131;
+	margin: 15px 0 10px 0;
+}
 #content h3 {
 	font-size: 18px;
-	margin: 15px 0 10px 0;
+	margin: 20px 0 10px 0;
 	color: #313131;
 }
 #content h4 {
