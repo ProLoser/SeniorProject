@@ -21,7 +21,7 @@
 <!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
 <!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->
 
-<?php echo $javascript->link(array(
+<?php echo $this->Html->script(array(
 	'lib/jquery-1.3.2.min', 
 	'lib/jquery.easing.1.2',
 	'lib/jquery.prettyPhoto',

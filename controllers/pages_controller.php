@@ -28,8 +28,7 @@ class PagesController extends AppController {
 			}
 		}
 		$locations = $this->Page->Location->find('list');
-		$trips = $this->Page->Trip->find('list');
-		$this->set(compact('locations', 'trips'));
+		$this->set(compact('locations'));
 	}
 
 	function edit($id = null) {
@@ -49,8 +48,7 @@ class PagesController extends AppController {
 			$this->data = $this->Page->read(null, $id);
 		}
 		$locations = $this->Page->Location->find('list');
-		$trips = $this->Page->Trip->find('list');
-		$this->set(compact('locations', 'trips'));
+		$this->set(compact('locations'));
 	}
 
 	function delete($id = null) {
