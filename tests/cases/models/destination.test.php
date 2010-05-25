@@ -1,9 +1,9 @@
 <?php
-/* Destination Test cases generated on: 2010-04-23 23:04:37 : 1272066097*/
+/* Destination Test cases generated on: 2010-05-24 16:05:18 : 1274744238*/
 App::import('Model', 'Destination');
 
 class DestinationTestCase extends CakeTestCase {
-	var $fixtures = array('app.destination', 'app.base_combination', 'app.program', 'app.addon_combination', 'app.addon');
+	var $fixtures = array('app.destination', 'app.trip_page', 'app.trip');
 
 	function startTest() {
 		$this->Destination =& ClassRegistry::init('Destination');

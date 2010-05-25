@@ -2,7 +2,7 @@
 class AddonCombination extends AppModel {
 	var $name = 'AddonCombination';
 	var $validate = array(
-		'base_combination_id' => array(
+		'trip_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -26,9 +26,9 @@ class AddonCombination extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 	var $belongsTo = array(
-		'BaseCombination' => array(
-			'className' => 'BaseCombination',
-			'foreignKey' => 'base_combination_id',
+		'Trip' => array(
+			'className' => 'Trip',
+			'foreignKey' => 'trip_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

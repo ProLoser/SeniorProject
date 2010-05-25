@@ -15,7 +15,7 @@ class Location extends AppModel {
 		'name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				'message' => 'Please enter the name of the location',
+				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -58,45 +58,6 @@ class Location extends AppModel {
 	var $hasMany = array(
 		'Page' => array(
 			'className' => 'Page',
-			'foreignKey' => 'location_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Price' => array(
-			'className' => 'Price',
-			'foreignKey' => 'location_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'location_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Volunteer' => array(
-			'className' => 'Volunteer',
 			'foreignKey' => 'location_id',
 			'dependent' => false,
 			'conditions' => '',

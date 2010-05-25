@@ -45,7 +45,7 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php __('Id'); ?></th>
-		<th><?php __('Base Combination Id'); ?></th>
+		<th><?php __('Trip Id'); ?></th>
 		<th><?php __('Addon Id'); ?></th>
 		<th><?php __('Created'); ?></th>
 		<th><?php __('Modified'); ?></th>
@@ -61,7 +61,7 @@
 		?>
 		<tr<?php echo $class;?>>
 			<td><?php echo $addonCombination['id'];?></td>
-			<td><?php echo $addonCombination['base_combination_id'];?></td>
+			<td><?php echo $addonCombination['trip_id'];?></td>
 			<td><?php echo $addonCombination['addon_id'];?></td>
 			<td><?php echo $addonCombination['created'];?></td>
 			<td><?php echo $addonCombination['modified'];?></td>

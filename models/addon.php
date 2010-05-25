@@ -5,7 +5,7 @@ class Addon extends AppModel {
 		'name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				'message' => 'Please enter a name for the addon',
+				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
