@@ -13,7 +13,7 @@ $(document).ready(function () {
 	 * Fade in and out upon hover
 	 *
 	 * File: jquery-1.4.2.min.js
-	 * Instructions: http://api.jquery.com/fadeTo/ http://api.jquery.com/fadeOut/
+	 * Instructions: http://api.jquery.com/fadeTo/  http://api.jquery.com/fadeOut/
 	 */
 	$('.js-fade').hover(function(){
 		$(this).fadeTo('slow', 0.5);
@@ -28,6 +28,13 @@ $(document).ready(function () {
 	 * Website: http://medienfreunde.com/lab/innerfade/
 	 */
 	$('.js-fadeslideshow').innerfade();
-
+	
+	/**
+	 * Gallery
+	 *
+	 * File: galleria.js  plugins/*  themes/*
+	 * Website: http://galleria.aino.se/
+	 */
+	$('.js-gallery').galleria();
 	 
 });

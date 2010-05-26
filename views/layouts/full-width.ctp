@@ -21,6 +21,8 @@
 	'jquery/jquery-1.4.2.min',
 	'jquery/jquery-ui-1.8.1.custom.min',
 	'jquery/jquery.slideshow.lite-0.5.3',
+	'jquery/jquery.innerfade',
+	'jquery/galleria',
 	'ISVOnline',
 )); ?>
 
