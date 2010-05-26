@@ -26,6 +26,5 @@
 <div class="clear"></div>
 
 <ul id="footerbarwrap">
-	<li>Copyright &copy; ISV. All rights reserved.     +12 34 56 78 90</li>
-	<li>Other important footer information is easy to add <a href="#">Including links</a></li>
+	<li>&copy; 2010 International Student Volunteers. All rights reserved.</li>
 </ul>
