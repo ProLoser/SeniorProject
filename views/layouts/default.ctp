@@ -22,15 +22,12 @@
 <!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->
 
 <?php echo $this->Html->script(array(
-	'lib/jquery-1.3.2.min', 
-	'lib/jquery.easing.1.2',
-	'lib/jquery.prettyPhoto',
-	'jquery.prettyPhoto',
-	'jquery.galleria',
-	'flash-map',
-	'slideshow',
-	'accordion_info',
-	'ISVOnline'
+	'jquery/jquery-1.4.2.min',
+	'jquery/jquery-ui-1.8.1.custom.min',
+	'jquery/jquery.slideshow.lite-0.5.3',
+	'jquery/jquery.innerfade',
+	'jquery/galleria',
+	'ISVOnline',
 )); ?>
 
 <?php echo $scripts_for_layout; ?>
