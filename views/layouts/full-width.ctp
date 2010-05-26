@@ -18,22 +18,10 @@
 <!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->
 
 <?php echo $this->Html->script(array(
-	'jquery-1.3.2.min',
-	'jquery.easing.1.2',
-	'fadeinout',
-	'jquery.prettyPhoto',
-	'lib/jquery-1.3.2.min',
-	'lib/jquery.easing.1.2',
-	'lib/jquery.prettyPhoto',
-	'galleria-init1',
-	'jquery.galleria',
-	'cufon-yui',
-	'fontconfig',
-	'common.js',
-	'common-innovation',
-	'index_advmain',
-	'haccordion',
-	'flash-map'
+	'jquery/jquery-1.4.2.min',
+	'jquery/jquery-ui-1.8.1.custom.min',
+	'jquery/jquery.slideshow.lite-0.5.3',
+	'ISVOnline',
 )); ?>
 
 
