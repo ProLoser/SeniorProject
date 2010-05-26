@@ -1,12 +1,12 @@
 <h1>Plugin Test Page</h1>
 
 <h2>Slideshow</h2>
-<ul class="js-slideshow">
-	<li><img src="/SeniorProject/img/adventure/Australia/aus-vol01.jpg" width="580" height="360" alt="Grass Blades" /></li>
-    <li><img src="/SeniorProject/img/adventure/Australia/aus-vol02.jpg" width="580" height="360" alt="Grass Blades" /></li>
-    <li><img src="/SeniorProject/img/adventure/Australia/aus-vol03.jpg" width="580" height="360" alt="Grass Blades" /></li>
-    <li><img src="/SeniorProject/img/adventure/Australia/aus-vol04.jpg" width="580" height="360" alt="Grass Blades" /></li>
-</ul>
+<div class="js-slideshow">
+	<a href="#"><img src="/SeniorProject/img/adventure/Australia/aus-vol01.jpg" width="580" height="360" alt="Grass Blades" /></a>
+    <img src="/SeniorProject/img/adventure/Australia/aus-vol02.jpg" width="580" height="360" alt="Grass Blades" />
+    <img src="/SeniorProject/img/adventure/Australia/aus-vol03.jpg" width="580" height="360" alt="Grass Blades" />
+    <img src="/SeniorProject/img/adventure/Australia/aus-vol04.jpg" width="580" height="360" alt="Grass Blades" />
+</div>
 
 <h2>Gallery</h2>
 <div class="js-gallery">
