@@ -1,7 +1,6 @@
-.galleria-container{height:400px;position:relative;overflow:hidden;background:#000;}
+.galleria-container{height:400px;position:relative;overflow:hidden;}
 .galleria-stage{position:absolute;top:10px;bottom:50px;left:10px;right:10px;overflow:hidden;}
 .galleria-thumbnails-container{height:40px;bottom:0;position:absolute;left:10px;right:10px;z-index:2;}
-.galleria-carousel .galleria-thumbnails-list{margin-left:30px;margin-right:30px;}
 .galleria-thumbnails .galleria-image{height:28px;width:48px;background:#000;margin:0 5px 0 0;border:1px solid #000;;float:left;cursor:pointer;}
 .galleria-thumbnails .active{border-color:#aaa;}
 .galleria-counter{position:absolute;bottom:10px;left:10px;text-align:right;color:#fff;font:normal 11px/1 arial,sans-serif;z-index:2;}

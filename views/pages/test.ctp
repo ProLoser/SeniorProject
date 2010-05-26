@@ -20,6 +20,10 @@
     <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day08.jpg' ); ?>
     <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day09.jpg' ); ?>
     <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day10.jpg' ); ?>
+    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day07.jpg' ); ?>
+    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day08.jpg' ); ?>
+    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day09.jpg' ); ?>
+    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day10.jpg' ); ?>
 </div>
 
 <h2>Innerfade</h2>
