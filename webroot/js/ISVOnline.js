@@ -20,5 +20,14 @@ $(document).ready(function () {
 	}, function(){
 		$(this).fadeIn('slow');
 	});
+	
+	/**
+	 * InnerFade Slideshow
+	 *
+	 * File: jquery.innerfade.js
+	 * Website: http://medienfreunde.com/lab/innerfade/
+	 */
+	$('.js-fadeslideshow').innerfade();
 
+	 
 });
