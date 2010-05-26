@@ -23,6 +23,9 @@
 	'jquery/jquery.slideshow.lite-0.5.3',
 	'jquery/jquery.innerfade',
 	'jquery/galleria',
+)); ?>
+<script type="text/javascript">Galleria.loadTheme('<?php echo $this->webroot?>js/jquery/themes/classic/galleria.classic.js');</script>
+<?php echo $this->Html->script(array(
 	'ISVOnline',
 )); ?>
 
