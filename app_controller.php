@@ -33,17 +33,14 @@
 class AppController extends Controller {
 
 	var $components = array(
-		'DebugKit.Toolbar',
 		'Session',
 	);
 
 	var $helpers = array(
-		'UploadPack.Upload',
 		'Form',
 		'Text',
 		'Time',
-		'Javascript',
-		'HTML',
+		'Html',
 		'Session',
 		'Isv',
 	);
