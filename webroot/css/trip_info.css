@@ -46,17 +46,13 @@
     margin-top: 7px;
 }
 
-.excursionWrapper .image
+.excursionWrapper .imageWrapper img
 {
     height:90px;
     width:90px;
     padding:2px;
     border:1px solid #eee;
     background-color: #FFF;
-    
-    background-image: url('../img/loading1.gif');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
 }
 
 .excursionWrapper .itemDesc

@@ -146,7 +146,7 @@ The adventure ends, travel home, Hasta Pronto!" /></li>
         <p class="about">Don't forget about the great optional extras such as a trip to the Galapagos Islands, Machu Picchu or our Spanish Lessons!</p>
 			<div class="excursionWrapper">
                 <div class="imageWrapper">
-                    <div class="image asyncImgLoad" title="/img/adventure/CostaRica/cr-excur01.jpg"></div>
+                    <img src="/img/adventure/CostaRica/cr-excur01.jpg" alt="Galapagos Islands Excursion" />
                 </div>
                 <div class="itemDesc">
                     <h4 class="excur_title">Galapagos Islands Excursion</h4>
@@ -158,7 +158,7 @@ The adventure ends, travel home, Hasta Pronto!" /></li>
             
             <div class="excursionWrapper">
                 <div class="imageWrapper">
-                    <div class="image asyncImgLoad" title="/img/adventure/CostaRica/cr-excur02.jpg"></div>
+                    <img src="/img/adventure/CostaRica/cr-excur02.jpg" alt="Peru/Machu Picchu Excursion" />
                 </div>
                 <div class="itemDesc">
                     <h4 class="excur_title">Peru/Machu Picchu Excursion</h4>
@@ -170,7 +170,7 @@ The adventure ends, travel home, Hasta Pronto!" /></li>
             
             <div class="excursionWrapper">
                 <div class="imageWrapper">
-                    <div class="image asyncImgLoad" title="/img/adventure/CostaRica/cr-excur03.jpg"></div>
+                    <img src="/img/adventure/CostaRica/cr-excur03.jpg" alt="Spanish Lessons" />
                 </div>
                 <div class="itemDesc">
                     <h4 class="excur_title">Spanish Lessons</h4>

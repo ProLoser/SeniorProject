@@ -87,7 +87,7 @@ Several opportunities exist to assist at educational summer camps, community cen
             
               <!-- slide 1 -->
               <div id="slide1" class="accordionImgDiv_info">
-                  <a href="index.html" id="slideimg1" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/img/adventure/EEurope/caving.jpg"></a>
+                  <a href="index.html" id="slideimg1" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/EEurope/caving.jpg"></a>
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Caving</h3>
@@ -95,59 +95,59 @@ Several opportunities exist to assist at educational summer camps, community cen
                       This caving adventure will take you deep underground<br />
                       into some of the largest cave systems in Europe.</p> 
                   </div>                    
-                  <div class="slideStrip_info" title="/img/adventure/EEurope/cavingstrip.jpg"></div>
+                  <div class="slideStrip_info" title="/SeniorProject/img/adventure/EEurope/cavingstrip.jpg"></div>
                   <p class="slideDesc_info">Caving</p>  
               </div>
                                                           
               <!-- slide 2 -->
               <div id="slide2" class="accordionImgDiv_info"> 
-                  <a href="index.html" id="slideimg2" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/img/adventure/EEurope/lakebled.jpg"></a>
+                  <a href="index.html" id="slideimg2" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/EEurope/lakebled.jpg"></a>
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Lake Bled Castle and Bicycle Tour</h3>
                       <p>This idyllic glacial lake and medieval castle <br />
                       clinging to a rockface has a hypnotic beauty.</p> 
                   </div>                    
-                  <div class="slideStrip_info" title="/img/adventure/EEurope/lakebledstrip.jpg"></div>
+                  <div class="slideStrip_info" title="/SeniorProject/img/adventure/EEurope/lakebledstrip.jpg"></div>
                   <p class="slideDesc_info">Lake Bled<br />Castle and<br />Bicycle Tour</p> 
               </div>
                                 
               <!-- slide 3 -->
               <div id="slide3" class="accordionImgDiv_info">
-                  <a href="index.html" id="slideimg3" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/img/adventure/EEurope/centinariver.jpg"></a>
+                  <a href="index.html" id="slideimg3" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/EEurope/centinariver.jpg"></a>
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Centina River Canyoning</h3>
                       <p>Experience the adrenaline rush of rappelling down the<br /> 
                       beautiful limestone cliffs of the Cetina River canyon. </p> 
                   </div>                    
-                  <div class="slideStrip_info" title="/img/adventure/EEurope/centinariverstrip.jpg"></div>
+                  <div class="slideStrip_info" title="/SeniorProject/img/adventure/EEurope/centinariverstrip.jpg"></div>
                   <p class="slideDesc_info">Centina <br />River<br />Canyoning</p>  
               </div>
                                           
               <!-- slide 4 -->
               <div id="slide4" class="accordionImgDiv_info">
-                  <a href="index.html" id="slideimg4" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/img/adventure/EEurope/omisrock.jpg"></a>
+                  <a href="index.html" id="slideimg4" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/EEurope/omisrock.jpg"></a>
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Omis Rock Climbing</h3>
                       <p>It's time to enter a vertical world as we explore <br />
                       the limestone cliffs of Omis!</p> 
                   </div>                   
-                 <div class="slideStrip_info"  title="/img/adventure/EEurope/omisrockstrip.jpg"></div>
+                 <div class="slideStrip_info"  title="/SeniorProject/img/adventure/EEurope/omisrockstrip.jpg"></div>
                  <p class="slideDesc_info">Omis Rock<br />Climbing</p>  
               </div>           
                 
               <!-- slide 5 -->
               <div id="slide5" class="accordionImgDiv_info">
-                  <a href="index.html" id="slideimg5" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/img/adventure/EEurope/korculaisland.jpg"></a> 
+                  <a href="index.html" id="slideimg5" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/EEurope/korculaisland.jpg"></a> 
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Korcula Island Culture</h3>
                       <p>Korcula Island has a rich culture and is famous <br />
                       for being the birthplace of the explorer Marco Polo.</p> 
                   </div>    
-                  <div class="slideStrip_info" title="/img/adventure/EEurope/korculaislandstrip.jpg"></div>
+                  <div class="slideStrip_info" title="/SeniorProject/img/adventure/EEurope/korculaislandstrip.jpg"></div>
                   <p class="slideDesc_info">Korcula<br />Island<br />Culture</p>  
               </div>
           </div> <!-- accordionContainer -->
