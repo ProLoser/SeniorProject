@@ -28,7 +28,7 @@
 			pauseSeconds: 2,
 			fadeSpeed: 0.5,
 			width: 468,
-			height: 120,
+			height: 400,
 			caption: true,
 			cssClass: 'slideshowlite'
 		};
