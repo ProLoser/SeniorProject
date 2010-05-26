@@ -16,9 +16,9 @@ $(document).ready(function () {
 	 * Instructions: http://api.jquery.com/fadeTo/  http://api.jquery.com/fadeOut/
 	 */
 	$('.js-fade').hover(function(){
-		$(this).fadeTo('slow', 0.5);
+		$(this).fadeTo('slow', 0.3);
 	}, function(){
-		$(this).fadeIn('slow');
+		$(this).fadeTo('slow', 1);
 	});
 	
 	/**
