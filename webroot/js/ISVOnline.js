@@ -35,6 +35,13 @@ $(document).ready(function () {
 	 * File: galleria.js  plugins/*  themes/*
 	 * Website: http://galleria.aino.se/
 	 */
-	$('.js-gallery').galleria();
+	$('.js-gallery').galleria({
+		autoplay: true,
+		height: 500,
+		transition: 'fade',
+		transition_speed: 1300,
+		image_crop: true,
+		carousel: false
+	});
 	 
 });
