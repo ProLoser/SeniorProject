@@ -27,8 +27,8 @@
 		var defaults = {
 			pauseSeconds: 2,
 			fadeSpeed: 0.5,
-			width: 468,
-			height: 120,
+			width: 600,
+			height: 350,
 			caption: true,
 			cssClass: 'slideshowlite'
 		};
@@ -83,7 +83,7 @@
 		var j = 0;
 		$(this).children("a").each(function(){
 			pagination.append("<li><a href=\"#\">" + i++ + "</a></li>");
-			caption.append("<li>" + $("#" + $(target).attr("id") + " img:nth(" + j++ + ")").attr("alt") + "</li>");
+			caption.append("<li>" + $($(target).attr("id") + " img:nth(" + j++ + ")").attr("alt") + "</li>");
 		});
 		pagination.fadeTo(0, 0.8);
 		caption.fadeTo(0, 0.6);

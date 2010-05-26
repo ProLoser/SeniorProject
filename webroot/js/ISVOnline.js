@@ -35,6 +35,7 @@ $(document).ready(function () {
 	 * File: galleria.js  plugins/*  themes/*
 	 * Website: http://galleria.aino.se/
 	 */
-	$('.js-gallery').galleria();
+	
+  	 $('.js-gallery').galleria();
 	 
 });
