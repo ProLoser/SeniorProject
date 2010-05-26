@@ -2,8 +2,9 @@
 
 .slideshowlite {
 	position: relative;
-	border: 2px solid #111;
 	overflow: hidden;
+	width: 600px;
+	height: 400px;
 }
 
 	.slideshowlite a {
@@ -26,15 +27,15 @@
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	bottom: 5px;
-	right: 5px;
+	top: 330px;
+	right: 2px;
 	z-index: 3;
 }
 
 	.slideshowlite ul li,
 	.slideshowlite ol li {
 		float: left;
-		margin: 0 3px;
+		margin: 0 2px;
 		width: 16px;
 	}
 	
@@ -45,11 +46,11 @@
 		height: 14px;
 		padding-top: 2px;
 		text-decoration: none;
-		color: #666;
-		background: #eee;
-		border: 1px solid #666;
+		color: #E8EFC0;
+		background: #475223;
+		border: 1px solid #E8EFC0;
 		text-align: center;
-		font-size: 11px;
+		font-size: 90%;
 	}
 	
 	.slideshowlite ul li a.current {
@@ -61,20 +62,20 @@
 	
 	.slideshowlite ul li a:hover {
 		color: #fff;
-		background: #333;
+		background: #656C2F;
 	}
 	
 /* caption control */
 
 .slideshowlite ol {
-	top: 5px;
-	position: relative;
+	top: 355px;
+	position: absolute;
 	overflow: hidden;
 	width: 100%;
-	font-size: 14px;
-	color: #fff;
-	background: #000;
-	padding: 3px 10px;
+	font-size: 90%;
+	color: #000;
+	background: transparent;
+	line-height: 50%;
 }
 
 	.slideshowlite ol li {

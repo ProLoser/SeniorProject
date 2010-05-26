@@ -25,10 +25,10 @@
 	$.fn.slideshow = function(options){
 		
 		var defaults = {
-			pauseSeconds: 2,
-			fadeSpeed: 0.5,
+			pauseSeconds: 3,
+			fadeSpeed: 1,
 			width: 600,
-			height: 350,
+			height: 440,
 			caption: true,
 			cssClass: 'slideshowlite'
 		};
@@ -86,7 +86,7 @@
 			caption.append("<li>" + $($(target).attr("id") + " img:nth(" + j++ + ")").attr("alt") + "</li>");
 		});
 		pagination.fadeTo(0, 0.8);
-		caption.fadeTo(0, 0.6);
+		caption.fadeTo(0, 1);
 		caption.hide();
 		
 		// ----------------------------------------

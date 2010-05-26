@@ -37,10 +37,10 @@ $(document).ready(function () {
 	 */
 	$('.js-gallery').galleria({
 		autoplay: true,
-		height: 500,
 		transition: 'fade',
-		transition_speed: 1300,
-		image_crop: true,
+		height: 620,
+		transition_speed: 1400,
+		image_crop: false,
 		carousel: false
 	});
 	 
