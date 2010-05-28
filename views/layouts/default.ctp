@@ -11,6 +11,8 @@
 	'home',
 	'trip_info',
 	'jquery/slideshow',
+	'jquery/accordion_info',
+	'jquery/fancy_accordion'
 )); ?>
 <meta name="keywords" content="<?php echo (isset($keywords_for_layout)) ? $keywords_for_layout : ""; ?>" />
 <meta name="description" content="<?php echo (isset($description_for_layout)) ? $description_for_layout : ""; ?>" />
@@ -23,6 +25,9 @@
 	'jquery/jquery.slideshow.lite-0.5.3',
 	'jquery/jquery.innerfade',
 	'jquery/galleria',
+	'jquery/jquery.prettyPhoto',
+	'jquery/accordion_info',
+	'jquery/fancy_accordion',
 )); ?>
 <script type="text/javascript">Galleria.loadTheme('<?php echo $this->webroot?>js/jquery/themes/classic/galleria.classic.js');</script>
 <?php echo $this->Html->script(array(
