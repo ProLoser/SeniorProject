@@ -1,14 +1,68 @@
-// array of image descriptions
-var ImageTitles = new Array();
-var ImageDescriptions = new Array();
+/**********************************
+ ACCORDION - TRIP INFORMATION PAGE
+**********************************/
 
-/**************************
-       ACCORDION CODE
-**************************/
+/***************************************
+    ASYNCHRONOUS IMAGE LOADING CODE
+****************************************/
+
+// For all object with class "asyncImaLoad" (loader), function read
+// image path from title attribute, create new Image object,
+// next assign image from path to Image object and 
+// append it to loader 
+function setupLoadingAsynchronousImages()
+{
+    // for each object with class "asyncImgLoad"
+    $('.asyncImgLoad').each(
+        function()
+        {   
+            // save handle to loader - caintainer which we gona insert loaded image    
+            var loader = $(this);
+            // get image path from loader title attribute
+            var imagePath = loader.attr('title');
+            // create new image object
+            var img = new Image();
+            // set opacity for image to maximum
+            // value 0.0 means completly transparent
+            $(img).css("opacity", "0.0")
+            // next we set function wich gona be caled then
+            // image load is finished  
+                .load(
+                    function() 
+                    {
+                        // insert loaded image to loader object 
+                        // and remove unnecessary title attribute
+                        loader.append(this).removeAttr('title');
+                        // for inserted image we set margin to zero
+                        // opacity to max and fire up 500ms opacity animation 
+                        $(this)
+                            .css("margin", "0px")
+                            .css("opacity", "0.0")
+                            .animate({opacity: 1.0}, 500,
+                                function()
+                                {
+                                    // after animation we remove loader background image 
+                                    loader.css("background-image", "none");
+                                }
+                            );
+                    }
+                // set new value for attribute src - this means: load image from imagePath    
+                ).attr('src', imagePath);                        
+        }
+    );
+} // end of function setupLoadingAsynchronousImages
+
+
+/***
+The difference betweent he 'accordion_info' plugin and the 'accordion' plugin is that the
+accordion_info plugin is made for a shorter caption which appears within the accordion
+itself.  This is in contrast to the 'accordion' plugin which allows for a longer caption
+which appears below the accordion.  This also takes out the 'controls'.
+***/
  
 // default width of accordion for this template is set to 960 pixels,
 // this value is hardcoded and must be equal to accordion width coded in
-// accordionContainer CSS style (file: indexCSS.css)
+// js-accordion_info CSS style (file: accordion_main.css)
 var ACCORDION_WIDTH = 600;
 // this variable determine the width of div then it is draw aside
 var ACCORDION_DRAW_ASIDE_WIDTH = 50;
@@ -22,16 +76,16 @@ var ACCORDION_SLIDE_TIME = 650;
 // elements whith other informations needed for main image, we pack objects into an array
 var g_slidedDivs = null;
 var g_hoveredSlideIndex = null;
-function setupAccordionImageSlider()
+function setupAccordionImageSlider_infopage()
 {
     // turn off displaying border-left for first div holding image in accordion
-    $("#js-accordion").find(".accordionImgDiv:first").css("border-left", "0px");
+    $("#js-accordion_info").find(".accordionImgDiv_info:first").css("border-left", "0px");
     
     // get list of all slided divs in slider
-    var slidedDivsList = $("#js-accordion .accordionImgDiv");
+    var slidedDivsList = $("#js-accordion_info .accordionImgDiv_info");
     // collect information on every div in to an global array
     g_slidedDivs = new Array;
-    var firstDiv = $("#js-accordion .accordionImgDiv:first");
+    var firstDiv = $("#js-accordion_info .accordionImgDiv_info:first");
     for(var i = 0; i < slidedDivsList.length; i++)
     {
         var obj = new Object(); 
@@ -40,7 +94,7 @@ function setupAccordionImageSlider()
         obj.out = 0;
         g_slidedDivs.push(obj); 
 
-        firstDiv = $(firstDiv).next(".accordionImgDiv");
+        firstDiv = $(firstDiv).next(".accordionImgDiv_info");
     }
                  
     // calculating rib width based on accordion containter width divided by slides number in accordion
@@ -62,7 +116,7 @@ function setupAccordionImageSlider()
     // when the mouse is moved on, there is no action taken,
     // when mouse is moved from we distribyte all slided divs in accordion
     // equally on accordion space
-    $("#js-accordion").hover(
+    $("#js-accordion_info").hover(
         function()
         {   
             // stop the auto play accordion image slider
@@ -76,7 +130,7 @@ function setupAccordionImageSlider()
                 return;
             }            
             // hide slide strip desc
-            $("#js-accordion .accordionImgDiv").find(".slideDesc").stop().animate({opacity: 0.0}, 150);
+            $("#js-accordion_info .accordionImgDiv_info").find(".slideDesc_info").stop().animate({opacity: 0.0}, 150);
         },
         function()
         {   
@@ -96,7 +150,7 @@ function setupAccordionImageSlider()
                 // we set the destination member to the same value
                 g_slidedDivs[i].dest = i*ribOutWidth;
                 // show strip desc
-                $(g_slidedDivs[i].name).find(".slideDesc").stop().animate({opacity: 1.0}, 1200);
+                $(g_slidedDivs[i].name).find(".slideDesc_info").stop().animate({opacity: 1.0}, 1200);
             }
             // fire up auto play for slider
             if(true == g_sliderAutoPlay)
@@ -108,9 +162,9 @@ function setupAccordionImageSlider()
         }
     );                                                    
 
-    // setting hover action for every div of class accordionImgDiv in accordion,
+    // setting hover action for every div of class accordionImgDiv_info in accordion,
     // when user move mause on div, we must to draw aside all dive except the hovered
-    $(".accordionImgDiv").hover(
+    $(".accordionImgDiv_info").hover(
         function()
         {   
             // stop the auto play accordion image slider
@@ -129,24 +183,20 @@ function setupAccordionImageSlider()
             // fade out all divs with excluding hovered div
             mouseOutAccorOnAll(divID);
 
-            g_hoveredSlideIndex = $("#js-accordion .accordionImgDiv").index(this);    
+            g_hoveredSlideIndex = $("#js-accordion_info .accordionImgDiv_info").index(this);    
             
             var context = $(this)[0];
             // stop and set new animation of main image opacity
-            $(".accordionSlideImage", context).find("img").stop().animate({opacity: 1.0}, 400); 
+            $(".accordionSlideImage_info", context).find("img").stop().animate({opacity: 1.0}, 400); 
             // stop and set new animation of image description background div
-            $(".accordionDescBack", context).stop().animate({bottom: 0, opacity: 0.8}, 1000);
+            $(".accordionDescBack_info", context).stop().animate({bottom: 0, opacity: 0.8}, 1000);
             // stop and set new animation of image description div
-            $(".accordionDesc", context).stop().animate({bottom: 0, opacity: 1.0}, 1000);
-            $(".slideStrip", context).stop().animate({opacity: 0.0}, 200, ACCORDION_EASING_METHOD); 
+            $(".accordionDesc_info", context).stop().animate({bottom: 0, opacity: 1.0}, 1000);
+            $(".slideStrip_info", context).stop().animate({opacity: 0.0}, 200, ACCORDION_EASING_METHOD); 
             
             g_slidedDivs[g_hoveredSlideIndex].out = 0;
             // draw aside all divs
             setMoveForAccordionDivs(g_hoveredSlideIndex);
-			
-			$("div#ImageTitle").text(ImageTitles[divID.substring(6,7)-1]); 
-			$("div#ImageDescrip").text(ImageDescriptions[divID.substring(6,7)-1]);  
-			
         }, 
         function()
         {
@@ -179,10 +229,10 @@ function setupAccordionImageSlider()
             }
         }
     );
-} // end of function setupAccordionImageSlider 
+} // end of function setupAccordionImageSlider_infopage 
 
 // Function set value of left margin for every slided div in accordion
-// @param[in] index - index of ohovered div with class accordionImgDiv 
+// @param[in] index - index of ohovered div with class accordionImgDiv_info 
 function setMoveForAccordionDivs(index)
 {
     // for every slided div we make the same
@@ -190,7 +240,7 @@ function setMoveForAccordionDivs(index)
     {
         var context = $(g_slidedDivs[i].name)[0];
         var object = $(g_slidedDivs[i].name);
-        $(".slideDesc", context).stop().animate({opacity: 0.0}, 150);
+        $(".slideDesc_info", context).stop().animate({opacity: 0.0}, 150);
         // if div lie on left we move it on left
         if(i < index)
         {
@@ -210,8 +260,6 @@ function setMoveForAccordionDivs(index)
                     {marginLeft: newMargin+"px"}, 
                     {duration: animTime, easing: ACCORDION_EASING_METHOD});
             }
-			$("div#ImageTitle").text(ImageTitles[i + 1]); 
-			$("div#ImageDescrip").text(ImageDescriptions[i + 1]); 
             // go to next iteraction of loop
             continue;
         }
@@ -309,16 +357,13 @@ function accordionPlay()
        
         for(var i = 0; i < g_slidedDivs.length; i++)
         {
-			$("div#ImageTitle").text(ImageTitles[0]); 
-			$("div#ImageDescrip").text(ImageDescriptions[0]); 
             // if div is currently moved we stop the animation
             // and set new animation for left margin
             $(g_slidedDivs[i].name).stop()
                 .animate({marginLeft: (i*ribOutWidth)+"px"}, {duration: 900, easing: ACCORDION_EASING_METHOD});
             // we set the destination member to the same value
             g_slidedDivs[i].dest = i*ribOutWidth;
-            $(g_slidedDivs[i].name).find(".slideDesc").stop().animate({opacity: 1.0}, 2000); 
-			
+            $(g_slidedDivs[i].name).find(".slideDesc_info").stop().animate({opacity: 1.0}, 2000); 
         }
         timeOut = g_sliderTimerInterval * 2;
         g_sliderNewLoop = false;
@@ -336,7 +381,7 @@ function accordionPlay()
     if(g_actualSlideImage >= g_slidedDivs.length)
     {
         g_actualSlideImage = 0;
-        g_sliderNewLoop = true; 
+        g_sliderNewLoop = true;   
     }
     
     // fire up slider
@@ -347,14 +392,14 @@ function accordionPlay()
     
 } // end of function accordionPlay
 
-function setupAccordionAutoPlay()
+function setupAccordionAutoPlay_infopage()
 {
     // fire up auto play for accordion image slider
     if(true == g_sliderAutoPlay)
     {
         g_sliderTimerAutoPlay = setTimeout(accordionPlay, g_sliderTimerInterval);
     }
-} // end of function setupAccordionAutoPlay
+} // end of function setupAccordionAutoPlay_infopage
 
 function mouseOnAccor(_this)
 {
@@ -373,12 +418,12 @@ function mouseOnAccor(_this)
     g_slidedDivs[index].out = 0;
 
     // stop and set new animation of main image opacity
-    $(_this).find(".accordionSlideImage").find("img").stop().animate({opacity: 1.0}, 400); 
+    $(_this).find(".accordionSlideImage_info").find("img").stop().animate({opacity: 1.0}, 400); 
     // stop and set new animation of image description background div
-    $(_this).find(".accordionDescBack").stop().animate({bottom: 0, opacity: 0.8}, 1000);
+    $(_this).find(".accordionDescBack_info").stop().animate({bottom: 0, opacity: 0.8}, 1000);
     // stop and set new animation of image description div
-    $(_this).find(".accordionDesc").stop().animate({bottom: 0, opacity: 1.0}, 1000);
-    $(_this).find(".slideStrip").stop().animate({opacity: 0.0}, 300);
+    $(_this).find(".accordionDesc_info").stop().animate({bottom: 0, opacity: 1.0}, 1000);
+    $(_this).find(".slideStrip_info").stop().animate({opacity: 0.0}, 300);
   
     // draw aside all divs
     setMoveForAccordionDivs(index);
@@ -386,15 +431,15 @@ function mouseOnAccor(_this)
 
 function mouseOutAccor(_this)
 {
-    var context = $('#js-accordion')[0];
+    var context = $('#js-accordion_info')[0];
     // stop and set new animation of main image opacity
-    $(_this, context).find(".accordionSlideImage").find("img").stop().animate({opacity: 0.0}, 800
-    ,function(){$(_this, context).find(".slideStrip").stop().animate({opacity: 1.0}, 600);}
+    $(_this, context).find(".accordionSlideImage_info").find("img").stop().animate({opacity: 0.0}, 800
+    ,function(){$(_this, context).find(".slideStrip_info").stop().animate({opacity: 1.0}, 600);}
     );
     // stop and set new animation of image description background div   
-    $(_this, context).find(".accordionDescBack").stop().animate({bottom: -70, opacity: 0}, 300);
+    $(_this, context).find(".accordionDescBack_info").stop().animate({bottom: -70, opacity: 0}, 300);
     // stop and set new animation of image description div   
-    $(_this, context).find(".accordionDesc").stop().animate({bottom: -70, opacity: 0}, 300);
+    $(_this, context).find(".accordionDesc_info").stop().animate({bottom: -70, opacity: 0}, 300);
     
 } // end of function mouseOutAccor
 
@@ -426,10 +471,10 @@ var FORWARD = true;
 var BACKWARD = false;
 var g_lastSlideMoveDirection = FORWARD;
  
-function setupAccordionControlPanel()
+function setupAccordionControlPanel_infopage()
 {
     // fadeout description text
-    $("#accorControlBtnDesc").fadeTo(0, 0.0); 
+    $("#accorControlBtnDesc").fadeTo(0, 0.0);
 
     // bind function to accordion control panel play button called then button is clicked 
     $("#accorPlayBtn").click(
@@ -453,7 +498,7 @@ function setupAccordionControlPanel()
                         .animate({marginLeft: (i*ribOutWidth)+"px"}, {duration: 900, easing: ACCORDION_EASING_METHOD});
                     // we set the destination member to the same value
                     g_slidedDivs[i].dest = i*ribOutWidth;
-                    $(g_slidedDivs[i].name).find(".slideDesc").stop().animate({opacity: 1.0}, 2000); 
+                    $(g_slidedDivs[i].name).find(".slideDesc_info").stop().animate({opacity: 1.0}, 2000); 
                 }                
             } else
             {
@@ -461,10 +506,10 @@ function setupAccordionControlPanel()
             }
             if(true == g_sliderAutoPlay)
             {
-                 $(this).attr("src", "/SeniorProject/img/slider/accordion/control/pause_hover.png");
+                 $(this).attr("src", "img/slider/accordion/control/pause_hover.png");
             } else
             {
-                  $(this).attr("src", "/SeniorProject/img/slider/accordion/control/play_hover.png");
+                  $(this).attr("src", "img/slider/accordion/control/play_hover.png");
             }
         }
     );
@@ -478,20 +523,20 @@ function setupAccordionControlPanel()
            
             if(false == g_sliderAutoPlay)
             {
-                $(this).attr("src", "/SeniorProject/img/slider/accordion/control/play_hover.png");
+                $(this).attr("src", "img/slider/accordion/control/play_hover.png");
             } else
             {
-                $(this).attr("src", "/SeniorProject/img/slider/accordion/control/pause_hover.png");
+                $(this).attr("src", "img/slider/accordion/control/pause_hover.png");
             }
         },
         function ()
         {
             if(false == g_sliderAutoPlay)
             {
-                $(this).attr("src", "/SeniorProject/img/slider/accordion/control/play.png");
+                $(this).attr("src", "img/slider/accordion/control/play.png");
             } else
             {
-                $(this).attr("src", "/SeniorProject/img/slider/accordion/control/pause.png")
+                $(this).attr("src", "img/slider/accordion/control/pause.png")
             }
             $("#accorControlBtnDesc").stop().fadeTo(0, 0.0);  
         }
@@ -503,11 +548,11 @@ function setupAccordionControlPanel()
         {
            // set text and slow fade to 100%  
            $("#accorControlBtnDesc").text("previous slide").fadeTo("slow", 1.0); 
-           $(this).attr("src", "/SeniorProject/img/slider/accordion/control/back_hover.png");
+           $(this).attr("src", "img/slider/accordion/control/back_hover.png");
         },
         function ()
         {
-            $(this).attr("src", "/SeniorProject/img/slider/accordion/control/back.png");
+            $(this).attr("src", "img/slider/accordion/control/back.png");
             $("#accorControlBtnDesc").stop().fadeTo(0, 0.0); 
         }
     );
@@ -570,11 +615,11 @@ function setupAccordionControlPanel()
         {
             // set text and slow fade to 100% 
             $("#accorControlBtnDesc").text("next slide").fadeTo("slow", 1.0);
-            $(this).attr("src", "/SeniorProject/img/slider/accordion/control/forward_hover.png");
+            $(this).attr("src", "img/slider/accordion/control/forward_hover.png");
         },
         function ()
         {
-            $(this).attr("src", "/SeniorProject/img/slider/accordion/control/forward.png");
+            $(this).attr("src", "img/slider/accordion/control/forward.png");
             $("#accorControlBtnDesc").stop().fadeTo(0, 0.0);   
         }
     ); 
@@ -592,12 +637,10 @@ function setupAccordionControlPanel()
                  if(g_actualSlideImage >= g_slidedDivs.length)
                  {
                     g_actualSlideImage = 0;
-                    g_sliderNewLoop = true; 
+                    g_sliderNewLoop = true;
                  }                  
             }
             g_lastSlideMoveDirection = FORWARD;
-				$("div#ImageTitle").text(ImageTitles[0]); 
-				$("div#ImageDescrip").text(ImageDescriptions[0]);  
             mouseOutAccorOnAll(null);
             mouseOnAccor(g_slidedDivs[g_actualSlideImage].name);
     
@@ -615,8 +658,7 @@ function setupAccordionControlPanel()
         }
     );       
 
-} // end of function setupAccordionControlPanel 
-
+} // end of function setupAccordionControlPanel_infopage 
 
 
 /*********************************************
@@ -629,28 +671,28 @@ function checkAccordionLoading()
 {
     if(g_loadedSlideCount < g_imgList.length)
     {  
-       setupLoadingAsynchronousImagesForAccordion();
+       setupLoadingAsynchronousImagesForAccordion_infopage();
     }
 } // end of function checkAccordionLoading 
 
-function setupLoadingAsynchronousImagesForAccordion()
+function setupLoadingAsynchronousImagesForAccordion_infopage()
 {
     if(g_imgList == null)
     {
         // get list of all slided divs in slider
-        var imgDivsList = $("#js-accordion .asyncImgLoadAccordion");
+        var imgDivsList = $("#js-accordion_info .asyncImgLoadAccordion_info");
         // collect information on every div in to an global array
          g_imgList = new Array;
-         var firstDiv = $("#js-accordion .accordionImgDiv:first");
-         var imgDiv = $(firstDiv).find(".asyncImgLoadAccordion");
+         var firstDiv = $("#js-accordion_info .accordionImgDiv_info:first");
+         var imgDiv = $(firstDiv).find(".asyncImgLoadAccordion_info");
          for(var i = 0; i < imgDivsList.length; i++)
          {
             var obj = new Object(); 
             obj.id = "#" + $(imgDiv).attr('id'); 
             g_imgList.push(obj); 
 
-            firstDiv = $(firstDiv).next(".accordionImgDiv");    
-            imgDiv = $(firstDiv).find(".asyncImgLoadAccordion");
+            firstDiv = $(firstDiv).next(".accordionImgDiv_info");    
+            imgDiv = $(firstDiv).find(".asyncImgLoadAccordion_info");
          }
     }
         
@@ -658,7 +700,7 @@ function setupLoadingAsynchronousImagesForAccordion()
     {  
        g_loadedSlideCount++;
        loadAccordionImg(g_imgList[g_loadedSlideCount-1].id, g_loadedSlideCount-1);
-       setTimeout(setupLoadingAsynchronousImagesForAccordion, 500);
+       setTimeout(setupLoadingAsynchronousImagesForAccordion_infopage, 500);
     }
         
         function loadAccordionImg(id, _index)
@@ -666,10 +708,7 @@ function setupLoadingAsynchronousImagesForAccordion()
             // save handle to loader - caintainer which we gona insert loaded image    
             var loader = $(id);
             // get image path from loader title attribute
-			var imageInformation = loader.attr('title').split('|');
-            var imagePath = imageInformation[0];
-			ImageTitles[_index] = imageInformation[1];
-			ImageDescriptions[_index] = imageInformation[2];
+            var imagePath = loader.attr('title');
             // create new image object
             var img = new Image();
             // set opacity for image to maximum
@@ -693,7 +732,7 @@ function setupLoadingAsynchronousImagesForAccordion()
                         if(_index == g_hoveredSlideIndex)
                         {
                             $(this).animate({opacity: 1.0}, 500);
-                        }                     
+                        }                        
                             
                     }
                 // set new value for attribute src - this means: load image from imagePath    
@@ -701,28 +740,28 @@ function setupLoadingAsynchronousImagesForAccordion()
         } 
         
            
-} // end of function setupLoadingAsynchronousImagesForAccordion 
+} // end of function setupLoadingAsynchronousImagesForAccordion_infopage 
 
 var g_loadedStripCount = 0;
 var g_stripList = null;
-function setupLoadingAsyncSlideStripImages()
+function setupLoadingAsyncSlideStripImages_infopage()
 {
     if(g_stripList == null)
     {
         // get list of all slided divs in slider
-        var imgDivsList = $("#js-accordion .slideStrip");
+        var imgDivsList = $("#js-accordion_info .slideStrip_info");
         // collect information on every div in to an global array
          g_stripList = new Array;
-         var firstDiv = $("#js-accordion .accordionImgDiv:first");
-         var imgDiv = $(firstDiv).find(".slideStrip");
+         var firstDiv = $("#js-accordion_info .accordionImgDiv_info:first");
+         var imgDiv = $(firstDiv).find(".slideStrip_info");
          for(var i = 0; i < imgDivsList.length; i++)
          {
             var obj = new Object(); 
             obj.id = imgDiv; 
             g_stripList.push(obj); 
 
-            firstDiv = $(firstDiv).next(".accordionImgDiv");    
-            imgDiv = $(firstDiv).find(".slideStrip");
+            firstDiv = $(firstDiv).next(".accordionImgDiv_info");    
+            imgDiv = $(firstDiv).find(".slideStrip_info");
          }
     }
         
@@ -742,9 +781,7 @@ function setupLoadingAsyncSlideStripImages()
             // save handle to loader - caintainer which we gona insert loaded image    
             var loader = $(id);
             // get image path from loader title attribute
-			var imageInformation = loader.attr('title').split('|');
-            var imagePath = imageInformation[0];
-			var imageDesc = imageInformation[1];
+            var imagePath = loader.attr('title');
             // create new image object
             var img = new Image();
             // set opacity for image to maximum
@@ -767,12 +804,11 @@ function setupLoadingAsyncSlideStripImages()
                             .animate({opacity: 1.0}, 400, function()
                             {
                                 loader.css("background-image", "none"); 
-                                setTimeout(setupLoadingAsyncSlideStripImages, 20); 
+                                setTimeout(setupLoadingAsyncSlideStripImages_infopage, 20); 
                             });                            
                     }
                 // set new value for attribute src - this means: load image from imagePath    
                 ).attr('src', imagePath);                        
         } 
-} // end of function setupLoadingAsyncSlideStripImages 
-
+} // end of function setupLoadingAsyncSlideStripImages_infopage 
 

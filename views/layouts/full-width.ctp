@@ -12,6 +12,7 @@
 	'index',
 	'forms',
 	'tables',
+	'jquery/accordion_info',
 	'home'
 )); ?>
 <!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
@@ -23,6 +24,8 @@
 	'jquery/jquery.slideshow.lite-0.5.3',
 	'jquery/jquery.innerfade',
 	'jquery/galleria',
+	'jquery/accordion_info',
+	'flash-map',
 	'ISVOnline',
 )); ?>
 
