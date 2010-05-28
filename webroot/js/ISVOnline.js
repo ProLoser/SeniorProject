@@ -22,6 +22,16 @@ $(document).ready(function () {
 	});
 	
 	/**
+	 * Lightbox
+	 *
+	 * File: jquery.prettyPhoto.js
+	 */
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+		allowresize: true,
+		default_width: 500,
+	});
+	
+	/**
 	 * InnerFade Slideshow
 	 *
 	 * File: jquery.innerfade.js
@@ -96,7 +106,6 @@ $(document).ready(function () {
 		setupLoadingAsynchronousImagesForAccordion_infopage();
 		setupLoadingAsyncSlideStripImages_infopage();            
 		setupAccordionImageSlider_infopage();
-		setupAccordionControlPanel_infopage();        
 		setupAccordionAutoPlay_infopage();
 	}
 	

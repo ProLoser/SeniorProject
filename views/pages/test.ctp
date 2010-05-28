@@ -33,6 +33,12 @@
 <h2>Innerfade</h2>
 <?php echo $this->Html->image('adventure/Australia/Fiji_Excursion.jpg', array('class' => 'js-fade')); ?>
 
+<h2>Lightbox</h2>
+<a rel="prettyPhoto" href="/SeniorProject/img/adventure/Australia/sydney.jpg"> 
+	<img class="prettyPhoto_img" src="/SeniorProject/img/adventure/Australia/sydney.jpg" alt="bigphoto" /> 
+</a> 
+<br />
+<a href="http://www.youtube.com/watch?v=5S1l8qq7EVA" rel="prettyPhoto" title=""><?php echo $this->Html->image('adventure/black-kids.jpg', array('alt' => 'Black Kids - Hurricane Jane','class' => 'prettyPhoto_img')); ?></a>
 <h2>Fancy Accordion</h2>
 <!-- ACCORDION IMAGE ROTATOR -->
 <div id="js-accordion">
@@ -108,3 +114,4 @@
 </div> <!-- accordionControlPanel -->    
 	<div id="ImageTitle">Sydney Harbour Sunset Cocktail Cruise</div>
 	<div id="ImageDescrip">Enjoy the amazing Sydney Harbour on board this sunset cocktail cruise. The 1.5 hour trip cruises under the Sydney Harbour Bridge, up close to the Sydney Opera House, past the Royal Botanic Gardens while the sun sets on beautiful Sydney. All this while enjoying a complimentary drink and Australian Cheeses.</div>
+   
