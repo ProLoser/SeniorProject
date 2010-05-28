@@ -1,9 +1,8 @@
 <h1>Plugin Test Page</h1>
 
 <h2>Slideshow</h2>
-<div class="js-slideshow">
-	<img src="/SeniorProject/img/adventure/Australia/aus-vol01.jpg" alt="<strong>Nature Sanctuary:</strong> <em>Make a difference to Australia's wildlife!</em><br />
-ISV has several projects located in nature sanctuaries. The goal is to conserve native animals in a relatively natural setting. Primary tasks vary and can include building and maintaining animal enclosures, fence building, vegetation removal, tree planting, and surveying. All of these tasks are directly related to the establishment or maintenance of the sanctuary and the species within it." />
+<div class="js-slideshow" id="slideshow">
+	<?php echo $this->Html->image('adventure/Australia/aus-vol02.jpg', array('alt' => '<strong>Nature Sanctuary:</strong> <em>Make a difference to Australia&#39;s wildlife!</em><br />ISV has several projects located in nature sanctuaries. The goal is to conserve native animals in a relatively natural setting. Primary tasks vary and can include building and maintaining animal enclosures, fence building, vegetation removal, tree planting, and surveying. All of these tasks are directly related to the establishment or maintenance of the sanctuary and the species within it.') ); ?>
     <?php echo $this->Html->image('adventure/Australia/aus-vol02.jpg', array('alt' => 'This is the caption for this.  Pic 2.') ); ?>
     <?php echo $this->Html->image('adventure/Australia/aus-vol03.jpg', array('alt' => 'This is the caption for this.  Pic 3.') ); ?>
     <?php echo $this->Html->image('adventure/Australia/aus-vol04.jpg', array('alt' => 'This is the caption for this.  Pic 4.') ); ?>

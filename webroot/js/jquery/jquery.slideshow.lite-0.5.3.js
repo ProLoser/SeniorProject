@@ -83,7 +83,7 @@
 		var j = 0;
 		$(this).children("a").each(function(){
 			pagination.append("<li><a href=\"#\">" + i++ + "</a></li>");
-			caption.append("<li>" + $($(target).attr("id") + " img:nth(" + j++ + ")").attr("alt") + "</li>");
+			caption.append("<li>" + $("#" + $(target).attr("id") + " img:nth(" + j++ + ")").attr("alt") + "</li>");
 		});
 		pagination.fadeTo(0, 0.8);
 		caption.fadeTo(0, 1);
