@@ -48,7 +48,7 @@ $(document).ready(function () {
 	$('.js-gallery').galleria({
 		autoplay: true,
 		transition: 'fade',
-		height: 620,
+		height: 700,
 		transition_speed: 1400,
 		image_crop: false,
 		carousel: false
