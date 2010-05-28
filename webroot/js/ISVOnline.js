@@ -27,10 +27,7 @@ $(document).ready(function () {
 	 * File: jquery.prettyPhoto.js
 	 * Instructions: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
 	 */
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		allowresize: true,
-		default_width: 500,
-	});
+	$(".js-litebox").prettyPhoto();
 	
 	/**
 	 * InnerFade Slideshow
@@ -49,7 +46,7 @@ $(document).ready(function () {
 	$('.js-gallery').galleria({
 		autoplay: true,
 		transition: 'fade',
-		height: 620,
+		height: 700,
 		transition_speed: 1400,
 		image_crop: false,
 		carousel: false

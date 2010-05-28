@@ -34,11 +34,9 @@
 <?php echo $this->Html->image('adventure/Australia/Fiji_Excursion.jpg', array('class' => 'js-fade')); ?>
 
 <h2>Lightbox</h2>
-<a rel="prettyPhoto" href="/SeniorProject/img/adventure/Australia/sydney.jpg"> 
-	<img class="prettyPhoto_img" src="/SeniorProject/img/adventure/Australia/sydney.jpg" alt="bigphoto" /> 
-</a> 
+<?php echo $this->Html->link($this->Html->image('adventure/Australia/sydney.jpg'), 'img/adventure/Australia/sydney.jpg', array('class' => 'js-litebox', 'escape' => false)); ?>
 <br />
-<a href="http://www.youtube.com/watch?v=5S1l8qq7EVA" rel="prettyPhoto" title=""><?php echo $this->Html->image('adventure/black-kids.jpg', array('alt' => 'Black Kids - Hurricane Jane','class' => 'prettyPhoto_img')); ?></a>
+<?php echo $this->Html->link($this->Html->image('adventure/black-kids.jpg', array('alt' => 'Black Kids - Hurricane Jane')), 'http://www.youtube.com/watch?v=5S1l8qq7EVA', array('class' => 'js-litebox', 'escape' => false)); ?>
 <h2>Fancy Accordion</h2>
 <!-- ACCORDION IMAGE ROTATOR -->
 <div id="js-accordion">
