@@ -114,4 +114,5 @@
 </div> <!-- accordionControlPanel -->    
 	<div id="ImageTitle">Sydney Harbour Sunset Cocktail Cruise</div>
 	<div id="ImageDescrip">Enjoy the amazing Sydney Harbour on board this sunset cocktail cruise. The 1.5 hour trip cruises under the Sydney Harbour Bridge, up close to the Sydney Opera House, past the Royal Botanic Gardens while the sun sets on beautiful Sydney. All this while enjoying a complimentary drink and Australian Cheeses.</div>
-   
+ 
+<h2>And again</h2>
