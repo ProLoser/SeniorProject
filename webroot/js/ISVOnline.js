@@ -26,10 +26,7 @@ $(document).ready(function () {
 	 *
 	 * File: jquery.prettyPhoto.js
 	 */
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		allowresize: true,
-		default_width: 500,
-	});
+	$(".js-litebox").prettyPhoto();
 	
 	/**
 	 * InnerFade Slideshow
