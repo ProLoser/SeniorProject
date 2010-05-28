@@ -1,0 +1,148 @@
+/**********************************
+ ACCORDION - TRIP INFORMATION PAGE
+**********************************/
+
+#js-accordion_info {
+    width:600px; 
+    height:300px; 
+    overflow:hidden; 
+    background-color:#000; 
+    position:relative;
+    border:0px solid #EEE; 
+    margin:15px 0px 22px 0px;
+}
+
+.asyncImgLoadAccordion { clear: none; }
+
+.accordionImgDiv_info 
+{
+    width: 400px;  
+    height: 300px; 
+    position: absolute;  
+    border-left:1px solid #222;  
+    margin-left: 0px; 
+    background-color: black; 
+    cursor:pointer;
+    overflow: hidden;
+}
+
+.accordionImgDiv_info .slideStrip_info
+{
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    left:0px;
+    top:0px;
+    overflow: hidden;
+    background-image: url('../img/loading6.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+}    
+
+.accordionImgDiv_info .slideDesc_info
+{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font: normal 12px/12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #eee;     
+}
+
+.accordionSlideImage_info 
+{
+    border-left: 0px solid #AAA; 
+    /*width:760px; */
+	width:400px;
+    height:300px;
+	display:block;
+    
+   background-image: url('../img/common/ajax/loading10.gif');
+   background-repeat: no-repeat;
+   background-position: 50% 50%; 
+}    
+
+.accordionDescBack_info 
+{
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:600px;
+    height:70px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    background-color:#000;
+    border-top:1px solid #111;
+}
+
+.accordionDesc_info 
+{
+    font-weight:normal;
+    font-family: verdana;
+    font-size:10px;
+    padding-top:0px;
+    padding-left:10px;
+    text-align:left;
+    color:#DDD;
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:600px;
+    height:70px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    background:none;
+    border:0px solid red;
+}
+
+/*.accordionDescBack 
+{
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:760px;
+    height:70px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    /*background-color:#000;
+    border-top:1px solid #111;
+}
+
+.accordionDesc 
+{
+    font-weight:normal;
+    font-family: verdana;
+    font-size:10px;
+    padding-top:0px;
+    padding-left:10px;
+    text-align:left;
+    color:#DDD;
+    bottom:-70px;
+    margin-left:0px;
+    margin-top:0px;
+    position:absolute;
+    left:0px;
+    width:760px;
+    height:70px;
+    opacity:0.0;
+    filter:alpha(opacity=0); /* IE */ 
+    /*background:none;
+    border:0px solid red;
+}*/
+
+#content .accordionDescHeader_info 
+{
+    margin-top:5px;
+    position:static;
+    color:#FFF;
+    font: bold 20px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding-bottom:3px;
+    margin-bottom:0px;
+}

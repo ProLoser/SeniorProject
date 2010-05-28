@@ -35,6 +35,70 @@ $(document).ready(function () {
 	 * File: galleria.js  plugins/*  themes/*
 	 * Website: http://galleria.aino.se/
 	 */
-	$('.js-gallery').galleria();
+	$('.js-gallery').galleria({
+		autoplay: true,
+		transition: 'fade',
+		height: 620,
+		transition_speed: 1400,
+		image_crop: false,
+		carousel: false
+	});
 	 
+// Fancy Accordion
+/***********
+ Example: 
+	<div id="js-accordion">
+		<!-- slide 1 -->
+		<div id="slide1" class="accordionImgDiv">
+			<a href="index.html" id="slideimg1" class="accordionSlideImage asyncImgLoadAccordion" title="../img/slide1.jpg"></a>
+			<div class="accordionDescBack"></div>
+			<div class="accordionDesc">
+				<h3 class="accordionDescHeader">Slide 1</h3>
+				<p>This is the description for Slide 1</p> 
+			</div>                    
+			<div class="slideStrip" title="../img/slide1strip.jpg"></div>
+			<p class="slideDesc">Slide 1</p>  
+		</div>
+	</div>
+***********/
+	setupLoadingAsynchronousImages();
+	if($("#js-accordion").length > 0)
+	{
+		// call this functions only if accordion is included
+		setupLoadingAsynchronousImagesForAccordion();
+		setupLoadingAsyncSlideStripImages();            
+		setupAccordionImageSlider();
+		setupAccordionControlPanel();        
+		setupAccordionAutoPlay();
+	}
+
+// Accordion for the Trip Information page
+/***********
+ Example: 
+	<div id="js-accordion_info">
+		<!-- slide 1 -->
+		<div id="slide1" class="accordionImgDiv_info">
+			<a href="index.html" id="slideimg1" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="../img/slide1.jpg"></a>
+			<div class="accordionDescBack_info"></div>
+			<div class="accordionDesc_info">
+				<h3 class="accordionDescHeader_info">Slide 1</h3>
+				<p>This is the description for Slide 1</p> 
+			</div>                    
+			<div class="slideStrip_info" title="../img/slide1strip.jpg"></div>
+			<p class="slideDesc_info">Slide 1</p>  
+		</div>
+	</div>
+***********/
+	// this file
+	if($("#js-accordion_info").length > 0)
+	{
+		// call this functions only if accordion is included
+		setupLoadingAsynchronousImagesForAccordion_infopage();
+		setupLoadingAsyncSlideStripImages_infopage();            
+		setupAccordionImageSlider_infopage();
+		setupAccordionControlPanel_infopage();        
+		setupAccordionAutoPlay_infopage();
+	}
+	
+	
 });
