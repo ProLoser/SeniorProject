@@ -230,6 +230,20 @@ a:hover {
 	margin: 0 0 0 25px;
 	line-height: 17px;
 }
+hr {
+	background-color: #667436; 	
+	color: #667436; 
+}
+.readmore {
+	color: #7A9746;
+	background: transparent url(../img/readmore-arrow.png) bottom right no-repeat;
+	padding: 0 12px 0 0;
+}
+
+.readmore:hover {
+	color: #A5BB59;	
+	border-bottom: 1px dotted #7A8745;
+}
 
 /*** FULL WIDTH CONTENTS ***/
 #fullwidth-content {
