@@ -34,7 +34,7 @@
 <?php echo $this->Html->image('adventure/Australia/Fiji_Excursion.jpg', array('class' => 'js-fade')); ?>
 
 <h2>Lightbox</h2>
-<?php echo $this->Html->link($this->Html->image('adventure/Australia/sydney.jpg'), 'img/adventure/Australia/sydney.jpg', array('class' => 'js-litebox', 'escape' => false)); ?>
+<?php echo $this->Html->link($this->Html->image('adventure/Australia/sydney.jpg', array('alt' => 'Sydney Harbour')), 'adventure/Australia/sydney.jpg', array('class' => 'js-litebox', 'escape' => false)); ?>
 <br />
 <?php echo $this->Html->link($this->Html->image('adventure/black-kids.jpg', array('alt' => 'Black Kids - Hurricane Jane')), 'http://www.youtube.com/watch?v=5S1l8qq7EVA', array('class' => 'js-litebox', 'escape' => false)); ?>
 <h2>Fancy Accordion</h2>

@@ -1,0 +1,10 @@
+/**********
+ VOLUNTEER
+ **********/
+
+/* Mini Country Showcase for Volunteer Directory */
+#content ul.vol-showcase { list-style:none; margin:15px 0 0 0; padding:0; overflow: auto; }
+#content ul.vol-showcase img { margin: 0; padding: 0; width: 77px; padding: 3px; margin: 0 3px 3px 3px; background: #d1d1d1; border: 1px solid #B9B9B9; }
+#content ul.vol-showcase img:hover { background: #d1d1d1; border: 1px solid #484848; }
+#content ul.vol-showcase a { margin: 0; padding: 0; }
+#content .vol-showcase li { float: left; }
