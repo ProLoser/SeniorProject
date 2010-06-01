@@ -14,7 +14,7 @@
 	'jquery/accordion_info',
 	'jquery/fancy_accordion',
 	'jquery/prettyPhoto',
-	'articles'
+	'volunteer',
 )); ?>
 <meta name="keywords" content="<?php echo (isset($keywords_for_layout)) ? $keywords_for_layout : ""; ?>" />
 <meta name="description" content="<?php echo (isset($description_for_layout)) ? $description_for_layout : ""; ?>" />

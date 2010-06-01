@@ -12,7 +12,9 @@
 	'forms',
 	'tables',
 	'jquery/accordion_info',
-	'home'
+	'home',
+	'selector',
+	'volunteer'
 )); ?>
 <!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
 <!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->

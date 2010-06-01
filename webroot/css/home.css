@@ -21,27 +21,20 @@
 	padding:10px 0 10px 0;
 	margin: 15px 0 15px 7px;
 }
-.homeportfoliotitle { 
-	font-size:18px; 
-	color:#3a3a3a; 
-	font-style:normal; 
-	font-weight:bold;  
-	margin-bottom:15px;
-}
-.homeportfoliotitle img { 
-	margin:0px 0px -13px -5px;
-}
-.mportfoliotitle { 
-	margin-bottom:15px;
-}
 .mportfoliobox {
 	width:300px;
 	float:left;
 }
+#fullwidth-content .mportfoliobox h4 {
+	margin: 0 auto; 
+	float: left; 
+	padding: 1px 1px 0px 1px;
+	margin:-10px 0px 3px 0px;
+}
 .mportfolio {}
-	.mportfolio img { width:300px; height:138px;float:left;}
+	.mportfolio img { width:300px; height:138px; float:left;}
 	.mportfoliospace { margin-left:20px;}
-	.mportfoliocatbg { width:300px; height:138px; float:left; background: transparent url(img/hover2.png) no-repeat top left;}
+	.mportfoliocatbg { width:300px; height:138px; float:left; background: transparent url(../img/hover2.png) no-repeat top left;}
 
 .categoryportfoliowrap {
 	padding:10px 0 10px 0;
@@ -56,14 +49,7 @@
 	float:left;
 	margin: -20px 0 0 0;
 }
-.mblogtitle img {
-	text-align: center; 
-	margin: 0 auto; 
-	float: right; 
-	padding: 1px 1px 0px 1px;
-	margin:-10px 0px 0px 0px;
-}
-.mblogtext { 
+.mblogbox p { 
 	font-size:13px; 
 	line-height:20px; 
 	color:#7d7d7d; 
