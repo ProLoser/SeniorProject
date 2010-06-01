@@ -210,15 +210,15 @@ a:hover {
 #content h3 {
 	font-size: 18px;
 	margin: 20px 0 10px 0;
-	color: #576525;
+	color: #313131;
 }
 #content h4 {
-	font-size: 16px;
+	font-size: 14px;
 	color: #6C6C6C;
 	margin: 10px 0 10px 0;
 }
 #content h5 {
-	font-size: 14px;
+	font-size: 12px;
 	color: #6C6C6C;
 	margin: 10px 0 10px 0;
 }
@@ -229,18 +229,6 @@ a:hover {
 #content ol {
 	margin: 0 0 0 25px;
 	line-height: 17px;
-}
-
-.readmore {
-	background: transparent url(../img/readmore-arrow.png) bottom right no-repeat;
-	padding: 0 12px 0 0;
-	color: #57622F;
-	text-decoration: none;
-}
-
-.readmore:hover {
-	color: #3C4D22;
-	border-bottom: 1px dotted #3C4D22;
 }
 
 /*** FULL WIDTH CONTENTS ***/
@@ -254,35 +242,6 @@ a:hover {
 #fullwidth-content ol {
 	margin: 0 0 0 25px;
 	line-height: 16px;
-}
-#fullwidth-content h1 {
-	/* title of the individual page */	
-	font-size: 22px;
-	color: #9F9F9F;
-	font-weight: normal;
-	padding-bottom: 10px;
-	margin-bottom: 20px;
-	border-bottom: 1px dotted #ccc;
-}
-#fullwidth-content h2 {
-	font-size: 20px;
-	color: #313131;
-	margin: 15px 0 10px 0;
-}
-#fullwidth-content h3 {
-	font-size: 18px;
-	margin: 20px 0 10px 0;
-	color: #576525;
-}
-#fullwidth-content h4 {
-	font-size: 16px;
-	color: #6C6C6C;
-	margin: 10px 0 10px 0;
-}
-#fullwidth-content h5 {
-	font-size: 14px;
-	color: #6C6C6C;
-	margin: 10px 0 10px 0;
 }
 
 
