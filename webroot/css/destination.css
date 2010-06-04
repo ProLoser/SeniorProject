@@ -2,24 +2,24 @@
  DESTINATION
 ************/
 
-.dest_Wrapper
+.listitem_wrapper
 {
     border-bottom: 1px solid #ECECEC;
-    height: 120px;
+    height: 110px;
     margin: 0px;
     cursor:pointer;
 	width: 600px;
 }
 
-.dest_Wrapper:hover
+.listitem_wrapper:hover
 {
     background: transparent url('../img/listitemhover-bg.png') left repeat-x;
 }
 
-.dest_Wrapper img
+.listitem_wrapper img
 {
     float: left;
-	margin: 15px 10px 0 10px;
+	margin: 7px 10px 0 10px;
 	height:90px;
     width:90px;
     padding:2px;
@@ -27,7 +27,7 @@
     background-color: #FFF;
 }
 
-.dest_Wrapper .itemDesc
+.listitem_wrapper .itemDesc
 {
     height:96px;
     margin-top:7px;
@@ -37,7 +37,7 @@
     overflow: hidden;
 }
 
-#content .dest_Wrapper .itemDesc h4
+#content .listitem_wrapper .itemDesc h4
 {
    font: normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
    margin: 5px 0 5px 0;
@@ -45,7 +45,7 @@
    color: #424914;
 }
 
-.dest_Wrapper .itemDesc p
+.listitem_wrapper .itemDesc p
 {
     font: 11px Verdana;
     color: #000;
