@@ -1,12 +1,11 @@
-.prettyPhoto_img {
-	margin: 5px 0 20px 0;
-	padding:5px;
+.js-litebox img {
+	margin: 5px 0 10px 0;
+	padding: 4px;
 	background:#d1d1d1;
 	border:1px solid #B9B9B9; 
-	width:230px;
 }
 
-.prettyPhoto_img:hover {
+.js-litebox img:hover {
 	background:#d1d1d1;
 	border:1px solid #484848; 
 }
@@ -26,7 +25,7 @@
 	div.light_rounded .pp_expand:hover { background: url(../../img/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat; cursor: pointer; } /* Expand button hover */
 	div.light_rounded .pp_contract { background: url(../../img/prettyPhoto/light_rounded/sprite.png) 0 -26px no-repeat; cursor: pointer; } /* Contract button */
 	div.light_rounded .pp_contract:hover { background: url(../../img/prettyPhoto/light_rounded/sprite.png) 0 -47px no-repeat; cursor: pointer; } /* Contract button hover */
-	div.light_rounded .pp_close { width: 75px; height: 22px; background: url(../../img/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat; cursor: pointer; } /* Close button */
+	div.light_rounded .pp_close { width: 75px; height: 22px; background: url(../../img/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat; cursor: pointer; overflow: hidden; } /* Close button */
 
 	div.light_rounded .pp_arrow_previous { background: url(../../img/prettyPhoto/light_rounded/sprite.png) 0 -71px no-repeat; } /* The previous arrow in the bottom nav */
 		div.light_rounded .pp_arrow_previous.disabled { background-position: 0 -87px; cursor: default; }
@@ -185,6 +184,7 @@
 			.pp_content .pp_details {
 				display: none;
 				margin: 10px 15px 2px 20px;
+				overflow: hidden;
 			}
 				.pp_description {
 					display: none;

@@ -6,7 +6,7 @@
 		</p>
         
         <h3>By Country:</h3>
-        <hr />
+        <hr width="600px" />
         <div class="dest_Wrapper">
             <?php echo $this->Html->image('adventure/countries/cp-Aus.jpg', array('alt' => 'Australia')); ?>
             <div class="itemDesc">
