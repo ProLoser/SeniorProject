@@ -1,7 +1,6 @@
 <h3>Some Media</h3>
-	<a rel="prettyPhoto[gallery]" >
-		<?php echo $this->Html->image('adventure/Aus_map.jpg', array('alt' => 'Adventure Map of Australia')); ?>
-	</a>
+    <?php echo $this->Html->link($this->Html->image('adventure/Aus_map.jpg', array('alt' => 'Adventure Map of Australia')), 'adventure/Aus_map.jpg', array('class' => 'js-litebox', 'escape' => false)); ?>
+    
 <h3>Sub Navigation</h3>
 <ul>
 	<li><a href="adv-Aus">Australia</a></li>

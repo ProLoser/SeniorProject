@@ -40,31 +40,29 @@
     <!-- Portfolio Block -->
     <div id="mportfoliowrap">
         <div class="mportfoliobox">
-            <div class="homeportfoliotitle"><a href="#"><?php echo $this->Html->image('main/programs-lbl.png', array('alt' => 'Programs')); ?></a></div>
-            <!-- mportfoliobg will enable the background image which is seen on mouse over -->
-            <!-- Portfolio Block One-->
-            <div class="mportfolio mportfoliocatbg"><!-- The line for prettyphoto lightbox -->
-                <a href="portfolio-items.html">
-                    <!-- Class fade will enable fade in out -->
-                    <img class="fade" src="img/main/portfolio1.jpg" alt="Portfolio" />
+            <h4><a href="#"><?php echo $this->Html->image('main/programs-lbl.png', array('alt' => 'Programs')); ?></a></h4>
+            <div class="mportfolio mportfoliocatbg"><!-- Portfolio Block One-->
+                <a href="#">
+                    <!-- Class js-fade will enable fade in out -->
+                    <?php echo $this->Html->image('main/portfolio1.jpg', array('alt' => 'Programs','class' => 'js-fade')); ?>
                 </a>
             </div>
         </div>
         
         <div class="mportfoliobox mportfoliospace">
-            <div class="homeportfoliotitle"><a href="#"><?php echo $this->Html->image('main/Adventures-lbl.png', array('alt' => 'Adventures')); ?></a></div>
+            <h4><a href="#"><?php echo $this->Html->image('main/Adventures-lbl.png', array('alt' => 'Adventures')); ?></a></h4>
             <div class="mportfolio mportfoliocatbg"><!-- Portfolio Block Two -->
-                <a href="portfolio-gallery.html">
-                    <img class="fade" src="img/main/portfolio2.jpg" alt="Portfolio" />
+                <a href="#">
+                    <?php echo $this->Html->image('main/portfolio2.jpg', array('alt' => 'Adventures','class' => 'js-fade')); ?>
                 </a>
             </div>
         </div>
         
         <div class="mportfoliobox mportfoliospace">
-            <div class="homeportfoliotitle"><a href="#"><?php echo $this->Html->image('main/Volunteer-lbl.png', array('alt' => 'Volunteer')); ?></a></div>
+            <h4><a href="#"><?php echo $this->Html->image('main/Volunteer-lbl.png', array('alt' => 'Volunteer')); ?></a></h4>
             <div class="mportfolio mportfoliocatbg"><!-- Portfolio Block Three -->
-                <a href="portfolio-recent.html">
-                    <img class="fade" src="img/main/portfolio3.jpg" alt="Portfolio" />
+                <a href="#">
+                    <?php echo $this->Html->image('main/portfolio3.jpg', array('alt' => 'Volunteer','class' => 'js-fade')); ?>
                 </a>
             </div>
        	</div>
@@ -73,22 +71,22 @@
 	
     <div id="mblogwrap">
         <div class="mblogbox"><!-- Info Block One -->
-            <div class="mblogtext">
+            <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur, nibh ut feugiat placerat, orci lacus accumsan erat, eget porttitor arcu velit a lacus. Sed tempus bibendum risus, nec dignissim sem vestibulum ut. Nam iaculis aliquam elementum. Nunc sed dignissim sapien. 
-            </div>
-            <div class="mblogtitle"><img src="img/portfolio/meet_new_people.png" alt="Meet new people" /></div>
+            </p>
+            <a href="#"><img src="img/portfolio/meet_new_people.png" alt="Meet new people" /></a>
         </div>
         <div class="mblogbox mblogspace"><!-- Info Block Two -->
-            <div class="mblogtext">
+            <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur, nibh ut feugiat placerat, orci lacus accumsan erat, eget porttitor arcu velit a lacus. Sed tempus bibendum risus, nec dignissim sem vestibulum ut. Nam iaculis aliquam elementum. Nunc sed dignissim sapien. 
-            </div>
-            <div class="mblogtitle"><img src="img/portfolio/discover_new_places.png" alt="Discover new places" /></div>
+            </p>
+            <a href="#"><img src="img/portfolio/discover_new_places.png" alt="Discover new places" /></a>
         </div>
         <div class="mblogbox mblogspace"><!-- Info Block Three -->
-            <div class="mblogtext">
+            <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur, nibh ut feugiat placerat, orci lacus accumsan erat, eget porttitor arcu velit a lacus. Sed tempus bibendum risus, nec dignissim sem vestibulum ut. Nam iaculis aliquam elementum. Nunc sed dignissim sapien.
-            </div>
-            <div class="mblogtitle"><img src="img/portfolio/travel_with_a_purpose.png" alt="Travel with a purpose" /></div>
+            </p>
+            <a href="#"><img src="img/portfolio/travel_with_a_purpose.png" alt="Travel with a purpose" /></a>
         </div>
         <div class="clear"></div>
 	</div>

@@ -27,8 +27,8 @@
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	top: 330px;
-	right: 2px;
+	top: 370px;
+	right: 10px;
 	z-index: 3;
 }
 
@@ -72,12 +72,12 @@
 	position: absolute;
 	overflow: hidden;
 	width: 100%;
-	font-size: 90%;
+	font-size: 100%;
 	color: #000;
 	background: transparent;
-	line-height: 50%;
 }
 
 	.slideshowlite ol li {
 		width: 100%;
+		line-height: 120%;
 	}

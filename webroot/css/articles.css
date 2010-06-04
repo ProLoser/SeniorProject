@@ -1,0 +1,162 @@
+/********************************************************************
+    File:   
+        articlesCSS.css
+    Brief:  
+        Hold styles used in file articles.html
+    Author:
+        DigitalCavalry
+    Author URI:
+        http://graphicriver.net/user/DigitalCavalry
+*********************************************************************/
+
+#articlesContentContainer
+{
+    width: 960px;
+    margin-left: 40px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+    
+#articlesContainer
+{
+    width:600px;
+    float:left;
+    min-height: 500px;
+    background-color: #fff;
+    padding-bottom: 60px;
+}    
+
+
+.articlesLastImage
+{
+   border: 0px dotted red;
+   position: relative;
+   width: 600px;
+   height: 250px;
+   margin-bottom: 5px;
+   background-image: url('../img/common/ajax/loading3.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-top: 0px solid #ccc;
+    background-color: #FFF;
+    display: block;   
+}
+
+.articlesLastWrapper
+{
+    width: 600px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    background-color: #30380f;
+}
+
+.articlesLastImageDesc
+{
+   text-align:right;
+   font: 9px Arial;
+   color: #aaa;
+   padding-right: 10px;
+   float:right;
+}
+
+.articlesLastDate
+{
+   text-align:left;
+   font: 10px/12px Verdana;
+   color: #FFF;
+   width: 120px;
+   padding-left: 10px;
+   padding-top:10px;
+}
+
+.articlesLastTitle
+{
+   font: normal 22px "Trebuchet MS", Arial, Helvetica, sans-serif;
+   padding-left: 20px;
+   color: #fff;
+}
+.articlesLastSubTitle
+{
+   font: 12px Verdana;
+   padding: 0px;
+   padding-left: 10px;
+   color: #ccc;
+}
+
+.articlesLastText
+{
+    font: 11px Verdana;
+    color: #FFF;
+    margin-top: 15px;
+    padding-left:20px;
+    padding-right:20px;
+    line-height: 120%;
+}
+
+.articlesItemWrapper
+{
+    border-bottom: 1px solid #ECECEC;
+    height: 110px;
+    margin-bottom: 0px;
+    cursor:pointer;
+}
+
+.articlesItemWrapper:hover
+{
+    background-image: url('../img/articles/background.jpg');
+	background-repeat: repeat-x;
+}
+
+.articlesItemWrapper .imageWrapper
+{
+    float:left;
+    padding-left: 10px;
+    width: 106px;
+    height: 96px;
+    margin-top: 7px;
+}
+
+.articlesItemWrapper .image
+{
+    height:90px;
+    width:90px;
+    padding:2px;
+    border:1px solid #eee;
+    background-color: #FFF;
+    
+    background-image: url('../img/common/ajax/loading1.gif');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.articlesItemWrapper .itemDesc
+{
+    height:96px;
+    width: 480px;
+    float:left;
+    background-color:transparent;
+    overflow: hidden;
+}
+
+.articlesItemWrapper .itemDesc  .date
+{
+   text-align:left;
+   font: 10px/12px Verdana;
+   color: #000;
+   width: 120px;
+}
+
+.articlesItemWrapper .itemDesc  .title
+{
+   font: normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+   padding: 0px;
+   color: #65B31C;
+}
+
+.articlesItemWrapper .itemDesc  .text
+{
+    font: 11px Verdana;
+    color: #000;
+    margin-top: 0px;
+}
+

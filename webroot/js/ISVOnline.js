@@ -22,6 +22,14 @@ $(document).ready(function () {
 	});
 	
 	/**
+	 * Lightbox
+	 *
+	 * File: jquery.prettyPhoto.js
+	 * Instructions: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
+	 */
+	$(".js-litebox").prettyPhoto();
+	
+	/**
 	 * InnerFade Slideshow
 	 *
 	 * File: jquery.innerfade.js
@@ -38,7 +46,7 @@ $(document).ready(function () {
 	$('.js-gallery').galleria({
 		autoplay: true,
 		transition: 'fade',
-		height: 620,
+		height: 700,
 		transition_speed: 1400,
 		image_crop: false,
 		carousel: false
@@ -96,7 +104,6 @@ $(document).ready(function () {
 		setupLoadingAsynchronousImagesForAccordion_infopage();
 		setupLoadingAsyncSlideStripImages_infopage();            
 		setupAccordionImageSlider_infopage();
-		setupAccordionControlPanel_infopage();        
 		setupAccordionAutoPlay_infopage();
 	}
 	
