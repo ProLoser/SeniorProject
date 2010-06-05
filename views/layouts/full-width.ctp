@@ -13,7 +13,7 @@
 	'tables',
 	'jquery/accordion_info',
 	'home',
-	'selector',
+	'localization',
 	'volunteer'
 )); ?>
 <!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
