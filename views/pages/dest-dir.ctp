@@ -72,4 +72,3 @@
             </p>
         </li>
      	</ul> <!-- ExcursionWrapper -->
-		<div class="clear"></div>

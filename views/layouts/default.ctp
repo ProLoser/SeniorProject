@@ -13,6 +13,7 @@
 	'jquery/accordion_info',
 	'jquery/fancy_accordion',
 	'jquery/prettyPhoto',
+	'jquery/pikachoose',
 	'volunteer',
 	'articles',
 	'destination'
@@ -27,7 +28,7 @@
 	'jquery/jquery-ui-1.8.1.custom.min',
 	'jquery/jquery.slideshow.lite-0.5.3',
 	'jquery/jquery.innerfade',
-	'jquery/galleria',
+	'jquery/pikachoose',
 	'jquery/jquery.prettyPhoto',
 	'jquery/accordion_info',
 	'jquery/fancy_accordion',
