@@ -48,7 +48,6 @@
     
     <div id="body">
     	<div id="sidebar">
-			<?php if (isset($sidebar)) echo $sidebar; ?>
         	<?php echo $this->element('layout/sidebar');?>
         </div>
         
