@@ -4,13 +4,13 @@ ul.js-gallery li{float: left;border:1px solid #555;padding:2px;background:#777;m
 ul.js-gallery li div img{position:relative;cursor:pointer;}
 
 /* this is the surroundner for all your elements. This is also the fake border around the main img and room for caption */
-.pika_main{display:block;position:relative;}
+.pika_main{display:block;position:relative;width:600px;}
 /*sine we give it the fake border, you need to position the image a little. */
 .pika_main_img{position:relative;}
 .pika_subdiv{position:relative;}
-.pika_animationDivs{top:0;left:0;} /*must match top/left padding for subdiv */
-.pika_subdiv img, .pika_subdiv a img, .pika_animationDivs{border:3px solid #777;}
-.pika_caption{padding-top:4px;text-align:center;}
+.pika_animationDivs{top:3px;left:3px;} /*must match top/left padding for subdiv */
+.pika_subdiv img, .pika_subdiv a img{border:3px solid #777;}
+.pika_caption{padding-top:4px;}
 .pika_caption a{color:white;}
 
 .pika_play{position:absolute;z-index:1;left:50%;margin-left:-25px;width:50px;top:5px;}
