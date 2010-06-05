@@ -38,7 +38,7 @@ p.about {
 #header {
 	height: 100px;
 	/* an idea I had to display the current localization */
-	background: url(../img/flag-us.png) no-repeat 535px 22px;
+	background: url(../img/flag-ca.png) no-repeat 535px 22px;
 }
 #header h2 {
 	/* title goes in here */
