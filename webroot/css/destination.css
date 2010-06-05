@@ -4,16 +4,17 @@
 .previewList {
 	margin: 0px;
 	padding: 0px;
+	border-top: 1px solid #A6B95B;
+	width: 600px;
 }
 
 .previewList li
 {
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid #D1DFB3;
     height: 110px;
     margin: 0px;
 	padding: 0px;
     cursor: pointer;
-	width: 600px;
 	list-style-type: none;
 }
 
