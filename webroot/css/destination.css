@@ -1,51 +1,47 @@
 /************
  DESTINATION
 ************/
+.previewList {
+	margin: 0px;
+	padding: 0px;
+}
 
-.listitem_wrapper
+.previewList li
 {
     border-bottom: 1px solid #ECECEC;
     height: 110px;
     margin: 0px;
-    cursor:pointer;
+	padding: 0px;
+    cursor: pointer;
 	width: 600px;
+	list-style-type: none;
 }
 
-.listitem_wrapper:hover
+.previewList li:hover
 {
     background: transparent url('../img/listitemhover-bg.png') left repeat-x;
 }
 
-.listitem_wrapper img
+.previewList li img
 {
     float: left;
 	margin: 7px 10px 0 10px;
-	height:90px;
-    width:90px;
+	height: 90px;
+    width: 90px;
     padding:2px;
-    border:1px solid #eee;
+    border: 1px solid #eee;
     background-color: #FFF;
 }
 
-.listitem_wrapper .itemDesc
-{
-    height:96px;
-    margin-top:7px;
-    width: 480px;
-    float:left;
-    background-color:transparent;
-    overflow: hidden;
-}
-
-#content .listitem_wrapper .itemDesc h4
+.previewList li h4
 {
    font: normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
-   margin: 5px 0 5px 0;
-   padding: 0;
+   margin: 0 0 5px 0;
+   padding: 7px 0 0 0;
    color: #424914;
 }
 
-.listitem_wrapper .itemDesc p
+.previewList li p
 {
     font: 11px Verdana;
     color: #000;
