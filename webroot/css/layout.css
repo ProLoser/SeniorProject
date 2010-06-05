@@ -243,7 +243,7 @@ h2 {
 }
 h3 {
 	font-size: 18px;
-	margin: 20px 0 25px 0;
+	margin: 15px 0 15px 0;
 	color: #313131;
 }
 h4 {
@@ -273,10 +273,15 @@ hr {
 	background: transparent url(../img/readmore-arrow.png) bottom right no-repeat;
 	padding: 0 12px 0 0;
 }
-
 .readmore:hover {
 	color: #A5BB59;	
 	border-bottom: 1px dotted #7A8745;
+}
+.about {
+	font-size: 14px;
+	color: #3A3A3A;
+	margin: 0 0 10px 0;
+	line-height: 20px;
 }
 
 /*** FULL WIDTH CONTENTS ***/

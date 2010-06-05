@@ -87,66 +87,66 @@ Get involved to help develop or operate existing outdoor education facilities th
             
               <!-- slide 1 -->
               <div id="slide1" class="accordionImgDiv_info">
-                  <a href="index.html" id="slideimg1" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/Australia/sydney.jpg"></a>
+                  <a href="index.html" id="slideimg1" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/oap/australia/accordion/1.jpg"></a>
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Sydney Harbour</h3>
                       <p>Enjoy the amazing Sydney Harbour on board this<br />
                       sunset cocktail cruise.</p> 
                   </div>                    
-                  <div class="slideStrip_info" title="/SeniorProject/img/adventure/Australia/sydneystrip.jpg"></div>
+                  <div class="slideStrip_info" title="/SeniorProject/img/oap/australia/accordion/1strip.jpg"></div>
                   <p class="slideDesc_info">Sydney<br />Harbour</p>  
               </div>
                                                           
               <!-- slide 2 -->
               <div id="slide2" class="accordionImgDiv_info"> 
-                  <a href="index.html" id="slideimg2" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/Australia/bluemountains.jpg"></a>
+                  <a href="index.html" id="slideimg2" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/oap/australia/accordion/2.jpg"></a>
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Blue Mountains</h3>
                       <p>Experience the rush of rappelling down the beautiful<br /> 
                         sandstone cliffs of the World Heritage listed Blue Mountains.</p> 
                   </div>                    
-                  <div class="slideStrip_info" title="/SeniorProject/img/adventure/Australia/bluemountainsstrip.jpg"></div>
+                  <div class="slideStrip_info" title="/SeniorProject/img/oap/australia/accordion/2strip.jpg"></div>
                   <p class="slideDesc_info">Blue<br />Mountains</p> 
               </div>
                                 
               <!-- slide 3 -->
               <div id="slide3" class="accordionImgDiv_info">
-                  <a href="index.html" id="slideimg3" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/Australia/bryonbay.jpg"></a>
+                  <a href="index.html" id="slideimg3" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/oap/australia/accordion/3.jpg"></a>
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Bryon Bay</h3>
                       <p>Surfing is an Australian tradition and Byron Bay<br />
                       is one of Australia's most popular surfing spots.</p> 
                   </div>                    
-                  <div class="slideStrip_info" title="/SeniorProject/img/adventure/Australia/bryonbaystrip.jpg"></div>
+                  <div class="slideStrip_info" title="/SeniorProject/img/oap/australia/accordion/3strip.jpg"></div>
                   <p class="slideDesc_info">Bryon <br />Bay</p>  
               </div>
                                           
               <!-- slide 4 -->
               <div id="slide4" class="accordionImgDiv_info">
-                  <a href="index.html" id="slideimg4" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/Australia/frasierisland.jpg"></a>
+                  <a href="index.html" id="slideimg4" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/oap/australia/accordion/4.jpg"></a>
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Frasier Island</h3>
                       <p>Lake Wabby is a stunning emerald freshwater lake<br /> 
                       on the amazing Fraser Island.</p> 
                   </div>                   
-                 <div class="slideStrip_info"  title="/SeniorProject/img/adventure/Australia/frasierislandstrip.jpg"></div>
+                 <div class="slideStrip_info"  title="/SeniorProject/img/oap/australia/accordion/4strip.jpg"></div>
                  <p class="slideDesc_info">Frasier<br />Island</p>  
               </div>           
                 
               <!-- slide 5 -->
               <div id="slide5" class="accordionImgDiv_info">
-                  <a href="index.html" id="slideimg5" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/adventure/Australia/whitsundayislands.jpg"></a> 
+                  <a href="index.html" id="slideimg5" class="accordionSlideImage_info asyncImgLoadAccordion_info" title="/SeniorProject/img/oap/australia/accordion/5.jpg"></a> 
                   <div class="accordionDescBack_info"></div>
                   <div class="accordionDesc_info">
                       <h3 class="accordionDescHeader_info">Whitsunday Islands</h3>
                       <p>This is an adrenaline filled day eco-adventure tour<br />
                       through the Whitsunday Islands to Whitehaven beach.</p> 
                   </div>    
-                  <div class="slideStrip_info" title="/SeniorProject/img/adventure/Australia/whitsundayislandsstrip.jpg"></div>
+                  <div class="slideStrip_info" title="/SeniorProject/img/oap/australia/accordion/5strip.jpg"></div>
                   <p class="slideDesc_info">Whitsunday<br />Islands</p>  
               </div>
           </div> <!-- accordionContainer -->
