@@ -43,7 +43,7 @@ $(document).ready(function () {
 	 * File: galleria.js  plugins/*  themes/*
 	 * Website: http://galleria.aino.se/
 	 */
-	$('.js-gallery').PikaChoose();
+	$('.js-gallery').PikaChoose({show_prev_next:false});
 	 
 // Fancy Accordion
 /***********

@@ -11,8 +11,8 @@
 
 <h2>Gallery</h2>
 <ul class="js-gallery">
-	<li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day01.jpg'); ?><p>This is the caption for this.  Pic 1.</p></li>
-    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day02.jpg' ); ?><p>asdf</p></li>
+	<li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day01.jpg'); ?><span>This is the caption for this.  Pic 1.</span></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day02.jpg' ); ?><span>asdf</span></li>
     <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day03.jpg' ); ?></li>
     <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day04.jpg' ); ?></li>
     <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day05.jpg' ); ?></li>
@@ -23,8 +23,6 @@
     <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day10.jpg' ); ?></li>
     <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day11.jpg' ); ?></li>
     <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day12.jpg' ); ?></li>
-    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day13.jpg' ); ?></li>
-    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day14.jpg' ); ?></li>
 </ul>
 
 <h2>Innerfade</h2>
