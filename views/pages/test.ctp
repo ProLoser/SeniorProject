@@ -6,6 +6,7 @@
 	<?php echo $this->Html->image('volunteer/australia/aus-vol02.jpg', array('alt' => 'This is the caption for this.  Pic 2.') ); ?>
     <?php echo $this->Html->image('volunteer/australia/aus-vol03.jpg', array('alt' => 'This is the caption for this.  Pic 3.') ); ?>
     <?php echo $this->Html->image('volunteer/australia/aus-vol04.jpg', array('alt' => 'This is the caption for this.  Pic 4.') ); ?>
+    <?php echo $this->Html->image('volunteer/australia/aus-vol04.jpg', array('alt' => 'This is the caption for this.  Pic 4.') ); ?>
 </div>
 
 <h2>Gallery</h2>
