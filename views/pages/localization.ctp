@@ -11,21 +11,21 @@
     <h1>Please Select Your Global Site:</h1>
         <ul id="world_map">
             <li id="loc_can">
-            	<a href="#">Canada</a>
+            	<?php echo $this->Html->link('Canada', '/ca');?>
             </li>
             <li id="loc_usa">
-            	<a href="#">United States</a>
+            	<?php echo $this->Html->link('United States', '/us');?>
             </li>
             <li id="loc_uk">
-            	<a href="#">UK</a>
+            	<?php echo $this->Html->link('United Kingdom', '/uk');?>
             </li>
             <li id="loc_eu">
-            	<a href="#">Europe</a>
+            	<?php echo $this->Html->link('Europe', '/eu');?>
             </li>
             <li id="loc_aus">
-            	<a href="#">Australia</a>
+            	<?php echo $this->Html->link('Australia', '/au');?>
             </li>
             <li id="loc_nz">
-            	<a href="#">New<br />Zealand</a>
+            	<?php echo $this->Html->link('New Zealand', '/nz');?>
             </li>
         </ul>

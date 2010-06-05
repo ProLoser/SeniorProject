@@ -27,5 +27,7 @@
  * Creates Group prefixes
  */
 	Router::connect('/:local/:controller/:action/*', array(), array('local' => '[a-zA-Z]{2,3}'));
+	Router::connect('/:local/:controller/*', array(), array('local' => '[a-zA-Z]{2,3}'));
+	Router::connect('/:local/*', array('controller' => 'pages', 'action' => 'display', 'home'), array('local' => '[a-zA-Z]{2,3}'));
 
 ?>
