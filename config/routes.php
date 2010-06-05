@@ -25,6 +25,6 @@
 /**
  * Creates Group prefixes
  */	
-	Router::connect('/:location/:controller/:action/*', array(), array('location' => '[a-zA-Z]{2,3}'));
+	Router::connect('/:local/:controller/:action/*', array(), array('local' => '[a-zA-Z]{2,3}'));
 
 ?>
