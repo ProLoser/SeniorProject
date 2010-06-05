@@ -8,7 +8,7 @@
         <?php echo $this->Html->image('selector/nz_hover.jpg', array('alt' => 'New Zealand') ); ?>
 	</div>
     
-    <h1>Please Select Your Location:</h1>
+    <h1>Please Select Your Global Site:</h1>
         <ul id="world_map">
             <li id="loc_can">
             	<a href="#">Canada</a>
