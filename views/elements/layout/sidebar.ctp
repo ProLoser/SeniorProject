@@ -1,3 +1,4 @@
+<?php if (isset($sidebar)) echo $sidebar; ?>
 <h3>Sub Navigation</h3>
 <ul>
 	<li><a href="adv-Aus">Australia</a></li>
