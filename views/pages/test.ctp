@@ -9,26 +9,22 @@
 </div>
 
 <h2>Gallery</h2>
-<div class="js-gallery">
-	<?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day01.jpg', array('alt' => 'This is the caption for this.  Pic 1.') ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day02.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day03.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day04.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day05.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day06.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day07.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day08.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day09.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day10.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day07.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day08.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day09.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day10.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day11.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day12.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day13.jpg' ); ?>
-    <?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day14.jpg' ); ?>
-</div>
+<ul class="js-gallery">
+	<li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day01.jpg'); ?><p>This is the caption for this.  Pic 1.</p></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day02.jpg' ); ?><p>asdf</p></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day03.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day04.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day05.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day06.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day07.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day08.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day09.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day10.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day11.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day12.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day13.jpg' ); ?></li>
+    <li><?php echo $this->Html->image('adventure/Australia/Adv_Aus-Day14.jpg' ); ?></li>
+</ul>
 
 <h2>Innerfade</h2>
 <?php echo $this->Html->image('adventure/Australia/Fiji_Excursion.jpg', array('class' => 'js-fade')); ?>
@@ -46,7 +42,7 @@
 		<a href="index.html" id="slideimg1" class="accordionSlideImage asyncImgLoadAccordion" title="/SeniorProject/img/oap/australia/accordion/1.jpg|Sydney Harbour Sunset Cocktail Cruise|Enjoy the amazing Sydney Harbour on board this sunset cocktail cruise. The 1.5 hour trip cruises under the Sydney Harbour Bridge, up close to the Sydney Opera House, past the Royal Botanic Gardens while the sun sets on beautiful Sydney. All this while enjoying a complimentary drink and Australian Cheeses."></a>
 		<div class="accordionDescBack"></div>
 		<div class="accordionDesc">
-			<p class="accordionDescHeader">Sydney Harbour</h3>
+			<p class="accordionDescHeader">Sydney Harbour</p>
 			
 		</div>                    
 		<div class="slideStrip" title="/SeniorProject/img/oap/australia/accordion/1strip.jpg"></div>
@@ -58,7 +54,7 @@
 		<a href="index.html" id="slideimg2" class="accordionSlideImage asyncImgLoadAccordion" title="/SeniorProject/img/oap/australia/accordion/2.jpg|Rappelling in the Blue Mountains|Experience the adrenaline rush of rappelling down the beautiful sandstone cliffs of the World Heritage listed Blue Mountains. Participants will build their skills and confidence on rappels of multiple heights - the ultimate challenge is 180ft high!"></a>
 		<div class="accordionDescBack"></div>
 		<div class="accordionDesc">
-			<p class="accordionDescHeader">Blue Mountains</h3>
+			<p class="accordionDescHeader">Blue Mountains</p>
 			
 		</div>                    
 		<div class="slideStrip" title="/SeniorProject/img/oap/australia/accordion/2strip.jpg"></div>
@@ -70,7 +66,7 @@
 		<a href="index.html" id="slideimg3" class="accordionSlideImage asyncImgLoadAccordion" title="/SeniorProject/img/oap/australia/accordion/3.jpg|Learn to Surf in Byron Bay|Surfing is an Australian tradition and Byron Bay is one of Australia's most popular surfing spots. Surfing professionals will teach you the basics to the advanced skills of surfing in some of the best waves in Australia."></a>
 		<div class="accordionDescBack"></div>
 		<div class="accordionDesc">
-			<p class="accordionDescHeader">Bryon Bay</h3>
+			<p class="accordionDescHeader">Bryon Bay</p>
 			
 		</div>                    
 		<div class="slideStrip" title="/SeniorProject/img/oap/australia/accordion/3strip.jpg"></div>
@@ -82,7 +78,7 @@
 		<a href="index.html" id="slideimg4" class="accordionSlideImage asyncImgLoadAccordion" title="/SeniorProject/img/oap/australia/accordion/4.jpg|Fraser Island Lake Wabby Tour|Lake Wabby is a stunning emerald green freshwater lake on the amazing Fraser Island, which is the largest sand island in the world. Lake Wabby is great for swimming and you may be lucky enough to see friendly catfish and long neck turtles! To reach Lake Wabby we will drive a short distance along 75-mile Beach, and then take an interpreted hike across the ever-changing sand dunes."></a>
 		<div class="accordionDescBack"></div>
 		<div class="accordionDesc">
-			<p class="accordionDescHeader">Frasier Island</h3>
+			<p class="accordionDescHeader">Frasier Island</p>
 			
 		</div>                   
 	   <div class="slideStrip" title="/SeniorProject/img/oap/australia/accordion/4strip.jpg"></div>
@@ -94,7 +90,7 @@
 		<a href="index.html" id="slideimg5" class="accordionSlideImage asyncImgLoadAccordion" title="/SeniorProject/img/oap/australia/accordion/5.jpg|Ocean Rafting the Beautiful Whitsunday Islands|This is an adrenaline filled full day eco-adventure tour through the Whitsunday Islands to postcard perfect Whitehaven beach. Ocean Rafting is the most exhilarating and fastest way to tour the Whitsunday Islands. The day includes exploring Whitehaven Beach, snorkeling pristine coral reefs and tropical island guided walks. A buffet lunch is also included. Whitehaven Beach is recognized as one of the most beautiful beaches in the world with its amazing blue water and white sand."></a> 
 		<div class="accordionDescBack"></div>
 		<div class="accordionDesc">
-			<p class="accordionDescHeader">Whitsunday Islands</h3>
+			<p class="accordionDescHeader">Whitsunday Islands</p>
 			
 		</div>    
 		<div class="slideStrip" title="/SeniorProject/img/oap/australia/accordion/5strip.jpg"></div>

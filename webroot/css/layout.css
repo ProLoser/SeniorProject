@@ -36,9 +36,9 @@ p.about {
 
 /*** HEADER ***/
 #header {
-	height: 100px;
 	/* an idea I had to display the current localization */
 	background: url(../img/flag.png) no-repeat 600px 10px;
+	overflow: auto;
 }
 #header h2 {
 	/* title goes in here */

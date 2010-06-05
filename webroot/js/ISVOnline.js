@@ -43,14 +43,7 @@ $(document).ready(function () {
 	 * File: galleria.js  plugins/*  themes/*
 	 * Website: http://galleria.aino.se/
 	 */
-	$('.js-gallery').galleria({
-		autoplay: true,
-		transition: 'fade',
-		height: 700,
-		transition_speed: 1400,
-		image_crop: false,
-		carousel: false
-	});
+	$('.js-gallery').PikaChoose();
 	 
 // Fancy Accordion
 /***********
