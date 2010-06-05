@@ -50,7 +50,7 @@
         </div>
         
         <div class="mportfoliobox mportfoliospace">
-            <h4><a href="#"><?php echo $this->Html->image('main/Adventures-lbl.png', array('alt' => 'Adventures')); ?></a></h4>
+            <h4><a href="#"><?php echo $this->Html->image('main/adventures-lbl.png', array('alt' => 'Adventures')); ?></a></h4>
             <div class="mportfolio mportfoliocatbg"><!-- Portfolio Block Two -->
                 <a href="#">
                     <?php echo $this->Html->image('main/portfolio2.jpg', array('alt' => 'Adventures','class' => 'js-fade')); ?>
@@ -59,7 +59,7 @@
         </div>
         
         <div class="mportfoliobox mportfoliospace">
-            <h4><a href="#"><?php echo $this->Html->image('main/Volunteer-lbl.png', array('alt' => 'Volunteer')); ?></a></h4>
+            <h4><a href="#"><?php echo $this->Html->image('main/volunteer-lbl.png', array('alt' => 'Volunteer')); ?></a></h4>
             <div class="mportfolio mportfoliocatbg"><!-- Portfolio Block Three -->
                 <a href="#">
                     <?php echo $this->Html->image('main/portfolio3.jpg', array('alt' => 'Volunteer','class' => 'js-fade')); ?>
