@@ -33,9 +33,7 @@ a:hover {
 
 /*** HEADER ***/
 #header {
-	height: 100px;
-	/* an idea I had to display the current localization */
-	background: url(../img/flag.png) no-repeat 600px 10px;
+	overflow: auto;
 }
 #header h2 {
 	/* title goes in here */
@@ -73,10 +71,44 @@ a:hover {
 }
 #header #globalnav a:hover {
 	color: #fff;
-	border-bottom: 1px #fff dotted;
-	/* compensates for the extra pixel height added by the border */
-	margin-bottom: 9px;
 }
+/* Localization Flags */
+#header #globalnav li.flag-us a{
+	background: url(../img/flag-us.png) no-repeat left center;
+	padding: 10px 0 10px 55px;
+	margin: 0 10px 0 0;
+}
+#header #globalnav li.flag-us a:hover {background-image:url(../img/flag-us-hover.png)}
+#header #globalnav li.flag-ca a{
+	background: url(../img/flag-ca.png) no-repeat left center;
+	padding: 10px 0 10px 55px;
+	margin: 0 10px 0 0;
+}
+#header #globalnav li.flag-ca a:hover {background-image:url(../img/flag-ca-hover.png)}
+#header #globalnav li.flag-eu a{
+	background: url(../img/flag-eu.png) no-repeat left center;
+	padding: 10px 0 10px 55px;
+	margin: 0 10px 0 0;
+}
+#header #globalnav li.flag-eu a:hover {background-image:url(../img/flag-eu-hover.png)}
+#header #globalnav li.flag-uk a{
+	background: url(../img/flag-uk.png) no-repeat left center;
+	padding: 10px 0 10px 55px;
+	margin: 0 10px 0 0;
+}
+#header #globalnav li.flag-uk a:hover {background-image:url(../img/flag-uk-hover.png)}
+#header #globalnav li.flag-au a{
+	background: url(../img/flag-au.png) no-repeat left center;
+	padding: 10px 0 10px 55px;
+	margin: 0 10px 0 0;
+}
+#header #globalnav li.flag-au a:hover {background-image:url(../img/flag-au-hover.png)}
+#header #globalnav li.flag-nz a{
+	background: url(../img/flag-nz.png) no-repeat left center;
+	padding: 10px 0 10px 55px;
+	margin: 0 10px 0 0;
+}
+#header #globalnav li.flag-nz a:hover {background-image:url(../img/flag-nz-hover.png)}
 #header #globalnav form {
 	/* search form */
 	color: #EBEBEB;

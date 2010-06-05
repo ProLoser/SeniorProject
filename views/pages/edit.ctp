@@ -1,3 +1,4 @@
+<?php $this->layout = 'full-width'?>
 <div class="pages form">
 <?php echo $this->Form->create('Page');?>
 	<fieldset>

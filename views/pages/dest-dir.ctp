@@ -6,7 +6,6 @@
 		</p>
         
         <h3>By Country:</h3>
-        <hr width="600px" />
         <ul class="previewList">
         <li>
             <?php echo $this->Html->image('adventure/countries/cp-Aus.jpg', array('alt' => 'Australia')); ?>
@@ -72,4 +71,3 @@
             </p>
         </li>
      	</ul> <!-- ExcursionWrapper -->
-		<div class="clear"></div>

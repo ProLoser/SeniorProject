@@ -1,7 +1,9 @@
 <h2>ISV Online</h2>
 <ul id="globalnav">
-	<li><a href="#">Global Site</a></li> 
+	<li class="flag-<?php if (isset($this->params['local'])) echo strtolower($this->params['local']);?>">
+		<?php echo $this->Html->link('Change Location', '/welcome'); ?>
+	</li> 
 	<li><a href="#">My Account</a></li>
-	<li><form><input type="textbox"></input> <input type="button" value="Search"></input></form></li>
+	<li><form><input type="textbox" /> <input type="button" value="Search" /></form></li>
 </ul>
 <?php echo $this->element('layout/navigation'); ?>
