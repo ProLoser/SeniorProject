@@ -22,9 +22,10 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	Router::connect('/welcome', array('controller' => 'pages', 'action' => 'display', 'localization'));
 /**
  * Creates Group prefixes
- */	
+ */
 	Router::connect('/:local/:controller/:action/*', array(), array('local' => '[a-zA-Z]{2,3}'));
 
 ?>
