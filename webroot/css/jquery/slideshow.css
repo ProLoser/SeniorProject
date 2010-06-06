@@ -68,7 +68,8 @@
 /* caption control */
 
 .slideshowlite ol {
-	top: 355px;
+	left: 0px;
+	top: 410px;
 	position: absolute;
 	overflow: hidden;
 	width: 100%;
