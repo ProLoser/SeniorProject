@@ -1,11 +1,17 @@
 		<h1>
-		ISV Destination Directory
+		Standard 4 Week Program
 		</h1>
-        <p class="about">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis est. Fusce eu quam sit amet ligula ultricies varius vitae sed lectus. Suspendisse in diam quis lacus bibendum fermentum sit amet in ligula. Vivamus fermentum placerat purus et blandit. Sed congue condimentum molestie. Quisque aliquam, lectus malesuada consequat tristique, justo enim fermentum nunc, in aliquet quam sem ut dolor. Nullam tempus placerat semper. Sed tristique urna id sem ullamcorper varius. Fusce porta bibendum libero.
-		</p>
-        
-        <h3>By Country:</h3>
+		<h4>
+		<em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus auctor congue dui non vestibulum. Nullam vitae imperdiet purus. </em>
+		</h4>
+		
+        <div class="progPreview">
+        	<img src="/SeniorProject/img/program/prog-standard4week.jpg" alt="Standard 4 Week Program" />
+        	<h4>Standard 4 Week Program</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel sem massa. In elementum imperdiet odio, sodales hendrerit turpis porttitor non. Sed augue augue, ornare ut malesuada sit amet, placerat vel metus. Fusce ullamcorper malesuada arcu, et condimentum ipsum euismod ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed et massa purus. Sed luctus ultrices orci, vel laoreet eros tempus a. Nullam interdum laoreet diam, et consequat ligula feugiat eu. Etiam rhoncus nunc in quam imperdiet egestas.  <a href="prog-aus_readmore" class="readmore">Read More</a></p>
+        </div>
+
+		<h3>By Country: </h3>
         <ul class="previewList">
         <li>
             <img src="/SeniorProject/img/adventure/countries/cp-Aus.jpg" alt="Australia" />

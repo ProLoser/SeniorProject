@@ -6,7 +6,7 @@
 	width: 952px;
 	height: 250px;
 	float: left;
-	background-color: #3D4824;
+	background-color: #30380f;
 	color: #fff;
 	overflow: auto;
 	margin: 0 0 20px 0;
@@ -15,17 +15,17 @@
 .readmore_img img {
 	float: left;	
 	overflow: auto;
-	padding: 0 20px 0 0;
+	padding: 0 15px 0 0;
 }
 
 .readmore_img h4 {
 	font-size: 140%;
 	color: #BFBFBF;
-	margin: 20px 20px 0px 20px;
+	margin: 20px 15px 0px 15px;
 }
 
 .readmore_img p {
-	margin: 20px;
+	margin: 15px;
 	line-height: 150%;
 }
 
@@ -76,4 +76,21 @@
 .previewLink:hover {
 	color: #5E6934;
 	border-bottom: 1px dotted #5E6934;
+}
+
+.progPreview {
+	width: 600px;
+	background-color: #30380f;
+}
+
+.progPreview h4 {
+	font-size: 140%;
+	color: #BFBFBF;
+	margin: 15px;	
+}
+
+.progPreview p {
+	color: #fff;	
+	margin: 15px;
+	padding: 0 0 15px 0;
 }
