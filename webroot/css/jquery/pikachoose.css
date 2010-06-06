@@ -1,5 +1,5 @@
 /* This is the ul you have all your images in */
-ul.js-gallery{margin:10px 0 0 0;}
+ul.js-gallery{margin:10px 0 0 0;overflow:auto;}
 ul.js-gallery li{float: left;border:1px solid #555;padding:2px;background:#777;margin:0 6px 4px 0;position:relative;overflow:hidden;}
 ul.js-gallery li div img{position:relative;cursor:pointer;}
 

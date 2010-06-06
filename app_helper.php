@@ -33,5 +33,19 @@ App::import('Helper', 'Helper', false);
  * @subpackage    cake.cake
  */
 class AppHelper extends Helper {
+	/**
+	 * The Html->url() function overridden to support local prefixes
+	 *
+	 * @param string $url 
+	 * @param string $full 
+	 * @return void
+	 * @author Dean Sofer
+	 */
+	function url($url = null, $full = false) {
+	     if(!isset($url['local']) && isset($this->params['local'])) {
+	       $url['local'] = $this->params['local'];
+	     }     
+	     return parent::url($url, $full);
+	}
 }
 ?>

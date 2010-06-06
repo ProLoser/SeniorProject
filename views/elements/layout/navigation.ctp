@@ -1,5 +1,5 @@
 <ul id="nav">
-    <li><?php echo $html->link(__('Home', true),'/',array('title' => 'Home')); ?></li>
+    <li><?php echo $html->link(__('Home', true),array('controller' => 'pages', 'action' => 'display', 'home'),array('title' => 'Home')); ?></li>
     <li><?php echo $html->link(__('Programs', true),array('controller'=>'programs','action'=>'index'),array('title' => 'Programs'));?></li>
     <li><a href="adv-main.html">Adventure</a></li>
     <li><a href="#">Volunteer</a></li>

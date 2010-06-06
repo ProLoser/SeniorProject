@@ -1,3 +1,4 @@
+<?php $this->layout = 'full-width'?>
 <div class="pages index">
 	<h2><?php __('Pages');?></h2>
 	<table cellpadding="0" cellspacing="0">
