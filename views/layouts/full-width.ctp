@@ -14,7 +14,8 @@
 	'jquery/accordion_info',
 	'home',
 	'localization',
-	'volunteer'
+	'volunteer',
+	'program'
 )); ?>
 <!--[if IE 6]><?php echo $this->Html->css('ie6'); ?><![endif]-->
 <!--[if IE 7]><?php echo $this->Html->css('ie7'); ?><![endif]-->

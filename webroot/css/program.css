@@ -1,0 +1,79 @@
+/********
+ PROGRAM
+********/
+
+.readmore_img {
+	width: 952px;
+	height: 250px;
+	float: left;
+	background-color: #3D4824;
+	color: #fff;
+	overflow: auto;
+	margin: 0 0 20px 0;
+}
+
+.readmore_img img {
+	float: left;	
+	overflow: auto;
+	padding: 0 20px 0 0;
+}
+
+.readmore_img h4 {
+	font-size: 140%;
+	color: #BFBFBF;
+	margin: 20px 20px 0px 20px;
+}
+
+.readmore_img p {
+	margin: 20px;
+	line-height: 150%;
+}
+
+.leftColumn {
+	margin: 0 30px 0 0;
+	float: left;
+	text-indent: 30px;	
+	width: 457px;
+	font-size: 110%;
+	line-height: 120%;
+	list-style-type: none;
+}
+
+.leftColumn li {
+	margin: 0 0 15px 0;	
+}
+
+.leftColumn li img {
+	display: block;
+	margin: 0 auto;
+}
+
+.rightColumn {
+	margin: 0;
+	float: left;
+	text-indent: 30px;
+	width: 457px;
+	font-size: 110%;
+	line-height: 120%;
+	list-style-type: none;
+}
+
+.rightColumn li {
+	margin: 0 0 15px 0;	
+}
+
+.rightColumn li img {
+	display: block;
+	margin: 0 auto;
+}
+
+.previewLink {
+	color: #797E38;
+	float: right;
+	text-indent: 0;
+}
+
+.previewLink:hover {
+	color: #5E6934;
+	border-bottom: 1px dotted #5E6934;
+}
