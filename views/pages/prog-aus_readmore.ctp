@@ -24,5 +24,5 @@
         <li class="readmore_links"><?php echo $html->link('New Zealand', '/pages/view/21'); ?></li>
         <li class="readmore_links"><?php echo $html->link('South Africa', '/pages/view/21'); ?></li>
         <li class="readmore_links"><?php echo $html->link('Thailand', '/pages/view/21'); ?></li>
-        <li class="readmore_links"><?php echo $html->link('Back to the Preview page', '/pages/view/20'); ?></li>
+        <li><?php echo $html->link('Back to the Preview page', '/pages/view/20', array('class' => 'previewLink')); ?></li>
     </ul>
