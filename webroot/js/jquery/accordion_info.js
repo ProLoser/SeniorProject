@@ -1,7 +1,3 @@
-/**********************************
- ACCORDION - TRIP INFORMATION PAGE
-**********************************/
-
 /***************************************
     ASYNCHRONOUS IMAGE LOADING CODE
 ****************************************/
@@ -52,6 +48,9 @@ function setupLoadingAsynchronousImages()
     );
 } // end of function setupLoadingAsynchronousImages
 
+/**********************************
+ ACCORDION - TRIP INFORMATION PAGE
+**********************************/
 
 /***
 The difference betweent he 'accordion_info' plugin and the 'accordion' plugin is that the
@@ -76,7 +75,7 @@ var ACCORDION_SLIDE_TIME = 650;
 // elements whith other informations needed for main image, we pack objects into an array
 var g_slidedDivs = null;
 var g_hoveredSlideIndex = null;
-function setupAccordionImageSlider_infopage()
+function setupAccordionImageSlider_tripinfo()
 {
     // turn off displaying border-left for first div holding image in accordion
     $("#js-accordion_info").find(".accordionImgDiv_info:first").css("border-left", "0px");
@@ -229,7 +228,7 @@ function setupAccordionImageSlider_infopage()
             }
         }
     );
-} // end of function setupAccordionImageSlider_infopage 
+} // end of function setupAccordionImageSlider_tripinfo 
 
 // Function set value of left margin for every slided div in accordion
 // @param[in] index - index of ohovered div with class accordionImgDiv_info 
@@ -392,14 +391,14 @@ function accordionPlay()
     
 } // end of function accordionPlay
 
-function setupAccordionAutoPlay_infopage()
+function setupAccordionAutoPlay_tripinfo()
 {
     // fire up auto play for accordion image slider
     if(true == g_sliderAutoPlay)
     {
         g_sliderTimerAutoPlay = setTimeout(accordionPlay, g_sliderTimerInterval);
     }
-} // end of function setupAccordionAutoPlay_infopage
+} // end of function setupAccordionAutoPlay_tripinfo
 
 function mouseOnAccor(_this)
 {
@@ -463,6 +462,203 @@ function mouseOutAccorOnAll(excludedID)
 } // end of function mouseOutAccorOnAll
 
 
+/**********************************
+    ACCORDION CONTROL PANEL CODE
+***********************************/
+// true - forward, false - backward
+var FORWARD = true;
+var BACKWARD = false;
+var g_lastSlideMoveDirection = FORWARD;
+ 
+function setupAccordionControlPanel_tripinfo()
+{
+    // fadeout description text
+    $("#accorControlBtnDesc").fadeTo(0, 0.0);
+
+    // bind function to accordion control panel play button called then button is clicked 
+    $("#accorPlayBtn").click(
+        function()
+        {
+            // change state of accordion slider auto play
+            g_sliderAutoPlay = !g_sliderAutoPlay;
+            // if auto play is off, we need to clear actual timer,
+            // in other case, if slider is on, we set new timer function call
+            if(false == g_sliderAutoPlay)
+            {
+                clearTimeout(g_sliderTimerAutoPlay);
+                
+                mouseOutAccorOnAll(null);
+                var ribOutWidth = ACCORDION_WIDTH / g_slidedDivs.length; 
+                for(var i = 0; i < g_slidedDivs.length; i++)
+                {
+                    // if div is currently moved we stop the animation
+                    // and set new animation for left margin
+                    $(g_slidedDivs[i].name).stop()                    
+                        .animate({marginLeft: (i*ribOutWidth)+"px"}, {duration: 900, easing: ACCORDION_EASING_METHOD});
+                    // we set the destination member to the same value
+                    g_slidedDivs[i].dest = i*ribOutWidth;
+                    $(g_slidedDivs[i].name).find(".slideDesc_info").stop().animate({opacity: 1.0}, 2000); 
+                }                
+            } else
+            {
+                 g_sliderTimerAutoPlay = setTimeout(accordionPlay, g_sliderTimerInterval); 
+            }
+            if(true == g_sliderAutoPlay)
+            {
+                 $(this).attr("src", "img/slider/accordion/control/pause_hover.png");
+            } else
+            {
+                  $(this).attr("src", "img/slider/accordion/control/play_hover.png");
+            }
+        }
+    );
+
+    // bind function to accordion control panel play button called then button is hovered by user
+    $("#accorPlayBtn").hover(
+        function ()
+        {
+            // set text and slow fade to 100%
+            $("#accorControlBtnDesc").text("turn off/on slider auto play").fadeTo("slow", 1.0);
+           
+            if(false == g_sliderAutoPlay)
+            {
+                $(this).attr("src", "img/slider/accordion/control/play_hover.png");
+            } else
+            {
+                $(this).attr("src", "img/slider/accordion/control/pause_hover.png");
+            }
+        },
+        function ()
+        {
+            if(false == g_sliderAutoPlay)
+            {
+                $(this).attr("src", "img/slider/accordion/control/play.png");
+            } else
+            {
+                $(this).attr("src", "img/slider/accordion/control/pause.png")
+            }
+            $("#accorControlBtnDesc").stop().fadeTo(0, 0.0);  
+        }
+    );
+    
+    // bind function to accordion control panel backward button called then button is hovered by user
+    $("#accorBackBtn").hover(
+        function ()
+        {
+           // set text and slow fade to 100%  
+           $("#accorControlBtnDesc").text("previous slide").fadeTo("slow", 1.0); 
+           $(this).attr("src", "img/slider/accordion/control/back_hover.png");
+        },
+        function ()
+        {
+            $(this).attr("src", "img/slider/accordion/control/back.png");
+            $("#accorControlBtnDesc").stop().fadeTo(0, 0.0); 
+        }
+    );
+    
+    // bind function to accordion control panel backward button called then button is clicked
+    $("#accorBackBtn").click(
+        function()
+        {
+            clearTimeout(g_sliderTimerAutoPlay);
+            if(FORWARD == g_lastSlideMoveDirection)
+            {
+               g_actualSlideImage--;
+            }
+            g_lastSlideMoveDirection = BACKWARD;
+            
+            if(false == g_setBackwardBtnOnLast)
+            {
+                mouseOutAccorOnAll(null);
+                g_actualSlideImage--;
+                
+                // if new loop is in progress we must stop it
+                if(true == g_sliderNewLoop)
+                {
+                    g_sliderNewLoop = false;
+                }
+                
+                if(0 > g_actualSlideImage)
+                {
+                    // if slider is on last slided div in this moment g_actualSlideImage 
+                    // value is -2 becouse above we have two decreasing operations
+                    if(g_actualSlideImage == -2)
+                    {
+                        // so in this situation we must set slider on the next to last slided div
+                        g_actualSlideImage = g_slidedDivs.length - 2;
+                    } else
+                    {
+                        // in normal situation we move one slide back
+                        g_actualSlideImage = g_slidedDivs.length - 1;
+                    }
+                }
+                mouseOnAccor(g_slidedDivs[g_actualSlideImage].name);
+            } else
+            {
+                mouseOutAccorOnAll(null);
+                g_actualSlideImage = g_slidedDivs.length - 1;                                               
+                mouseOnAccor(g_slidedDivs[g_actualSlideImage].name);
+                g_setBackwardBtnOnLast = false;               
+            }
+            // fire up slider
+            if(true == g_sliderAutoPlay)
+            {
+                g_sliderTimerAutoPlay = setTimeout(accordionPlay, g_sliderTimerInterval); 
+            }
+        }
+    );     
+    
+    // bind function to accordion control panel forward button called then button is hovered by user
+    $("#accorForwardBtn").hover(
+        function ()
+        {
+            // set text and slow fade to 100% 
+            $("#accorControlBtnDesc").text("next slide").fadeTo("slow", 1.0);
+            $(this).attr("src", "img/slider/accordion/control/forward_hover.png");
+        },
+        function ()
+        {
+            $(this).attr("src", "img/slider/accordion/control/forward.png");
+            $("#accorControlBtnDesc").stop().fadeTo(0, 0.0);   
+        }
+    ); 
+    
+    // bind function to accordion control panel forward button called then button is clicked
+    $("#accorForwardBtn").click(
+        function()
+        {
+            clearTimeout(g_sliderTimerAutoPlay);
+            g_sliderNewLoop = false; 
+            
+            if(BACKWARD == g_lastSlideMoveDirection)
+            {
+                 g_actualSlideImage++;
+                 if(g_actualSlideImage >= g_slidedDivs.length)
+                 {
+                    g_actualSlideImage = 0;
+                    g_sliderNewLoop = true;
+                 }                  
+            }
+            g_lastSlideMoveDirection = FORWARD;
+            mouseOutAccorOnAll(null);
+            mouseOnAccor(g_slidedDivs[g_actualSlideImage].name);
+    
+            g_actualSlideImage++;
+            if(g_actualSlideImage >= g_slidedDivs.length)
+            {
+                g_actualSlideImage = 0;
+                g_sliderNewLoop = true;
+            }
+            // fire up slider
+            if(true == g_sliderAutoPlay)
+            {
+                g_sliderTimerAutoPlay = setTimeout(accordionPlay, g_sliderTimerInterval); 
+            }
+        }
+    );       
+
+} // end of function setupAccordionControlPanel_tripinfo 
+
 
 /*********************************************
     ASYNCHRONOUS IMAGE LOADING FOR ACCORDION
@@ -474,11 +670,11 @@ function checkAccordionLoading()
 {
     if(g_loadedSlideCount < g_imgList.length)
     {  
-       setupLoadingAsynchronousImagesForAccordion_infopage();
+       setupLoadingAsynchronousImagesForAccordion_tripinfo();
     }
 } // end of function checkAccordionLoading 
 
-function setupLoadingAsynchronousImagesForAccordion_infopage()
+function setupLoadingAsynchronousImagesForAccordion_tripinfo()
 {
     if(g_imgList == null)
     {
@@ -503,7 +699,7 @@ function setupLoadingAsynchronousImagesForAccordion_infopage()
     {  
        g_loadedSlideCount++;
        loadAccordionImg(g_imgList[g_loadedSlideCount-1].id, g_loadedSlideCount-1);
-       setTimeout(setupLoadingAsynchronousImagesForAccordion_infopage, 500);
+       setTimeout(setupLoadingAsynchronousImagesForAccordion_tripinfo, 500);
     }
         
         function loadAccordionImg(id, _index)
@@ -543,11 +739,11 @@ function setupLoadingAsynchronousImagesForAccordion_infopage()
         } 
         
            
-} // end of function setupLoadingAsynchronousImagesForAccordion_infopage 
+} // end of function setupLoadingAsynchronousImagesForAccordion_tripinfo 
 
 var g_loadedStripCount = 0;
 var g_stripList = null;
-function setupLoadingAsyncSlideStripImages_infopage()
+function setupLoadingAsyncSlideStripImages_tripinfo()
 {
     if(g_stripList == null)
     {
@@ -607,11 +803,11 @@ function setupLoadingAsyncSlideStripImages_infopage()
                             .animate({opacity: 1.0}, 400, function()
                             {
                                 loader.css("background-image", "none"); 
-                                setTimeout(setupLoadingAsyncSlideStripImages_infopage, 20); 
+                                setTimeout(setupLoadingAsyncSlideStripImages_tripinfo, 20); 
                             });                            
                     }
                 // set new value for attribute src - this means: load image from imagePath    
                 ).attr('src', imagePath);                        
         } 
-} // end of function setupLoadingAsyncSlideStripImages_infopage 
+} // end of function setupLoadingAsyncSlideStripImages_tripinfo 
 
