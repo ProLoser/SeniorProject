@@ -7,7 +7,6 @@
 	'layout',
 	'forms',
 	'tables',
-	'home',
 	'trip_info',
 	'jquery/slideshow',
 	'jquery/accordion_info',
