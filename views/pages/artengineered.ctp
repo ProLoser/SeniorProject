@@ -1,6 +1,6 @@
 <?php $this->layout = 'full-width'; ?>
     <div class="readmore_img" style="border: 1px solid #000; ">
-	<img src="/SeniorProject/img/artengineered.jpg" alt="Art Engineered" />
+	<?php echo $html->image('/img/artengineered.jpg',array('alt' => 'Art Engineered')); ?>
     	<h4>The Team</h4><br />
         <ul class="list">
 			<li>Geoana Sunabe</li>
@@ -13,4 +13,4 @@
 		</ul>
     </div>
 	
-    IMAGE
+    <?php echo $html->image('/img/group.jpg', array('alt' => 'Art Engineered group photo')); ?>
