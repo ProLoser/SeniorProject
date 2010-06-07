@@ -260,10 +260,10 @@ ul {
 	margin: 0 0 0 25px;
 	line-height: 17px; 
 }
-#contents ul.list li:before {
+ul.list li:before {
 	content: "\00BB \0020";
 	}
-#contents ul.list li {
+ul.list li {
 	list-style-type: none;	
 }
 ol {
