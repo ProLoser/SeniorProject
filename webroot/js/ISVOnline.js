@@ -94,10 +94,11 @@ $(document).ready(function () {
 	if($("#js-accordion_info").length > 0)
 	{
 		// call this functions only if accordion is included
-		setupLoadingAsynchronousImagesForAccordion_infopage();
-		setupLoadingAsyncSlideStripImages_infopage();            
-		setupAccordionImageSlider_infopage();
-		setupAccordionAutoPlay_infopage();
+		setupLoadingAsynchronousImagesForAccordion_tripinfo();
+		setupLoadingAsyncSlideStripImages_tripinfo();            
+		setupAccordionImageSlider_tripinfo();
+		setupAccordionControlPanel_tripinfo(); 
+		setupAccordionAutoPlay_tripinfo();
 	}
 	
 	
