@@ -402,3 +402,10 @@ hr {
 	color: #C0C0C0;
 	text-decoration: none;
 }
+
+/*** Actions List ***/
+ul.actions li {
+	display: inline;
+	margin: 10px;
+	font-weight: bold;
+}
