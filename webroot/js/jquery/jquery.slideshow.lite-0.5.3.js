@@ -25,10 +25,10 @@
 	$.fn.slideshow = function(options){
 		
 		var defaults = {
-			pauseSeconds: 3,
-			fadeSpeed: 1,
+			pauseSeconds: 7,
+			fadeSpeed: 1.5,
 			width: 600,
-			height: 440,
+			height: 490,
 			caption: true,
 			cssClass: 'slideshowlite'
 		};

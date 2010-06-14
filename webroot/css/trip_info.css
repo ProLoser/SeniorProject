@@ -4,12 +4,6 @@
  
 /* Main Splash Page */
 
-#content .about {
-	font-size: 14px;
-	color: #3A3A3A;
-	margin: 0 0 15px 0;
-	line-height: 20px;
-}
 #adv_vol {float:left;}
 #adv_adv {float:right; margin: 0 0 15px 0;}
 #adv_vol p {font-size: 12px; line-height:20px; color:#646464;}
@@ -79,6 +73,3 @@
     color: #000;
     margin-top: 0px;
 }
-
-
-.js-gallery{width:600px;}

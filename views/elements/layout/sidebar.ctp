@@ -1,14 +1,11 @@
-<h3>Some Media</h3>
-    <?php echo $this->Html->link($this->Html->image('adventure/Aus_map.jpg', array('alt' => 'Adventure Map of Australia')), 'adventure/Aus_map.jpg', array('class' => 'js-litebox', 'escape' => false)); ?>
-    
+<?php if (isset($sidebar)) echo $sidebar; ?>
 <h3>Sub Navigation</h3>
 <ul>
-	<li><a href="adv-Aus">Australia</a></li>
-	<li><a href="adv-cr">Costa Rica</a></li>
-	<li><a href="adv-dr">Dominican Republic</a></li>
-	<li><a href="adv-ee">Eastern Europe</a></li>
-	<li><a href="#">Ecuador</a></li>
-	<li><a href="#">New Zealand</a></li>
-	<li><a href="#">South Africa</a></li>
-	<li><a href="#">Thailand</a></li>
+	<li><?php echo $this->Html->link('Pages', array('controller' => 'pages', 'action' => 'index'));?></li>
+	<li><?php echo $this->Html->link('Pictures', array('controller' => 'pictures', 'action' => 'index'));?></li>
+	<li><?php echo $this->Html->link('Trip Pages', array('controller' => 'trip_pages', 'action' => 'index'));?></li>
+	<li><?php echo $this->Html->link('Trips', array('controller' => 'trips', 'action' => 'index'));?></li>
+	<li><?php echo $this->Html->link('Volunteer Types', array('controller' => 'volunteer_types', 'action' => 'index'));?></li>
+	<li><?php echo $this->Html->link('Locales', array('controller' => 'locations', 'action' => 'index'));?></li>
+	<li><?php echo $this->Html->link('Destinations', array('controller' => 'destinations', 'action' => 'index'));?></li>
 </ul>

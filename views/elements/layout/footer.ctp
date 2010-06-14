@@ -26,5 +26,6 @@
 <div class="clear"></div>
 
 <ul id="footerbarwrap">
+	<li><?php echo $html->link('Team Art Engineered', '/pages/display/artengineered'); ?></li>
 	<li>&copy; 2010 International Student Volunteers. All rights reserved.</li>
 </ul>

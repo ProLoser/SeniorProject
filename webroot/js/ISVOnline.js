@@ -43,14 +43,7 @@ $(document).ready(function () {
 	 * File: galleria.js  plugins/*  themes/*
 	 * Website: http://galleria.aino.se/
 	 */
-	$('.js-gallery').galleria({
-		autoplay: true,
-		transition: 'fade',
-		height: 700,
-		transition_speed: 1400,
-		image_crop: false,
-		carousel: false
-	});
+	$('.js-gallery').PikaChoose({show_prev_next:false});
 	 
 // Fancy Accordion
 /***********
@@ -101,10 +94,11 @@ $(document).ready(function () {
 	if($("#js-accordion_info").length > 0)
 	{
 		// call this functions only if accordion is included
-		setupLoadingAsynchronousImagesForAccordion_infopage();
-		setupLoadingAsyncSlideStripImages_infopage();            
-		setupAccordionImageSlider_infopage();
-		setupAccordionAutoPlay_infopage();
+		setupLoadingAsynchronousImagesForAccordion_tripinfo();
+		setupLoadingAsyncSlideStripImages_tripinfo();            
+		setupAccordionImageSlider_tripinfo();
+		setupAccordionControlPanel_tripinfo(); 
+		setupAccordionAutoPlay_tripinfo();
 	}
 	
 	

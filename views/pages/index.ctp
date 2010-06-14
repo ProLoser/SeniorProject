@@ -1,5 +1,9 @@
+<?php $this->layout = 'full-width'?>
 <div class="pages index">
 	<h2><?php __('Pages');?></h2>
+	<ul class="actions">
+		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Page', true)), array('action' => 'add')); ?></li>
+	</ul>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
@@ -20,8 +24,8 @@
 	<tr<?php echo $class;?>>
 		<td><?php echo $page['Page']['id']; ?>&nbsp;</td>
 		<td><?php echo $page['Page']['title']; ?>&nbsp;</td>
-		<td><?php echo $page['Page']['created']; ?>&nbsp;</td>
-		<td><?php echo $page['Page']['modified']; ?>&nbsp;</td>
+		<td><?php echo $this->Time->niceShort($page['Page']['created']); ?>&nbsp;</td>
+		<td><?php echo $this->Time->niceShort($page['Page']['modified']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($page['Location']['name'], array('controller' => 'locations', 'action' => 'view', $page['Location']['id'])); ?>
 		</td>
@@ -46,14 +50,4 @@
  |
 		<?php echo $this->Paginator->next(__('next', true).' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
-</div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Page', true)), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Locations', true)), array('controller' => 'locations', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Location', true)), array('controller' => 'locations', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Trips', true)), array('controller' => 'trips', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Trip', true)), array('controller' => 'trips', 'action' => 'add')); ?> </li>
-	</ul>
 </div>

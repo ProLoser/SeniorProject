@@ -7,15 +7,16 @@
 	'layout',
 	'forms',
 	'tables',
-	'home',
 	'trip_info',
 	'jquery/slideshow',
 	'jquery/accordion_info',
 	'jquery/fancy_accordion',
 	'jquery/prettyPhoto',
+	'jquery/pikachoose',
 	'volunteer',
 	'articles',
-	'destination'
+	'destination',
+	'program'
 )); ?>
 <meta name="keywords" content="<?php echo (isset($keywords_for_layout)) ? $keywords_for_layout : ""; ?>" />
 <meta name="description" content="<?php echo (isset($description_for_layout)) ? $description_for_layout : ""; ?>" />
@@ -27,7 +28,7 @@
 	'jquery/jquery-ui-1.8.1.custom.min',
 	'jquery/jquery.slideshow.lite-0.5.3',
 	'jquery/jquery.innerfade',
-	'jquery/galleria',
+	'jquery/pikachoose',
 	'jquery/jquery.prettyPhoto',
 	'jquery/accordion_info',
 	'jquery/fancy_accordion',

@@ -1,7 +1,6 @@
 /* Forms */
 form {
 	margin: 0 auto;
-	width: 500px;
 	font-size: 12px;
 }
 fieldset {
@@ -19,24 +18,26 @@ form div.input {
 label {
 	display: block; 
 	float: left; 
-	width: 100px; 
+	width: 120px; 
 	padding: 2px; 
 	margin: 6px 0 6px 0; 
 	text-align: right; 
 	color: #666;
 }
 input, textarea, select {
-	width: auto;     
 	margin: 5px 8px 5px 8px;
 	border: 1px #A6C460 dotted;
 	padding: 2px;
+	width: 80%;
 	background: #ECF5D6;
 }
+input[type=checkbox] {
+	width: auto;
+}
 textarea {
-	overflow: auto;	
+	height: 200px;
 }
 form select {
-	width: auto;	
 	margin: 5px 0 5px 8px;
 	border: 1px #A6C460 dotted;
 	padding: 2px;
@@ -44,6 +45,7 @@ form select {
 }
 form .submit {
 	margin: 10px 0 0 120px;	
+	width: 200px;
 }
 .error-message {
 	color: #ff0000;

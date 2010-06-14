@@ -5,7 +5,7 @@
 		'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0',
 		'width', '940',
 		'height', '323',
-		'src', 'flash/teasermapflashapp',
+		'src', '<?php echo $this->Html->url('/flash/teasermapflashapp')?>',
 		'quality', 'high',
 		'pluginspage', 'http://www.adobe.com/go/getflashplayer',
 		'align', 'middle',
@@ -20,7 +20,7 @@
 		'menu', 'true',
 		'allowFullScreen', 'false',
 		'allowScriptAccess','sameDomain',
-		'movie', 'flash/teasermapflashapp',
+		'movie', '<?php echo $this->Html->url('/flash/teasermapflashapp')?>',
 		'salign', ''
 		); //end AC code
 		</script>
@@ -40,9 +40,9 @@
     <!-- Portfolio Block -->
     <div id="mportfoliowrap">
         <div class="mportfoliobox">
-            <h4><a href="#"><?php echo $this->Html->image('main/programs-lbl.png', array('alt' => 'Programs')); ?></a></h4>
+            <h4><a href="pages/view/19"><?php echo $this->Html->image('main/programs-lbl.png', array('alt' => 'Programs')); ?></a></h4>
             <div class="mportfolio mportfoliocatbg"><!-- Portfolio Block One-->
-                <a href="#">
+                <a href="pages/view/19">
                     <!-- Class js-fade will enable fade in out -->
                     <?php echo $this->Html->image('main/portfolio1.jpg', array('alt' => 'Programs','class' => 'js-fade')); ?>
                 </a>
@@ -50,18 +50,18 @@
         </div>
         
         <div class="mportfoliobox mportfoliospace">
-            <h4><a href="#"><?php echo $this->Html->image('main/Adventures-lbl.png', array('alt' => 'Adventures')); ?></a></h4>
+            <h4><a href="pages/view/19"><?php echo $this->Html->image('main/adventures-lbl.png', array('alt' => 'Adventures')); ?></a></h4>
             <div class="mportfolio mportfoliocatbg"><!-- Portfolio Block Two -->
-                <a href="#">
+                <a href="pages/view/19">
                     <?php echo $this->Html->image('main/portfolio2.jpg', array('alt' => 'Adventures','class' => 'js-fade')); ?>
                 </a>
             </div>
         </div>
         
         <div class="mportfoliobox mportfoliospace">
-            <h4><a href="#"><?php echo $this->Html->image('main/Volunteer-lbl.png', array('alt' => 'Volunteer')); ?></a></h4>
+            <h4><a href="pages/view/19"><?php echo $this->Html->image('main/volunteer-lbl.png', array('alt' => 'Volunteer')); ?></a></h4>
             <div class="mportfolio mportfoliocatbg"><!-- Portfolio Block Three -->
-                <a href="#">
+                <a href="pages/view/19">
                     <?php echo $this->Html->image('main/portfolio3.jpg', array('alt' => 'Volunteer','class' => 'js-fade')); ?>
                 </a>
             </div>
@@ -74,19 +74,19 @@
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur, nibh ut feugiat placerat, orci lacus accumsan erat, eget porttitor arcu velit a lacus. Sed tempus bibendum risus, nec dignissim sem vestibulum ut. Nam iaculis aliquam elementum. Nunc sed dignissim sapien. 
             </p>
-            <a href="#"><img src="img/portfolio/meet_new_people.png" alt="Meet new people" /></a>
+            <a href="pages/view/19"><?php echo $this->Html->image('portfolio/meet_new_people.png', array('alt' => 'Meet new people'))?></a>
         </div>
         <div class="mblogbox mblogspace"><!-- Info Block Two -->
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur, nibh ut feugiat placerat, orci lacus accumsan erat, eget porttitor arcu velit a lacus. Sed tempus bibendum risus, nec dignissim sem vestibulum ut. Nam iaculis aliquam elementum. Nunc sed dignissim sapien. 
             </p>
-            <a href="#"><img src="img/portfolio/discover_new_places.png" alt="Discover new places" /></a>
+            <a href="pages/view/19"><?php echo $this->Html->image('portfolio/discover_new_places.png', array('alt' => 'Discover new places'))?></a>
         </div>
         <div class="mblogbox mblogspace"><!-- Info Block Three -->
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur, nibh ut feugiat placerat, orci lacus accumsan erat, eget porttitor arcu velit a lacus. Sed tempus bibendum risus, nec dignissim sem vestibulum ut. Nam iaculis aliquam elementum. Nunc sed dignissim sapien.
             </p>
-            <a href="#"><img src="img/portfolio/travel_with_a_purpose.png" alt="Travel with a purpose" /></a>
+            <a href="pages/view/19"><?php echo $this->Html->image('portfolio/travel_with_a_purpose.png', array('alt' => 'Travel with a purpose'))?></a>
         </div>
         <div class="clear"></div>
 	</div>
