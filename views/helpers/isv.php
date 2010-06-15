@@ -12,8 +12,8 @@ class IsvHelper extends AppHelper {
 		$replace = array('href="/', 'src="/');
 		$content = preg_replace($pattern, $replace, $content);*/
 		
-		$pattern = '/(?:href|src)="(?!/|http://)/gi';
-		$content = preg_replace($pattern, '$1/',$content);
+		$pattern = "/(?:href|src)=\"(?!/|http://)/gi";
+		$content = preg_replace($pattern, "$1/",$content);
 
         return $this->output($content);
     }
