@@ -34,7 +34,8 @@
 	'jquery/jquery.prettyPhoto',
 	'jquery/accordion_info',
 	'jquery/fancy_accordion',
-	'flash-map'
+	'flash-map',
+	'tiny_mce/tiny_mce'
 )); ?>
 <script type="text/javascript">Galleria.loadTheme('<?php echo $this->webroot?>js/jquery/themes/classic/galleria.classic.js');</script>
 <?php echo $this->Html->script(array(
