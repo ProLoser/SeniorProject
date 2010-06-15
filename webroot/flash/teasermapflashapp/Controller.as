@@ -6,49 +6,57 @@
 		
 		private var main:Main;
 		private var mapView:MapView;
-		private var galleryView:GalleryView;
-		private var bigMapView:BigMapView;
+		private var quickSelectView:QuickSelectView;
+		private var programView:ProgramView;
+		private var volunteerView:VolunteerView;
+		private var rightPanelModel:RightPanelModel;
+		private var galleryModel:GalleryModel;
 		
 		public function Controller(theMain:Main):void {
 			main=theMain;
-			galleryView = new GalleryView(this);
-			main.addView(galleryView);
-			galleryView.startLoading();
-			mapView = new MapView(this);
-			main.addView(mapView);
-			mapView.startLoading();
+			galleryModel = new GalleryModel(this);
+			main.addView(galleryModel);
+			galleryModel.startLoading();
+			rightPanelModel = new RightPanelModel(this);
+			rightPanelModel.x=676;
+			main.addView(rightPanelModel);
+			rightPanelModel.loadQuickSelect();
 		}
 		
-		public function loadMap(type:String):void {
-			galleryView.toggleGallery();
-			mapView.toggleMap();
-			if (type == "byMap") {
-				galleryView.setImageIndex(3);
-				bigMapView = new BigMapView(this);
-				main.addView(bigMapView);
-				bigMapView.startLoading();
-				
-			} else if (type == "byProgram") {
-				galleryView.setImageIndex(0);
-				galleryView.setupByProgram(mapView);
-				
-			}
+		public function toggleCloseButton():void {
+			rightPanelModel.toggleCloseButton();
 		}
 		
-		public function closeMap():void {
-			main.removeView(bigMapView);
-			galleryView.toggleGallery();
-			mapView.toggleMap();
+		public function setState(newState:String):void {
+			rightPanelModel.setState(newState);
 		}
 		
 		public function setDot(region:String):void {
-			mapView.setDot(region);
+			rightPanelModel.setDot(region);
 		}
-		
-		public function closeByPrograms():void {
-			galleryView.closeByPrograms();
-			mapView.toggleMap();
-			galleryView.toggleGallery();
+		public function setProgram(program:int):void {
+			rightPanelModel.setProgram(program);
+		}
+		public function setAdventure(adventure:int):void {
+			rightPanelModel.setAdventure(adventure);
+		}
+		public function setVol(vol:int):void {
+			rightPanelModel.setVol(vol);
+		}
+		public function toggleGallery():void {
+			galleryModel.toggleGallery();
+		}
+		public function stopOpenOscilation():void {
+			galleryModel.stopOpenOscilation();
+		}
+		public function setImageIndex(imageIndex:int):void {
+			rightPanelModel.setImageIndex(imageIndex);
+		}
+		public function pausePlayOscilation(playState:String):void {
+			galleryModel.pausePlayOscilation(playState);
+		}
+		public function setOpenSlider(index:int):void {
+			galleryModel.setOpenSlider(index);
 		}
 	}
 }
